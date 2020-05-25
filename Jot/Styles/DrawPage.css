@@ -1,0 +1,509 @@
+﻿/******************************************************************************************************
+//
+// Name:        Joe Maurer
+// Email:       Joseph.Maurer2@oit.edu
+// Class:       CST 326 - Junior Project
+// Project:     Jot by Verge++
+// Date:        Januray 24, 2016
+// Description: 
+//          This file is called from .html
+//          This styles the drawpage and canvas
+//
+//
+//******************************************************************************************************/
+.info {
+    positition: absolute;
+}
+
+.col-center-block {
+    text-align: center;
+}
+
+.end {
+    display: none;
+}
+
+body {
+    background-color: #d9d9d9 !important;
+    background-image: none;
+}
+
+#myCanvas {
+    background-color: white;
+    background-size: 100% 100%;
+    /*position: fixed;*/ /*This make the page not scrollable.*/
+    /*left: 0px;*/
+    top: 125px;
+    left: inherit;
+    right: inherit;
+    left: 125px;
+    width: 8.5in;
+    height: 11in;
+    border: none;
+    margin: 0;
+    padding: 0;
+    z-index: -999999;
+    cursor: inherit;
+    margin-top: 50px; 
+left mode*/
+}
+
+body {
+    font-family: arial;
+}
+
+body {
+    font-family: arial;
+}
+
+body {
+    font-family: arial, helvetica;
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 14pt;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+canvas {
+    border: 1px solid #AAAAAA;
+}
+
+#canvas {
+    position: absolute;
+    left: 90px;
+    top: 10px;
+}
+
+#canvasInterface {
+    position: absolute;
+    left: 90px;
+    top: 10px;
+}
+
+#noCanvas {
+    position: absolute;
+    left: 90px;
+    top: 100px;
+    width: 400px;
+    height: 400px;
+    font-size: 33px;
+}
+
+#chooserWidgets {
+    display: block;
+    position: absolute;
+    left: 1300px;
+    width: 300px;
+    top: 10px;
+}
+
+    #chooserWidgets canvas {
+        margin-bottom: 10px;
+    }
+
+#controls {
+    position: absolute;
+    top: 120px;
+    /*left: 8px;*/
+    font-size: 42px;
+    text-align: center;
+    width: 70px;
+}
+
+#cpainterInfo {
+    position: absolute;
+    left: 500px;
+    top: 300px;
+}
+
+#errorArea {
+    position: absolute;
+    width: 200px;
+    left: 800px;
+}
+
+.sidebar-nav-fixed {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    left: 1300px;
+    top: 20px;
+}
+
+.right_ctrl {
+    position: absolute;
+    float: right;
+    /*Change below if you want to bring the tool bar more to the top of the screen*/
+    top: 20px;
+    right: 125px;
+    bottom: auto;
+    left: auto;
+}
+
+.m_center {
+    top: 250px;
+    align-content: center;
+}
+
+
+/*css here to control the right side bar*/
+button {
+    background: none;
+    outline: 0;
+    border: 0px;
+}
+
+a.nav-expander {
+    top: 50px !important;
+    background: none repeat scroll 0 0 #18191b;
+    color: #cccccc;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    height: 50px;
+    margin-right: 0;
+    padding: 1em 1.6em 2em;
+    position: absolute;
+    right: 0em;
+    /* Below is the animation that moves the menu option out*/
+    /*-webkit-transition: right 0.3s ease-in-out 0s;
+  -moz-transition: right 0.3s ease-in-out 0s;
+  -o-transition: right 0.3s ease-in-out 0s;*/
+}
+/*.modal-content.ui-resizable {
+  overflow: scroll;
+}*/
+.modal-body {
+    z-index: 99999;
+    container: 'body';
+}
+
+a.nav-expander:hover {
+    cursor: pointer;
+}
+
+a.nav-expander.fixed {
+    position: fixed;
+}
+
+nav {
+    background: #18191b;
+    color: #6F7D8C;
+    display: block;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    /*right: -15em;*/
+    right: 0em;
+    top: 3em;
+    font-size: 15px;
+    width: 15em;
+    z-index: 12;
+    transition: right 0.3s ease-in-out 0s;
+    -webkit-transition: right 0.3s ease-in-out 0s;
+    -moz-transition: right 0.3s ease-in-out 0s;
+    -o-transition: right 0.3s ease-in-out 0s;
+    text-align: center;
+    display: inline-block;
+}
+
+.nav-expanded nav {
+    top: 60px;
+    right: 0;
+}
+
+body.nav-expanded {
+    margin-left: 0em;
+    transition: right 0.4s ease-in-out 0s;
+    -webkit-transition: right 0.4s ease-in-out 0s;
+    -moz-transition: right 0.4s ease-in-out 0s;
+    -o-transition: right 0.4s ease-in-out 0s;
+}
+
+#nav-close {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+.main-menu li {
+    border-bottom: 1px solid #323949;
+    margin-left: 20px;
+    font-size: 18px;
+    padding: 12px;
+}
+
+    .main-menu li a {
+        color: #6F7D8C;
+        text-decoration: none;
+    }
+
+        .main-menu li a:hover {
+            padding-right: 10px;
+        }
+
+.main-menu li {
+    border-bottom: 1px solid #323949;
+    margin-left: 20px;
+    font-size: 18px;
+    padding: 12px;
+}
+
+    .main-menu li a {
+        color: #6F7D8C;
+        text-decoration: none;
+    }
+
+        .main-menu li a:hover {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+    .main-menu li .sub-nav {
+        border-bottom: 0px;
+        padding: 4px;
+    }
+
+.main-menu a .caret {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    vertical-align: top;
+    border-top: 4px solid #4f5963;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+    margin-top: 8px;
+}
+
+.main-menu a:hover .caret {
+    border-top-color: #4f5963;
+}
+
+.main-menu li.open > a > .caret {
+    border-top: none;
+    border-bottom: 4px solid #4f5963;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.main-menu li.open > a:hover > .caret {
+    border-bottom-color: #4f5963;
+}
+
+.icon:before {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+    content: '\f105';
+}
+
+.main-menu li > a > span.icon {
+    float: right;
+    margin: 0.1em 1.7em -0.1em 0;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-menu li > a:hover > span.icon {
+    float: right;
+    margin: 0.1em 0.8em -0.1em 0;
+    opacity: 1;
+}
+
+#ex1Slider .slider-selection {
+    background: #BABABA;
+}
+
+.colorpickercells {
+    outline: 2px solid #18191b;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    line-height: 35px;
+    column-width: 35px;
+    width: 35px;
+    min-height: 35px;
+
+    /*-webkit-transition-property: width, height; 
+    -webkit-transition-duration: 2s; 
+    transition-property: width, height;
+    transition-duration: 2s;*/
+}
+
+
+#colorpicker {
+    text-align: center;
+    align-content: center;
+    margin: 2em;
+    width: 50%;
+}
+
+
+#sizepicker {
+   text-align: center;
+    align-content: center;
+    margin: 2em;
+    width: 50%;
+}
+
+#circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: red;
+}
+
+.sizepickercells {
+    outline: 2px solid #18191b;
+    background-color: white;
+    position: absolute;
+    line-height: 35px;
+    column-width: 35px;
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+}
+.svg_ico path {
+     background: green;
+    -webkit-mask: url(image.svg) center / contain no-repeat;
+}
+
+.shape_ico_size {
+        font-size: 35px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* add a little bottom space under the images */
+.thumbnail {
+	margin-bottom:7px;
+    height: 190px !important;
+    width: 100%;
+
+}
+.thumbnail:hover {
+    border-style: solid;
+    border-width: medium;
+    border-color: lightblue;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+/*Code below is for siwtches on the settings page*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*Code for newer slider style*/
+.onoffswitch {
+    position: relative; width: 55px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 20px; padding: 0; line-height: 20px;
+    border: 0px solid #FFFFFF; border-radius: 28px;
+    background-color: #9E9E9E;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 28px; margin: -4px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 31px;
+    border-radius: 28px;
+    box-shadow: 0 6px 12px 0px #757575;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #42A5F5;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #42A5F5;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+    background-color: #2196F3; 
+    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}

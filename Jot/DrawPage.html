@@ -1,0 +1,1016 @@
+﻿<!-- %@ Page Language="C#" AutoEventWireup="true" CodeFile="DrawPage.aspx.cs" Inherits="DrawPage"
+    MasterPageFile="~/Web.master" Title="Note" %> -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+
+    <script src="JavaScript/Canvas.js"></script>
+    <!--     // Link for Shapes is down below in by the canvas html. This is because a canvas has a reference to the js. Need to be after -->
+    <link href="Styles/DrawPage.css" rel="stylesheet" />
+    <script src="JavaScript/DBstore.js"></script>
+    <script src="JavaScript/Parse.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- @*External library that allows pdf for canvas below*@ -->
+    <script src="http://parall.ax/parallax/js/jspdf.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src='https://apis.google.com/js/platform.js' async defer></script>
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+    <!-- Needed for Google Drive Saving -->
+    <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+    <!-- <script src="JavaScript/GoogleDriveSave.js"></script> -->
+
+
+    <!-- Code here for slide out menu -->
+
+    <nav id="tool-bar">
+        <div class="dropdown">
+            <ul class="list-unstyled main-menu " id="tool-bar-content">
+
+                <!--Include your navigation here-->
+                <li class="text-right"><a id="nav-close">≫</a></li>
+
+               <!--  Modal for the loading bar -->
+                <div id="pleaseWaitDialog" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <label id="LoadingHeader"><strong>Loading...</strong></label>
+                            </div>
+                            <div class="modal-body">
+                                <div class="progress">
+                                    <span class="sr-only">Loading...</span>
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                        Loading...
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                   <div id="TemplateModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Background Templates</h4>
+                                </div>
+                                <div class="modal-body" style="padding: 40px 50px;">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(1);">
+                                            <img src="Background%20Templates/jpg/narrow%20ruled%202.jpeg" class="thumbnail img-responsive"> 
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(2);">
+                                            <img src="Background%20Templates/jpg/todo%202.jpeg" class="thumbnail img-responsive" />
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(3)">
+                                            <img src="Background%20Templates/jpg/dot%20grid%20med%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(4)">
+                                            <img src="Background%20Templates/jpg/graph%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(6)"> <!-- Engineering -->
+                                            <img src="Background%20Templates/jpg/engineering_grey%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(7)"> 
+                                            <img src="Background%20Templates/jpg/calendar%20week%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(8)">
+                                            <img src="Background%20Templates/jpg/meeting%20notes%20basic%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(15)">
+                                            <img src="Background%20Templates/jpg/meeting%20notes%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(14)">
+                                            <img src="Background%20Templates/jpg/legal%202.jpeg" class="thumbnail img-responsive" />
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(16)">
+                                            <img src="Background%20Templates/jpg/ruled%20margin%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(9)">
+                                            <img src="Background%20Templates/jpg/music%20staves%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(10)">
+                                            <img src="Background%20Templates/jpg/baseball%20portrait%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(11)">
+                                            <img src="Background%20Templates/jpg/basketball%20landscape%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(12)">
+                                            <img src="Background%20Templates/jpg/football%20landscape%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(13)">
+                                            <img src="Background%20Templates/jpg/soccer%20landscape%202.jpeg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(18)">
+                                            <img src="Background%20Templates/color/blue.jpg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                     <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(19)">
+                                            <img src="Background%20Templates/color/Green.jpg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(20)">
+                                            <img src="Background%20Templates/color/red.jpg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                                        <a onclick="bgFunction(0)">
+                                            <img src="Background%20Templates/color/white.jpg" class="thumbnail img-responsive"/>
+                                        </a>
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button data-dismiss="modal" type="button" class="btn btn-success btn-default pull-right" onclick="ChangeNoteName()"><span class="glyphicon glyphicon-ok"></span>Save</button>
+                                    <button data-dismiss="modal" type="submit" class="btn btn-danger btn-default pull-left" onclick="CancelNoteName()"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+
+
+                <!--  Modal for sharing a note with another user.  -->
+                <div id="ShareNoteModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" type="submit" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Who do you want to share this note with?</h4>
+                            </div>
+                            <div class="modal-body" style="padding: 40px 50px;">
+                                <p>Enter the email of who you want to share the note with: </p>
+                                <p style="color: darkgrey;">For multiple emails, separate the emails with commas. </p>
+
+                                <input type="text" id="DestEmailEntry" class="form-control" required="required" />
+                                <center>
+                                    <label class="radio-inline">Read Only</label>
+                                    <input type="radio" id="read-only-permission" name="optradio" value="0" required="required"/>
+                                    <label class="radio-inline">Edit</label>
+                                    <input type="radio" id="edit-permission" name="optradio" value="1"/>
+                                </center>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" type="button" class="btn btn-success btn-default pull-right" onclick="ShareNote()"><span class="glyphicon glyphicon-ok"></span>Send</button>
+                                <button data-dismiss="modal" type="submit" class="btn btn-danger btn-default pull-left"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br />
+                <div class="tool-bar-all" style="text-align:center;">
+                    <!-- Sections with the buttons for the tool bar -->
+                    <span title="Text">
+                        <button id="btn1" class="dropdown-toggle" type="button" data-toggle="dropdown" onclick="ToolFunction(9)">
+                        <img src="Jot_Icons/Text.png" /></button>
+                    </span>
+                    <br />
+                    <span title="Draw and Highligher">
+                        <button id="btn2" class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        <img src="Jot_Icons/brush.png" /></button>
+                     </span>
+
+                    <br />
+
+                    <span title="Shapes">
+                        <button id="btn3" class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        <img src="Jot_Icons/Shapes.png" /></button>
+                    </span>
+
+                    <br />
+                    <br />
+
+                    <span title="Share/Export">
+                        <button id="ShareNoteButton" type="button" data-toggle="dropdown"><i class='fa fa-share-alt fa-4x' aria-hidden='true' style="color: #b40f18;"></i></button>
+                    </span>
+                    <br />
+                    <br />
+
+                    <span title="Settings">
+                        <button id='btn4' class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        <img src="Jot_Icons/Settings.png" /></button>
+                    </span>
+
+                    <br />
+                    <br />
+                <!--  END Sections with the buttons for the tool bar -->
+                </div>
+            </ul>
+
+            <ul class="list-unstyled main-menu " id="tool-bar-text">
+                <!-- Text Modal -->
+                <button id="back-btn1" type="button" class="btn btn-danger pull-left"><span class="glyphicon glyphicon-arrow-left"></span>Back</button>
+                <br /> <br />
+                <h4>Text Tool</h4>
+                
+                <br />
+                <p>Select Text Size</p>
+                <input type="range" id="textRange" min="5" max="90" step="1" value="30" onchange="ChangeFontSize(this.value);">
+                <span id="textsize" style="color: white">30</span>
+                <br />
+                <div class="col-center-block" style="align-content: center;" id="stylepicker">
+                    <span class="stylepickercells"  style="font-weight: bold" onclick="BIU('bold');"><i class="material-icons">format_bold</i></span>
+                    <span class="stylepickercells"  style="font-style: italic" onclick="BIU('italic');"><i class="material-icons">format_italic</i></span>
+                    <span class="stylepickercells" style="font-style: italic; font-weight: bold" onclick="BIU('italic bold');"><i class="material-icons">format_bold</i><i class="material-icons">format_italic</i></span>
+                    <span class="stylepickercells" onclick="BIU('small-caps');"><i class="material-icons">text_fields</i></span>
+                </div>
+                <br />
+
+                <p>Select a font</p>
+                <select id="font" onchange="ChangeFont(this);">
+                    <option style="font-family: arial;">Arial</option>
+                    <option style="font-family: Verdana;">Verdana</option>
+                    <option style="font-family: Times New Roman;">Times New Roman</option>
+                    <option style="font-family: Courier New;">Courier New</option>
+                    <option style="font-family: serif;">serif</option>
+                    <option style="font-family: sans-serif;">sans-serif</option>
+                    <option style="font-family: Comic Sans MS;">Comic Sans MS </option>
+                    <option style="font-family: Lobster;">Lobster</option>
+                </select>
+                <br />
+                <div id="colorpicker2"  style="text-align: center; display: inline-block; margin: 2em; width: 50%;">
+                    <p>Text Color</p>
+                    <div class="col-sm-2 colorpickercells" style="background-color: red; height: 25px;" onclick="TextColor(1)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: blue; height: 25px;" onclick="TextColor(2)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: green; height: 25px;" onclick="TextColor(3)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: yellow; height: 25px;" onclick="TextColor(4)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: purple; height: 25px;" onclick="TextColor(5)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: black; height: 25px;" onclick="TextColor(6)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: white; height: 25px;" onclick="TextColor(7)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: teal; height: 25px;" onclick="TextColor(8)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: brown; height: 25px;" onclick="TextColor(9)">
+                        <br />
+                    </div>
+                </div>
+                <br /> <br />  <br /> <br /> 
+
+                <script>
+                    $(document).ready(function () {
+                        // Case for when a style was picked, make the background grey and make the thing red as hell
+                        $(".stylepickercells").click(function () {
+                            $("#stylepicker").children().css({ "background-color": "#18191b", "color": "#6F7D8C" });
+                            $(this).css({ "color": "#b40f18" });
+                        });
+                    });
+                    </script>
+            </ul>
+
+            <ul class="list-unstyled main-menu " id="tool-bar-draw">
+                <button id="back-btn2" type="button" class="btn btn-danger pull-left"><span class="glyphicon glyphicon-arrow-left"></span>Back</button>
+                <br /><br />
+                <h4>Draw Tool</h4>
+
+                <div id="drawpicker" style="text-align: center; display: inline-block;">
+                    <div id="Pen-tool" class="col-sm-2 drawpickercells" onclick="ToolFunction(7)">
+                        <!-- <span title="Pencil"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></span> -->
+                        <span title="Pencil"><i class="material-icons" style="font-size: 35px;">gesture</i></span>
+                        
+                    </div>
+                    <br /><br />
+                    <div id="Highlighter-tool" class="col-sm-2 drawpickercells svg_ico" onclick="ToolFunction(0)">
+                        <!-- <span title="Highligher"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></span> --> 
+                        <span title="Highligher" ><img id="grey" src="Jot_Icons/high_ico_grey.png" style="width: 35px; height: 35px;"/></span>
+                    </div>
+                    <br /><br />
+                    <div onclick="ToolFunction(8)" class="col-sm-2 drawpickercells">
+                        <span title="Eraser"><i class="fa fa-eraser fa-2x" aria-hidden="true"></i></span>
+                    </div>
+                    <br />
+                </div>
+
+                <br />
+                <!-- color picker for the draw tools -->
+                <div id="colorpicker" style="text-align: center; display: inline-block;">
+                    <h5>Pen Color</h5>
+                    <div class="col-sm-2 colorpickercells" style="background-color: red; height: 25px;" onclick="LineColor(1); ">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: blue; height: 25px;" onclick="LineColor(2)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: green; height: 25px;" onclick="LineColor(3)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: yellow; height: 25px;" onclick="LineColor(4)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: purple; height: 25px;" onclick="LineColor(5)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: black; height: 25px;" onclick="LineColor(6)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: white; height: 25px;" onclick="LineColor(7)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: teal; height: 25px;" onclick="LineColor(8)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: brown; height: 25px;" onclick="LineColor(9)">
+                        <br />
+                    </div>
+                </div>
+
+                <br />
+                <!-- size picker for the size picker -->
+                <div id="sizepicker" style="text-align: center; display: inline-block;">
+                    <h5 class="title_pen" style ="background-color: #18191b ! important;">Pen Size</h5>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(1)">        
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em; width: 100%; ">
+                            <circle cx="15" cy="20" r="1" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                     </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(2)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em; width: 100%; ">
+                            <circle cx="15" cy="20" r="2" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(3)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em; width: 100%;">
+                            <circle cx="15" cy="20" r="3" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(4)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em; width: 100%;">
+                            <circle cx="15" cy="20" r="4" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(5)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="5" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(6)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="6" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(7)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="7" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(8)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="8" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(9)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="9" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(10)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="10" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(11)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="11" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(12)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="12" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(13)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="13" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(14)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="14" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                    <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(15)">
+                        <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
+                            <circle cx="15" cy="20" r="15" stroke="black" stroke-width="3" fill="black" />
+                        </svg>
+                    </div>
+                </div>
+                <br /> <br />  <br /> <br /> 
+                <script>
+                    $(document).ready(function () {
+                        // Case for when a size was picked, make the background grey
+                        $(".sizepickercells").click(function () {
+                                $("#sizepicker").children().css({ "background-color": "white" });
+                                $('.title_pen').css({ "background-color": "#18191b" });
+                                $(this).css({ "background-color": "grey" });
+                        });
+                        // case for when a color is picked, dynamically remove all the checkmarks and add the new one to the color they selected. 
+                        $(".colorpickercells").click(function () {
+                            var d = document.getElementById("check-box"); // get all of the current check boxes so that we can remove them. 
+                            if (d != null) // if there are any marks that need to be removed
+                                d.parentNode.removeChild(d);
+                            // add the new check box by dynamically overlaying the check box icon over the div that contains the color
+                            $(this).css({ "border-color": "white" }).append('<div id="check-box" style="position:absolute; top: 0em; left: 0em; width: 100%; z-index: 1000; opacity:1;"><i class="fa fa-check-circle fa-1x" aria-hidden="true"></i></div>');
+                        });
+
+                        $(".drawpickercells").click(function () { // this allows the icons at the top to change color when picked
+                            $("#drawpicker").children().css({ "background-color": "#18191b", "color": "#6F7D8C" });
+                            $(this).css({ "color": "#b40f18" });
+                        });
+                    });
+                 </script>
+
+            </ul>
+
+            <ul class="list-unstyled main-menu " id="tool-bar-shapes">
+                <!-- Shapes Settings -->
+                <button id="back-btn3" type="button" class="btn btn-danger pull-left"><span class="glyphicon glyphicon-arrow-left"></span>Back</button>
+                <br /><br />
+                <h4>Shapes Tool</h4>
+         
+
+                <br />
+                <!-- Code to display the different shapes options to the user -->
+                <div id="shapepicker" style="align-content:center; display: inline-block;">
+                    <div class="col-sm-4 shapepickercells" onclick="ToolFunction(1); ">
+                        <span title="Circle"> <i class="material-icons shape_ico_size" style="font-size: 40px;" >panorama_fish_eye</i></span>
+                    </div>
+                    <div class="col-sm-4 shapepickercells" onclick="ToolFunction(6)">
+                        <span title="Ellipse"><i class="material-icons shape_ico_size" style="font-size: 40px;">vignette</i></span>
+                    </div>
+                    <div class="col-sm-4 shapepickercells" onclick="ToolFunction(2)">
+                        <span title="Rectangle"> <i class="material-icons shape_ico_size" style="font-size: 40px;">crop_5_4</i></span>
+                    </div>
+                   
+                    <div class="col-sm-4 shapepickercells"  onclick="ToolFunction(3)">
+                        <span title="Line"><i class="material-icons shape_ico_size" style="font-size: 40px;">linear_scale</i></span>
+                    </div>
+                    <div class="col-sm-4 shapepickercells" onclick="ToolFunction(4)">
+                        <span title="Triangle"> <i class="material-icons shape_ico_size" style="font-size: 40px;">change_history</i></span>
+                    </div>
+                    <div class="col-sm-4 shapepickercells" onclick="ToolFunction(5)">
+                        <span title="Square"> <i class="material-icons shape_ico_size" style="font-size: 40px;"> check_box_outline_blank</i></span>
+                    </div>
+                    <div class="col-sm-4 shapepickercells" onclick="DeleteSelectedShape()">
+                        <span title="Delete Selected Shape"> <i class="material-icons shape_ico_size" style="font-size: 40px;"> delete</i></span>
+                    </div>
+                </div>
+
+                <!-- Color picker for different shapes -->
+                 <div id="colorpicker2"  style="text-align: center; display: inline-block; margin: 2em; width: 50%;">
+                    <h5>Shape Color</h5>
+                    <div class="col-sm-2 colorpickercells" style="background-color: red; height: 25px;" onclick="ToolColor(1); ">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: blue; height: 25px;" onclick="ToolColor(2)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: green; height: 25px;" onclick="ToolColor(3)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: yellow; height: 25px;" onclick="ToolColor(4)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: purple; height: 25px;" onclick="ToolColor(5)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: black; height: 25px;" onclick="ToolColor(6)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: white; height: 25px;" onclick="ToolColor(7)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: teal; height: 25px;" onclick="ToolColor(9)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: brown; height: 25px;" onclick="ToolColor(10)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style=" height: 25px; background-color: lightgrey; font-size: 15px; color:#6F7D8C; text-align: center; " onclick="ToolColor(8)">
+                         &#9940;
+                    </div>
+                </div>
+                <!-- Color picker for the different outline colors -->
+                <div id="colorpicker3"  style="text-align: center; display: inline-block; margin: 2em; width: 50%;">
+                    <h5>Shape Outline Color</h5>
+                    <div class="col-sm-2 colorpickercells" style="background-color: red; height: 25px;" onclick="ToolOutlineColor(1); ">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: blue; height: 25px;" onclick="ToolOutlineColor(2)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: green; height: 25px;" onclick="ToolOutlineColor(3)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: yellow; height: 25px;" onclick="ToolOutlineColor(4)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: purple; height: 25px;" onclick="ToolOutlineColor(5)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: black; height: 25px;" onclick="ToolOutlineColor(6)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: white; height: 25px;" onclick="ToolOutlineColor(7)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: teal; height: 25px;"  onclick="ToolOutlineColor(8)">
+                        <br />
+                    </div>
+                    <div class="col-sm-2 colorpickercells" style="background-color: brown; height: 25px;"  onclick="ToolOutlineColor(9)">
+                        <br />
+                    </div>
+                     <div class="col-sm-2 colorpickercells" style="height: 25px; background-color: lightgrey; font-size: 15px; color:#6F7D8C; text-align: center; " onclick="ToolOutlineColor(10)">
+                         &#9940;
+                    </div>
+
+                </div>
+                <br /><br />
+                <p>Outline Size</p>
+                <input type="range" id="txtRange" min="1" max="20" step="1" value="10" onchange="OutlineThicknessFunction(this.value); showValue2(this.value);">
+                <span id="txtsize" style="color: white">10</span>
+                 <br /> <br />  <br /> <br /> 
+
+                    <script>
+                        $(document).ready(function () {
+                            // Case for when a size was picked, make the background grey
+                            $(".shapepickercells").click(function () {
+                                $("#shapepicker").children().css({ "background-color": "#18191b", "color": "#6F7D8C" });
+                                $('.title_pen').css({ "background-color": "#18191b" });
+                                $(this).css({ "color": "#b40f18" });
+                            });
+                            // case for when a color is picked, dynamically remove all the checkmarks and add the new one to the color they selected. 
+                            $(".colorpicker2cells").click(function () {
+                                var d = document.getElementById("check-box"); // get all of the current check boxes so that we can remove them. 
+                                if (d != null) // if there are any marks that need to be removed
+                                    d.parentNode.removeChild(d);
+                                // add the new check box by dynamically overlaying the check box icon over the div that contains the color
+                                $(this).css({ "border-color": "white" }).append('<div id="check-box2" style="position:absolute; top: 0em; left: 0em; width: 100%; z-index: 1000; opacity:1;"><i class="fa fa-check-circle fa-1x" aria-hidden="true"></i></div>');
+                            });
+                        });
+                 </script>
+
+            </ul>
+            <ul class="list-unstyled main-menu " id="tool-bar-settings">
+                <!-- Settings Modal -->
+                <button id="back-btn4" type="button" class="btn btn-danger pull-left"><span class="glyphicon glyphicon-arrow-left"></span>Back</button>
+                <br /><br />
+                <h4>Settings</h4>
+
+
+                <span title="undo"><button type="button" onclick="undo()"><i class="material-icons">undo</i></button></span>
+                <span title="redo"><button type="button" onclick="redo()"><i class="material-icons">redo</i></button></span>
+                <span title="print"><button type="button" onclick="Print()"><i class="fa fa-print fa-2x" aria-hidden="true"></i></button></span>
+                <span title="download"><button type="button" onclick="downloadCanvas()"><i  class="fa fa-download fa-2x" aria-hidden="true"></i></button></span>
+                <span title="Save"><button type="button" onclick="SaveNote()"><i  class="fa fa-save fa-2x" aria-hidden="true"></i></button></span>
+                <button id="TemplateButton" type="button" class="btn btn-default btn-block">Background Templates</button>
+
+                <h5>Set your own template</h5>
+                <input class="btn btn-default btn-block" type="file" id="input" accept="image/jpeg, image/png" onchange="handleFiles(this.files); "/>
+                <br />
+
+                <br /><br />
+                <h5>Left Hand mode</h5>
+                <label class="switch" style="left: 5px; right: -5px;">
+                  <input class="savecheckbox" type="checkbox" onchange="lefthandedmode();">
+                  <div class="slider round" id="leftslider"></div>
+                </label>
+
+                <button type="button" onclick=" $('#Helpmodal').appendTo('body').modal('show');"><i class="fa fa-question-circle" style="position:absolute; bottom: 0px !important; right: 0px !important;" aria-hidden="true"></i></button>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- Menu icon in the top right corner  -->
+    <div class="pull-right navbar-header">
+        <a id="nav-expander" class="nav-expander fixed" >
+            <i class="fa fa-bars fa-lg white"></i>
+        </a>
+
+        <!-- Code above for slide out menu -->
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <!-- Code to pop up that with the notifications  -->
+    <div class="col-md-3 navbar-fixed-bottom">
+        <div class="alert alert-dismissable alert-success" id="success-alert">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+        </div>
+    </div>
+
+    <!-- Modal for display help -->
+    <div id="Helpmodal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close">&times;</button>
+                    <h4 class="modal-title">Help</h4>
+                </div>
+                <div class="modal-body" style="padding: 40px 50px;">
+                    <p>CTRL S - saves the note  </p>
+                    <p>CTRL Z - undo the last mark </p>
+                    <p>CTRL Q - redo the last mark </p>
+                    <p>CTRL 1 - Circle </p>
+                    <p>CTRL 2 - Rectangle </p>
+                    <p>CTRL 3 - Line </p>
+                    <p>CTRL 4 - Triangle </p>
+                    <p>CTRL 5 - Square </p>
+                    <p>CTRL 6 - FreeForm Line </p>
+                    <p>CTRL 7 - Erase  </p>
+                    <p>CTRL 8 - Text  </p>
+                    <p>CTRL P - Print  </p>
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" type="submit" class="btn btn-danger btn-default pull-left"><span class="glyphicon glyphicon-remove"></span>Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End popup for help options -->
+
+
+
+
+    <!--  Control for the canvas -->
+    <div class="col-xs-1"></div>
+    <div class="col-xs-6 col-center-block">
+        <canvas id="myCanvas" height="1300" width="1000">Your browser does not support HTML5 canvas :( 
+        </canvas>
+        <script src="JavaScript/Shapes.js"></script>
+    </div>
+
+    <div id="AddPageIcon" style="position: fixed;bottom: 0;left: 0px; z-index: 1000"> <!-- Add page icon in the bottom right -->
+        <span title="Add a Page" onclick="addPage()" >
+            <span class="fa-stack fa-lg" >
+              <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-plus fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+        </span>
+    </div>
+
+    <div id="RemovePageIcon" style="position: fixed;bottom: 0;left: 35px; z-index: 1000"> <!-- Remove page icon in the bottom right -->
+        <span title="Remove a Page" onclick="removePage()" >
+            <span class="fa-stack fa-lg" >
+              <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-minus fa-stack-1x fa-inverse" aria-hidden="true"></i>
+            </span>
+        </span>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Navigation Menu Slider
+            $('#nav-expander').on('click', function (e) {
+                e.preventDefault();
+                $('body').toggleClass('nav-expanded');
+                $('#tool-bar').show();
+            });
+            $('#nav-close').on('click', function (e) {
+                e.preventDefault();
+                $('body').removeClass('nav-expanded');
+                $('#tool-bar').hide();
+                $('body').toggleClass('nav-expanded');
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        // This function can not be moved to a seperate file
+        // These function show and hide the different settings panels for each option in the tool bar
+        $(document).ready(function () {
+            $('#btn1').click(function () { // btn 1 maps to text settings
+                $('#tool-bar-content').hide();
+                $('#tool-bar-text').fadeIn("slow");
+            });
+            $("#back-btn1").on('click', function (e) {
+                $('#tool-bar-text').hide();
+                $('#tool-bar-content').show();
+            });
+            $('#btn2').click(function () { // btn 2 maps to draw settings 
+                $('#tool-bar-content').hide();
+                $('#tool-bar-draw').fadeIn("slow");
+            });
+            $("#back-btn2").on('click', function (e) {
+                $('#tool-bar-draw').hide();
+                $('#tool-bar-content').show();
+            });
+            $('#btn3').click(function () { // btn 3 maps to the shapes settings
+                $('#tool-bar-content').hide();
+                $('#tool-bar-shapes').fadeIn("slow");
+            });
+            $("#back-btn3").on('click', function (e) {
+                $('#tool-bar-shapes').hide();
+                $('#tool-bar-content').show();
+            });
+            $('#btn4').click(function () { // btn 4 maps to the settings
+                $('#tool-bar-content').hide();
+                $('#tool-bar-settings').fadeIn("slow");
+            });
+            $("#back-btn4").on('click', function (e) {
+                $('#tool-bar-settings').hide();
+                $('#tool-bar-content').show();
+            });
+            $('#MainContent_notesName').click(function () { // notesName
+                $("#NoteNamemodal").appendTo("body").modal('show');
+            });
+            $('#ShareNoteButton').click(function () {
+                $("#ShareNoteModal").appendTo("body").modal('show');
+            });
+            $('#TemplateButton').click(function () {
+                $("#TemplateModal").appendTo("body").modal('show');
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        function ShareNote() {
+            var DestEmail = document.getElementById("DestEmailEntry").value;
+            // get the permission from the radio buttons
+            var Permission;
+            if (document.getElementById('read-only-permission').checked && DestEmail) {          // since required, you know that ONE has to be checked
+                Permission = document.getElementById('read-only-permission').value; // 0
+            }
+            else if (document.getElementById('edit-permission').checked && DestEmail) {
+                Permission = document.getElementById('edit-permission').value;      // 1
+            }
+            else
+                alert("Note not shared. Please make sure entire form is filled out."); // if string empty || box not checked, error
+
+            $.ajax({
+                type: "POST",
+                url: "DrawPage.aspx/ShareNote",
+                data: '{email: "' + DestEmail + '", permission: "' + Permission + '" }',
+                processdata: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnSuccess_ShareNote,
+                failure: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+        function OnSuccess_ShareNote(response) {
+            alert(response.d);
+        }
+    </script>
+
+    <script type="text/javascript">
+        // Can NOT be moved to a seperate file
+        // Switch for the different CTRL traps that our site uses
+        $(window).bind('keydown', function (event) {
+            if (event.ctrlKey || event.metaKey) {
+                switch (String.fromCharCode(event.which).toLowerCase()) {
+                    case 's': // CTRL S calls save
+                        event.preventDefault();
+                        SetStack();
+                        document.getElementById("success-alert").innerHTML = "<strong>Note Saved</strong>";
+                        ShowAlert();
+                        break;
+                    case 'z': // CTRL Z calls undo
+                        event.preventDefault();
+                        undo();
+                        document.getElementById("success-alert").innerHTML = "<strong>Last mark was undone!</strong>";
+                        ShowAlert();
+                        break;
+                    case 'p': // CTRL P calls print
+                        event.preventDefault();
+                        Print();
+                        break;
+                    case 'q': // CTRL Q calls redo
+                        event.preventDefault();
+                        redo();
+                        document.getElementById("success-alert").innerHTML = "<strong>Last mark that was undone was just redone</strong>";
+                        ShowAlert();
+                        break;
+                    case 'h': // CTRL H displays the help section
+                        event.preventDefault();
+                        $("#Helpmodal").appendTo("body").modal('show');
+                        break;
+                    case '1': // CTRL 1 Selects the Circle Tool
+                        event.preventDefault();
+                        ToolFunction(1);
+                        document.getElementById("success-alert").innerHTML = "<strong>Circle Tool Selected</strong>";
+                        ShowAlert();
+                        break;
+                    case '2': // CTRL 2 Selects the Rectangle Tool
+                        event.preventDefault();
+                        ToolFunction(2);
+                        document.getElementById("success-alert").innerHTML = "<strong>Rectangle Tool Selected</strong>";
+                        ShowAlert();
+                        break;
+                    case '3': // CTRL 3 Selects the Line Tool
+                        event.preventDefault();
+                        ToolFunction(3);
+                        document.getElementById("success-alert").innerHTML = "<strong>Line Tool Selected</strong>";
+                        ShowAlert();
+                        break;
+                    case '4': // CTRL 4 Selects the Triangle Tool
+                        event.preventDefault();
+                        ToolFunction(4);
+                        document.getElementById("success-alert").innerHTML = "<strong>Triangle Tool Selected</strong>";
+                        ShowAlert();
+                        break;
+                    case '5': // CTRL 5 Selects the Square Tool
+                        event.preventDefault();
+                        ToolFunction(5);
+                        document.getElementById("success-alert").innerHTML = "<strong>Square Tool Selected</strong>";
+                        ShowAlert();
+                        break;
+                    case '6': // CTRL 6 Selects the FreeForm Tool
+                        event.preventDefault();
+                        ToolFunction(7);
+                        document.getElementById("success-alert").innerHTML = "<strong>FreeForm Tool Selected</strong>";
+                        ShowAlert();
+                        break;
+                    case '7': // CTRL 7 Selects the Eraser Tool
+                        event.preventDefault();
+                        ToolFunction(8);
+                        document.getElementById("success-alert").innerHTML = "<strong>Eraser Tool Selected</strong>";
+                        ShowAlert();
+                        break;
+                    case '8': // CTRL 8 Selects the Text Tool
+                        event.preventDefault();
+                        ToolFunction(9);
+                        document.getElementById("success-alert").innerHTML = "<strong>Text Tool Selected</strong>";
+                        ShowAlert();
+                        break;
+                }
+            }
+        });
+
+    </script>
+
+
+    <script type="text/javascript">
+        // DO NOT REMOVE FROM THIS FILE OR FIRE
+        // Hide the pop up so that it isn't displays when the page first loads
+        // This function goes on load
+        // Can't remove from file.
+        $(document).ready(function () {
+            $("#success-alert").hide(); // hide the alert green popup
+            $("#pleaseWaitDialog").hide(); // hide the loading screen things
+            $("#TemplateModal").hide(); // hide the template with the modal
+            $("#SaveorNay").hide();
+            has_shown_save = false;
+
+            // hide the layers for the tools
+            $('#tool-bar-text').hide();
+            $('#tool-bar-draw').hide();
+            $('#tool-bar-shapes').hide();
+            $('#tool-bar-settings').hide();
+        });
+    </script>
+
+    <script type="text/javascript">
+        function showValue(newValue) {
+            // This is for the slider for selecting the size of text
+            document.getElementById("textsize").innerHTML = newValue;
+        }
+    </script>
+    <script type="text/javascript">
+        function showValue2(newValue) {
+            // they look the same, but do two different things lolz
+            // This is for the slider for selecting the size of shapes
+            document.getElementById("txtsize").innerHTML = newValue;
+        }
+    </script>
+    <script type="text/javascript">
+        var autosavestatus = true;
+        function autosavetoggle() {
+            autosavestatus = !autosavestatus; // toggle val
+            if (autosavestatus) {
+                document.getElementById("success-alert").innerHTML = "<strong>Auto Save On</strong> ";
+                has_shown_save = false;
+                autosaveInterval = setInterval(function () { AutoSave(); }, TIME_SAVE * 1000); // Default: 60 seconds 
+            }
+            else {
+                document.getElementById("success-alert").innerHTML = "<strong>Auto Save Off</strong> ";
+                clearInterval(autosaveInterval);
+            }
+            // ShowAlert();
+            
+        }
+     </script>
+        <script type="text/javascript">
+            // This function flips the tool bar from the side of the screen that its on to the other
+            // For example if the tool bar is on the right hand side, it will flip to the other side
+            // The add page icon will also flip side from left to right so that it won't conflict
+            // Finally the canvas will shift over slightly so the tool bar doesn't cover it 
+            // and to utilize the screen resolution
+            var leftmode = false;
+            function lefthandedmode() {
+                leftmode = !leftmode; // toggle val
+                var tool = document.getElementById("tool-bar"); // tool bar 
+                var exp = document.getElementById("nav-expander"); // expander to unhide tool bar
+                var add = document.getElementById("AddPageIcon"); // need to flip the add page icon to the other side
+                var rem = document.getElementById("RemovePageIcon");
+                var canvas = document.getElementById("myCanvas");
+
+                if (leftmode) {
+                    document.getElementById("success-alert").innerHTML = "<strong>Left Handed Mode On</strong> ";
+                    tool.style.left = '0em';
+                    // reset the expander to the left
+                    exp.style.left = '0em';
+                    exp.style.right = 'auto';
+                    // flip add page icon
+                    add.style.right = '0em';
+                    add.style.left = 'auto';
+                    // flip remove page icon
+                    rem.style.right = '3em';
+                    rem.style.left = 'auto';
+                    // Move the canvas over so you can see it
+                    canvas.style.marginLeft = '135px';
+                }
+                else {
+                    document.getElementById("success-alert").innerHTML = "<strong>Left Handed Mode Off</strong> ";
+                    tool.style.right = '0em';
+                    tool.style.left = 'auto';
+                    // reset the expander to the right
+                    exp.style.right = '0em';
+                    exp.style.left = 'auto';
+                    // flip add page icon
+                    add.style.left = '0em';
+                    add.style.right = 'auto';
+                    // flip remove page icon
+                    rem.style.left = '3em';
+                    rem.style.right = 'auto';
+                    // remove margin left
+                    canvas.style.marginLeft = 'auto';
+                }
+                ShowAlert();
+            }
+     </script>
+</html>
