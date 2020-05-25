@@ -71,7 +71,16 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #f0f1f5;
+  background-color: #9e0404ce;
+}
+
+.footer-copyright {
+  font-size: 10px;
+}
+
+.page-footer {
+  /* background-color: #263238 !important; */
+  
 }
 
 .dev-icons {
@@ -79,7 +88,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #f0f1f5;
+  color: #9e0404ce;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -252,7 +261,7 @@ li:hover li:active {
 
 /* The cursor blinking effect */
 .typewriter > .wrap { 
-  border-right: .05em solid #3df218;
+  border-right: .1em solid #3df218;
   animation:
     caret .5s steps(1) infinite;
 }
