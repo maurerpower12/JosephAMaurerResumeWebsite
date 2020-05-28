@@ -66,9 +66,10 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
       <div class="w-100">
-        <h1 class="mb-0">Joseph
+        <!-- <h1 class="mb-0">Joseph
           <span class="text-primary">Maurer</span>
-        </h1>
+        </h1> -->
+        <img src="img/[DRAFT] Joseph Maurer Logo.png" class="img-name">
         <div class="subheading mb-5">Software Engineer
         </div>
         <h4>
@@ -313,52 +314,65 @@
                   <textarea type="text" id="message5" name="message5" rows="2" class="form-control md-textarea white-text"></textarea>
                   <label for="message5">Your message</label>
               </div> -->
-              <div class="controls">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="form_name">Name *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name"
-                      required="required" data-error="Name is required.">
+
+              <form id="contact-form" method="post" action="contact.php" role="form">
+                <div class="controls">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="form_name">Name *</label>
+                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name"
+                        required="required" data-error="Name is required.">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="form_email">Email *</label>
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email"
+                        required="required" data-error="Valid email is required.">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label for="form_message">Message *</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Your Message" rows="4"
+                        required="required" data-error="Please, leave us a message."></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 form-group">
+                    <div class="g-recaptcha" data-sitekey="6Ldn3fsUAAAAAB5bAs9rYjvoC9F11YdQoAbGNMs-"
+                      data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                    <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
                     <div class="help-block with-errors"></div>
                   </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email"
-                      required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Your Message" rows="4"
-                      required="required" data-error="Please, leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!--Grid row-->
-              <div class="row d-flex align-items-center">
-
-                <div class="messages"></div>
-
-                <div class="form-group">
-                  <div class="g-recaptcha" data-sitekey="6Ldn3fsUAAAAAB5bAs9rYjvoC9F11YdQoAbGNMs-" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                  <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
-                  <div class="help-block with-errors"></div>
-                </div>
-
-                  <!--Grid column-->
+              
                   <div class="text-center mb-3 col-md-12">
-                      <button type="submit" class="btn btn-success btn-block btn-rounded">Send message</button>
+                    <input type="submit" class="btn btn-success btn-send" value="Send message">
                   </div>
-                  <!--Grid column-->
+                </div>
+              
+                <!--Grid row-->
+                <!-- <div class="row d-flex align-items-center">
+              
+                  <div class="messages"></div>
+              
+                  <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="6Ldn3fsUAAAAAB5bAs9rYjvoC9F11YdQoAbGNMs-"
+                      data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                    <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                    <div class="help-block with-errors"></div>
+                  </div>
 
-              </div>
-              <!--Grid row-->
+                  <div class="text-center mb-3 col-md-12">
+                    <button type="submit" class="btn btn-success btn-block btn-rounded">Send message</button>
+                    <input type="submit" class="btn btn-success btn-send" value="Send message">
+                  </div>
+              
+                </div> -->
+                <!--Grid row-->
+              </form>
 
             </div>
           </div>
@@ -409,7 +423,8 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.js"></script>
-
+  <script src="js/validator.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 
 </html>

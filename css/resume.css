@@ -78,9 +78,16 @@ p.lead {
   font-size: 10px;
 }
 
-.page-footer {
-  /* background-color: #263238 !important; */
-  
+.img-name {
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.with-errors {
+  color: red;
 }
 
 .dev-icons {

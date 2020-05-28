@@ -4,13 +4,13 @@ require('recaptcha-master/src/autoload.php');
 
 // configure
 // an email address that will be in the From field of the email.
-$from = 'Demo contact form <demo@domain.com>';
+$from = 'contact@josephamaurer.com';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Demo contact form <demo@domain.com>';
+$sendTo = 'contact@josephamaurer.com';
 
 // subject of the email
-$subject = 'New message from contact form';
+$subject = 'New message from JosephAMaurer contact form';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
