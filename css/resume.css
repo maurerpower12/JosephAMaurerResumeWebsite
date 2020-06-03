@@ -86,6 +86,13 @@ p.lead {
   max-width: 100%;
 }
 
+.logo-section {
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
 .with-errors {
   color: red;
 }
@@ -315,4 +322,35 @@ li:hover li:active {
 
 .concept {
   border: 1px solid #86BE91;
+}
+
+/* svg concept logo stuff */
+.overlay-wrap {
+  position: relative;
+  display: inline-block; /* <= shrinks container to image size */
+}
+
+.svg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#jm {
+  stroke-dasharray: 0 740;
+  stroke-dashoffset: -500;
+  stroke-width: 2.5px;
+  fill: transparent;
+  stroke: #3df218;
+  border-bottom: 5px solid black;
+  animation-name: animate-stroke;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes animate-stroke {
+  0%  {stroke-width: .5px; stroke-dashoffset: -500; stroke-dasharray: 0 740; fill: #3cf21800;}
+  100%  {stroke-width: 2.5px; stroke-dashoffset: 0; stroke-dasharray: 3000; fill: #3df218;}
 }
