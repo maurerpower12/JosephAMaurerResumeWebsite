@@ -342,15 +342,59 @@ li:hover li:active {
   stroke-dashoffset: -500;
   stroke-width: 2.5px;
   fill: transparent;
-  stroke: #3df218;
+  stroke: #000000;
   border-bottom: 5px solid black;
   animation-name: animate-stroke;
-  animation-duration: 3.5s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+/* This is for the small logo in the nav bar on mobile */
+#initials {
+  stroke-dasharray: 0 740;
+  stroke-dashoffset: -500;
+  stroke-width: 2.5px;
+  fill: transparent;
+  stroke: #ffffff;
+  border-bottom: 5px solid black;
+  animation-name: animate-stroke;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes animate-stroke {
-  0%  {stroke-width: .5px; stroke-dashoffset: -500; stroke-dasharray: 0 740; fill: #3cf21800;}
-  100%  {stroke-width: 2.5px; stroke-dashoffset: 0; stroke-dasharray: 3000; fill: #3df218;}
+  0%  { stroke-width: .5px; stroke-dashoffset: -500; stroke-dasharray: 0 740; }
+  100%  { stroke-width: 3.5px; stroke-dashoffset: 0; stroke-dasharray: 9999; }
 }
+
+/* Before and After lines */
+.lined {
+  display: inline-block;
+  position: relative;
+}
+
+.lined::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5rem;
+  height: 3px;
+  background: #9e0404ce;
+  }
+
+.lined::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background: #9e0404ce;
+  }
