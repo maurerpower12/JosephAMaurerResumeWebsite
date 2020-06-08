@@ -78,6 +78,10 @@ p.lead {
   font-size: 10px;
 }
 
+img {
+  pointer-events: none;
+}
+
 .img-name {
   padding: 0;
   display: block;
@@ -117,7 +121,7 @@ p.lead {
 
 @media (min-width: 992px) {
   #sideNav {
-    text-align: left;
+    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -397,4 +401,20 @@ li:hover li:active {
   width: 3rem;
   height: 2px;
   background: #9e0404ce;
+  }
+
+  .card {
+    font-weight: 400;
+    border: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 5px 25px 5px;
+  }
+
+  .card-grid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
