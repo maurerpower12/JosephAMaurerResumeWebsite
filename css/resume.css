@@ -1,6 +1,5 @@
 /*!
- * Start Bootstrap - Resume v5.0.8 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2019 Start Bootstrap
+ * Derived from https://startbootstrap.com/template-overviews/resume with heavy modifications
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
@@ -295,7 +294,7 @@ li:hover li:active {
   stroke-dashoffset: -500;
   stroke-width: 2.5px;
   fill: transparent;
-  stroke: #000000;
+  stroke: #738B59;
   border-bottom: 5px solid black;
   animation-name: animate-stroke;
   animation-duration: 10s;
@@ -353,6 +352,7 @@ li:hover li:active {
   }
 
 .card {
+  max-width: 450px;
   font-weight: 400;
   border: 0;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
@@ -366,4 +366,15 @@ li:hover li:active {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.card-header-img {
+  height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#googleForm {
+  max-width: 550px;
 }

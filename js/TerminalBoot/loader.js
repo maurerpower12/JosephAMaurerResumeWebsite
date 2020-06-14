@@ -1,6 +1,9 @@
-/* Derived from https://tlijm.csb.app with heavy modifications */
+/* 
+ * Derived from https://tlijm.csb.app with heavy modifications 
+ * Licensed under MIT
+*/
 
-import {type} from "./terminal.js";
+import {type, poweroff} from "./terminal.js";
 
 window.onload = function () {
     var introArray = [[
@@ -14,7 +17,7 @@ window.onload = function () {
     ], [
         "> BOOT Joseph Maurer's Portfolio -fast",
         " ",
-        "Finding missing semi-colon.............FOUND IT!",
+        "Finding missing semicolon.............FOUND IT!",
         " ",
         "WE HAVE LIFT OFF",
     ]];
@@ -26,3 +29,7 @@ function random_item(items)
 {
    return items[Math.floor(Math.random()*items.length)];
 }
+
+$('.loader').click(function(event){
+    poweroff();
+});

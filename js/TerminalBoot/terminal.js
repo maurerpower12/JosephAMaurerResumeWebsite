@@ -1,4 +1,12 @@
-/* Derived from https://tlijm.csb.app with heavy modifications */
+/* 
+ * Derived from https://tlijm.csb.app with heavy modifications 
+ * Licensed under MIT
+*/
+
+/*
+* True if the laoding screen is still showing.
+*/
+var loading = false;
 
 /*
 * Types the given text on the screen 
@@ -12,11 +20,12 @@ async function type(
         initialWait = 10,
         // Wait after done typing.
         finalWait = 750,
-        // True creates a new div to type in.
+        // True uses the passed container, else we make a new div.
         useContainer = false
     } = {},
     container = document.querySelector(".terminal")
 ) {
+    loading = true;
     let typerDiv = useContainer ? container : document.createElement("div");
     typerDiv.classList.add("typer", "active");
     if (!useContainer) {
@@ -27,12 +36,16 @@ async function type(
         await pause(initialWait / 1000);
     }
 
+    // Did we get passed an array?
     if (Array.isArray(text)) {
+        // Join it to a text string.
         text = text.join("\n");
     }
+    // split the text into a queue to iterate over
     let queue = text.split("");
 
-    while (queue.length) {
+    while (queue.length && loading) {
+        // shifts the next character out of the queue.
         let char = queue.shift();
         // Get the element in html form.
         let element = getChar(char);
@@ -40,14 +53,14 @@ async function type(
             typerDiv.appendChild(element);
         }
         scroll(container);
+
+        // Delay for some random amount of time between input.
         var delta =  (Math.random() * (1.85) + wait);
         await pause(delta / 1000);
     }
 
     await pause(finalWait / 1000);
-    document.querySelector("#crt").classList.add("poweroff");
-    await pause(0.2);
-    document.querySelector(".loader").remove();
+    poweroff();
     return;
 }
 
@@ -103,4 +116,21 @@ function scroll(el = document.querySelector(".terminal")) {
     el.scrollTop = el.scrollHeight;
 }
 
-export {type};
+/**
+ * "powers off" the crt monitor
+ * */
+async function poweroff() {
+    if (loading) {
+        document.querySelector("#crt").classList.add("poweroff");
+        await pause(0.2);
+
+        // Remove the loader from view
+        let loaderElement = document.querySelector(".loader");
+        if (loaderElement) {
+            loaderElement.remove();
+        }
+    }
+    loading = false;
+}
+
+export {type, poweroff};

@@ -1,4 +1,8 @@
-/* Derived from https://tlijm.csb.app with heavy modifications */
+/* 
+ * Derived from https://tlijm.csb.app with heavy modifications 
+ * Licensed under MIT
+*/
+
 
   /*********** PARTS OF THE SCREEN *************/
   :root {
@@ -36,7 +40,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background: #1f2c23; */
     padding: 4rem 2rem;
     border-radius: 0.5rem;
     color: #3df218;
@@ -53,7 +56,6 @@
   .terminal {
     position: relative;
     height: 100%;
-    padding: 2rem;
     overflow-y: auto;
     overflow-x: hidden;
     word-break: break-word;
