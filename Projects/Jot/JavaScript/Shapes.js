@@ -530,13 +530,6 @@ document.addEventListener('keydown', function (evt) {
         if(evt.keyCode == 46) //delete
         {
             DeleteSelectedShape();
-            //var temp = jotCanvas.marks.slice(0, selectedIndex);
-            //var temp2 = jotCanvas.marks.slice(selectedIndex + 1, jotCanvas.marks.length );
-            //jotCanvas.marks = temp.concat(temp2);
-            //m_marks = jotCanvas.marks;
-            ////jotCanvas.marks = jotCanvas.marks.slice(0, selectedIndex - 1) + jotCanvas.marks.slice(selectedIndex, jotCanvas.marks.length);
-            //jotCanvas.Draw();
-            //shapeSelected = false;
         }
     }
 
@@ -571,9 +564,9 @@ function AddText(string)
 
 function SaveNote()
 {
-    SetStack();
-    document.getElementById("success-alert").innerHTML = "<strong>Note Saved</strong>";
-    ShowAlert();
+    //SetStack();
+    //document.getElementById("success-alert").innerHTML = "<strong>Note Saved</strong>";
+    //ShowAlert();
 }
 
 
@@ -918,7 +911,7 @@ function ChangeFont() {
     var selectedValue = $('option:selected', SelectList).val();
 
     document.getElementById("success-alert").innerHTML = "Font changed to " + selectedValue;
-    ShowAlert();
+    //ShowAlert();
 
     fontfamily = selectedValue;
    

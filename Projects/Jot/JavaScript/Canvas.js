@@ -85,8 +85,6 @@ function Print() {
 
 //Function to add a page to the canvas
 function addPage() {
-    document.getElementById("success-alert").innerHTML = "<strong>Adding a page</strong>";
-    // ShowAlert();
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
     var height = canvas.height;
@@ -110,8 +108,6 @@ function addPage() {
 //Function to add a page to the canvas
 function removePage() {
     if (jotCanvas.pages > 1) {
-        document.getElementById("success-alert").innerHTML = "<strong>Removing a page</strong>";
-        // ShowAlert();
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
         var height = canvas.height;
@@ -159,92 +155,33 @@ function invert() {
 
 //saves note as pdf
 function downloadCanvas() {
-
-    ////link.href = document.getElementById(canvasId).toDataURL();
-    ////link.download = filename;
     var canvas = document.getElementById("myCanvas");
-    var context = canvas.getContext('2d');
-
-    destinationCanvas = document.createElement("canvas");
-    destinationCanvas.width = canvas.width;
-    destinationCanvas.height = canvas.height;
-    destinationcontext = destinationCanvas.getContext('2d');
-
 
     var canvas2 = document.createElement("canvas");
     canvas2.width = canvas.width;
     canvas2.height = 1300;
     canvas2context = canvas2.getContext('2d');
-   
-    canvas2context.drawImage(m_background, 0, 0, canvas.width, 1300 / jotCanvas.pages);
-    canvas2context.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, canvas2.width, canvas2.height);
-
-    var pageHeight = (canvas.height / jotCanvas.pages);
-    for (var i = 0; i < jotCanvas.pages; i++) {
-        var y1 = i * (canvas.height / jotCanvas.pages)
-
-        destinationcontext.drawImage(m_background, 0, y1, canvas.width, pageHeight);
-    }
-
-   // destinationcontext.drawImage(m_background, 0, 0, canvas.width, canvas.height);
-
-    var pageHeight = (canvas.height / jotCanvas.pages);
-    for (var i = 0; i < jotCanvas.marks.length; i++) { //Draws each mark on canvas
-
-     //   jotCanvas.marks[i].Draw(destinationcontext);
-    }
-
-
-    var displayHeight = 11 * jotCanvas.pages + 1;
-    height = displayHeight + "in"
-
-
-    // only jpeg is supported by jsPDF :(
-    var imgData = canvas2.toDataURL("image/jpeg", 1.0);
-
-
-
-
-
-
-
-
 
     var pdf = new jsPDF();
 
-    pdf.addImage(imgData, 'JPEG', 0, 0, 210, 295 * jotCanvas.pages);
+    //pdf.addImage(imgData, 'JPEG', 0, 0);//, 210, 295 * jotCanvas.pages);
 
-    for (var i = 1; i < jotCanvas.pages; i++) {
+    for (var i = 0; i < jotCanvas.pages; i++) {
         //JavaScript syntax:	context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
-        canvas2context.drawImage(destinationCanvas, 0, i * 1300, canvas.width, canvas.height, 0, 0, canvas.width, 1300);
-        canvas2context.drawImage(canvas, 0, i * 1300, canvas.width, canvas.height, 0, 0, canvas.width, 1300);
-        imgData = canvas2.toDataURL("image/jpeg", 1.0);
+        canvas2context.drawImage(canvas, 0, i * 1300, canvas.width, canvas.height);
+        var imgData = canvas2.toDataURL("image/jpeg", 1.0);
 
-        pdf.addPage();
         pdf.addImage(imgData, 'JPEG', 0, 0, 210, 295 * jotCanvas.pages);
+
+        if (i >= 1) {
+            pdf.addPage();
+        }
     }
 
-
-    
-    pdf.save( document.title + '.pdf'); 
+    pdf.save('JosephAMaurerJotSample.pdf'); 
     pdf.output('dataurlnewwindow');
 
-    window.open('mailto:user@example.com?subject=Note from Jot');
-
-
-
-    // For PNG 
-    //window.open(canvas.toDataURL('PNG'), filename, "left=0,top=0,width=" +
-    //   canvas.width + ",height=" + canvas.height + ",toolbar=0,resizable=0");
-
-    //for JPEG
-    // var dt = canvas.toDataURL('image/jpeg');
-    // this.href = dt;
-    // window.open(this.href, filename, "left=0,top=0,width=" +
-    //canvas.width + ",height=" + canvas.height + ",toolbar=0,resizable=0");
-
-    console.log("Save Finished");
-
+    // console.log("Save Finished");
 }
 
 //Below is the code to validate file extensions
@@ -260,7 +197,7 @@ function checkFile(file) {
     console.log("Uploaded file size: " + iFileSize);
     if (!(sFileExtension === "jpg" ||
             sFileExtension === "jpeg" ||
-            sFileExtension === "png") || iFileSize > 200000) {//10485760) { /// 10 mb
+            sFileExtension === "png") || iFileSize > 200000) {
         txt = "File type : " + sFileExtension + "\n\n";
         txt += "Size: " + iConvert + " MB \n\n";
         txt += "Please make sure your file is in jpg, or png format and less than 200 KB.\n\n";

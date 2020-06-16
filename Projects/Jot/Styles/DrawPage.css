@@ -31,8 +31,6 @@ body {
 #myCanvas {
     background-color: white;
     background-size: 100% 100%;
-    /*position: fixed;*/ /*This make the page not scrollable.*/
-    /*left: 0px;*/
     top: 125px;
     left: inherit;
     right: inherit;
@@ -45,7 +43,7 @@ body {
     z-index: -999999;
     cursor: inherit;
     margin-top: 50px; 
-left mode*/
+    /* left mode */
 }
 
 body {
@@ -203,9 +201,8 @@ nav {
     height: 100%;
     overflow: auto;
     position: fixed;
-    /*right: -15em;*/
     right: 0em;
-    top: 3em;
+    top: 0em;
     font-size: 15px;
     width: 15em;
     z-index: 12;
