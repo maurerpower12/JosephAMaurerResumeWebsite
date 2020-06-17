@@ -25,6 +25,9 @@
   <link href="css/resume.css" rel="stylesheet">
   <link href="css/loader.css" rel="stylesheet">
 
+  <!-- Google Maps API  -->
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwPHXf9DxihwhR69BVD6Ks95z3EnbZMUQ"></script>
 </head>
 
 <body id="page-top">
@@ -188,6 +191,7 @@
   <div class="container-fluid p-0">
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
+      <div id="map"></div>
       <div class="w-100">
         <div class="overlay-wrap">
           <div class="logo-section">
@@ -735,10 +739,18 @@
         </div>
         <div class="subheading mb-5">Software Engineer in Reno, Nevada
         </div>
-        <div class="text-center btnDiv d-lg-none">
-          <div class="box">
-            <a class="nav-link js-scroll-trigger fas fa-chevron-down enterBtn" href="#about"></a>
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <button class="btn btn-1">
+                <a class="nav-link js-scroll-trigger" href="#projects">See My Work</a>
+              </button>
+              <button class="btn btn-1">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a>
+              </button>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -907,7 +919,12 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
       <div class="w-100">
         <div>
-          <h2 class="mb-5 lined">Work & Personal Projects</h2>
+          <div class="lined">
+            <h2 class="d-sm-inline">Projects</h2>
+            <p class="d-sm-inline">A collection of work & personal projects</p>
+          </div>
+          <br>
+          <br>
     
           <div class="card-deck container-fluid">
             <!-- Row 1 -->
@@ -915,14 +932,15 @@
               <div class="card mb-3 col-lg-6">
                 <div class="row">
                   <div class="col-xs-4">
-                    <img src="img/OITNB/BaseGame.png" width="100%"
-                      class="card-header-img"
+                    <img src="img/OITNB/BaseGame.png" width="100%" class="card-header-img"
                       alt="Orange is the new black slot machine base game thumbnail">
                   </div>
                   <div class="col-xs-8">
                     <div class="card-body">
                       <h5 class="card-title">Orange Is The New Black Slot</h5>
-                      <p class="card-text">Based on the hit show, this game ties in strong game mechanics with the hit Netflix show's theme.</p>
+                      <p class="card-text">Based on the hit show, this game ties in strong game mechanics with the hit
+                        Netflix
+                        show's theme.</p>
                       <div>
                         <span class="coding skill">Unity</span>
                         <span class="coding skill">c#</span>
@@ -933,19 +951,20 @@
                     </div>
                   </div>
                 </div>
-              </div> 
+              </div>
     
               <div class="card mb-3 col-lg-6">
                 <div class="row">
                   <div class="col-xs-4">
-                    <img src="img/WOF_STP_GSD/STPLogo.png" width="100%" height="100%"
-                      class="card-header-img"
+                    <img src="img/WOF_STP_GSD/STPLogo.png" width="100%" height="100%" class="card-header-img"
                       alt="WOF STP GSD base game thumbnail">
                   </div>
                   <div class="col-xs-8">
                     <div class="card-body">
                       <h5 class="card-title">Wheel Of Fortune Super Times Pay Gold Spin Deluxe Slot</h5>
-                      <p class="card-text">This 3 reels 5 lines mechanical stepper slot machine was my first solo engineering project.</p>
+                      <p class="card-text">This 3 reels 5 lines mechanical stepper slot machine was my first solo
+                        engineering
+                        project.</p>
                       <div>
                         <span class="coding skill">Unity</span>
                         <span class="coding skill">c#</span>
@@ -964,20 +983,19 @@
               <div class="card mb-3 col-lg-6">
                 <div class="row justify-content-center">
                   <div class="col-xs-4">
-                    <img src="img/HQ/Home.png" class="card-header-img"
-                      alt="HQ Project thumbnail">
+                    <img src="img/HQ/Home.png" class="card-header-img" alt="HQ Project thumbnail">
                   </div>
                   <div class="col-xs-8">
                     <div class="card-body">
                       <h5 class="card-title">HQ Housing & Res Life App</h5>
-                      <p class="card-text">Management software built for Oregon 
+                      <p class="card-text">Management software built for Oregon
                         Tech Housing and Residence Life as part of my Senior Capstone project.</p>
-                        <div>
-                          <span class="coding skill">C#</span>
-                          <span class="coding skill">Javascript</span>
-                          <span class="coding skill">SQL</span>
-                          <span class="concept skill">MVC</span>
-                        </div>
+                      <div>
+                        <span class="coding skill">C#</span>
+                        <span class="coding skill">Javascript</span>
+                        <span class="coding skill">SQL</span>
+                        <span class="concept skill">MVC</span>
+                      </div>
                       <a href="./Projects/hq.html" class="d-flex justify-content-end" target="_blank">
                         <p>Read more <i class="fas fa-angle-double-right"></i></p>
                       </a>
@@ -989,8 +1007,7 @@
               <div class="card mb-3 col-lg-6">
                 <div class="row">
                   <div class="col-xs-4">
-                    <img src="img/Jot/Interface.png" width="100%"
-                      class="card-header-img"
+                    <img src="img/Jot/Interface.png" width="100%" class="card-header-img"
                       alt="Orange is the new black slot machine base game">
                   </div>
                   <div class="col-xs-8">
@@ -1017,19 +1034,21 @@
               <div class="card mb-3 col-lg-6">
                 <div class="row justify-content-center">
                   <div class="col-xs-4">
-                    <img src="https://raw.githubusercontent.com/maurerpower12/Swift-Calculator-iOS/master/AppImages/iTunesArtwork.png"
-                      class="card-header-img" style="border-radius: 2rem!important;"
-                      alt="Swift Calculator thumbnail">
+                    <img
+                      src="https://raw.githubusercontent.com/maurerpower12/Swift-Calculator-iOS/master/AppImages/iTunesArtwork.png"
+                      class="card-header-img" style="border-radius: 2rem!important;" alt="Swift Calculator thumbnail">
                   </div>
                   <div class="col-xs-8">
                     <div class="card-body">
                       <h5 class="card-title">Swift iOS Calculator App</h5>
-                      <p class="card-text">An iPhone/iPad app in Swift that mimics the functionality of a hand held calculator.</p>
-                        <div>
-                          <span class="coding skill">Swift</span>
-                          <span class="concept skill">iOS</span>
-                        </div>
-                      <a href="https://github.com/maurerpower12/Swift-Calculator-iOS" class="d-flex justify-content-end" target="_blank">
+                      <p class="card-text">An iPhone/iPad app in Swift that mimics the functionality of a hand held
+                        calculator.</p>
+                      <div>
+                        <span class="coding skill">Swift</span>
+                        <span class="concept skill">iOS</span>
+                      </div>
+                      <a href="https://github.com/maurerpower12/Swift-Calculator-iOS" class="d-flex justify-content-end"
+                        target="_blank">
                         <p>Read more <i class="fas fa-angle-double-right"></i></p>
                       </a>
                     </div>
@@ -1040,9 +1059,9 @@
               <div class="card mb-3 col-lg-6">
                 <div class="row justify-content-center">
                   <div class="col-xs-4">
-                    <img src="https://raw.githubusercontent.com/maurerpower12/Study-Smart/master/ss_ico.iconset/icon_512x512.png"
-                      class="card-header-img"
-                      alt="Study Smart App">
+                    <img
+                      src="https://raw.githubusercontent.com/maurerpower12/Study-Smart/master/ss_ico.iconset/icon_512x512.png"
+                      class="card-header-img" alt="Study Smart App">
                   </div>
                   <div class="col-xs-8">
                     <div class="card-body">
@@ -1054,7 +1073,8 @@
                         <span class="coding skill">Qt</span>
                         <span class="concept skill">Cross-Platform</span>
                       </div>
-                      <a href="https://github.com/maurerpower12/Study-Smart" class="d-flex justify-content-end" target="_blank">
+                      <a href="https://github.com/maurerpower12/Study-Smart" class="d-flex justify-content-end"
+                        target="_blank">
                         <p>Read more <i class="fas fa-angle-double-right"></i></p>
                       </a>
                     </div>
@@ -1124,6 +1144,39 @@
   <script src="js/resume.js"></script>
   
  <script src="js/TerminalBoot/loader.js" type="module"></script>
-</body>
 
+  <script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+      var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 13,
+
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(39.5296, -119.8138), // Reno\
+
+        // hide all controls
+        disableDefaultUI: true,
+
+        // How you would like to style the map. 
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: [{ "featureType": "all", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "all", "elementType": "labels", "stylers": [{ "visibility": "off" }, { "saturation": "-100" }] }, { "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#000000" }, { "lightness": 40 }, { "visibility": "off" }] }, { "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }, { "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "all", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 17 }, { "weight": 1.2 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "landscape", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "landscape", "elementType": "geometry.stroke", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "landscape.natural", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "lightness": 21 }] }, { "featureType": "poi", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "poi", "elementType": "geometry.stroke", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "road", "elementType": "geometry", "stylers": [{ "visibility": "on" }, { "color": "#7f8d89" }] }, { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 18 }] }, { "featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.arterial", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "road.local", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.local", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 19 }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#2b3638" }, { "visibility": "on" }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#2b3638" }, { "lightness": 17 }] }, { "featureType": "water", "elementType": "geometry.fill", "stylers": [{ "color": "#24282b" }] }, { "featureType": "water", "elementType": "geometry.stroke", "stylers": [{ "color": "#24282b" }] }, { "featureType": "water", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }]
+      };
+
+      // Get the HTML DOM element that will contain your map 
+      // We are using a div with id="map" seen below in the <body>
+      var mapElement = document.getElementById('map');
+
+      // Create the Google Map using our element and options defined above
+      var map = new google.maps.Map(mapElement, mapOptions);
+
+      // Let's also add a marker while we're at it
+      var marker = new google.maps.Marker({
+        map: map
+      });
+    }
+  </script>
+</body>
 </html>

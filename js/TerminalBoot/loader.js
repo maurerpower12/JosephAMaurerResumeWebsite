@@ -9,17 +9,20 @@ window.onload = function () {
     var introArray = [[
         "> whoami",
         "Joseph Maurer's Portfolio",
-        " ",
+        "",
         "> BOOT Portfolio ",
         "Initiating boot sequence..........",
-        " ",
-        "WE HAVE LIFT OFF",
     ], [
         "> BOOT Joseph Maurer's Portfolio -fast",
-        " ",
-        "Finding missing semicolon.............FOUND IT!",
-        " ",
-        "WE HAVE LIFT OFF",
+        "Verifying oit.dll.....",
+        "Applying unr.exe.....",
+        "Launching prospect.app.....",
+    ], [
+        "> SUDO g++ joe.cpp",
+        "int main()",
+        "{",
+        "      cout << \"Hello, world!\" << endl;",
+        "}"
     ]];
 
     type(random_item(introArray));

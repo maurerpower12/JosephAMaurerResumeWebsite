@@ -12,6 +12,11 @@
     --dark: #111;
   }
 
+  @font-face {
+    font-family: "terminalFont";
+    src: url("../fonts/Fira_Code/static/FiraCode-Regular.ttf");
+  }
+
   /* Loader style */
   .loader {
     background: rgba(18, 19, 20) !important;
@@ -20,6 +25,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    font-family: terminalFont;
   
     display: -webkit-box;
     display: -ms-flexbox;
