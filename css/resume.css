@@ -300,7 +300,7 @@ li:hover li:active {
   stroke-dashoffset: -500;
   stroke-width: 2.5px;
   fill: transparent;
-  stroke: rgb(255, 255, 255);
+  stroke: rgb(228, 184, 97);
   border-bottom: 5px solid black;
   animation-name: animate-stroke;
   animation-duration: 10s;
@@ -385,17 +385,25 @@ li:hover li:active {
   max-width: 550px;
 }
 
-#map {
+#mapBackground {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
   z-index: -999;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/Maps/Black&Gold.png');
 }
 
-.btn {
+.mapOverlay-btn {
   flex: 1 1 auto;
   margin-right: 10px;
   text-align: center;
@@ -403,16 +411,13 @@ li:hover li:active {
   transition: 0.5s;
   background-size: 110% auto;
   border-radius: 5px;
+  background-color: rgba(18, 19, 20, 0.75) !important;
  }
 
-.btn:hover {
-  background-position: right center; /* change the direction of the change here */
+.mapOverlay-btn:hover {
+  background-color: rgba(18, 19, 20, 0.95) !important;
 }
 
-.btn-1 {
-  background-image: linear-gradient(to right, #966365 0%, #875557 51%, #1b1212 100%);
-}
-
-.btn a{
+.mapOverlay-btn a{
   color: #ffffff !important;
 }
