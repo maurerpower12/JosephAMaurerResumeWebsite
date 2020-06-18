@@ -13,7 +13,7 @@ window.onload = function () {
         "> BOOT Portfolio ",
         "Initiating boot sequence..........",
     ], [
-        "> BOOT Joseph Maurer's Portfolio -fast",
+        "> BOOT Joseph Maurer's Portfolio",
         "Verifying oit.dll.....",
         "Applying unr.exe.....",
         "Launching prospect.app.....",
