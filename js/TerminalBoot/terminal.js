@@ -26,6 +26,7 @@ async function type(
     container = document.querySelector(".terminal")
 ) {
     loading = true;
+    setNavBarStatus(false);
     let typerDiv = useContainer ? container : document.createElement("div");
     typerDiv.classList.add("typer", "active");
     if (!useContainer) {
@@ -124,13 +125,19 @@ async function poweroff() {
         document.querySelector("#crt").classList.add("poweroff");
         await pause(0.2);
 
+        setNavBarStatus(true);
+
         // Remove the loader from view
         let loaderElement = document.querySelector(".loader");
         if (loaderElement) {
-            loaderElement.remove();
+            loaderElement.style.visibility = "hidden";
         }
     }
     loading = false;
+}
+
+async function setNavBarStatus(status = false) {
+    document.getElementById("navbarSupportedContent").style.visibility = (status ? "visible": "hidden");
 }
 
 export {type, poweroff};

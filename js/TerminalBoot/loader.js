@@ -5,28 +5,29 @@
 
 import {type, poweroff} from "./terminal.js";
 
-window.onload = function () {
-    var introArray = [[
-        "> whoami",
-        "Joseph Maurer's Portfolio",
-        "",
-        "> BOOT Portfolio ",
-        "Initiating boot sequence..........",
-    ], [
-        "> BOOT Joseph Maurer's Portfolio",
-        "Verifying oit.dll.....",
-        "Applying unr.exe.....",
-        "Launching prospect.app.....",
-    ], [
-        "> SUDO g++ joe.cpp",
-        "int main()",
-        "{",
-        "      cout << \"Hello, world!\" << endl;",
-        "}"
-    ]];
+var introArray = [[
+    "> whoami",
+    "Joseph Maurer's Portfolio",
+    "",
+    "> BOOT Portfolio ",
+    "Initiating boot sequence..........",
+], [
+    "> BOOT Joseph Maurer's Portfolio",
+    "Verifying oit.dll.....",
+    "Applying unr.exe.....",
+    "Launching prospect.app.....",
+], [
+    "> SUDO g++ joe.cpp",
+    "int main()",
+    "{",
+    "      cout << \"Hello, world!\" << endl;",
+    "}"
+]];
 
+$(document).ready(function() {
+    $('.navbar-nav').attr('disabled','disabled');
     type(random_item(introArray));
-};
+})
 
 function random_item(items)
 {
