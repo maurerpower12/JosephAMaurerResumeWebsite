@@ -6,6 +6,7 @@
  :root {
   --gold-accent-color: rgb(228, 184, 97);
   --red-accent-color: #9e0404ce;
+  --map-color: rgb(51,51,51);
 }
 
 body {
@@ -13,6 +14,8 @@ body {
   padding-top: 54px;
   color: #868e96;
 }
+
+.tabbed {padding-left:4.00em;}
 
 @media (min-width: 992px) {
   body {
@@ -61,6 +64,10 @@ p.lead {
   font-weight: 300;
   font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 1.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
 }
 
 .social-icons a {
@@ -404,7 +411,7 @@ li:hover li:active {
   background-size: cover;
   background-image: url('../img/Maps/Black&Gold.png');
   /* Add the blur effect. IDK if I like it but I'll try it and probably forget to change it tbh */
-  filter: blur(8px);
+  filter: blur(0.5px);
   -webkit-filter: blur(0.5px);
 }
 
