@@ -29,7 +29,8 @@
 <body id="page-top">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fas fa-bars"></span>
     </button>
     <a class="navbar-brand js-scroll-trigger" href="../index.html">
@@ -155,19 +156,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="../index.html#about">About</a>
+          <a class="nav-link js-scroll-trigger" href="index.html#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a>
+          <a class="nav-link js-scroll-trigger" href="index.html#experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a>
+          <a class="nav-link js-scroll-trigger" href="index.html#education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="../index.html#projects">Projects</a>
+          <a class="nav-link js-scroll-trigger" href="index.html#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="../index.html#contact">Contact</a>
+          <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -177,14 +178,24 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="main">
       <div class="w-100">
-        <h2 class="heading mb-5">Orange Is The New Black Slot Machine</h2>
+        <div class="row flex-md-row">
+          <div class="col-sm-5">
+            <img src="../img/OITNB/logo.png" alt="Logo" width="100%">
+          </div>
+          <div class="col-sm-7">
+            <h2 class="heading mb-5">Orange Is The New Black Video Slot Machine</h2>
+          </div>
+        </div>
+        <p class="text-primary">Project Date: October 2017 - April 2018</p>
         <br>
         <p>
-            Do you ever look back on a project and remember how everything came together so perfectly?
-            That was my first thought when I think back on building this game. 
-            Orange Is the New Black was my first full-time project at IGT and was the second game that IGT produced for the brand. 
-            As the second engineer on the game, I got to work with another staff-level engineer to complete my half of the game. This game had 5 distinct bonuses that are themed to the tv show. 
-            I was responsible for 3 of them. Here's a short marketing video for the game.
+          Do you ever look back on a project and remember how everything came together so perfectly?
+          That was my first thought when I think back on building this game.
+          Orange Is the New Black was my first full-time project at IGT and was the second game that IGT produced for
+          the brand.
+          As the second engineer on the game, I got to work with another staff-level engineer to complete my half of the
+          game. This game had 5 distinct bonuses that are themed to the tv show.
+          I was responsible for 3 of them (see the list below). Here's a short marketing video for the game.
         </p>
         <div class="text-center">
           <iframe width="100%" height="315" src="https://www.youtube-nocookie.com./embed/BC-VV_fgd-M" frameborder="0"
@@ -196,59 +207,101 @@
         <hr class="m-0">
         <br>
 
-        <h3>Triple Roller</h3>
+        <h3 class="mb-5 lined">Triple Roller</h3>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-7">
-                    <br>
-                    &#9; While this bonus doesn't take long to complete, the visual presentation was fairly complicated. 
-                    <br>
-                    The 3D rendered toilet paper rolls act as virtual stepper reels that spin and stop one at a time to award a base credit amount and multiplicative multipliers (i.e. 3x & 2x = 6x).
-                    Never did I think I would spend so much time looking at TP at work, but the "reels" subtly shrink as the waiving toilet paper falls off the backside. 
-                    <br>
-                    The shifting by numbers isn't actually on the toilet paper model. Instead, we utilized a render texture to make it look like the numbers were printed on the roll (dimple pattern and all).
-                </div>
-                <div class="col-5">
-                    <img src="../img/OITNB/LetsRoll.png" alt="LetsRoll" width="100%">
-                </div>
+          <div class="row flex-column-reverse flex-md-row">
+            <div class="col-sm-7">
+              <br>
+              While this bonus doesn't take long to complete, the visual presentation was fairly complicated.
+              <br>
+              The 3D rendered toilet paper rolls act as virtual stepper reels that spin and stop one at a time to award
+              a base credit amount and multiplicative multipliers (i.e. 3x & 2x = 6x).
+              Never did I think I would spend so much time looking at TP at work, but the "reels" subtly shrink as the
+              waiving toilet paper falls off the backside.
+              <br>
+              The shifting by numbers isn't actually on the toilet paper model. Instead, we utilized a render texture to
+              make it look like the numbers were printed on the roll (dimple pattern and all).
             </div>
+            <div class="col-sm-5">
+              <img src="../img/OITNB/LetsRoll.png" alt="LetsRoll" width="100%">
+            </div>
+          </div>
         </div>
 
         <br>
         <hr class="m-0">
         <br>
 
-        <h3>Bunk Search</h3>
+        <h3 class="mb-5 lined">Bunk Search</h3>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-7">
-                    <br>
-                    The bunk search is probably my favorite bonus in the game. 
-                    <br>The player is presented with a 3D bunk scene from the show and has to find the contraband hidden in any of the highlighted areas. As the player picks potential hiding places, various voiceovers from the game yell out to encourage the player to pick faster. As the player finds contraband (like the cellphone in the picture), it flies out of its hiding spot and toward the multiplier ladder. Each item moves the player up as a felt tip pen crosses off the older multiplier. The text pulses as the player moves up towards the top multiplier. Everything from the subtle animations that each hiding spot plays as the item flies out, to crossing items off on the bag create a sense the player is really in the jail cell.
-                </div>
-                <div class="col-5">
-                    <img src="../img/OITNB/BunkSearch.png" alt="LetsRoll" width="100%">
-                </div>
+          <div class="row flex-column-reverse flex-md-row">
+            <div class="col-sm-7">
+              <br>
+              The bunk search is probably my favorite bonus in the game.
+              <br>The player is presented with a 3D bunk scene from the show and has to find the contraband hidden in
+              any of the highlighted areas. As the player picks potential hiding places, various voiceovers from the
+              game yell out to encourage the player to pick faster. As the player finds contraband (like the cellphone
+              in the picture), it flies out of its hiding spot and toward the multiplier ladder. Each item moves the
+              player up as a felt tip pen crosses off the older multiplier. The text pulses as the player moves up
+              towards the top multiplier. Everything from the subtle animations that each hiding spot plays as the item
+              flies out, to crossing items off on the bag create a sense the player is really in the jail cell.
             </div>
+            <div class="col-sm-5">
+              <img src="../img/OITNB/BunkSearch.png" alt="LetsRoll" width="100%">
+            </div>
+          </div>
         </div>
 
         <br>
         <hr class="m-0">
         <br>
 
-        <h3>Litchfield Jackpot</h3>
+        <h3 class="mb-5 lined">Litchfield Jackpot</h3>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-7">
-                    <br>
-                    If you ever get to play this bonus, YOU'RE IN THE MONEY!
-                    <br>
-                    The player gets to spin the wheel that consists of inmate cards with the jackpots listed on them. The wheel is actually all controlled through code. The closer the cards get to the middle, the bigger the grow, and the glow around the cards gets brighter. After the final card lands, the screen transitions into a movie of the associated character from the show while your money rolls up.
-                    <br>The bonus was designed to look like you were in the Warden's office looking at his computer screen!</div>
-                <div class="col-5">
-                    <img src="../img/OITNB/JackpotBonus.png " alt="JackotBonus" width="100%">
-                </div>
+          <div class="row flex-column-reverse flex-md-row">
+            <div class="col-sm-7">
+              <br>
+              If you ever get to play this bonus, YOU'RE IN THE MONEY!
+              <br>
+              The player gets to spin the wheel that consists of inmate cards with the jackpots listed on them. The
+              wheel is actually all controlled through code. The closer the cards get to the middle, the bigger the
+              grow, and the glow around the cards gets brighter. After the final card lands, the screen transitions into
+              a movie of the associated character from the show while your money rolls up.
+              <br>The bonus was designed to look like you were in Warden Caputo's office looking at his computer screen!
             </div>
+            <div class="col-sm-5">
+              <img src="../img/OITNB/JackpotBonus.png " alt="JackotBonus" width="100%">
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <hr class="m-0">
+        <br>
+
+        <h3 class="mb-5 lined">Global Gaming Expo 2018 Debut</h3>
+        <div class="container-fluid">
+          <div class="row flex-column-reverse flex-md-row">
+            <div class="col-sm-7">
+              The game made its public debut at the Global Gaming Expo (G2E) in Las Vegas in October 2018.
+              I was lucky enough to get a chance to go to the show to show off the game!
+            </div>
+            <div class="col-sm-5">
+              <img src="../img/OITNB/G2E.gif" alt="G2E" width="100%">
+            </div>
+          </div>
+          <br>
+          <div class="row flex-column-reverse flex-md-row">
+            <div class="col-sm-5">
+              The game was even featured on the giant overhead screen!
+            </div>
+            <div class="col-sm-7">
+              <img src="../img/OITNB/G2E-Overhead.jpg" alt="G2E" width="100%">
+            </div>
+          </div>
+          <div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -278,14 +331,14 @@
         <!-- Social buttons -->
       </div>
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">
-            © 2019 Copyright IGT
-            <br>
-            © 2019 Lions Gate Entertainment Inc. All Rights Reserved.
-        </div>
-            
-        <!-- Copyright -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2019 Copyright IGT
+        <br>
+        © 2019 Lions Gate Entertainment Inc. All Rights Reserved.
+      </div>
+
+      <!-- Copyright -->
 
     </footer>
   </div>
