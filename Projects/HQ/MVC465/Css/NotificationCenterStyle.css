@@ -1,0 +1,58 @@
+﻿#uxNotificationCenter {
+    color: white;
+    display: block;
+    transition: 0.5s;
+    font-size: 25px !important;
+    align-content: space-between;
+    float: left !important;
+    width: 450px;
+    text-align: left;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(55,58,60);
+    transition: 0.5s;
+}
+.notification {
+    background-color: #D7D7D7;
+    color: black;
+    float: left;
+    word-wrap: break-word;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    clear: both;
+    margin-bottom: 8px;
+    padding: 13px 14px;
+    vertical-align: top;
+    border-radius: 5px;
+    width: 95%;
+}
+.notifications {
+  max-height: 100vh;
+  overflow:auto;
+}
+/*Smaller screen size*/
+@media only screen and (max-width: 649px) {
+    #uxNotificationCenter {
+    color: white;
+    display: block;
+    transition: 0.5s;
+    font-size: 25px !important;
+    align-content: space-between;
+    float: left !important;
+    width: 250px;
+    text-align: left;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(55,58,60);
+    transition: 0.5s;
+}
+}
+/*Full Screen size
+@media only screen and (min-width: 650px) {
+
+}*/

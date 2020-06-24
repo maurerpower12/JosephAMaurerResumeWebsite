@@ -1,0 +1,484 @@
+﻿<img class="thumbnail" src='@Url.Action("Show", "Image", new { id = order.ID })' alt="profile"
+    style="width: 50px; height: 50px;" />
+}
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="../Img/house.ico" />
+    <link rel="apple-touch-icon" href="../Img/Home.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-startup-image" href="../Img/Home.png">
+
+    <title>HQ Demo ~ Roster </title>
+
+    <link href="../Css/StaticNavStyle.css" rel="stylesheet" />
+    <link href="../Css/DefaultStyles.css" rel="stylesheet" />
+    <link href="../Css/NotificationCenterStyle.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/9e62847280.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Page specific includes -->
+    <link href="../Content/Gridmvc.css" rel="stylesheet" />
+    <!-- @*<script src="~/Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>*@ -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="../Scripts/gridmvc.min.js" type="text/javascript"></script>
+    <link href="../Content/gridmvc.datepicker.min.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.js"></script>
+
+    <link href="../Css/RosterStyle.css" rel="stylesheet" />
+</head>
+
+<body id="uxMain">
+    <header class="uxHeader" style="position: fixed; top: 0; z-index: 100;">
+        <div id="uxNotificationCenter" style="display: none;">
+            <h4 style="display: inline-block">Notification(s)</h4>
+            <a id="uxRefresh" class="btn btn-default pull-right" style="display: inline-block"><i
+                    class="fa fa-refresh fa-2x" aria-hidden="true"></i></a>
+
+            <hr />
+            <ul class="notifications">
+                <li class="notification">
+                    <p class="text-muted pull-left">Mandi Smart</p>
+                    <p class="text-muted pull-right">05/21/2017 7:45:21 AM</p>
+                    <br />
+                    <hr />
+                    Your paperwork is late!
+                    <p class="text-muted pull-right">
+                        <a href='' class="btn btn-danger"><i class="fa fa-times-circle fa-2x"
+                                aria-hidden="true"></i></a>
+
+                        <a href='' class="btn btn-info"><i class="fa fa-chevron-circle-right fa-2x"
+                                aria-hidden="true"></i></a>
+                    </p>
+                </li>
+
+                <li class="notification">
+                    <p class="text-muted pull-left">Rusty Schmo</p>
+                    <p class="text-muted pull-right">05/21/2017 7:45:21 AM</p>
+                    <br />
+                    <hr />
+                    Did you see the Yankee game last night?!
+                    <p class="text-muted pull-right">
+                        <a href='' class="btn btn-danger"><i class="fa fa-times-circle fa-2x"
+                                aria-hidden="true"></i></a>
+
+                        <a href='' class="btn btn-info"><i class="fa fa-chevron-circle-right fa-2x"
+                                aria-hidden="true"></i></a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- @*This is the main nav when at full rez*@ -->
+        <div id="uxStaticSideNav" class="sidenav" style="z-index: 1000;">
+            <div class="uxStaticNavTop" style="overflow: hidden;">
+                <img id="uxUserProfilePic" src="../Img/img_avatar.png" width="100" height="100">
+                <p>John Smith</p>
+                <div class="uxHiddenProfile" style="margin-right: 1px;">
+                    <span class="fa-stack has-badge fa-1x" data-count="2" id="uxNotificationBtn" style="cursor:pointer"
+                        onclick="toggleNotificationCenter()">
+                        <i class="fa fa-circle fa-stack-2x fa-1x"></i>
+                        <i class="fa fa-bell fa-stack-1x fa-inverse" style="color:black"></i>
+                    </span>
+                    <span class="fa-stack has-badge fa-1x">
+                        <i class="fa fa-circle fa-stack-2x fa-1x"></i>
+                        <i class="fa fa-cog fa-stack-1x fa-inverse" style="color:black"></i>
+                    </span>
+                    <span class="fa-stack has-badge fa-1x">
+                        <i class="fa fa-circle fa-stack-2x fa-1x"></i>
+                        <a href="https://www.josephamaurer.com"><i class="fa fa-times fa-stack-1x fa-inverse"
+                                style="color:black"></i></a>
+                    </span>
+                </div>
+            </div>
+            <ul style="padding-left: 5px;" id="uxAppIcons">
+                <li title="Dashboard"><a href=""><img src="../Img/HQLogo/Home.png" /></a></li>
+                <li title="Roster"><a href=""><img src="../Img/HQLogo/Roster-V3.png" /></a></li>
+                <li title="Incident Report"><a href=""><img src="../Img/HQLogo/IR-V4.png" /></a></li>
+                <li title="CDL"><a href=""><img src="../Img/HQLogo/Dev-V1.png" /></a></li>
+                <li title="PreForm"><a href=""><img src="../Img/HQLogo/PF-V1.png" /></a></li>
+                <li title="Calendar"><a href=""><img src="../Img/HQLogo/Cal-V1.png" /></a></li>
+                <li title="Duty"><a href=""><img src="../Img/HQLogo/Duty.png" /></a></li>
+                <li title="Document Library" style="padding-bottom:75px;"><a href=""><img
+                            src="../Img/HQLogo/doc.png" /></a></li>
+            </ul>
+        </div>
+
+    </header>
+    <div class="uxContentBody">
+        <style>
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {
+                height: 550px
+            }
+
+            /* On small screens, set height to 'auto' for the grid */
+            @media screen and (max-width: 767px) {
+                .row.content {
+                    height: auto;
+                }
+            }
+
+            #uxAnnouncement:hover {
+                background-color: #373a3c;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+        <div class="container">
+            <div style="width: 100% !important;">
+                <h1 style="color: black;">Roster</h1>
+
+                <div class="alert alert-danger" role="alert">
+                    In the live project this was populated dynamically from the database. This is just a static preview and doesn't do any of the auto-fill or sorting!
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <label>
+                                            Page Size: <select class="form-control" data-mvcgrid-type="pageSize"
+                                                data-mvcgrid-name="TestGrid">
+                                                <option value="10">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="form-inline pull-right">
+                                    <div class="btn-group">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Fields
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu"
+                                                data-mvcgrid-type="columnVisibilityList" data-mvcgrid-name="TestGrid">
+                                                <li><a><label><input type="checkbox" name="TestGridcols" value="Id"
+                                                                checked="" disabled="">Student Id</label></a></li>
+                                                <li><a><label><input type="checkbox" name="TestGridcols"
+                                                                value="FirstName" checked=""> First Name</label></a>
+                                                </li>
+                                                <li><a><label><input type="checkbox" name="TestGridcols"
+                                                                value="LastName" checked=""> Last Name</label></a></li>
+                                                <li><a><label><input type="checkbox" name="TestGridcols"
+                                                                value="FullName"> Full Name</label></a></li>
+                                                <li><a><label><input type="checkbox" name="TestGridcols"
+                                                                value="StartDate" checked=""> Birthday</label></a>
+                                                </li>
+                                                <li><a><label><input type="checkbox" name="TestGridcols" value="Status"
+                                                                checked=""> Status</label></a></li>
+                                                <li><a><label><input type="checkbox" name="TestGridcols" value="Gender"
+                                                                checked=""> Gender</label></a></li>
+                                                <li><a><label><input type="checkbox" name="TestGridcols" value="Email">
+                                                            Email</label></a></li>
+                                            </ul>
+                                        </div>
+                                        <button class="btn btn-default" data-mvcgrid-type="export"
+                                            data-mvcgrid-name="TestGrid">
+                                            <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                                            Export
+                                        </button>
+                                    </div>
+
+                                    <span>&nbsp;</span>
+                                    <div class="form-group">
+                                        <label>Search: <input type="search" placeholder="Search" class="form-control"
+                                                data-mvcgrid-type="additionalQueryOption" data-mvcgrid-option="search"
+                                                data-mvcgrid-name="TestGrid"
+                                                data-mvcgrid-apply-additional="keyup"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="MVCGridContainer_TestGrid" class="MVCGridContainer"><input type="hidden"
+                                name="MVCGridName" value="TestGrid">
+                            <div id="MVCGrid_TestGrid_JsonData" style="display: none">{"name": "TestGrid","qsPrefix":
+                                "","preloaded":
+                                true,"clientLoading": "","clientLoadingComplete": "","renderingMode":
+                                "renderingengine","pageParameters": {}}
+                            </div>
+                            <div id="MVCGrid_ErrorMessage_TestGrid" style="display: none;">
+                                <div class="alert alert-warning" role="alert">There was a problem loading the grid.
+                                </div>
+                            </div>
+                            <div id="MVCGrid_Loading_TestGrid" class="text-center" style="visibility: hidden;">
+                                &nbsp;&nbsp;&nbsp;<img src="/MVCGridHandler.axd/ajaxloader.gif" alt="Processing"
+                                    style="width: 15px; height: 15px;">&nbsp;Processing...</div>
+                            <div id="MVCGridTableHolder_TestGrid">
+                                <table id="MVCGridTable_TestGrid" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="cursor: pointer;"
+                                                onclick="MVCGrid.setSort(&quot;TestGrid&quot;, &quot;Id&quot;, &quot;Asc&quot;); return false;">
+                                                Student ID
+                                            <th style="cursor: pointer;"
+                                                onclick="MVCGrid.setSort(&quot;TestGrid&quot;, &quot;FirstName&quot;, &quot;Asc&quot;); return false;">
+                                                First Name
+                                            </th>
+                                            <th style="cursor: pointer;"
+                                                onclick="MVCGrid.setSort(&quot;TestGrid&quot;, &quot;LastName&quot;, &quot;Asc&quot;); return false;">
+                                                Last Name 
+                                            </th>
+                                            <th style="cursor: pointer;"
+                                                onclick="MVCGrid.setSort(&quot;TestGrid&quot;, &quot;StartDate&quot;, &quot;Asc&quot;); return false;">
+                                                Birth Date
+                                            </th>
+                                            <th style="cursor: pointer;"
+                                                onclick="MVCGrid.setSort(&quot;TestGrid&quot;, &quot;Status&quot;, &quot;Asc&quot;); return false;">
+                                                Room Number </th>
+                                            <th style="cursor: pointer;"
+                                                onclick="MVCGrid.setSort(&quot;TestGrid&quot;, &quot;Gender&quot;, &quot;Asc&quot;); return false;">
+                                                Gender </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="">1000</a></td>
+                                            <td>Patricia</td>
+                                            <td>Jacobs</td>
+                                            <td class="success">10/19/2013</td>
+                                            <td>A1</td>
+                                            <td>Female</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">999</a></td>
+                                            <td>Jeffrey</td>
+                                            <td>Shaw</td>
+                                            <td>9/25/2012</td>
+                                            <td>A12</td>
+                                            <td>Male</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">998</a></td>
+                                            <td>Dorothy</td>
+                                            <td>Nguyen</td>
+                                            <td class="danger">11/21/2014</td>
+                                            <td>A2</td>
+                                            <td>Female</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">997</a></td>
+                                            <td>Kathryn</td>
+                                            <td>Cruz</td>
+                                            <td>7/29/2014</td>
+                                            <td>A3</td>
+                                            <td>Female</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">996</a></td>
+                                            <td>Evelyn</td>
+                                            <td>Jacobs</td>
+                                            <td>10/16/2012</td>
+                                            <td>A4</td>
+                                            <td>Female</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">995</a></td>
+                                            <td>Michael</td>
+                                            <td>Wilson</td>
+                                            <td>2/9/2013</td>
+                                            <td>A23</td>
+                                            <td>Male</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">994</a></td>
+                                            <td>Nancy</td>
+                                            <td>Collins</td>
+                                            <td>3/31/2013</td>
+                                            <td>A5</td>
+                                            <td>Female</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">993</a></td>
+                                            <td>Joyce</td>
+                                            <td>Crawford</td>
+                                            <td>10/24/2013</td>
+                                            <td>A6</td>
+                                            <td>Female</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">992</a></td>
+                                            <td>Martin</td>
+                                            <td>Frazier</td>
+                                            <td>6/29/2014</td>
+                                            <td>A99</td>
+                                            <td>Male</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="">991</a></td>
+                                            <td>Lois</td>
+                                            <td>Snyder</td>
+                                            <td>4/13/2013</td>
+                                            <td>A7</td>
+                                            <td>Female</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row">
+                                    <div class="col-xs-6">Showing 1 to 10 of 2512 entries</div>
+                                    <div class="col-xs-6">
+                                        <ul class="pagination pull-right" style="margin-top: 0;">
+                                            <li class="disabled"><a href="#" aria-label="Previous"
+                                                    onclick="return false;"><span aria-hidden="true">«
+                                                        Previous</span></a></li>
+                                            <li class="active"><a href="#"
+                                                    onclick="MVCGrid.setPage(&quot;TestGrid&quot;, 1); return false;">1</a>
+                                            </li>
+                                            <li><a href="#"
+                                                    onclick="MVCGrid.setPage(&quot;TestGrid&quot;, 2); return false;">2</a>
+                                            </li>
+                                            <li><a href="#"
+                                                    onclick="MVCGrid.setPage(&quot;TestGrid&quot;, 3); return false;">3</a>
+                                            </li>
+                                            <li><a href="#"
+                                                    onclick="MVCGrid.setPage(&quot;TestGrid&quot;, 4); return false;">4</a>
+                                            </li>
+                                            <li><a href="#"
+                                                    onclick="MVCGrid.setPage(&quot;TestGrid&quot;, 5); return false;">5</a>
+                                            </li>
+                                            <li><a href="#" aria-label="Next"
+                                                    onclick="MVCGrid.setPage(&quot;TestGrid&quot;, 2); return false;"><span
+                                                        aria-hidden="true">Next »</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <script type="text/javascript" src="../JS/home.js"></script>
+    <script type="text/javascript">
+        function toggleNotificationCenter() {
+            var x = document.getElementById("uxNotificationCenter");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        // Below is the function for showing the roster modal
+        $(function () {
+            pageGrids.rosterGrid.onRowSelect(function (e) {
+                var msg;
+                var name = e.row.firstName + " " + e.row.lastName + "\n";
+                $("#uxStudentID").text(e.row.studentID);
+                $("#uxRoomNumber").text(e.row.roomNumber);
+                $("#uxEmail").text(e.row.Email);
+                $("#uxEmergencyContact").text(e.row.emergencyContact);
+                $("#uxMedNeeds").text(e.row.medNeeds);
+                $("#uxPMB").text(e.row.PMB);
+                $("#uxBDay").text(e.row.Birthday.slice(0, 10));
+
+                $("#uxFullName").text(name);
+
+                $('#uxProfilePic').attr("src", "/Image/Show/" + e.row.ID);
+
+                // Display Modal should always be last
+                $('#resModal').modal('show');
+            });
+        });
+    </script>
+
+
+    <script>
+        // Below are the scripts for student autocomplete section.
+        $(document).ready(function () {
+
+            $("#students").autocomplete({
+                autoFocus: true,
+                appendTo: '#menu-container',
+                source: function (request, response) {
+                    $.ajax({
+                        url: '/IR/AutoComplete/',
+                        data: "{ 'prefix': '" + request.term + "'}",
+                        dataType: "json",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return {
+                                    label: item.firstName + " " + item.lastName,
+                                    value: item
+                                };
+                            }))
+                        },
+                        error: function (response) {
+                            alert(response.responseText);
+                        },
+                        failure: function (response) {
+                            alert(response.responseText);
+                        }
+                    });
+                },
+                select: function (e, i) {
+                    e.preventDefault();
+                    var msg;
+                    var name = i.item.value.firstName + " " + i.item.value.lastName + "\n";
+                    $("#uxStudentID").text(i.item.value.studentID);
+                    $("#uxRoomNumber").text(i.item.value.roomNumber);
+                    $("#uxEmail").text(i.item.value.Email);
+                    $("#uxEmergencyContact").text(i.item.value.emergencyContact);
+                    $("#uxMedNeeds").text(i.item.value.medNeeds);
+                    $("#uxPMB").text(i.item.value.PMB);
+                    var date = new Date(parseInt(i.item.value.BDay.substr(6)));
+                    date = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+                    $("#uxBDay").text(date);
+
+                    $("#uxFullName").text(name);
+
+                    $('#uxProfilePic').attr("src", "/Image/Show/" + i.item.value.ID);
+
+                    // Display Modal should always be last
+                    $('#resModal').modal('show');
+                },
+                focus: function (e, i) {
+                    e.preventDefault();
+                },
+                minLength: 1
+            });
+        });
+    </script>
+
+    <style>
+        @media screen and (max-width: 767px) {
+            #uxSearch {
+                width: 100%;
+                left: 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
