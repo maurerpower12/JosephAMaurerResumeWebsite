@@ -8,8 +8,7 @@
   <meta name="keywords" content="Software Engineer, Portfolio, Developer, Coding, C#, C++, Swift, Personal Website">
   <meta name="description" content="Portfolio for Joseph A Maurer, a Software Engineer in Reno, NV">
   <meta name="author" content="Joseph A Maurer">
-  <link rel="icon" href="/img/favicon.ico" />
-  <link rel="apple-touch-icon" href="/img/favicon.png">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
 
   <title>Wheel Of Fortune Slot</title>
 
@@ -23,7 +22,6 @@
 
   <!-- Custom styles for this template -->
   <link href="../css/resume.css" rel="stylesheet">
-  <link href="../css/loader.css" rel="stylesheet">
 
 </head>
 
@@ -178,12 +176,101 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="main">
       <div class="w-100">
-        <h2 class="heading mb-5">Wheel Of Fortune Super Times Pay Gold Spin Deluxe Slot Machine</h2>
-        <div class="text-center">
-            <div>
-                <img src="../img/WOF_STP_GSD/GameComp.png">
-            </div>
+        <div class="row flex-md-row">
+          <div class="col-sm-5">
+            <img src="../img/WOF_STP_GSD/STPLogo.png" alt="Logo" width="100%">
+          </div>
+          <div class="col-sm-7">
+            <h2 class="heading mb-5">Wheel Of Fortune Mechanical Reel Slot Machine</h2>
+          </div>
         </div>
+        <p class="text-primary">Project Date: May 2018 - December 2018</p>
+
+        <br>
+
+        <h3 class="mb-5 lined">Project Design</h3>
+        <div class="container-fluid">
+          <div class="row flex-column-reverse flex-md-row">
+            <div class="col-sm-7">
+              With great power, comes great responsibility. Well, at least that's 
+              how the line goes in every superhero movie. As I started my first 
+              industry solo engineering project, I realized that this is also 
+              the case when being the only engineer on the project. Every day 
+              you get to make decisions that affect how the final project will 
+              look and feel. These choices might seem minute in the beginning, 
+              but in the end, these design decisions can limit you or help to 
+              make your life easier. 
+            </div>
+            <div class="col-sm-5">
+              <img src="../img/WOF_STP_GSD/GameComp.png" alt="Machine" width="129" height="375">
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <hr class="m-0">
+        <br>
+
+        <h3 class="mb-5 lined">Game Design</h3>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              From a design perspective, this game was about fusing two known 
+              game mechanics, Wheel Of Fortune (WOF) Super Times Pay and the 
+              Gold Spin Deluxe family of games. IGT has made plenty of WOF games 
+              throughout its history, and Super Times Pay has been a staple of the 
+              brand. On the other hand, Gold Spin Deluxe is a relatively new game 
+              mechanic where players get a chance to spin digital wheels before 
+              the iconic physical wheel. The virtual wheel can award additional 
+              pointers on the wheel and/or multiplier that help the player on 
+              the physical wheel spin.
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <hr class="m-0">
+        <br>
+
+        <h3 class="mb-5 lined">Engineering</h3>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              While there are always a plethora of challenges you face during 
+              software development, one of the biggest problems I faced during 
+              this project was how to come with clean, elegant solutions to a 
+              problem while minimizing the change lists impact on the rest of 
+              the codebase. 
+              <br>
+              <br>
+              "Big asks" late in development are when a game's stakeholders 
+              want to add a feature that would cause regression changes throughout 
+              the application. Depending on the state of the game, it can be 
+              breaking changes, and it's the reason we try so hard to make 
+              everything as robust and interchangeable as possible.
+              <br>
+              <br>
+              The big ask late in development for this game was to show every 
+              value in the game in currency (i.e. $5.00 instead of 5 credits) 
+              when the game is set up for high limit gambling. While some values 
+              were already in currency, the vast majority weren't. It would have 
+              been labor-intensive to go to every text area in Unity 
+              (probably 200+) and attach additional scripts that would handle the 
+              conversion, so a better solution needed to be implemented. 
+              <br>
+              <br>
+              The solution was to create a dynamic display mode that checked the 
+              game's settings and updated all of the text areas accordingly. 
+              This also required the backend to be refactored to include the 
+              correct values so that the game could easily switch between currency 
+              and credits. The functionality was even extended so that certain 
+              images would be displayed at certain limits. All of this had to be 
+              done, while the game was already late in testing so that minimal 
+              changes were done to avoid additional regression testing.
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -202,8 +289,8 @@
           <a href="https://github.com/maurerpower12" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://www.instagram.com/maurerpwer/" target="_blank">
-            <i class="fab fa-instagram"></i>
+          <a href="https://medium.com/@josephmau12" target="_blank">
+            <i class="fab fa-medium-m"></i>
           </a>
           <a href="https://leetcode.com/mwrpwr/" target="_blank">
             <i class="fas fa-laptop-code"></i>
@@ -212,9 +299,12 @@
         <!-- Social buttons -->
       </div>
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© twentytwenty Copyright Joseph A Maurer</div>
-        <!-- Copyright -->
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        Images and Logos © 2019 Copyright IGT
+      </div>
+
+      <!-- Copyright -->
 
     </footer>
   </div>
