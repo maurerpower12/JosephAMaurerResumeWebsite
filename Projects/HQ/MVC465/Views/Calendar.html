@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 
@@ -20,6 +20,11 @@
     <script src="https://use.fontawesome.com/9e62847280.js"></script>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
 
+    <script src="../Scripts/lib/moment.min.js"></script>
+    <link href="../Content/fullcalendar.css" rel="stylesheet" />
+    <link href="../Content/fullcalendar.min.css" rel="stylesheet" />
+    <script src="../Scripts/fullcalendar.min.js"></script>
+    <script src="../Scripts/fullcalendar.js"></script>
 </head>
 
 <body id="uxMain">
@@ -121,8 +126,11 @@
         </style>
         <div class="container">
             <div class="col-sm-9" style="width: 100% !important;">
-                <h1 style="color: black;">Dashboard</h1>
-
+                <h1 style="color: black;">Calendar</h1>
+                <div class="alert alert-danger" role="alert">
+                    In the live project events were populated dynamically from the database. This is just a static preview!
+                </div>
+                <div id="calendar"></div>
             </div>
         </div>
     </div>
@@ -140,6 +148,69 @@
             }
         }
     </script>
+    <script>
+        $(document).ready(function () {
+
+            $('#calendar').fullCalendar({
+                //theme: true,
+                eventClick: function (event) {
+                    if (event.allDay != true)
+                        alert("Title: " + event.title + " \n\nDescription: " + event.Description + " \n\nStart: " + event.start+ " \n\nEnd: " + event.end);
+                    else
+                        alert("Title: " + event.title + " \n\nDescription: " + event.Description + " \n\nStart: " + event.start + " \n\nEvent is All Day");
+                },
+                header: {
+                    left: 'prev, next today',
+                    center: 'title',
+                    right: 'month, agendaWeek, agendaDay'
+                },
+                defaultView: 'month',
+
+                editable: true,
+                allDaySlot: true,
+                selectable: true,
+                slotMinutes: 15,
+
+
+                editable: false, // Don't allow editing of events
+            });
+
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
+            var lastView;
+            var daySource = new Object();
+            daySource.title = 'DAY'; // this should be string
+            daySource.start = new Date(y, m, d); // this should be date object
+            daySource.end = new Date(y, m, d);
+
+            var day = new Array();
+            day[0] = daySource;
+
+            var monthSource = new Object();
+            monthSource.title = 'All Hands'; // this should be string
+            monthSource.start = new Date(y, m, d); // this should be date object
+            monthSource.start._d = new Date(y, m, d); // this should be date object
+            monthSource.end = new Date(y, m, d);
+            monthSource.end._d = new Date(y, m, d);
+            monthSource.Description = "Meet to talk about work.";
+
+
+            var month = new Array();
+            month[0] = monthSource;
+
+            // Add the events to the calendar
+            $('#calendar').fullCalendar('addEventSource', {  events: month });
+
+        });
+    </script>
+    <style>
+        #calendar {
+            margin: 25px;
+            height: 100%;
+        }
+    </style>
 </body>
 
 </html>
