@@ -448,3 +448,41 @@ li:hover li:active {
 .mapOverlay-btn a{
   color: #ffffff !important;
 }
+
+.radiate-btn {
+  animation: shadow-pulse 1s infinite;
+  color: var(--gold-accent-color);
+}
+
+.radiate-btn:hover {
+  animation: shadow-pulse .25s infinite;
+  color: var(--gold-accent-color);
+}
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+.card-body a {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  padding: 5px;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.project-tools {
+  margin-bottom: 50px;
+}
