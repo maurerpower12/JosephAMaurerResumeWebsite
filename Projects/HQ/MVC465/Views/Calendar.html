@@ -147,70 +147,107 @@
                 x.style.display = "none";
             }
         }
-    </script>
-    <script>
+        
         $(document).ready(function () {
+            var date = new Date();
+            var d = date.getDate();
+            var m = date.getMonth();
+            var y = date.getFullYear();
 
             $('#calendar').fullCalendar({
-                //theme: true,
                 eventClick: function (event) {
-                    if (event.allDay != true)
-                        alert("Title: " + event.title + " \n\nDescription: " + event.Description + " \n\nStart: " + event.start+ " \n\nEnd: " + event.end);
-                    else
-                        alert("Title: " + event.title + " \n\nDescription: " + event.Description + " \n\nStart: " + event.start + " \n\nEvent is All Day");
+                        alert("Title: " + event.title + " \n\nDescription: " + event.Description + " \n\nStart: " + event.start.toDate()  + " \n\n All Day ? " + event.allDay);
                 },
                 header: {
                     left: 'prev, next today',
                     center: 'title',
                     right: 'month, agendaWeek, agendaDay'
                 },
-                defaultView: 'month',
+                defaultView: $(window).width() < 765 ? 'listWeek':'month',
 
-                editable: true,
                 allDaySlot: true,
                 selectable: true,
                 slotMinutes: 15,
 
-
-                editable: false, // Don't allow editing of events
+                editable: false, // Don't allow editing of events},
+                initialDate: date.getDate(),
+                events: [
+                    {
+                        title: 'All Day Meeting',
+                        Description: "Meet in the confrence room",
+                        start: new Date(y, m, d)
+                    },
+                    {
+                        title: 'Long Meeting',
+                        Description: "Meet in the confrence room",
+                        start: new Date(y, m, d-2),
+                        end: new Date(y, m, d)
+                    },
+                    {
+                        title: 'Long Meeting',
+                        Description: "Meet in the confrence room",
+                        start: new Date(y, m, d-15),
+                        end: new Date(y, m, d-12),
+                        color: 'teal'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Meeting',
+                        Description: "Meet in the confrence room",
+                        start: new Date(y, m, d-7),
+                        color: 'red',
+                        textColor: 'black'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Meeting',
+                        Description: "Meet in the confrence room",
+                        start: new Date(y, m, d+7),
+                        color: 'red',
+                        textColor: 'black'
+                    },
+                    {
+                        id: 999,
+                        title: 'Meeting',
+                        Description: "Meet in the confrence room",
+                        start: new Date(y, m, d+3),
+                        color: 'green',
+                        textColor: 'white'
+                    },
+                    {
+                        id: 999,
+                        title: 'Lunch',
+                        Description: "Dutch Bros?",
+                        start: new Date(y, m, d+12),
+                        color: 'green',
+                        textColor: 'white'
+                    },
+                    {
+                        id: 999,
+                        title: 'Townhall',
+                        Description: "Call in.",
+                        start: new Date(y, m, d+14),
+                        color: 'blue',
+                        textColor: 'white'
+                    },
+                    {
+                        id: 999,
+                        title: 'One on One',
+                        Description: "Call in.",
+                        start: new Date(y, m, d+5),
+                        color: 'purple',
+                        textColor: 'white'
+                    }
+                ]
             });
-
-            var date = new Date();
-            var d = date.getDate();
-            var m = date.getMonth();
-            var y = date.getFullYear();
-            var lastView;
-            var daySource = new Object();
-            daySource.title = 'DAY'; // this should be string
-            daySource.start = new Date(y, m, d); // this should be date object
-            daySource.end = new Date(y, m, d);
-
-            var day = new Array();
-            day[0] = daySource;
-
-            var monthSource = new Object();
-            monthSource.title = 'All Hands'; // this should be string
-            monthSource.start = new Date(y, m, d); // this should be date object
-            monthSource.start._d = new Date(y, m, d); // this should be date object
-            monthSource.end = new Date(y, m, d);
-            monthSource.end._d = new Date(y, m, d);
-            monthSource.Description = "Meet to talk about work.";
-
-
-            var month = new Array();
-            month[0] = monthSource;
-
-            // Add the events to the calendar
-            $('#calendar').fullCalendar('addEventSource', {  events: month });
-
+        });
+        $(window).resize(function() {
+            if(window.innerWidth < 765){
+                $('#calendar').fullCalendar('changeView', 'listWeek');
+            } else {
+                $('#calendar').fullCalendar('changeView', 'month');
+            }
         });
     </script>
-    <style>
-        #calendar {
-            margin: 25px;
-            height: 100%;
-        }
-    </style>
 </body>
-
 </html>
