@@ -23,7 +23,8 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/resume.css" rel="stylesheet">
-    <link href="../css/loader.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=doxy"></script>
+
 
 </head>
 
@@ -279,7 +280,7 @@
           </figure>
           <p>
             After completing the inception of how users were going to interact with the system, it was also important to
-            create the visual model for how the system was going to be laid out. Fire up Visio . Being about to
+            create the visual model for how the system was going to be laid out. Fire up Visio 🔥. Being about to
             construct a UML at a high level helped to guarantee that the architecture for the project would be cohesive
             in the early iterations. It was also a chance to problem solve without writing any code first. Being able to
             have professors and my classmates take a dive into the deep architecture before any code was written made it
@@ -290,48 +291,45 @@
             <img src="./HQ/Plan/ExecutiveUML.png" width="100%" alt="Executive UML" style="margin: 25px; max-width: 750px;">
             <figcaption class="figure-caption text-center">Figure 2: HQ Executive UML Diagram</figcaption>
           </figure>
-          <pre><code>
-            -- =======================================================
-            -- Procedure: dbo.setEvent
-            --
-            --	Purpose:        Creates and Saves an Event
-            --
-            --	Description:    Event for the calendar
-            --
-            --	@eventTitle:          Title of the event
-            --	@eventDate:           Date of the event
-            --	@eventdescription:    Plain text of what the event is about.
-            --	@eventHost:           FK to staffID
-            -- =======================================================
-            CREATE PROCEDURE setEvent
-              @eventTitle varchar(300) = NULL,
-              @eventDate datetime = NULL,
-              @eventdescription varchar(MAX) = NULL,
-              @eventHost int = NULL
-            AS
-            BEGIN
-              IF @eventHost IS NULL
-              BEGIN
-                THROW 50002, 'Invalid User Code', 1;
-              END
+          <pre class="prettyprint lang-sql"><code>
+  /* =======================================================
+  --  Procedure: dbo.setEvent
+  --  Purpose:        Creates and Saves an Event
+  --  Description:    Event for the calendar
+  --  Parameters:
+  --    @eventTitle:          Title of the event
+  --    @eventDate:           Date of the event
+  --    @eventdescription:    Text of what the event is about.
+  --    @eventHost:           FK to staffID
+  -- ======================================================= */
+  CREATE PROCEDURE setEvent
+    @eventTitle varchar(300) = NULL,
+    @eventDate datetime = NULL,
+    @eventdescription varchar(MAX) = NULL,
+    @eventHost int = NULL
+  AS
+  BEGIN
+    IF @eventHost IS NULL
+    BEGIN
+      THROW 50002, 'Invalid User Code', 1;
+    END
 
-              IF EXISTS (SELECT * FROM StaffMember WHERE staffID = @eventHost)
-              BEGIN
-                  INSERT INTO Event
-                    (eventTitle, eventDate, eventdescription, eventHost)
-                  VALUES  (@eventTitle,@eventDate, @eventdescription, @eventHost);
-              END
+    IF EXISTS (SELECT * FROM StaffMember WHERE staffID = @eventHost)
+    BEGIN
+        INSERT INTO Event (eventTitle, eventDate, eventdescription, eventHost)
+        VALUES  (@eventTitle, @eventDate, @eventdescription, @eventHost);
+    END
 
-              ELSE
-              BEGIN
-                THROW 50007, 'Staff ID does not exist', 1;
-              END
-            END
-            GO
+    ELSE
+    BEGIN
+      THROW 50007, 'Staff ID does not exist', 1;
+    END
+  END
+  GO
           </code></pre>
 
 
-          <pre><code>
+          <pre class="prettyprint"><code>
             public static DataTable ListToDataTable<T>(List<T> data)
               {
                   PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));

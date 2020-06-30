@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-startup-image" href="../Img/Home.png">
 
-    <title>HQ Demo</title>
+    <title>HQ Demo ~ Program</title>
 
     <link href="../Css/StaticNavStyle.css" rel="stylesheet" />
     <link href="../Css/DefaultStyles.css" rel="stylesheet" />
@@ -20,11 +20,10 @@
     <script src="https://use.fontawesome.com/9e62847280.js"></script>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
 
-    <script src="../Scripts/lib/moment.min.js"></script>
-    <link href="../Content/fullcalendar.css" rel="stylesheet" />
-    <link href="../Content/fullcalendar.min.css" rel="stylesheet" />
-    <script src="../Scripts/fullcalendar.min.js"></script>
-    <script src="../Scripts/fullcalendar.js"></script>
+    <link href="../Content/gridmvc.datepicker.min.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body id="uxMain">
@@ -123,134 +122,100 @@
                 color: white;
                 cursor: pointer;
             }
+
+            canvas {
+                display: block;
+            }
         </style>
-        <div class="container">
-            <div class="col-sm-9" style="width: 100% !important;">
-                <h1 style="color: black;">Calendar</h1>
-                <div class="alert alert-danger" role="alert">
-                    In the live project events were populated dynamically from the database. This is just a static preview!
+
+        <div class="container-fluid">
+            <div>
+                <h1 style="color: black;">Program Proposal</h1>
+                <p class="text-muted">Click on the row to edit form, and see responses.</p>
+                <button class='btn btn-primary' id="addItemVendor" onclick="addPreForm();">Add PreForm<i class="fa fa-plus-square" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="row" style="margin:25px">
+                <h3 style="color: black;">Budget Breakdown</h3>
+                <p class="text-muted">Note: Only proposals that you have entered are considered in this graph.</p>
+
+                <div class="col-lg-6">
+                    <div id="counter" style="height: 500px;"></div>
                 </div>
-                <div id="calendar"></div>
-                <div class="pull-right">
-                    <a href="https://fullcalendar.io" target="_blank">Powered by Full Calendar</a>
+                <div class="col-lg-6">
+                    <div id="piechart" style="height: 500px;"></div>
                 </div>
             </div>
         </div>
     </div>
 
-
     <!-- Footer -->
     <script type="text/javascript" src="../JS/home.js"></script>
     <script type="text/javascript">
-        function toggleNotificationCenter() {
-            var x = document.getElementById("uxNotificationCenter");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
+            function toggleNotificationCenter() {
+                var x = document.getElementById("uxNotificationCenter");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
             }
-        }
 
-        $(document).ready(function () {
-            var date = new Date();
-            var d = date.getDate();
-            var m = date.getMonth();
-            var y = date.getFullYear();
+            // @*Script for Pie Chart*@
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawBreakdownChart);
+            google.charts.setOnLoadCallback(drawBudgetChart);
 
-            $('#calendar').fullCalendar({
-                eventClick: function (event) {
-                        alert("Title: " + event.title + " \n\nDescription: " + event.Description + " \n\nStart: " + event.start.toDate()  + " \n\n All Day ? " + event.allDay);
-                },
-                header: {
-                    left: 'prev, next today',
-                    center: 'title',
-                    right: 'month, agendaWeek, agendaDay'
-                },
-                defaultView: $(window).width() < 765 ? 'listWeek':'month',
+            function drawBreakdownChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Program', 'Cost'],
+                    ['Intro',     36.75],
+                    ['Gardening',      44.27],
+                    ['Card Night',  21.34],
+                    ['Movie Night', 29.62],
+                    ['Move Out Day',    10.27]
+                ]);
 
-                allDaySlot: true,
-                selectable: true,
-                slotMinutes: 15,
+                var element = document.getElementById('piechart');
+                var chart = new google.visualization.PieChart(element);
+                chart.draw(data, { title: 'Budget Breakdown per Program',
+                                legend: 'none', pieSliceText: 'label', 
+                                chartArea: { width: '100%' }, });
+            }
 
-                editable: false, // Don't allow editing of events},
-                initialDate: date.getDate(),
-                events: [
-                    {
-                        title: 'All Day Meeting',
-                        Description: "Meet in the confrence room",
-                        start: new Date(y, m, d)
+            function drawBudgetChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Costs', 'Total Cost'],
+                    ['Spent',     142.25],
+                    ['Budget',     57.75],
+                ]);
+
+                var options = {
+                    title: 'Amount of Budget Spent',
+                    pieHole: 0.5,
+                    pieSliceTextStyle: {
+                        color: 'black',
                     },
-                    {
-                        title: 'Long Meeting',
-                        Description: "Meet in the confrence room",
-                        start: new Date(y, m, d-2),
-                        end: new Date(y, m, d)
+                    legend: 'none',
+                    slices: {
+                        0: { color: '#eb4034' },
+                        1: { color: '#99CC33' }
                     },
-                    {
-                        title: 'Long Meeting',
-                        Description: "Meet in the confrence room",
-                        start: new Date(y, m, d-15),
-                        end: new Date(y, m, d-12),
-                        color: 'teal'
+                    width: '100%',
+                    chartArea: {
+                       width: '100%'
                     },
-                    {
-                        id: 999,
-                        title: 'Repeating Meeting',
-                        Description: "Meet in the confrence room",
-                        start: new Date(y, m, d-7),
-                        color: 'red',
-                        textColor: 'black'
-                    },
-                    {
-                        id: 999,
-                        title: 'Repeating Meeting',
-                        Description: "Meet in the confrence room",
-                        start: new Date(y, m, d+7),
-                        color: 'red',
-                        textColor: 'black'
-                    },
-                    {
-                        id: 999,
-                        title: 'Meeting',
-                        Description: "Meet in the confrence room",
-                        start: new Date(y, m, d+3),
-                        color: 'green',
-                        textColor: 'white'
-                    },
-                    {
-                        id: 999,
-                        title: 'Lunch',
-                        Description: "Dutch Bros?",
-                        start: new Date(y, m, d+12),
-                        color: 'green',
-                        textColor: 'white'
-                    },
-                    {
-                        id: 999,
-                        title: 'Townhall',
-                        Description: "Call in.",
-                        start: new Date(y, m, d+14),
-                        color: 'blue',
-                        textColor: 'white'
-                    },
-                    {
-                        id: 999,
-                        title: 'One on One',
-                        Description: "Call in.",
-                        start: new Date(y, m, d+5),
-                        color: 'purple',
-                        textColor: 'white'
-                    }
-                ]
+                };
+                var element = document.getElementById('counter');
+                var chart = new google.visualization.PieChart(element);
+                chart.draw(data, options);
+            }
+
+            $(window).resize(function(){
+                drawBreakdownChart();
+                drawBudgetChart();
             });
-        });
-        $(window).resize(function() {
-            if(window.innerWidth < 765){
-                $('#calendar').fullCalendar('changeView', 'listWeek');
-            } else {
-                $('#calendar').fullCalendar('changeView', 'month');
-            }
-        });
-    </script>
+        </script>
 </body>
+
 </html>
