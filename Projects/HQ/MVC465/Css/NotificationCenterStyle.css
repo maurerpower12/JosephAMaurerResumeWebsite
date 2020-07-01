@@ -52,6 +52,25 @@
     transition: 0.5s;
 }
 }
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+    height: 550px
+}
+
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 767px) {
+    .row.content {
+        height: auto;
+    }
+}
+
+#uxAnnouncement:hover {
+    background-color: #373a3c;
+    color: white;
+    cursor: pointer;
+}
 /*Full Screen size
 @media only screen and (min-width: 650px) {
 
