@@ -3,8 +3,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /*border: 1px solid #e7e7e7;*/
-    background-color: #4C4C4C;     /*F1F0EE;*/ /*#f3f3f3;*/
+    background-color: #4C4C4C;
     position: absolute;
     top: 0;
     left: 0;
@@ -29,7 +28,7 @@ li {
     }
 
         li a:hover:not(.active) {
-            color: #3A8DEB;  /*ADADAD   ;*/ /*#ddd;*/
+            color: #3A8DEB;
         }
 
         li a.active {
@@ -41,42 +40,7 @@ li {
     font-size: 25px;
 }
 
-
-/*.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #4C4C4C;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 30px;
-    text-align:center;
-}
-
-.sidenav a {
-    padding: 8px 65px 15px 15px;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    font-size: 25px ! important;
-    right: 25px;
-    align-content: space-between;
-    /* line-height: 4.2px; 
-    float: left!important;
-    width: 250px;
-    text-align: left;
-}
-.sidenav a:hover{
-    color: #3A8DEB;
-    text-decoration: none !important;
-}*/
-
 .uxOpen { 
-    /*visibility: hidden;*/ 
     font-size: 30px;
     cursor: pointer; 
     position: relative; 
@@ -85,6 +49,7 @@ li {
     color: white;
     background-color: #4C4C4C;
 }
+
 .uxOpenNavMobile { 
     font-size: 30px;
     cursor: pointer; 
@@ -94,6 +59,7 @@ li {
     color: white;
     background-color: #4C4C4C;
 }
+
  .uxRightNav {
      text-decoration: none;
       color: white; 
@@ -104,16 +70,14 @@ li {
 
 /*Smaller screen size*/
 @media only screen and (max-width: 650px) {
-  /*.sidenav {padding-top: 15px;}*/
-  /*.uxOpen { visibility:visible; }*/
    header {background-color: #4C4C4C !important;}
    nav { visibility: hidden; }
    img {width: 100%;}
-   h1{ font-family: Rockwell;  }
-   /*.card {width: 100% !important; text-align: center !important;}*/
-    .banner {visibility: visible;}
+   h1 { font-family: Rockwell; }
+   .banner {visibility: visible;}
 
 }
+
 /*Full Screen size*/
 @media only screen and (min-width: 651px) {
     .uxOpenNavMobile { visibility: hidden; }
@@ -126,6 +90,7 @@ li {
     h3{ font-family: Rockwell; }
     .banner {visibility: hidden;}
 }
+
 .banner {
     width: 100%;
     height: 40px;
@@ -141,15 +106,6 @@ li {
     color: rgb(228,229,229);
 }
 
-/*header {
-    background-color: white;
-    position: absolute;
-    top:0;
-    left: 0;
-    right:0;
-    height: 45px;
-    width: 100%;
-}*/
 #uxBlogLink {
     background-color: #3A8DEB;
     border: none;
@@ -223,40 +179,6 @@ li {
     }
  /*End Used input Blog Controller*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* As hex codes */
 
 .color-primary-0 {
@@ -318,5 +240,3 @@ li {
 .color-secondary-2-4 {
     color: #979691;
 }
-
-

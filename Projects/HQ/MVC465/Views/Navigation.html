@@ -1,5 +1,5 @@
-<header class="uxHeader" style="position: fixed; top: 0; z-index: 100;">
-    <div id="uxNotificationCenter" style="display: none;">
+<header class="uxHeader">
+    <div id="uxNotificationCenter" style="width: 0%; visibility: hidden; z-index: 9999">
         <h4 style="display: inline-block">Notification(s)</h4>
         <a id="uxRefresh" class="btn btn-default pull-right" style="display: inline-block"><i
                 class="fa fa-refresh fa-2x" aria-hidden="true"></i></a>
@@ -37,11 +37,11 @@
     </div>
 
     <!-- @*This is the main nav when at full rez*@ -->
-    <div id="uxStaticSideNav" class="sidenav" style="z-index: 1000;">
+    <div id="uxStaticSideNav" class="sidenav">
         <div class="uxStaticNavTop" style="overflow: hidden;">
             <img id="uxUserProfilePic" src="../Img/img_avatar.png" width="100" height="100">
             <p>John Smith</p>
-            <div class="uxHiddenProfile" style="margin-right: 1px;">
+            <div class="uxHiddenProfile">
                 <span class="fa-stack has-badge fa-1x" data-count="2" id="uxNotificationBtn" style="cursor:pointer"
                     onclick="toggleNotificationCenter()">
                     <i class="fa fa-circle fa-stack-2x fa-1x"></i>
@@ -70,24 +70,24 @@
             </li>
         </ul>
     </div>
-
 </header>
 
 <div class="fa-stack fa-2x" style="position:fixed; bottom:25px; right:25px; z-index: 9999;">
     <i class="fa fa-circle fa-stack-2x"></i>
     <a href="../../../hq.html">
         <i class="fa fa-external-link-alt fa-inverse fa-stack-1x"></i>
-        <!-- <i class="fa fa-bell fa-inverse fa-stack-1x"></i> -->
     </a>
 </div>
 
 <script type="text/javascript">
     function toggleNotificationCenter() {
         var x = document.getElementById("uxNotificationCenter");
-        if (x.style.display === "none") {
-            x.style.display = "block";
+        if (x.style.visibility === 'hidden') {
+            x.style.width = $(window).width() < 700 ? '100%' : '30%';
+            x.style.visibility = 'visible';
         } else {
-            x.style.display = "none";
+            x.style.width = '0%';
+            x.style.visibility = 'hidden';
         }
     }
 </script>
