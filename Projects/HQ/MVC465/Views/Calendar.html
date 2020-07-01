@@ -28,102 +28,8 @@
 </head>
 
 <body id="uxMain">
-    <header class="uxHeader" style="position: fixed; top: 0; z-index: 100;">
-        <div id="uxNotificationCenter" style="display: none;">
-            <h4 style="display: inline-block">Notification(s)</h4>
-            <a id="uxRefresh" class="btn btn-default pull-right" style="display: inline-block"><i
-                    class="fa fa-refresh fa-2x" aria-hidden="true"></i></a>
-
-            <hr />
-            <ul class="notifications">
-                <li class="notification">
-                    <p class="text-muted pull-left">Mandi Smart</p>
-                    <p class="text-muted pull-right">05/21/2017 7:45:21 AM</p>
-                    <br />
-                    <hr />
-                    Your paperwork is late!
-                    <p class="text-muted pull-right">
-                        <a href='' class="btn btn-danger"><i class="fa fa-times-circle fa-2x"
-                                aria-hidden="true"></i></a>
-
-                        <a href='' class="btn btn-info"><i class="fa fa-chevron-circle-right fa-2x"
-                                aria-hidden="true"></i></a>
-                    </p>
-                </li>
-
-                <li class="notification">
-                    <p class="text-muted pull-left">Rusty Schmo</p>
-                    <p class="text-muted pull-right">05/21/2017 7:45:21 AM</p>
-                    <br />
-                    <hr />
-                    Did you see the Yankee game last night?!
-                    <p class="text-muted pull-right">
-                        <a href='' class="btn btn-danger"><i class="fa fa-times-circle fa-2x"
-                                aria-hidden="true"></i></a>
-
-                        <a href='' class="btn btn-info"><i class="fa fa-chevron-circle-right fa-2x"
-                                aria-hidden="true"></i></a>
-                    </p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- @*This is the main nav when at full rez*@ -->
-        <div id="uxStaticSideNav" class="sidenav" style="z-index: 1000;">
-            <div class="uxStaticNavTop" style="overflow: hidden;">
-                <img id="uxUserProfilePic" src="../Img/img_avatar.png" width="100" height="100">
-                <p>John Smith</p>
-                <div class="uxHiddenProfile" style="margin-right: 1px;">
-                    <span class="fa-stack has-badge fa-1x" data-count="2" id="uxNotificationBtn" style="cursor:pointer"
-                        onclick="toggleNotificationCenter()">
-                        <i class="fa fa-circle fa-stack-2x fa-1x"></i>
-                        <i class="fa fa-bell fa-stack-1x fa-inverse" style="color:black"></i>
-                    </span>
-                    <span class="fa-stack has-badge fa-1x">
-                        <i class="fa fa-circle fa-stack-2x fa-1x"></i>
-                        <i class="fa fa-cog fa-stack-1x fa-inverse" style="color:black"></i>
-                    </span>
-                    <span class="fa-stack has-badge fa-1x">
-                        <i class="fa fa-circle fa-stack-2x fa-1x"></i>
-                        <a href="https://www.josephamaurer.com"><i class="fa fa-times fa-stack-1x fa-inverse"
-                                style="color:black"></i></a>
-                    </span>
-                </div>
-            </div>
-            <ul style="padding-left: 5px;" id="uxAppIcons">
-                <li title="Dashboard"><a href="./_Layout.html"><img src="../Img/HQLogo/Home.png" /></a></li>
-                <li title="Roster"><a href="./Roster.html"><img src="../Img/HQLogo/Roster-V3.png" /></a></li>
-                <li title="Incident Report"><a href=""><img src="../Img/HQLogo/IR-V4.png" /></a></li>
-                <li title="CDL"><a href=""><img src="../Img/HQLogo/Dev-V1.png" /></a></li>
-                <li title="PreForm"><a href="./PreForm.html"><img src="../Img/HQLogo/PF-V1.png" /></a></li>
-                <li title="Calendar"><a href="./Calendar.html"><img src="../Img/HQLogo/Cal-V1.png" /></a></li>
-                <li title="Duty"><a href=""><img src="../Img/HQLogo/Duty.png" /></a></li>
-                <li title="Document Library" style="padding-bottom:75px;"><a href=""><img
-                            src="../Img/HQLogo/doc.png" /></a></li>
-            </ul>
-        </div>
-
-    </header>
+    <div id="Header"></div>
     <div class="uxContentBody">
-        <style>
-            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-            .row.content {
-                height: 550px
-            }
-
-            /* On small screens, set height to 'auto' for the grid */
-            @media screen and (max-width: 767px) {
-                .row.content {
-                    height: auto;
-                }
-            }
-
-            #uxAnnouncement:hover {
-                background-color: #373a3c;
-                color: white;
-                cursor: pointer;
-            }
-        </style>
         <div class="container">
             <div class="col-sm-9" style="width: 100% !important;">
                 <h1 style="color: black;">Calendar</h1>
@@ -142,14 +48,10 @@
     <!-- Footer -->
     <script type="text/javascript" src="../JS/home.js"></script>
     <script type="text/javascript">
-        function toggleNotificationCenter() {
-            var x = document.getElementById("uxNotificationCenter");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
+        // Load the navigation page dynamically
+        $(function(){
+            $("#Header").load("./Navigation.html"); 
+        });
 
         $(document).ready(function () {
             var date = new Date();
