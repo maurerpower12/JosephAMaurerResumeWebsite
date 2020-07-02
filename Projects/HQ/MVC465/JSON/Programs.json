@@ -1,0 +1,66 @@
+{
+    "columns": [
+        {
+            "name": "eventID",
+            "title": "ID",
+            "breakpoints": "xs"
+        },
+        {
+            "name": "eventName",
+            "title": "Event Name"
+        },
+        {
+            "name": "eventCost",
+            "title": "Event Cost"
+        },
+        {
+            "name": "eventDate",
+            "title": "Event Date"
+        }
+    ],
+    "rows": [
+        {
+            "eventID": 1,
+            "eventName": "Movie Night",
+            "eventCost": "$30.88",
+            "eventDate": "5/24/2020"
+        },
+        {
+            "eventID": 2,
+            "eventName": "Welcome Event",
+            "eventCost": "$35.13",
+            "eventDate": "4/14/2020"
+        },
+        {
+            "eventID": 3,
+            "eventName": "Gardening",
+            "eventCost": "$32.89",
+            "eventDate": "5/28/2020"
+        },
+        {
+            "eventID": 4,
+            "eventName": "Card Night",
+            "eventCost": "$21.47",
+            "eventDate": "4/29/2020"
+        },
+        {
+            "eventID": 5,
+            "eventName": "Move Out Day",
+            "eventCost": "$44.25",
+            "eventDate": "1/26/2020"
+        }
+    ],
+    "chartArray": [
+        ["Program", "Cost"],
+        ["Welcome Event", 35.13],
+        ["Gardening", 32.89],
+        ["Card Night", 21.47],
+        ["Movie Night", 30.88],
+        ["Move Out Day", 44.25]
+    ],
+    "summaryData": [
+        ["Costs", "Total Cost"],
+        ["Spent", 154.62],
+        ["Funds Remaining", 57.75]
+    ]
+}

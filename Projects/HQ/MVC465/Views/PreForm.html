@@ -15,16 +15,9 @@
     <link href="../Css/StaticNavStyle.css" rel="stylesheet" />
     <link href="../Css/DefaultStyles.css" rel="stylesheet" />
     <link href="../Css/NotificationCenterStyle.css" rel="stylesheet" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/9e62847280.js"></script>
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-
     <link href="../Content/fontawesome-free-5.13.1/css/all.min.css" rel="stylesheet" />
-    <link href="../Content/gridmvc.datepicker.min.css" rel="stylesheet" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../Scripts/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Css/RosterStyle.css" rel="stylesheet" />
 </head>
 
 <body id="uxMain">
@@ -37,7 +30,14 @@
                 <p class="text-muted">Click on the row to edit form, and see responses.</p>
                 <button class='btn btn-primary' id="addItemVendor" onclick="addPreForm();"><i class="fa fa-plus-square" aria-hidden="true"></i> Add Proposal</button>
             </div>
-
+            <br>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table" data-filtering="true"  data-paging="true">
+                        <thead></thead> <tbody></tbody>
+                    </table>
+                </div>
+            </div>
             <div class="row" style="margin:25px">
                 <h3 style="color: black;">Budget Breakdown</h3>
                 <p class="text-muted">Note: Only proposals that you have entered are considered in this graph.</p>
@@ -53,67 +53,76 @@
     </div>
 
     <!-- Footer -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="../Scripts/lib/moment.min.js"></script>
+    
+    <link rel="stylesheet" href="../Scripts/FooTable-3/compiled/footable.bootstrap.min.css"/>
+    <script src="../Scripts/FooTable-3/compiled/footable.min.js"></script>
+
     <script type="text/javascript">
+        var jsonData;
         // Load the navigation page dynamically
-        $(function(){
-            $("#Header").load("./Navigation.html"); 
+        $(function () {
+            $("#Header").load("./Navigation.html");
         });
 
-            // @*Script for Pie Chart*@
-            google.charts.load('current', {'packages':['corechart']});
-            google.charts.setOnLoadCallback(drawBreakdownChart);
-            google.charts.setOnLoadCallback(drawBudgetChart);
-
-            function drawBreakdownChart() {
-                var data = google.visualization.arrayToDataTable([
-                    ['Program', 'Cost'],
-                    ['Intro',     36.75],
-                    ['Gardening',      44.27],
-                    ['Card Night',  21.34],
-                    ['Movie Night', 29.62],
-                    ['Move Out Day',    10.27]
-                ]);
-
-                var element = document.getElementById('piechart');
-                var chart = new google.visualization.PieChart(element);
-                chart.draw(data, { title: 'Budget Breakdown per Program',
-                                legend: 'none', pieSliceText: 'label', 
-                                chartArea: { width: '100%' }, });
-            }
-
-            function drawBudgetChart() {
-                var data = google.visualization.arrayToDataTable([
-                    ['Costs', 'Total Cost'],
-                    ['Spent',     142.25],
-                    ['Budget',     57.75],
-                ]);
-
-                var options = {
-                    title: 'Amount of Budget Spent',
-                    pieHole: 0.5,
-                    pieSliceTextStyle: {
-                        color: 'black',
-                    },
-                    legend: 'none',
-                    slices: {
-                        0: { color: '#eb4034' },
-                        1: { color: '#99CC33' }
-                    },
-                    width: '100%',
-                    chartArea: {
-                       width: '100%'
-                    },
-                };
-                var element = document.getElementById('counter');
-                var chart = new google.visualization.PieChart(element);
-                chart.draw(data, options);
-            }
-
-            $(window).resize(function(){
-                drawBreakdownChart();
-                drawBudgetChart();
+        jQuery(function ($) {
+            // This loads all of the data from the JSON file into the table.
+            $.getJSON('../JSON/Programs.json', function (data) {
+                jsonData = data;
+                $('.table').footable(data);
             });
-        </script>
+        });
+
+        // @*Script for Pie Chart*@
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawBreakdownChart);
+        google.charts.setOnLoadCallback(drawBudgetChart);
+
+        function drawBreakdownChart() {
+            var data = google.visualization.arrayToDataTable(jsonData.chartArray);
+
+            var element = document.getElementById('piechart');
+            var chart = new google.visualization.PieChart(element);
+            chart.draw(data, {
+                title: 'Budget Breakdown per Program',
+                legend: 'none', pieSliceText: 'label',
+                chartArea: { width: '100%' },
+            });
+        }
+
+        function drawBudgetChart() {
+            var data = google.visualization.arrayToDataTable(jsonData.summaryData);
+
+            var options = {
+                title: 'Amount of Budget Spent',
+                pieHole: 0.5,
+                pieSliceTextStyle: {
+                    color: 'black',
+                },
+                legend: 'none',
+                slices: {
+                    0: { color: '#eb4034' },
+                    1: { color: '#99CC33' }
+                },
+                width: '100%',
+                chartArea: {
+                    width: '100%'
+                },
+            };
+            var element = document.getElementById('counter');
+            var chart = new google.visualization.PieChart(element);
+            chart.draw(data, options);
+        }
+
+        $(window).resize(function () {
+            drawBreakdownChart();
+            drawBudgetChart();
+        });
+    </script>
 </body>
 
 </html>
