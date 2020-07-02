@@ -388,6 +388,7 @@ li:hover li:active {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  object-fit: cover;
 }
 
 #googleForm {
@@ -455,7 +456,7 @@ li:hover li:active {
 }
 
 .radiate-btn:hover {
-  animation: shadow-pulse .25s infinite;
+  animation: gold-pulse 1s infinite;
   color: var(--gold-accent-color);
 }
 
@@ -466,6 +467,16 @@ li:hover li:active {
   }
   100% {
     box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes gold-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(228, 184, 97, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(228, 184, 97, 0);
   }
 }
 
