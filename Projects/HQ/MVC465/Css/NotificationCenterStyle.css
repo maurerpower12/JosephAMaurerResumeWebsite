@@ -1,19 +1,4 @@
-﻿#uxNotificationCenter {
-    color: white;
-    display: block;
-    transition: 0.5s;
-    font-size: 25px !important;
-    align-content: space-between;
-    float: left !important;
-    width: 450px;
-    text-align: left;
-    height: 100vh;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(55,58,60);
-}
-.notification {
+﻿.notification {
     background-color: #D7D7D7;
     color: black;
     float: left;

@@ -1,40 +1,55 @@
 <header class="uxHeader">
-    <div id="uxNotificationCenter" style="width: 0%; visibility: hidden; z-index: 9999">
-        <h4 style="display: inline-block">Notification(s)</h4>
-        <a id="uxRefresh" class="btn btn-default pull-right" style="display: inline-block"><i
-                class="fa fa-refresh fa-2x" aria-hidden="true"></i></a>
+    <div class="modal fade" id="uxNotificationCenter" tabindex="-1" role="dialog" aria-labelledby="notifcations"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="notificationLabel">Notification(s)</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <hr />
+                    <ul class="notifications">
+                        <li class="notification">
+                            <p class="text-muted pull-left">Mandi Smart</p>
+                            <p class="text-muted pull-right">05/21/2017 7:45:21 AM</p>
+                            <br />
+                            <hr />
+                            Your paperwork is late!
+                            <p class="text-muted pull-right">
+                                <a href='' class="btn btn-danger"><i class="fa fa-times-circle fa-2x"
+                                        aria-hidden="true"></i></a>
 
-        <hr />
-        <ul class="notifications">
-            <li class="notification">
-                <p class="text-muted pull-left">Mandi Smart</p>
-                <p class="text-muted pull-right">05/21/2017 7:45:21 AM</p>
-                <br />
-                <hr />
-                Your paperwork is late!
-                <p class="text-muted pull-right">
-                    <a href='' class="btn btn-danger"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></a>
+                                <a href='' class="btn btn-info"><i class="fa fa-chevron-circle-right fa-2x"
+                                        aria-hidden="true"></i></a>
+                            </p>
+                        </li>
 
-                    <a href='' class="btn btn-info"><i class="fa fa-chevron-circle-right fa-2x"
-                            aria-hidden="true"></i></a>
-                </p>
-            </li>
+                        <li class="notification">
+                            <p class="text-muted pull-left">Rusty Schmo</p>
+                            <p class="text-muted pull-right">05/21/2017 7:45:21 AM</p>
+                            <br />
+                            <hr />
+                            Did you see the Yankee game last night?!
+                            <p class="text-muted pull-right">
+                                <a href='' class="btn btn-danger"><i class="fa fa-times-circle fa-2x"
+                                        aria-hidden="true"></i></a>
 
-            <li class="notification">
-                <p class="text-muted pull-left">Rusty Schmo</p>
-                <p class="text-muted pull-right">05/21/2017 7:45:21 AM</p>
-                <br />
-                <hr />
-                Did you see the Yankee game last night?!
-                <p class="text-muted pull-right">
-                    <a href='' class="btn btn-danger"><i class="fa fa-times-circle fa-2x" aria-hidden="true"></i></a>
-
-                    <a href='' class="btn btn-info"><i class="fa fa-chevron-circle-right fa-2x"
-                            aria-hidden="true"></i></a>
-                </p>
-            </li>
-        </ul>
+                                <a href='' class="btn btn-info"><i class="fa fa-chevron-circle-right fa-2x"
+                                        aria-hidden="true"></i></a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <!-- @*This is the main nav when at full rez*@ -->
     <div id="uxStaticSideNav" class="sidenav">
@@ -81,13 +96,6 @@
 
 <script type="text/javascript">
     function toggleNotificationCenter() {
-        var x = document.getElementById("uxNotificationCenter");
-        if (x.style.visibility === 'hidden') {
-            x.style.width = $(window).width() < 700 ? '100%' : '30%';
-            x.style.visibility = 'visible';
-        } else {
-            x.style.width = '0%';
-            x.style.visibility = 'hidden';
-        }
+        $('#uxNotificationCenter').modal('show');
     }
 </script>
