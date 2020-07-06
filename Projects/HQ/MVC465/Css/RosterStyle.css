@@ -24,3 +24,7 @@
     color: white!important;
     text-decoration: none !important;
 }
+
+tbody tr:hover {
+    background-color: lightskyblue;
+}

@@ -33,14 +33,15 @@
             <br>
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <table class="table" data-filtering="true"  data-paging="true">
+                    <table id="ProgramTable" class="table" data-filtering="true"  data-paging="true">
                         <thead></thead> <tbody></tbody>
                     </table>
                 </div>
             </div>
             <div class="row" style="margin:25px">
                 <h3 style="color: black;">Budget Breakdown</h3>
-                <p class="text-muted">Note: Only proposals that you have entered are considered in this graph.</p>
+                <p class="text-muted">Note: Only proposals that are approved are considered in this graph.</p>
+                <p id="totalBudget">Total Budget: </p>
 
                 <div class="col-lg-6">
                     <div id="counter" style="height: 500px;"></div>
@@ -74,6 +75,7 @@
             $.getJSON('../JSON/Programs.json', function (data) {
                 jsonData = data;
                 $('.table').footable(data);
+                updateTotalBudget();
             });
         });
 
@@ -116,6 +118,10 @@
             var element = document.getElementById('counter');
             var chart = new google.visualization.PieChart(element);
             chart.draw(data, options);
+        }
+
+        function updateTotalBudget() {
+            document.getElementById('totalBudget').innerHTML += '$' + (jsonData.summaryData[1][1] + jsonData.summaryData[2][1]);
         }
 
         $(window).resize(function () {
