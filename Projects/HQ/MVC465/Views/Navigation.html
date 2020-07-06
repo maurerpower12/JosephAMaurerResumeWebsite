@@ -53,8 +53,8 @@
     <!-- @*This is the main nav when at full rez*@ -->
     <div id="uxStaticSideNav" class="sidenav">
         <div class="uxStaticNavTop" style="overflow: hidden;">
-            <img id="uxUserProfilePic" src="../Img/img_avatar.png" width="100" height="100">
-            <p>John Smith</p>
+            <img id="uxUserProfilePic" src="../Img/loading.png" width="100" height="100">
+            <p id="uxUserName"></p>
             <div class="uxHiddenProfile">
                 <span class="fa-stack has-badge fa-1x" data-count="2" id="uxNotificationBtn" style="cursor:pointer"
                     onclick="toggleNotificationCenter()">
@@ -96,5 +96,20 @@
 <script type="text/javascript">
     function toggleNotificationCenter() {
         $('#uxNotificationCenter').modal('show');
+    }
+
+    // Load the navigation page dynamically
+    $(function(){
+        LoadRandomAvatarImage(); 
+    });
+
+    // Loads a random avatar image from the avatar folder.
+    function LoadRandomAvatarImage() {
+        let lookup = ["John Smith", "Jane Smith", "Timmy Smith",
+                        "Karen Smith", "Lauren Smith"];
+        let imgNum = Math.floor((Math.random() * lookup.length)+1);
+        let imgName = 'img_avatar'+imgNum+'.png';
+        document.getElementById("uxUserProfilePic").src = "../Img/Avatars/" + imgName;
+        document.getElementById("uxUserName").innerHTML = lookup[imgNum-1];
     }
 </script>
