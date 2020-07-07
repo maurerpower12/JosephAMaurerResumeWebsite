@@ -79,7 +79,7 @@ padding-left:90px;
   top: 16px;
   left: 50%;
   margin-left: -25px;
-  background-color: #999999;
+  background-color: transparent;
   z-index: 100;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -126,4 +126,10 @@ padding-left:90px;
 }
 .timeline-body > p + p {
   margin-top: 5px;
+}
+
+#timelimeProfilePic {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
 }
