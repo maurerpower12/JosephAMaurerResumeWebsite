@@ -1,17 +1,5 @@
-﻿@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
-#uxSmallBody {
+﻿#uxSmallBody {
     margin-right: 205px;
-}
-/*#uxBlockScroll::-webkit-scrollbar { 
-    display: none; 
-}*/
-div::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-}
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
 }
 .top{
     position: fixed;
@@ -27,26 +15,19 @@ div::-webkit-scrollbar {
     height: 75px;
     top: 0;
     margin-right: 55px;
-    /*margin-top: 45px;*/
     z-index: 99999;
-    /*-webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -o-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);*/
 }
 .send{
-	text-transform: uppercase;
-	font-weight: 700;
-	float: right;
-	margin-right: 5%;
-	cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    float: right;
+    margin-right: 5%;
+    cursor: pointer;
     user-select:none;
 }
 .rightnav {
     background-color: #f1f5f8;
     height: 100%;
-    width: 205px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -54,7 +35,6 @@ div::-webkit-scrollbar {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 45px;
-    text-align:center;
 }
 .avatar img {
     margin-top: 5px;
@@ -64,12 +44,12 @@ div::-webkit-scrollbar {
     position: fixed;
     z-index: 1;
     bottom: 0;
-    right: 0;
-    display:inline;
+    display:inline-flex;
     padding-right: 2px !important;
     margin-right: 5px;
-    height: 100px;
     background-color: #f1f5f8;
+    padding-bottom: 65px;
+    padding-left: 10px;
 }
 
 .sender
@@ -107,7 +87,7 @@ div::-webkit-scrollbar {
   padding-left: 0px;
 
 }
-.messages-chat{margin-bottom:125px !important; margin-top:96px !important; overflow:hidden; overflow-y:auto;}
+.messages-chat{margin-bottom:125px !important; overflow:hidden; overflow-y:auto;}
 
 /*Smaller screen size*/
 @media only screen and (max-width: 650px) {
@@ -120,4 +100,33 @@ div::-webkit-scrollbar {
 }
 .rightnav {
     resize: horizontal;
+}
+
+.comment-wrapper .panel-body {
+    max-height:650px;
+    overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+    width:64px;
+    height:64px;
+    border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom:1px dashed #efefef;
+    margin-bottom:25px;
+}
+
+.media {
+    width: 100%;
+}
+
+.img-circle {
+    width: 60px;
+    height: 60px;
+}
+
+.comments {
+    padding: 15px;
 }
