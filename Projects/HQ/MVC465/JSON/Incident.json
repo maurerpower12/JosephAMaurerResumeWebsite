@@ -1,0 +1,15 @@
+{
+    "columns": [
+        { "name": "residentStudentID", "title": "Student ID", "breakpoints": "xs" },
+        { "name": "residentFirstName", "title": "First Name" },
+        { "name": "residentLastName", "title": "Last Name" },
+        { "name": "residentRoomNumber", "title": "Room #"},
+        { "name": "residentBDay", "title": "Birthdate", "breakpoints": "xs sm" },
+        { "name": "residentGender", "title": "Gender", "breakpoints": "xs sm md" }
+    ],
+    "rows": [
+        {"residentStudentID":1,"residentFirstName":"Hilton","residentLastName":"Bourget","residentBDay":"05/06/1991","residentGender":"Male","residentRoomNumber":"A29"},
+        {"residentStudentID":2,"residentFirstName":"Biron","residentLastName":"Brecknell","residentBDay":"12/02/1995","residentGender":"Male","residentRoomNumber":"A094"},
+        {"residentStudentID":3,"residentFirstName":"Barnebas","residentLastName":"Fayne","residentBDay":"08/29/2000","residentGender":"Male","residentRoomNumber":"A7"}
+    ]
+}
