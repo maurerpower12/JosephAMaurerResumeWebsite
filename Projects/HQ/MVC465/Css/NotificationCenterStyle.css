@@ -17,26 +17,6 @@
   max-height: 100vh;
   overflow:auto;
 }
-/*Smaller screen size*/
-@media only screen and (max-width: 649px) {
-    #uxNotificationCenter {
-    color: white;
-    display: block;
-    transition: 0.5s;
-    font-size: 25px !important;
-    align-content: space-between;
-    float: left !important;
-    width: 250px;
-    text-align: left;
-    height: 100vh;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(55,58,60);
-    transition: 0.5s;
-}
-}
-
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {
     height: 550px
