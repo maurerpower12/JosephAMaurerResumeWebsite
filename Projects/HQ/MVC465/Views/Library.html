@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="../Img/house.ico" />
+    <link rel="apple-touch-icon" href="../Img/Home.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-startup-image" href="../Img/Home.png">
+
+    <title>HQ Demo ~ Library</title>
+
+    <link href="../Css/StaticNavStyle.css" rel="stylesheet" />
+    <link href="../Css/DefaultStyles.css" rel="stylesheet" />
+    <link href="../Css/NotificationCenterStyle.css" rel="stylesheet" />
+    <link href="../Content/fontawesome-free-5.13.1/css/all.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Css/RosterStyle.css" rel="stylesheet" />
+</head>
+
+<body id="uxMain">
+    <div id="Header"></div>
+    <div class="uxContentBody">
+        <div class="container">
+            <div style="width: 100% !important;">
+                <h1 style="color: black;">Document Library</h1>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="table" data-filtering="true" data-paging="true">
+                            <thead></thead> <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="../Scripts/lib/moment.min.js"></script>
+    
+    <link rel="stylesheet" href="../Scripts/FooTable-3/compiled/footable.bootstrap.min.css"/>
+    <script src="../Scripts/FooTable-3/compiled/footable.min.js"></script>
+
+    <script type="text/javascript">
+        // Load the navigation page dynamically
+        $(function(){
+            $("#Header").load("./Navigation.html"); 
+        });
+
+        jQuery(function ($) {
+            // This loads all of the data from the JSON file into the table.
+            $.getJSON('../JSON/Library.json', function (data) {
+                $('.table').footable(data);
+            });
+        });
+    </script>
+</body>
+
+</html>
