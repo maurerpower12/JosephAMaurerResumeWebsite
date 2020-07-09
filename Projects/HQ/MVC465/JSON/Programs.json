@@ -73,6 +73,14 @@
             "eventDate": "1/26/2020",
             "eventStatus": "<span class=\"label label-success\">Approved</span>",
             "eventEdit": "<button type=\"button\" class=\"btn btn-primary disabled\">Edit</button>"
+        },
+        {
+            "eventID": 6,
+            "eventName": "Study Treats",
+            "eventCost": "$41.38",
+            "eventDate": "1/30/2020",
+            "eventStatus": "<span class=\"label label-warning\">Pending</span>",
+            "eventEdit": "<button type=\"button\" class=\"btn btn-primary disabled\">Edit</button>"
         }
     ],
     "chartArray": [
@@ -81,11 +89,13 @@
         ["Gardening", 32.89],
         ["Card Night", 21.47],
         ["Movie Night", 30.88],
-        ["Move Out Day", 44.25]
+        ["Move Out Day", 44.25],
+        ["Study Treats", 41.38]
     ],
     "summaryData": [
         ["Costs", "Total Cost"],
         ["Spent", 154.62],
-        ["Available", 57.75]
+        ["Available", 54.00],
+        ["Pending", 41.38]
     ]
 }

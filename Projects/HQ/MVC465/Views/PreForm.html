@@ -40,7 +40,6 @@
             </div>
             <div class="row" style="margin:25px">
                 <h3 style="color: black;">Budget Breakdown</h3>
-                <p class="text-muted">Note: Only proposals that are approved are considered in this graph.</p>
                 <p id="totalBudget">Total Budget: </p>
 
                 <div class="col-lg-6">
@@ -121,7 +120,7 @@
         }
 
         function updateTotalBudget() {
-            document.getElementById('totalBudget').innerHTML += '$' + (jsonData.summaryData[1][1] + jsonData.summaryData[2][1]);
+            document.getElementById('totalBudget').innerHTML += '$' + (jsonData.summaryData[1][1] + jsonData.summaryData[2][1]+ jsonData.summaryData[3][1]);
         }
 
         $(window).resize(function () {
