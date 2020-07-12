@@ -132,6 +132,9 @@ async function poweroff() {
         if (loaderElement) {
             loaderElement.style.visibility = "hidden";
         }
+
+        // Turn on the name animation.
+        $( "#jm" ).addClass( "fullName" );
     }
     loading = false;
 }

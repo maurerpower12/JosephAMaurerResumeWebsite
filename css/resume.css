@@ -185,8 +185,8 @@ section.resume-section .resume-item .resume-date {
 
 /* School crest icon styles */
 .crest-icon {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto;
   border-radius: 50%;
   float: left;
   display: block;
@@ -304,7 +304,7 @@ li:hover li:active {
   right: 0;
 }
 
-#jm {
+.fullName {
   stroke-dasharray: 0 740;
   stroke-dashoffset: -500;
   stroke-width: 2.5px;

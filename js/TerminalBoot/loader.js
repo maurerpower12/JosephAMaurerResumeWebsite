@@ -29,8 +29,7 @@ $(document).ready(function() {
     type(random_item(introArray));
 })
 
-function random_item(items)
-{
+function random_item(items) {
    return items[Math.floor(Math.random()*items.length)];
 }
 
