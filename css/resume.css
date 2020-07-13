@@ -186,6 +186,7 @@ section.resume-section .resume-item .resume-date {
 /* School crest icon styles */
 .crest-icon {
   width: 100%;
+  max-width: 100px;
   height: auto;
   border-radius: 50%;
   float: left;
