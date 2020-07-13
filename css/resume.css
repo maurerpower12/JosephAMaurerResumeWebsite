@@ -411,7 +411,7 @@ li:hover li:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../img/Maps/Black&Gold.png');
+  background-image: url('../img/Maps/Black&Gold-NoLabels.png');
   /* Add the blur effect. IDK if I like it but I'll try it and probably forget to change it tbh */
   filter: blur(0.5px);
   -webkit-filter: blur(0.5px);
