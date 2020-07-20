@@ -1,3 +1,20 @@
+
+// This is a list of the possible background images
+
+var introArray = [
+  "PugetSound.jpg",
+  "Bird.mov",
+  "Zephyr.mov",
+  "SantaMonica.mov",
+  "River.mov",
+  "Sunrise.mov",
+  "FireLookout.mov",
+  "Fly.mov",
+  "Rose.jpg",
+  "Rainbow.jpg",
+  "CraterLake.jpg"
+];
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -26,3 +43,12 @@
   });
 
 })(jQuery); // End of use strict
+
+$(document).ready(function() {
+  // Load a random background image
+  $('#mapBackground').css('background-image', 'url(./img/Lyfe/'+ random_item(introArray) +')');
+})
+
+function random_item(items) {
+  return items[Math.floor(Math.random()*items.length)];
+}
