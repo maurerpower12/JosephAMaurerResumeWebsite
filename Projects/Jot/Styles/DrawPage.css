@@ -153,7 +153,6 @@ canvas {
     align-content: center;
 }
 
-
 /*css here to control the right side bar*/
 button {
     background: none;
@@ -162,7 +161,6 @@ button {
 }
 
 a.nav-expander {
-    top: 50px !important;
     background: none repeat scroll 0 0 #18191b;
     color: #cccccc;
     display: block;
@@ -173,17 +171,10 @@ a.nav-expander {
     padding: 1em 1.6em 2em;
     position: absolute;
     right: 0em;
-    /* Below is the animation that moves the menu option out*/
-    /*-webkit-transition: right 0.3s ease-in-out 0s;
-  -moz-transition: right 0.3s ease-in-out 0s;
-  -o-transition: right 0.3s ease-in-out 0s;*/
 }
-/*.modal-content.ui-resizable {
-  overflow: scroll;
-}*/
+
 .modal-body {
     z-index: 99999;
-    container: 'body';
 }
 
 a.nav-expander:hover {
@@ -339,11 +330,6 @@ body.nav-expanded {
     column-width: 35px;
     width: 35px;
     min-height: 35px;
-
-    /*-webkit-transition-property: width, height; 
-    -webkit-transition-duration: 2s; 
-    transition-property: width, height;
-    transition-duration: 2s;*/
 }
 
 

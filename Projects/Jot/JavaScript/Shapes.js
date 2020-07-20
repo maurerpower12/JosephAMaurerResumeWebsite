@@ -16,19 +16,6 @@ $("#textinput").focus();
 $("#textinput").click();
 $("#textinput").trigger("tap");
 
-//JavaScript souce files for each shape
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Circle.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Ellipse.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Eraser.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/FreeFormLine.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/JotCanvas.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Line.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Rectangle.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Square.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Triangle.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Text.js"></script>');
-document.write('<script type="text/javascript" src="JavaScript/Shapes/Highlighter.js"></script>');
-
 // This javascript controls which template is being put in the background.
 var bgnum = 0;
 var m_background = new Image();
@@ -93,8 +80,6 @@ function bgFunction(num) {
     //m_save_string += JSON.stringify(m_marks);
 
     bgnum = num;
-    var c = document.getElementById("myCanvas");
-    var b = c.getContext("2d");
     var loc = window.location.pathname;
 
     var startingpath = 'Background%20Templates/jpg/';
@@ -171,16 +156,11 @@ function bgFunction(num) {
         m_background.src = startingcolors + "white.jpg";
     }
 
-    c.style.backgroundImage = "url('" + m_background.src + "')";
+    canvas.style.backgroundImage = "url('" + m_background.src + "')";
 
     m_background.onload = function () {
         b.globalCompositeOperation = "source-over";
-
-        //Parse(m_save_string); // call the Parse function passing the string from the database
-
         jotCanvas.SetBackground();
-
-
         HideLoadingScreen(); // Hide the loading screen
     }
 }
@@ -188,14 +168,11 @@ function bgFunction(num) {
 //function to load the user def image 
 var a_str;
 function userdefset(db_str) {
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
     var image = new Image();
     image.src = db_str;
     image.onload = function () {
         canvas.style.backgroundImage = "url('" + image.src + "')";  // set the image as the background
-        ctx.globalCompositeOperation = "source-over";
-        //Parse(m_save_string); // call the Parse function passing the string from the database
+        context.globalCompositeOperation = "source-over";
         m_background.src = image.src;
         jotCanvas.SetBackground();
         HideLoadingScreen(); // Hide the loading screen
@@ -207,8 +184,6 @@ function userdefset(db_str) {
 var inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles(e) {
-    var canvas = document.getElementById("myCanvas");
-
     destinationCanvas = document.createElement("canvas");
     destinationCanvas.width = canvas.width;
     destinationCanvas.height = canvas.height;
@@ -221,7 +196,7 @@ function handleFiles(e) {
         img.src = url;
         bgnum = -12; // set the background number.
         img.onload = function () {
-            document.getElementById("myCanvas").style.backgroundImage = "url('" + img.src + "')";  // set the image as the background
+            canvas.style.backgroundImage = "url('" + img.src + "')";  // set the image as the background
             m_background.src = img.src;
             jotCanvas.SetBackground();
 
@@ -237,12 +212,11 @@ function handleFiles(e) {
 function ThicknessFunction(num) {
     lineThickness = num;
 
-    if (shapeSelected && shape.name != "X" && (shape.name == "F" || shape.name == "Z" || shape.name == "H"))
+    if (shapeSelected && shape.name != "X" && (shape.name == "F" 
+        || shape.name == "Z" || shape.name == "H"))
     { //currently selected shape is not text
 
         shape.lineThickness = lineThickness;
-
-
 
         jotCanvas.Draw();
 
@@ -254,9 +228,9 @@ function ThicknessFunction(num) {
 function OutlineThicknessFunction(num) {
     outlineThickness = num;
 
-    if (shapeSelected && shape.name != "H" && shape.name != "F" && shape.name != "Z" && shape.name != "X")
+    if (shapeSelected && shape.name != "H" && shape.name != "F" && shape.name 
+            != "Z" && shape.name != "X")
     {
-     
         shape.outlineThickness = outlineThickness;
 
         jotCanvas.Draw();
@@ -302,7 +276,9 @@ function ToolColor(num) {
         default:
     }
 
-    if (shapeSelected && shape.name != "F" && shape.name != "H" && shape.name != "X" && shape.name != "Z") { //currently selected shape is not free-form line, text, or highlighter
+    //currently selected shape is not free-form line, text, or highlighter
+    if (shapeSelected && shape.name != "F" && shape.name != "H" && 
+            shape.name != "X" && shape.name != "Z") { 
         shape.fillColor = toolColor;
         jotCanvas.Draw();
     }
@@ -344,7 +320,8 @@ function LineColor(num) {
         default:
     }
 
-    if (shapeSelected && (shape.name == "F" || shape.name == "H")) { //currently selected shape is free-form line or highlighter
+    //currently selected shape is free-form line or highlighter
+    if (shapeSelected && (shape.name == "F" || shape.name == "H")) { 
         shape.fillColor = lineColor;
         jotCanvas.Draw();
     }
@@ -438,11 +415,10 @@ function ToolOutlineColor(num) {
 
 //tool is selected
 function ToolFunction(num) {
-    currentTool = num
+    currentTool = num;
 }
 
-function DeleteSelectedShape()
-{
+function DeleteSelectedShape() {
     if (shapeSelected || textClicked) {
         var temp = jotCanvas.marks.slice(0, selectedIndex);
         var temp2 = jotCanvas.marks.slice(selectedIndex + 1, jotCanvas.marks.length);
@@ -475,7 +451,7 @@ document.addEventListener('keypress', function (evt) {
             default:
                 evt.preventDefault();
                 shape.AddText(String.fromCharCode(evt.keyCode));
-        }                  
+        }
 
         jotCanvas.Draw();
         shape.DrawCursor(context);
@@ -490,7 +466,7 @@ document.addEventListener('keydown', function (evt) {
         switch (evt.keyCode) {
             case 8: //backspace
                 evt.preventDefault();
-                shape.Backspace();  
+                shape.Backspace();
                 break;
             case 9: //tab
                 evt.preventDefault();
@@ -538,64 +514,49 @@ document.addEventListener('keydown', function (evt) {
 //function to paste text into textbox
 document.addEventListener("paste", function (evt) {
     AddText(evt.clipboardData.getData('text/plain'));
-
 }, false);
 
 
-function AddText(string)
-{
+function AddText(pasteString) {
     if (textClicked) {
-      //  var text = evt.clipboardData.getData('text/plain')
-
-        for (var i = 0; i < text.length; i++) {
+        for (var i = 0; i < pasteString.length; i++) {
             if (text[i] == "\n") {
                 shape.AddLine();
             }
-            else
-                shape.AddText(text[i]);
+            else {
+                shape.AddText(pasteString[i]);
+            }
         }
         jotCanvas.Draw();
         shape.DrawCursor(context);
         shape.DrawBox(context);
     }
-
-
-}
-
-function SaveNote()
-{
-    //SetStack();
-    //document.getElementById("success-alert").innerHTML = "<strong>Note Saved</strong>";
-    //ShowAlert();
 }
 
 
 canvas.addEventListener('mousedown', function (evt) {
-    if(!mobile)
+    if(!mobile) {
         MouseDown(evt);
+    }
 }, false);
 
 canvas.addEventListener('mousemove', function (evt) {
-    if (!mobile)
+    if (!mobile) {
         MouseMove(evt);
+    }
 }, false);
 
 canvas.addEventListener('mouseup', function (evt) {
-    if (!mobile)
+    if (!mobile) {
         MouseUp(evt);
+    }
 }, false);
 
 canvas.addEventListener('touchstart', function (evt) {
     evt.preventDefault();
-    
-
-    //if (mouseclicked)
-   //     MouseUp(evt);
-
 
     evt = evt.touches[0];
     lastmove = evt;
-   // alert(evt.clientX);
 
     mobile = true;
     MouseDown(evt);
@@ -613,8 +574,6 @@ canvas.addEventListener('touchmove', function (evt) {
 canvas.addEventListener('touchend', function (evt) {
     evt.preventDefault();
     evt = lastmove;
-   // alert("touchend:" + evt.clientX);
-    //alert();
 
     mobile = true;
     MouseUp(evt);
@@ -636,13 +595,11 @@ function MouseDown (evt) {
     mouseclicked = true;
 
 
-    if (shapeSelected || textClicked)
-    {
+    if (shapeSelected || textClicked) {
         if (!shape.Contains(startX, startY)) {
             shapeSelected = false;
             textClicked = false;
         }
-
     }
 
     if (!shapeSelected && !textClicked) {
@@ -665,10 +622,7 @@ function MouseDown (evt) {
                 textClicked = false;
         }
 
-       // if (!textClicked) {
-            jotCanvas.Draw();
-      //      textClicked = false;
-      //  }
+        jotCanvas.Draw();
     }
 
 }
@@ -679,7 +633,7 @@ function MouseMove(evt) {
     if (mouseclicked) {
         var mousePos = getMousePosition(canvas, evt);
 
-        if (!shapeSelected && !textClicked) {       
+        if (!shapeSelected && !textClicked) {
 
             switch (currentTool) {
                 case 0: //Highlighter
@@ -812,25 +766,30 @@ function MouseUp (evt) {
 }
 
 //Selects shape at coordinates x,y
-function Selection(x,y)
-{
+function Selection(x,y) {
     var found = false;
     var i = jotCanvas.marks.length - 1;
     shapeSelected = false;
     selectedIndex = -1;
 
+    // Loop backwards through all of the marks
     while(!found && i >= 0)
     {
         var temp = jotCanvas.marks[i];
-        if (temp.name == 'X' || temp.name == 'S' || temp.name == 'R' || temp.name == 'C' || temp.name == 'E') //Text, square, rectangle, circle, 
+        // Text, square, rectangle, circle, 
+        if (temp.name == 'X' || temp.name == 'S' || temp.name == 'R' || 
+            temp.name == 'C' || temp.name == 'E')
         {
+            // Does this shape contain the coordinates where the user clicked?
             found = temp.Contains(x, y);
 
             if(found)
             {
                 shape = jotCanvas.marks[i];
+                // Draw the selected shape around the mark.
                 shape.DrawBox(context);
 
+                // Is this shape a text area?
                 if (temp.name == 'X') {
                     shape.SetCursors(x, y, context);
                     shape.DrawCursor(context);
@@ -841,27 +800,14 @@ function Selection(x,y)
                         for (var i = 0; i < temp2.length; i++) {
                             shape.AddText(temp2[i]);
                         }
-
                     }
                 }
-                else
+                else {
                     shapeSelected = true;
+                }
 
                 selectedIndex = i;
             }
-
-            //if (x > temp.startX && x < (temp.startX + temp.width) &&
-            //    y > temp.startY && y < (temp.startY + temp.height)) {
-            //    found = true;
-            //    shape = jotCanvas.marks[i];
-
-            //    cursorXposition = 0;
-            //    cursorYposition = parseInt((y - temp.startY) / temp.size);
-
-            //    shape.DrawBox(context);
-            //    shape.DrawCursor(context);
-            //    textClicked = true;
-            //}
         }
         i--;
     }
@@ -869,10 +815,7 @@ function Selection(x,y)
 
 //mark is undone
 function undo() {
-    var c = document.getElementById("myCanvas");
-    var b = c.getContext("2d");
     if (index_redo < max_undo) {
-
         redostack.push(jotCanvas.marks.pop());
         index_redo++;
         jotCanvas.Draw();
@@ -882,7 +825,7 @@ function undo() {
     }
 }
 
-//function that is called when when a new shape is 
+//function that is called when a new shape is 
 //added to canvas, which increments max undo
 function ResetUndo()
 {
@@ -892,8 +835,9 @@ function ResetUndo()
         redostack = [];
     }
 
-    if (max_undo < 10)
-        max_undo++
+    if (max_undo < 10) {
+        max_undo++;
+    }
 }
 
 //mark is redone
@@ -910,12 +854,8 @@ function ChangeFont() {
     var SelectList = $('select#font');
     var selectedValue = $('option:selected', SelectList).val();
 
-    document.getElementById("success-alert").innerHTML = "Font changed to " + selectedValue;
-    //ShowAlert();
-
     fontfamily = selectedValue;
    
-    
     if (textClicked) {
         shape.Change_Font(fontfamily);
         jotCanvas.Draw();
@@ -954,8 +894,3 @@ function ChangeFontSize(font_size) {
         shape.DrawBox(context);
     }
 }
-
-//Calls function to save canvas as pdf
-// document.getElementById('download').addEventListener('click', function () {
-//     downloadCanvas(this, 'myCanvas', 'Note');
-// }, false);

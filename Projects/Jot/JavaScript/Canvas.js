@@ -16,27 +16,6 @@
 //
 //******************************************************************************************************
 
-document.write('<script type="text/javascript" src="JavaScript/Shapes.js"></script>');
-
-//Helper functions fo the popup that lets users change the note name
-function CancelNoteName() {
-    document.getElementById("defaultnoteentry").value = "";
-}
-
-//Changes name of note
-function ChangeNoteName() {
-    current_note_name = document.getElementById("defaultnoteentry").value;
-    if (current_note_name != '') { // if they havent entered a new note name
-        document.title = document.getElementById("defaultnoteentry").value;
-        var final = "Name: " + current_note_name;
-        document.getElementById("MainContent_notesName").innerText = final;
-        SetStack();
-        document.getElementById("success-alert").innerHTML = "<strong>Note Saved</strong>";
-        // ShowAlert();
-    }
-}
-
-
 //This function deals with the URL functionality of changing the background*@
 function UserBackground() {
     var c = document.getElementById("myCanvas");
@@ -51,9 +30,7 @@ function UserBackground() {
 
 //prints note
 function Print() {
-
     var canvas = document.getElementById("myCanvas");
-
 
 
     destinationCanvas = document.createElement("canvas");
@@ -178,10 +155,8 @@ function downloadCanvas() {
         }
     }
 
-    pdf.save('JosephAMaurerJotSample.pdf'); 
+    pdf.save('Jot.pdf');
     pdf.output('dataurlnewwindow');
-
-    // console.log("Save Finished");
 }
 
 //Below is the code to validate file extensions
