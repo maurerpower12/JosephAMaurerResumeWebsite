@@ -16,665 +16,61 @@
         <meta property="og:image:height" content="598" />
         
         <title>Jot by Verge Sample Note</title>
-        
-        <!-- Link for Shapes is down below by the canvas html. This is because a canvas has a reference to the js. Needs to be after -->
+
         <link href="Styles/DrawPage.css" rel="stylesheet" />
 
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <!-- Custom Fonts -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+        <script src="https://kit.fontawesome.com/c372db8bc7.js" crossorigin="anonymous"></script>
         </head>
 
         <body>
-            <!-- Code here for slide out menu -->
-            <nav id="tool-bar">
-                <div class="dropdown">
-                    <ul class="list-unstyled main-menu " id="tool-bar-content">
+            <!-- Code here for top menu -->
+            <nav id="topNav" class="navbar navbar-dark bg-dark">
+                <div class="mx-auto" style="display:inline-flex;">
+                    <!-- Sections with the buttons for the tool bar -->
+                    <span title="Text">
+                        <button id="btn1" type="button" onclick="ToolFunction(9)">
+                            <img src="Jot_Icons/Text.png" class="nav-icon"/>
+                        </button>
+                    </span>
 
-                        <!--Include your navigation here-->
-                        <li class="text-right"><a id="nav-close">≫</a></li>
+                    <span title="Draw and Highligher">
+                        <button id="btn2" type="button">
+                            <img src="Jot_Icons/brush.png"  class="nav-icon"/>
+                        </button>
+                    </span>
+    
+                    <span title="Shapes">
+                        <button id="btn3" type="button">
+                            <img src="Jot_Icons/Shapes.png"  class="nav-icon"/>
+                        </button>
+                    </span>
+    
+                    <span title="Share/Export">
+                        <button id="ShareNoteButton" type="button">
+                            <i class='fa fa-share-alt fa-3x nav-icon'aria-hidden='true' 
+                                style="color: #b40f18;"></i>
+                            </button>
+                    </span>
+    
+                    <span title="Settings">
+                        <button id='btn4' type="button">
+                            <img src="Jot_Icons/Settings.png"  class="nav-icon"/>
+                        </button>
+                    </span>
+                    <!--  END Sections with the buttons for the tool bar -->
+                </div>
 
-                        <div id="TemplateModal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-        
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Background Templates</h4>
-                                    </div>
-                                    <div class="modal-body" style="padding: 40px 50px;">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(1);">
-                                                    <img src="Background%20Templates/jpg/narrow%20ruled%202.jpeg"
-                                                        class="thumbnail img-responsive">
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(2);">
-                                                    <img src="Background%20Templates/jpg/todo%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(3)">
-                                                    <img src="Background%20Templates/jpg/dot%20grid%20med%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(4)">
-                                                    <img src="Background%20Templates/jpg/graph%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(6)">
-                                                    <!-- Engineering -->
-                                                    <img src="Background%20Templates/jpg/engineering_grey%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(7)">
-                                                    <img src="Background%20Templates/jpg/calendar%20week%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(8)">
-                                                    <img src="Background%20Templates/jpg/meeting%20notes%20basic%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(15)">
-                                                    <img src="Background%20Templates/jpg/meeting%20notes%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(14)">
-                                                    <img src="Background%20Templates/jpg/legal%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(16)">
-                                                    <img src="Background%20Templates/jpg/ruled%20margin%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(9)">
-                                                    <img src="Background%20Templates/jpg/music%20staves%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(10)">
-                                                    <img src="Background%20Templates/jpg/baseball%20portrait%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(11)">
-                                                    <img src="Background%20Templates/jpg/basketball%20landscape%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(12)">
-                                                    <img src="Background%20Templates/jpg/football%20landscape%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(13)">
-                                                    <img src="Background%20Templates/jpg/soccer%20landscape%202.jpeg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(18)">
-                                                    <img src="Background%20Templates/color/blue.jpg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(19)">
-                                                    <img src="Background%20Templates/color/Green.jpg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(20)">
-                                                    <img src="Background%20Templates/color/red.jpg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-sm-6 col-xs-12">
-                                                <a onclick="bgFunction(0)">
-                                                    <img src="Background%20Templates/color/white.jpg"
-                                                        class="thumbnail img-responsive" />
-                                                </a>
-                                            </div>
-                                        </div>
-        
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button data-dismiss="modal" type="button"
-                                            class="btn btn-success btn-default pull-right"><span
-                                                class="glyphicon glyphicon-ok"></span>Save</button>
-                                        <button data-dismiss="modal" type="submit"
-                                            class="btn btn-danger btn-default pull-left"><span
-                                                class="glyphicon glyphicon-remove"></span>Cancel</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <!--  Modal for sharing a note with another user.  -->
-                        <div id="ShareNoteModal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button class="close" type="submit" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Who do you want to share this note with?</h4>
-                                    </div>
-                                    <div class="modal-body" style="padding: 40px 50px;">
-                                        <p style="color: #b40f18;">This feature is diabled, feel free to screenshot your
-                                            drawling though!</p>
-                                        <p>Enter the email of who you want to share the note with: </p>
-                                        <p style="color: darkgrey;">For multiple emails, separate the emails with commas. </p>
-        
-                                        <input type="text" id="DestEmailEntry" class="form-control" required="required" />
-                                        <center>
-                                            <label class="radio-inline">Read Only</label>
-                                            <input type="radio" id="read-only-permission" name="optradio" value="0"
-                                                required="required" />
-                                            <label class="radio-inline">Edit</label>
-                                            <input type="radio" id="edit-permission" name="optradio" value="1" />
-                                        </center>
-                                    </div>
-        
-                                    <div class="modal-footer">
-                                        <button data-dismiss="modal" type="button"
-                                            class="btn btn-success btn-default pull-right"><span
-                                                class="glyphicon glyphicon-ok"></span>Send</button>
-                                        <button data-dismiss="modal" type="submit"
-                                            class="btn btn-danger btn-default pull-left"><span
-                                                class="glyphicon glyphicon-remove"></span>Cancel</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <br />
-                        <div class="tool-bar-all" style="text-align:center;">
-                            <!-- Sections with the buttons for the tool bar -->
-                            <span title="Text">
-                                <button id="btn1" class="dropdown-toggle" type="button" data-toggle="dropdown"
-                                    onclick="ToolFunction(9)">
-                                    <img src="Jot_Icons/Text.png" /></button>
-                            </span>
-                            <br />
-                            <span title="Draw and Highligher">
-                                <button id="btn2" class="dropdown-toggle" type="button" data-toggle="dropdown">
-                                    <img src="Jot_Icons/brush.png" /></button>
-                            </span>
-        
-                            <br />
-        
-                            <span title="Shapes">
-                                <button id="btn3" class="dropdown-toggle" type="button" data-toggle="dropdown">
-                                    <img src="Jot_Icons/Shapes.png" /></button>
-                            </span>
-        
-                            <br />
-                            <br />
-        
-                            <span title="Share/Export">
-                                <button id="ShareNoteButton" type="button" data-toggle="dropdown"><i
-                                        class='fa fa-share-alt fa-4x' aria-hidden='true' style="color: #b40f18;"></i></button>
-                            </span>
-                            <br />
-                            <br />
-        
-                            <span title="Settings">
-                                <button id='btn4' class="dropdown-toggle" type="button" data-toggle="dropdown">
-                                    <img src="Jot_Icons/Settings.png" /></button>
-                            </span>
-        
-                            <br />
-                            <br />
-                            <!--  END Sections with the buttons for the tool bar -->
-                        </div>
-                    </ul>
-
-                    <ul class="list-unstyled main-menu " id="tool-bar-text">
-                        <!-- Text Modal -->
-                        <button id="back-btn1" type="button" class="btn btn-danger pull-left"><span
-                                class="glyphicon glyphicon-arrow-left"></span>Back</button>
-                        <br /> <br />
-                        <h4>Text Tool</h4>
-        
-                        <br />
-                        <p>Select Text Size</p>
-                        <input type="range" id="textRange" min="5" max="90" step="1" value="30"
-                            onchange="ChangeFontSize(this.value);">
-                        <span id="textsize" style="color: white">30</span>
-                        <br />
-                        <div class="col-center-block" style="align-content: center;" id="stylepicker">
-                            <span class="stylepickercells" style="font-weight: bold" onclick="BIU('bold');"><i
-                                    class="material-icons">format_bold</i></span>
-                            <span class="stylepickercells" style="font-style: italic" onclick="BIU('italic');"><i
-                                    class="material-icons">format_italic</i></span>
-                            <span class="stylepickercells" style="font-style: italic; font-weight: bold"
-                                onclick="BIU('italic bold');"><i class="material-icons">format_bold</i><i
-                                    class="material-icons">format_italic</i></span>
-                            <span class="stylepickercells" onclick="BIU('small-caps');"><i
-                                    class="material-icons">text_fields</i></span>
-                        </div>
-                        <br />
-        
-                        <p>Select a font</p>
-                        <select id="font" onchange="ChangeFont(this);">
-                            <option style="font-family: arial;">Arial</option>
-                            <option style="font-family: Verdana;">Verdana</option>
-                            <option style="font-family: Times New Roman;">Times New Roman</option>
-                            <option style="font-family: Courier New;">Courier New</option>
-                            <option style="font-family: serif;">serif</option>
-                            <option style="font-family: sans-serif;">sans-serif</option>
-                            <option style="font-family: Comic Sans MS;">Comic Sans MS </option>
-                            <option style="font-family: Lobster;">Lobster</option>
-                        </select>
-                        <br />
-                        <div id="colorpicker2" style="text-align: center; display: inline-block; margin: 2em; width: 50%;">
-                            <p>Text Color</p>
-                            <div class="col-sm-2 colorpickercells" style="background-color: red; height: 25px;"
-                                onclick="TextColor(1)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: blue; height: 25px;"
-                                onclick="TextColor(2)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: green; height: 25px;"
-                                onclick="TextColor(3)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: yellow; height: 25px;"
-                                onclick="TextColor(4)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: purple; height: 25px;"
-                                onclick="TextColor(5)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: black; height: 25px;"
-                                onclick="TextColor(6)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: white; height: 25px;"
-                                onclick="TextColor(7)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: teal; height: 25px;"
-                                onclick="TextColor(8)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: brown; height: 25px;"
-                                onclick="TextColor(9)">
-                                <br />
-                            </div>
-                        </div>
-                        <br /> <br /> <br /> <br />
-                    </ul>
-
-                    <ul class="list-unstyled main-menu " id="tool-bar-draw">
-                        <button id="back-btn2" type="button" class="btn btn-danger pull-left"><span
-                                class="glyphicon glyphicon-arrow-left"></span>Back</button>
-                        <br /><br />
-                        <h4>Draw Tool</h4>
-        
-                        <div id="drawpicker" style="text-align: center; display: inline-block;">
-                            <div id="Pen-tool" class="col-sm-2 drawpickercells" onclick="ToolFunction(7)">
-                                <!-- <span title="Pencil"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></span> -->
-                                <span title="Pencil"><i class="material-icons" style="font-size: 35px;">gesture</i></span>
-        
-                            </div>
-                            <br /><br />
-                            <div id="Highlighter-tool" class="col-sm-2 drawpickercells svg_ico" onclick="ToolFunction(0)">
-                                <!-- <span title="Highligher"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></span> -->
-                                <span title="Highligher"><img id="grey" src="Jot_Icons/high_ico_grey.png"
-                                        style="width: 35px; height: 35px;" /></span>
-                            </div>
-                            <br /><br />
-                            <div onclick="ToolFunction(8)" class="col-sm-2 drawpickercells">
-                                <span title="Eraser"><i class="fa fa-eraser fa-2x" aria-hidden="true"></i></span>
-                            </div>
-                            <br />
-                        </div>
-        
-                        <br />
-                        <!-- color picker for the draw tools -->
-                        <div id="colorpicker" style="text-align: center; display: inline-block;">
-                            <h5>Pen Color</h5>
-                            <div class="col-sm-2 colorpickercells" style="background-color: red; height: 25px;"
-                                onclick="LineColor(1); ">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: blue; height: 25px;"
-                                onclick="LineColor(2)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: green; height: 25px;"
-                                onclick="LineColor(3)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: yellow; height: 25px;"
-                                onclick="LineColor(4)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: purple; height: 25px;"
-                                onclick="LineColor(5)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: black; height: 25px;"
-                                onclick="LineColor(6)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: white; height: 25px;"
-                                onclick="LineColor(7)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: teal; height: 25px;"
-                                onclick="LineColor(8)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: brown; height: 25px;"
-                                onclick="LineColor(9)">
-                                <br />
-                            </div>
-                            <div>
-                                <input type="color" id="head" name="head" value="#e66465">
-                            </div>
-                        </div>
-        
-                        <br />
-                        <!-- size picker for the size picker -->
-                        <div id="sizepicker" style="text-align: center; display: inline-block;">
-                            <h5 class="title_pen" style="background-color: #18191b ! important;">Pen Size</h5>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(1)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em; width: 100%; ">
-                                    <circle cx="15" cy="20" r="1" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(2)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em; width: 100%; ">
-                                    <circle cx="15" cy="20" r="2" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(3)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em; width: 100%;">
-                                    <circle cx="15" cy="20" r="3" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(4)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em; width: 100%;">
-                                    <circle cx="15" cy="20" r="4" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(5)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="5" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(6)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="6" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(7)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="7" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(8)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="8" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(9)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="9" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(10)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="10" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(11)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="11" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(12)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="12" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(13)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="13" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(14)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="14" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                            <div class="col-sm-2 sizepickercells" onclick="ThicknessFunction(15)">
-                                <svg height="40" width="40" style="position:absolute; top: 0em; left: 0em;  width: 100%;">
-                                    <circle cx="15" cy="20" r="15" stroke="black" stroke-width="3" fill="black" />
-                                </svg>
-                            </div>
-                        </div>
-                        <br /> <br /> <br /> <br />
-                    </ul>
-
-                    <ul class="list-unstyled main-menu " id="tool-bar-shapes">
-                        <!-- Shapes Settings -->
-                        <button id="back-btn3" type="button" class="btn btn-danger pull-left"><span
-                                class="glyphicon glyphicon-arrow-left"></span>Back</button>
-                        <br /><br />
-                        <h4>Shapes Tool</h4>
-        
-        
-                        <br />
-                        <!-- Code to display the different shapes options to the user -->
-                        <div id="shapepicker" style="align-content:center; display: inline-block;">
-                            <div class="col-sm-4 shapepickercells" onclick="ToolFunction(1); ">
-                                <span title="Circle"> <i class="material-icons shape_ico_size"
-                                        style="font-size: 40px;">panorama_fish_eye</i></span>
-                            </div>
-                            <div class="col-sm-4 shapepickercells" onclick="ToolFunction(6)">
-                                <span title="Ellipse"><i class="material-icons shape_ico_size"
-                                        style="font-size: 40px;">vignette</i></span>
-                            </div>
-                            <div class="col-sm-4 shapepickercells" onclick="ToolFunction(2)">
-                                <span title="Rectangle"> <i class="material-icons shape_ico_size"
-                                        style="font-size: 40px;">crop_5_4</i></span>
-                            </div>
-        
-                            <div class="col-sm-4 shapepickercells" onclick="ToolFunction(3)">
-                                <span title="Line"><i class="material-icons shape_ico_size"
-                                        style="font-size: 40px;">linear_scale</i></span>
-                            </div>
-                            <div class="col-sm-4 shapepickercells" onclick="ToolFunction(4)">
-                                <span title="Triangle"> <i class="material-icons shape_ico_size"
-                                        style="font-size: 40px;">change_history</i></span>
-                            </div>
-                            <div class="col-sm-4 shapepickercells" onclick="ToolFunction(5)">
-                                <span title="Square"> <i class="material-icons shape_ico_size" style="font-size: 40px;">
-                                        check_box_outline_blank</i></span>
-                            </div>
-                            <div class="col-sm-4 shapepickercells" onclick="DeleteSelectedShape()">
-                                <span title="Delete Selected Shape"> <i class="material-icons shape_ico_size"
-                                        style="font-size: 40px;"> delete</i></span>
-                            </div>
-                        </div>
-        
-                        <!-- Color picker for different shapes -->
-                        <div id="colorpicker2" style="text-align: center; display: inline-block; margin: 2em; width: 50%;">
-                            <h5>Shape Color</h5>
-                            <div class="col-sm-2 colorpickercells" style="background-color: red; height: 25px;"
-                                onclick="ToolColor(1); ">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: blue; height: 25px;"
-                                onclick="ToolColor(2)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: green; height: 25px;"
-                                onclick="ToolColor(3)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: yellow; height: 25px;"
-                                onclick="ToolColor(4)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: purple; height: 25px;"
-                                onclick="ToolColor(5)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: black; height: 25px;"
-                                onclick="ToolColor(6)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: white; height: 25px;"
-                                onclick="ToolColor(7)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: teal; height: 25px;"
-                                onclick="ToolColor(9)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: brown; height: 25px;"
-                                onclick="ToolColor(10)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells"
-                                style=" height: 25px; background-color: lightgrey; font-size: 15px; color:#6F7D8C; text-align: center; "
-                                onclick="ToolColor(8)">
-                                &#9940;
-                            </div>
-                        </div>
-                        <!-- Color picker for the different outline colors -->
-                        <div id="colorpicker3" style="text-align: center; display: inline-block; margin: 2em; width: 50%;">
-                            <h5>Shape Outline Color</h5>
-                            <div class="col-sm-2 colorpickercells" style="background-color: red; height: 25px;"
-                                onclick="ToolOutlineColor(1); ">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: blue; height: 25px;"
-                                onclick="ToolOutlineColor(2)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: green; height: 25px;"
-                                onclick="ToolOutlineColor(3)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: yellow; height: 25px;"
-                                onclick="ToolOutlineColor(4)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: purple; height: 25px;"
-                                onclick="ToolOutlineColor(5)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: black; height: 25px;"
-                                onclick="ToolOutlineColor(6)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: white; height: 25px;"
-                                onclick="ToolOutlineColor(7)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: teal; height: 25px;"
-                                onclick="ToolOutlineColor(8)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells" style="background-color: brown; height: 25px;"
-                                onclick="ToolOutlineColor(9)">
-                                <br />
-                            </div>
-                            <div class="col-sm-2 colorpickercells"
-                                style="height: 25px; background-color: lightgrey; font-size: 15px; color:#6F7D8C; text-align: center; "
-                                onclick="ToolOutlineColor(10)">
-                                &#9940;
-                            </div>
-        
-                        </div>
-                        <br /><br />
-                        <p>Outline Size</p>
-                        <input type="range" id="txtRange" min="1" max="20" step="1" value="10"
-                            onchange="OutlineThicknessFunction(this.value); showValue2(this.value);">
-                        <span id="txtsize" style="color: white">10</span>
-                        <br /> <br /> <br /> <br />
-                    </ul>
-
-                    <ul class="list-unstyled main-menu " id="tool-bar-settings">
-                        <!-- Settings Modal -->
-                        <button id="back-btn4" type="button" class="btn btn-danger pull-left"><span
-                                class="glyphicon glyphicon-arrow-left"></span>Back</button>
-                        <br /><br />
-                        <h4>Settings</h4>
-        
-        
-                        <span title="undo"><button type="button" onclick="undo()"><i
-                                    class="material-icons">undo</i></button></span>
-                        <span title="redo"><button type="button" onclick="redo()"><i
-                                    class="material-icons">redo</i></button></span>
-                        <span title="print"><button type="button" onclick="Print()"><i class="fa fa-print fa-2x"
-                                    aria-hidden="true"></i></button></span>
-                        <span title="download"><button type="button" onclick="downloadCanvas()"><i class="fa fa-download fa-2x"
-                                    aria-hidden="true"></i></button></span>
-                        <button id="TemplateButton" type="button" class="btn btn-default btn-block">Background
-                            Templates</button>
-        
-                        <h5>Set your own template</h5>
-                        <input class="btn btn-default btn-block" type="file" id="input" accept="image/jpeg, image/png"
-                            onchange="handleFiles(this.files); " />
-                        <br />
-        
-                        <br /><br />
-                        <h5>Left Hand mode</h5>
-                        <label class="switch" style="left: 5px; right: -5px;">
-                            <input class="savecheckbox" type="checkbox" onchange="lefthandedmode();">
-                            <div class="slider round" id="leftslider"></div>
-                        </label>
-        
-                        <button type="button" onclick=" $('#Helpmodal').appendTo('body').modal('show');"><i
-                                class="fa fa-question-circle"
-                                style="position:absolute; bottom: 0px !important; right: 0px !important;"
-                                aria-hidden="true"></i></button>
-        
-                    </ul>
+                <!-- Menu icon in the top right corner  -->
+                <div class="pull-right hidden-sm-down">
+                    <a id="nav-expander">
+                        <i class='fas fa-brush fa-2x nav-icon'aria-hidden='true'></i>
+                    </a>
                 </div>
             </nav>
 
-            <!-- Menu icon in the top right corner  -->
-            <div class="pull-right navbar-header">
-                <a id="nav-expander" class="nav-expander fixed">
-                    <i class="fa fa-bars fa-lg white"></i>
-                </a>
-            </div>
 
             <!-- Modal for display help -->
             <div id="Helpmodal" class="modal fade" role="dialog">
@@ -708,19 +104,461 @@
                 </div>
             </div>
 
+
+            <!-- Modal for displaying background templates -->
+            <div id="TemplateModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Background Templates</h4>
+                        </div>
+                        <div class="modal-body" style="padding: 40px 50px;">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(1);">
+                                        <img src="Background%20Templates/jpg/narrow%20ruled%202.jpeg"
+                                            class="thumbnail img-responsive">
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(2);">
+                                        <img src="Background%20Templates/jpg/todo%202.jpeg" class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(3)">
+                                        <img src="Background%20Templates/jpg/dot%20grid%20med%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(4)">
+                                        <img src="Background%20Templates/jpg/graph%202.jpeg" class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(6)">
+                                        <!-- Engineering -->
+                                        <img src="Background%20Templates/jpg/engineering_grey%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(7)">
+                                        <img src="Background%20Templates/jpg/calendar%20week%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(8)">
+                                        <img src="Background%20Templates/jpg/meeting%20notes%20basic%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(15)">
+                                        <img src="Background%20Templates/jpg/meeting%20notes%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(14)">
+                                        <img src="Background%20Templates/jpg/legal%202.jpeg" class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(16)">
+                                        <img src="Background%20Templates/jpg/ruled%20margin%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(9)">
+                                        <img src="Background%20Templates/jpg/music%20staves%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(10)">
+                                        <img src="Background%20Templates/jpg/baseball%20portrait%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(11)">
+                                        <img src="Background%20Templates/jpg/basketball%20landscape%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(12)">
+                                        <img src="Background%20Templates/jpg/football%20landscape%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(13)">
+                                        <img src="Background%20Templates/jpg/soccer%20landscape%202.jpeg"
+                                            class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(18)">
+                                        <img src="Background%20Templates/color/blue.jpg" class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(19)">
+                                        <img src="Background%20Templates/color/Green.jpg" class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(20)">
+                                        <img src="Background%20Templates/color/red.jpg" class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-xs-12">
+                                    <a onclick="bgFunction(0)">
+                                        <img src="Background%20Templates/color/white.jpg" class="thumbnail img-responsive" />
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" type="button" class="btn btn-success btn-default pull-right"><span
+                                    class="glyphicon glyphicon-ok"></span>Save</button>
+                            <button data-dismiss="modal" type="submit" class="btn btn-danger btn-default pull-left"><span
+                                    class="glyphicon glyphicon-remove"></span>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Modal for sharing a note with another user.  -->
+            <div id="ShareNoteModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" type="submit" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Who do you want to share this note with?</h4>
+                        </div>
+                        <div class="modal-body" style="padding: 40px 50px;">
+                            <p style="color: #b40f18;">This feature is diabled, feel free to screenshot your
+                                drawling though!</p>
+                            <p>Enter the email of who you want to share the note with: </p>
+                            <p style="color: darkgrey;">For multiple emails, separate the emails with
+                                commas. </p>
+
+                            <input type="text" id="DestEmailEntry" class="form-control"
+                                required="required" />
+                            <div>
+                                <label class="radio-inline">Read Only</label>
+                                <input type="radio" id="read-only-permission" name="optradio" value="0"
+                                    required="required" />
+                                <label class="radio-inline">Edit</label>
+                                <input type="radio" id="edit-permission" name="optradio" value="1" />
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" type="button"
+                                class="btn btn-success btn-default pull-right"><span
+                                    class="glyphicon glyphicon-ok"></span>Send</button>
+                            <button data-dismiss="modal" type="submit"
+                                class="btn btn-danger btn-default pull-left"><span
+                                    class="glyphicon glyphicon-remove"></span>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
             <!--  Control for the canvas -->
-            <div class="container">
-                <div class="col-xs-1"></div>
-                <div class="col-xs-6 col-center-block">
-                    <canvas id="myCanvas" height="1300" width="1000">
-                        Your browser does not support HTML5 canvas :(
-                    </canvas>
+            <div class="container-fluid p-0 m-0">
+                <div class="row justify-content-md-center">
+                    <div class="col-9 p-0 ml-5 mr-0">
+                        <canvas id="myCanvas" height="1300" width="1000">
+                            Your browser does not support HTML5 canvas :(
+                        </canvas>
+                    </div>
+                    <div class="col-2 hidden-sm-down p-0 m-0">
+                        <!-- Code here for slide menu -->
+                        <div id="sidePanel" style="display: none;">
+                            <div class="dropdown">
+                                <ul class="list-unstyled main-menu" id="tool-bar-text">
+                                    <!-- Text Modal -->
+                                    <h4>Text Tool</h4>
+            
+                                    <br />
+                                    <p>Select Text Size</p>
+                                    <input type="range" id="textRange" min="5" max="90" step="1" value="30"
+                                        onchange="ChangeFontSize(this.value);">
+                                    <span id="textsize" style="color: white">30</span>
+                                    <br />
+                                    <div class="col-center-block" style="align-content: center;" id="stylepicker">
+                                        <span class="stylepickercells" style="font-weight: bold" onclick="BIU('bold');"><i
+                                                class="material-icons">format_bold</i></span>
+                                        <span class="stylepickercells" style="font-style: italic" onclick="BIU('italic');"><i
+                                                class="material-icons">format_italic</i></span>
+                                        <span class="stylepickercells" style="font-style: italic; font-weight: bold"
+                                            onclick="BIU('italic bold');"><i class="material-icons">format_bold</i><i
+                                                class="material-icons">format_italic</i></span>
+                                        <span class="stylepickercells" onclick="BIU('small-caps');"><i
+                                                class="material-icons">text_fields</i></span>
+                                    </div>
+
+                                    <hr class="m-2">
+
+                                    <div class="d-flex m-2">
+                                        <div>
+                                            Font
+                                        </div>
+                                        <div class="ml-auto">
+                                            <select id="font" onchange="ChangeFont(this);">
+                                                <option style="font-family: arial;">Arial</option>
+                                                <option style="font-family: Verdana;">Verdana</option>
+                                                <option style="font-family: Times New Roman;">Times New Roman</option>
+                                                <option style="font-family: Courier New;">Courier New</option>
+                                                <option style="font-family: serif;">serif</option>
+                                                <option style="font-family: sans-serif;">sans-serif</option>
+                                                <option style="font-family: Comic Sans MS;">Comic Sans MS </option>
+                                                <option style="font-family: Lobster;">Lobster</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex m-2">
+                                        <div>
+                                            Color
+                                        </div>
+                                        <div class="ml-auto">
+                                            <input type="color" id="textColor" name="textColor" value="black" >
+                                        </div>
+                                    </div>
+                                </ul>
+            
+                                <ul class="list-unstyled main-menu" id="tool-bar-draw">
+                                    <h4>Draw Tool</h4>
+            
+                                    <div class="btn-group btn-group-toggle m-3" role="group" aria-label="Draw Tools">
+                                        <button type="button" class="btn btn-light p-0" id="PenTool">
+                                            <div id="Pen-tool" class="col-sm-2" onclick="ToolFunction(7)">
+                                                <span title="Pencil">
+                                                    <i class="material-icons" style="font-size: 35px;">
+                                                        gesture
+                                                    </i>
+                                                </span>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="btn btn-light p-0" id="HighlighterTool">
+                                            <div id="Highlighter-tool" class="col-sm-2" onclick="ToolFunction(0)">
+                                                <span title="Highligher">
+                                                    <img src="Jot_Icons/Highlighter.svg" style="width: 35px; height: 35px;" />
+                                                </span>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="btn btn-light p-0" id="EraserTool">
+                                            <div onclick="ToolFunction(8)" class="col-sm-2">
+                                                <span title="Eraser"><i class="fa fa-eraser fa-2x" aria-hidden="true"></i></span>
+                                            </div>
+                                        </button>
+                                    </div>
+
+
+                                    <div class="btn-group btn-group-toggle m-3" role="group" aria-label="Pen Styles">
+                                        <button type="button" class="btn btn-light p-0" id="PenStyle">
+                                            <div class="col-sm-2">
+                                                <i class="fas fa-pen fa-2x"></i>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="btn btn-light p-0" id="Felt">
+                                            <div class="col-sm-2">
+                                                <i class="fas fa-marker fa-2x"></i>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="btn btn-light p-0" id="SprayPaint">
+                                            <div class="col-sm-2">
+                                                <i class="fas fa-spray-can fa-2x"></i>
+                                            </div>
+                                        </button>
+                                    </div>
+
+                                    <!-- color picker for the draw tools -->
+                                    <hr class="m-2">
+                                    <div class="d-flex">
+                                        <div>
+                                            Color
+                                        </div>
+                                        <div class="ml-auto">
+                                            <input type="color" id="penColor" name="penColor" value="black" >
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div>
+                                            Size
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div style="text-align: center; display: inline-flex;">
+                                                <input id="penSize" type="range" min="1" max="10" step="1">
+                                                <div>
+                                                    <svg height="40" width="40">
+                                                        <circle cx="15" cy="20" r="1" stroke="white" fill="white" stroke-width="3" fill="black" id="penSizeSample"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+            
+                                <ul class="list-unstyled main-menu " id="tool-bar-shapes">
+                                    <!-- Shapes Settings -->
+                                    <h4>Shapes Tool</h4>
+
+                                    <!-- Code to display the different shapes options to the user -->
+                                    <div id="shapepicker">
+
+                                        <div class="btn-group btn-group-toggle m-3" role="group" aria-label="Draw Tools">
+                                            <button type="button" class="btn btn-light p-0" id="CircleShape">
+                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(1); ">
+                                                    <span title="Circle">
+                                                        <i class="material-icons shape_ico_size">panorama_fish_eye</i>
+                                                    </span>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn btn-light p-0" id="OvalShape">
+                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(6)">
+                                                    <span title="Ellipse">
+                                                        <i class="material-icons shape_ico_size">vignette</i>
+                                                    </span>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn btn-light p-0" id="RectangleShape">
+                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(2)">
+                                                    <span title="Rectangle"> 
+                                                        <i class="material-icons shape_ico_size">crop_5_4</i>
+                                                    </span>
+                                                </div>
+                                            </button>
+                                        </div>
+
+                                        <div class="btn-group btn-group-toggle m-3" role="group" aria-label="Draw Tools">
+                                            <button type="button" class="btn btn-light p-0" id="LineShape">
+                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(3)">
+                                                    <span title="Line">
+                                                        <i class="material-icons shape_ico_size">linear_scale</i>
+                                                    </span>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn btn-light p-0" id="TriangleShape">
+                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(4)">
+                                                    <span title="Triangle">
+                                                        <i class="material-icons shape_ico_size">change_history</i>
+                                                    </span>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn btn-light p-0" id="SquareShape">
+                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(5)">
+                                                    <span title="Square">
+                                                        <i class="material-icons shape_ico_size"> check_box_outline_blank</i>
+                                                    </span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Color picker for different shapes -->
+                                    <hr class="m-2">
+                                    <div class="d-flex">
+                                        <div>
+                                            Fill Color
+                                        </div>
+                                        <div class="ml-auto">
+                                            <input type="color" id="shapeFillColor" name="shapeFillColor" value="black" >
+                                        </div>
+                                    </div>
+                                    <hr class="m-2">
+                                    <h5>Outline</h5>
+                                    <div>
+                                        <div class="d-flex">
+                                            <div>
+                                                Color
+                                            </div>
+                                            <div class="ml-auto">
+                                                <input type="color" id="shapeOutlineColor" name="shapeOutlineColor" value="black" >
+                                            </div>
+                                        </div>
+                                        <div class="ml-auto">
+                                            Size
+                                            <div style="text-align: center; display: inline-flex;">
+                                                <input id="shapeSize" type="range" min="1" max="10" step="1">
+                                                <div>
+                                                    <svg height="40" width="40">
+                                                        <circle cx="15" cy="20" r="1" stroke="white" fill="white" stroke-width="3" fill="black" id="shapeSizeSample"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+            
+                                <ul class="list-unstyled main-menu " id="tool-bar-settings">
+                                    <!-- Settings Modal -->
+                                    <h4>Settings</h4>
+            
+            
+                                    <span title="undo"><button type="button" onclick="undo()"><i
+                                                class="material-icons">undo</i></button></span>
+                                    <span title="redo"><button type="button" onclick="redo()"><i
+                                                class="material-icons">redo</i></button></span>
+                                    <span title="print"><button type="button" onclick="Print()"><i class="fa fa-print fa-2x"
+                                                aria-hidden="true"></i></button></span>
+                                    <span title="download"><button type="button" onclick="downloadCanvas()"><i
+                                                class="fa fa-download fa-2x" aria-hidden="true"></i></button></span>
+                                    <button id="TemplateButton" type="button" class="btn btn-default btn-block">Background
+                                        Templates</button>
+            
+                                    <h5>Set your own template</h5>
+                                    <input class="btn btn-default btn-block" type="file" id="input" accept="image/jpeg, image/png"
+                                        onchange="handleFiles(this.files); " />
+                                    <br />
+            
+                                    <br /><br />
+                                    <h5>Left Hand mode</h5>
+                                    <label class="switch" style="left: 5px; right: -5px;">
+                                        <input class="savecheckbox" type="checkbox" onchange="lefthandedmode();">
+                                        <div class="slider round" id="leftslider"></div>
+                                    </label>
+            
+                                    <button type="button" onclick=" $('#Helpmodal').appendTo('body').modal('show');"><i
+                                            class="fa fa-question-circle"
+                                            style="position:absolute; bottom: 0px !important; right: 0px !important;"
+                                            aria-hidden="true"></i></button>
+            
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Add page/remove icon in the bottom left -->
-            <div style="position: fixed; bottom: 0; z-index: 1000;">
-                <div id="AddPageIcon" style="left: 0px;">
+            <div class="mx-2" style="position: fixed; bottom: 0; z-index: 1000;">
+
+                <div id="AddPageIcon">
+                    <span title="Delete Shape" onclick="DeleteSelectedShape()">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-square fa-stack-2x"></i>
+                            <i class="fa fa-trash fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div id="AddPageIcon">
                     <span title="Add a Page" onclick="addPage()">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square fa-stack-2x"></i>
@@ -729,7 +567,7 @@
                     </span>
                 </div>
             
-                <div id="RemovePageIcon" style="left: 35px;">
+                <div id="RemovePageIcon">
                     <span title="Remove a Page" onclick="removePage()">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square fa-stack-2x"></i>
@@ -741,10 +579,12 @@
         </body>
 
     <!-- External includes for essentials. -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src='https://apis.google.com/js/platform.js' async defer></script>
     <script src="http://parall.ax/parallax/js/jspdf.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <!-- Custom Canvas marks scripts -->
     <script type="text/javascript" src="JavaScript/Canvas.js"></script>
     <script type="text/javascript" src="JavaScript/Shapes/JotCanvas.js"></script>
@@ -763,63 +603,147 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            //Navigation Menu Slider
+            // Navigation Menu Slider
             $('#nav-expander').on('click', function (e) {
                 e.preventDefault();
-                $('body').toggleClass('nav-expanded');
-                $('#tool-bar').show();
+                $('#sidePanel').toggle();
             });
+
             $('#nav-close').on('click', function (e) {
                 e.preventDefault();
                 $('body').removeClass('nav-expanded');
+                
                 $('#tool-bar').hide();
                 $('body').toggleClass('nav-expanded');
             });
-        });
 
-        // This function can not be moved to a seperate file
-        // These function show and hide the different settings panels for each option in the tool bar
-        $(document).ready(function () {
+            // These function show and hide the different settings panels for each option in the tool bar
             $('#btn1').click(function () { // btn 1 maps to text settings
-                $('#tool-bar-content').hide();
-                $('#tool-bar-text').fadeIn("slow");
-            });
-            $("#back-btn1").on('click', function (e) {
-                $('#tool-bar-text').hide();
-                $('#tool-bar-content').show();
+                $('#tool-bar-draw').hide();
+                $('#tool-bar-shapes').hide();
+                $('#tool-bar-settings').hide();
+                $('#tool-bar-text').show();
+                $('#sidePanel').show();
             });
             $('#btn2').click(function () { // btn 2 maps to draw settings 
-                $('#tool-bar-content').hide();
-                $('#tool-bar-draw').fadeIn("slow");
-            });
-            $("#back-btn2").on('click', function (e) {
-                $('#tool-bar-draw').hide();
-                $('#tool-bar-content').show();
+                $('#tool-bar-text').hide();
+                $('#tool-bar-shapes').hide();
+                $('#tool-bar-settings').hide();
+                $('#tool-bar-draw').show();
+                $('#sidePanel').show();
             });
             $('#btn3').click(function () { // btn 3 maps to the shapes settings
-                $('#tool-bar-content').hide();
-                $('#tool-bar-shapes').fadeIn("slow");
-            });
-            $("#back-btn3").on('click', function (e) {
-                $('#tool-bar-shapes').hide();
-                $('#tool-bar-content').show();
+                $('#tool-bar-text').hide();
+                $('#tool-bar-settings').hide();
+                $('#tool-bar-draw').hide();
+                $('#tool-bar-shapes').show();
+                $('#sidePanel').show();
             });
             $('#btn4').click(function () { // btn 4 maps to the settings
-                $('#tool-bar-content').hide();
-                $('#tool-bar-settings').fadeIn("slow");
+                $('#tool-bar-text').hide();
+                $('#tool-bar-draw').hide();
+                $('#tool-bar-shapes').hide();
+                $('#tool-bar-settings').show();
+                $('#sidePanel').show();
             });
-            $("#back-btn4").on('click', function (e) {
-                $('#tool-bar-settings').hide();
-                $('#tool-bar-content').show();
-            });
-            $('#MainContent_notesName').click(function () { // notesName
-                $("#NoteNamemodal").appendTo("body").modal('show');
-            });
+
             $('#ShareNoteButton').click(function () {
                 $("#ShareNoteModal").appendTo("body").modal('show');
             });
             $('#TemplateButton').click(function () {
                 $("#TemplateModal").appendTo("body").modal('show');
+            });
+
+            // Hide the pop up so that it isn't displays when the page first loads
+            $("#pleaseWaitDialog").hide(); // hide the loading screen things
+            $("#TemplateModal").hide(); // hide the template with the modal
+            has_shown_save = false;
+
+            // hide the layers for the tools
+            $('#tool-bar-text').hide();
+            $('#tool-bar-draw').hide();
+            $('#tool-bar-shapes').hide();
+            $('#tool-bar-settings').hide();
+
+            // Draw Tools Buttons
+            $("#PenTool").click(function () { 
+                $( "#PenTool" ).removeClass("disabled");
+                $( "#HighlighterTool" ).addClass("disabled");
+                $( "#EraserTool" ).addClass("disabled");
+            });
+            $("#HighlighterTool").click(function () { 
+                $( "#PenTool" ).addClass("disabled");
+                $( "#HighlighterTool" ).removeClass("disabled");
+                $( "#EraserTool" ).addClass("disabled");
+            });
+
+            // Shape Tool Buttons
+            $("#CircleShape").click(function (e) { 
+                disableShapeButtons();
+                $(this).removeClass("disabled");
+                $(this).addClass("active");
+            });
+            $("#OvalShape").click(function () {
+                disableShapeButtons();
+                $(this).removeClass("disabled");
+                $(this).addClass("active");
+            });
+            $("#RectangleShape").click(function () { 
+                disableShapeButtons();
+                $(this).removeClass("disabled");
+                $(this).addClass("active");
+            });
+            $("#LineShape").click(function () { 
+                disableShapeButtons();
+                $(this).removeClass("disabled");
+                $(this).addClass("active");
+            });
+            $("#TriangleShape").click(function () { 
+                $("#shapepicker button").each(function(btn){
+                    $( this).addClass("disabled");
+                })
+                $(this).removeClass("disabled");
+                $(this).addClass("active");
+            });
+            $("#SquareShape").click(function () { 
+                disableShapeButtons();
+                $(this).removeClass("disabled");
+                $(this).addClass("active");
+            });
+            // Disables all buttons in the shape picker
+            function disableShapeButtons() {
+                $("#shapepicker button").each(function(btn){
+                    $( this ).addClass("disabled");
+                })
+            };
+
+            $("#shapeFillColor").on("change", function (event) {
+                ToolColor(event.target.value);
+            });
+
+            $("#shapeOutlineColor").on("change", function (event) {
+                ToolOutlineColor(event.target.value);
+            });
+
+            $("#penColor").on("change", function (event) {
+                LineColor(event.target.value);
+            });
+
+            $("#textColor").on("change", function (event) {
+                TextColor(event.target.value);
+            });
+
+            $("#penSize").on("change", function (event) {
+                ThicknessFunction(event.target.value);
+
+                document.getElementById("penSizeSample").setAttribute('r', event.target.value );
+            });
+
+            $("#shapeSize").on("change", function (event) {
+                console.log(event.target.value);
+                OutlineThicknessFunction(this.value);
+
+                document.getElementById("shapeSizeSample").setAttribute('r', event.target.value );
             });
         });
 
@@ -883,77 +807,6 @@
             }
         });
 
-        // DO NOT REMOVE FROM THIS FILE OR FIRE
-        // Hide the pop up so that it isn't displays when the page first loads
-        // This function goes on load
-        // Can't remove from file.
-        $(document).ready(function () {
-            $("#success-alert").hide(); // hide the alert green popup
-            $("#pleaseWaitDialog").hide(); // hide the loading screen things
-            $("#TemplateModal").hide(); // hide the template with the modal
-            $("#SaveorNay").hide();
-            has_shown_save = false;
-
-            // hide the layers for the tools
-            $('#tool-bar-text').hide();
-            $('#tool-bar-draw').hide();
-            $('#tool-bar-shapes').hide();
-            $('#tool-bar-settings').hide();
-
-            // Case for when a style was picked, make the background grey and make the thing red as hell
-            $(".stylepickercells").click(function () {
-                $("#stylepicker").children().css({ "background-color": "#18191b", "color": "#6F7D8C" });
-                $(this).css({ "color": "#b40f18" });
-            });
-
-
-            // Case for when a size was picked, make the background grey
-            $(".sizepickercells").click(function () {
-                    $("#sizepicker").children().css({ "background-color": "white" });
-                    $('.title_pen').css({ "background-color": "#18191b" });
-                    $(this).css({ "background-color": "grey" });
-            });
-            // case for when a color is picked, dynamically remove all the checkmarks and add the new one to the color they selected. 
-            $(".colorpickercells").click(function () {
-                var d = document.getElementById("check-box"); // get all of the current check boxes so that we can remove them. 
-                if (d != null) // if there are any marks that need to be removed
-                    d.parentNode.removeChild(d);
-                // add the new check box by dynamically overlaying the check box icon over the div that contains the color
-                $(this).css({ "border-color": "white" }).append('<div id="check-box" style="position:absolute; top: 0em; left: 0em; width: 100%; z-index: 1000; opacity:1;"><i class="fa fa-check-circle fa-1x" aria-hidden="true"></i></div>');
-            });
-
-            $(".drawpickercells").click(function () { // this allows the icons at the top to change color when picked
-                $("#drawpicker").children().css({ "background-color": "#18191b", "color": "#6F7D8C" });
-                $(this).css({ "color": "#b40f18" });
-            });
-
-            // Case for when a size was picked, make the background grey
-            $(".shapepickercells").click(function () {
-                $("#shapepicker").children().css({ "background-color": "#18191b", "color": "#6F7D8C" });
-                $('.title_pen').css({ "background-color": "#18191b" });
-                $(this).css({ "color": "#b40f18" });
-            });
-            // case for when a color is picked, dynamically remove all the checkmarks and add the new one to the color they selected. 
-            $(".colorpicker2cells").click(function () {
-                var d = document.getElementById("check-box"); // get all of the current check boxes so that we can remove them. 
-                if (d != null) // if there are any marks that need to be removed
-                    d.parentNode.removeChild(d);
-                // add the new check box by dynamically overlaying the check box icon over the div that contains the color
-                $(this).css({ "border-color": "white" }).append('<div id="check-box2" style="position:absolute; top: 0em; left: 0em; width: 100%; z-index: 1000; opacity:1;"><i class="fa fa-check-circle fa-1x" aria-hidden="true"></i></div>');
-            });
-        });
-
-        function showValue(newValue) {
-            // This is for the slider for selecting the size of text
-            document.getElementById("textsize").innerHTML = newValue;
-        }
-
-        function showValue2(newValue) {
-            // they look the same, but do two different things lolz
-            // This is for the slider for selecting the size of shapes
-            document.getElementById("txtsize").innerHTML = newValue;
-        }
-
         // This function flips the tool bar from the side of the screen that its on to the other
         // For example if the tool bar is on the right hand side, it will flip to the other side
         // The add page icon will also flip side from left to right so that it won't conflict
@@ -962,14 +815,13 @@
         var leftmode = false;
         function lefthandedmode() {
             leftmode = !leftmode; // toggle val
-            var tool = document.getElementById("tool-bar"); // tool bar 
+            var tool = document.getElementById("sideBar"); // tool bar 
             var exp = document.getElementById("nav-expander"); // expander to unhide tool bar
             var add = document.getElementById("AddPageIcon"); // need to flip the add page icon to the other side
             var rem = document.getElementById("RemovePageIcon");
             var canvas = document.getElementById("myCanvas");
 
             if (leftmode) {
-                document.getElementById("success-alert").innerHTML = "<strong>Left Handed Mode On</strong> ";
                 tool.style.left = '0em';
                 // reset the expander to the left
                 exp.style.left = '0em';
@@ -984,7 +836,6 @@
                 canvas.style.marginLeft = '135px';
             }
             else {
-                document.getElementById("success-alert").innerHTML = "<strong>Left Handed Mode Off</strong> ";
                 tool.style.right = '0em';
                 tool.style.left = 'auto';
                 // reset the expander to the right

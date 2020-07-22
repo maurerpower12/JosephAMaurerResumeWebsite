@@ -31,19 +31,15 @@ body {
 #myCanvas {
     background-color: white;
     background-size: 100% 100%;
-    top: 125px;
-    left: inherit;
     right: inherit;
-    left: 125px;
-    width: 8.5in;
+    left: inherit;
+    width: 100%;
+    max-width: 8.5in;
     height: 11in;
     border: none;
-    margin: 0;
+    margin-top: 75px;
     padding: 0;
-    z-index: -999999;
     cursor: inherit;
-    margin-top: 50px; 
-    /* left mode */
 }
 
 body {
@@ -185,7 +181,18 @@ a.nav-expander.fixed {
     position: fixed;
 }
 
-nav {
+#topNav {
+    background: #18191b !important;
+    color: #6F7D8C;
+    z-index: 12;
+    width: 100%;
+    display: inline-flex;
+    position: fixed;
+    top: 0;
+    height: 65px;
+}
+
+#sidePanel {
     background: #18191b;
     color: #6F7D8C;
     display: block;
@@ -193,16 +200,24 @@ nav {
     overflow: auto;
     position: fixed;
     right: 0em;
-    top: 0em;
     font-size: 15px;
-    width: 15em;
     z-index: 12;
-    transition: right 0.3s ease-in-out 0s;
-    -webkit-transition: right 0.3s ease-in-out 0s;
-    -moz-transition: right 0.3s ease-in-out 0s;
-    -o-transition: right 0.3s ease-in-out 0s;
-    text-align: center;
-    display: inline-block;
+    top: 65px;
+}
+
+@media screen and (min-width: 480px) {
+    #sidePanel {
+        width: 15em;
+    }
+  }
+  @media screen and (max-width: 480px) {
+      #sidePanel {
+          display: none;
+      }
+    }
+.nav-icon {
+    width: 50px;
+    vertical-align: top;
 }
 
 .nav-expanded nav {
@@ -373,7 +388,7 @@ body.nav-expanded {
 }
 
 .shape_ico_size {
-        font-size: 35px;
+    font-size: 35px;
     text-align: center;
     display: inline-block;
 }
@@ -489,4 +504,8 @@ input:checked + .slider:before {
     right: 0px; 
     background-color: #2196F3; 
     box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+    background-color: lightgray;
 }

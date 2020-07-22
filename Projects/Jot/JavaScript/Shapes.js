@@ -37,6 +37,7 @@ var lineThickness = 10;
 var toolColor = "red"; //shape color
 var toolOutlinecolor = "black"; //shape outline color
 var outlineThickness = 10; //outline thickness of shapes
+var rotation = 0;
 
 var shape = null;
 
@@ -181,8 +182,8 @@ function userdefset(db_str) {
     a_str = db_str;
 }
 
-var inputElement = document.getElementById("input");
-inputElement.addEventListener("change", handleFiles, false);
+// var inputElement = document.getElementById("input");
+// inputElement.addEventListener("change", handleFiles, false);
 function handleFiles(e) {
     destinationCanvas = document.createElement("canvas");
     destinationCanvas.width = canvas.width;
@@ -241,40 +242,8 @@ function OutlineThicknessFunction(num) {
 }
 
 //shape fill color is selected
-function ToolColor(num) {
-    switch (num) {
-        case 1:
-            toolColor = "red";
-            break;
-        case 2:
-            toolColor = "blue";
-            break;
-        case 3:
-            toolColor = "green";
-            break;
-        case 4:
-            toolColor = "yellow";
-            break;
-        case 5:
-            toolColor = "purple";
-            break;
-        case 6:
-            toolColor = "black";
-            break;
-        case 7:
-            toolColor = "white";
-            break;
-        case 8:
-            toolColor = "transparent";
-            break;
-        case 9:
-            toolColor = "teal";
-            break;
-        case 10:
-            toolColor = "brown";
-            break;
-        default:
-    }
+function ToolColor(color) {
+    toolColor = color;
 
     //currently selected shape is not free-form line, text, or highlighter
     if (shapeSelected && shape.name != "F" && shape.name != "H" && 
@@ -283,42 +252,14 @@ function ToolColor(num) {
         jotCanvas.Draw();
     }
 
-    if(shapeSelected)
+    if(shapeSelected) {
         shape.DrawBox(context);
+    }
 }
 
 //line fill color is selected
-function LineColor(num) {
-    switch (num) {
-        case 1:
-            lineColor = "red";
-            break;
-        case 2:
-            lineColor = "blue";
-            break;
-        case 3:
-            lineColor = "green";
-            break;
-        case 4:
-            lineColor = "yellow";
-            break;
-        case 5:
-            lineColor = "purple";
-            break;
-        case 6:
-            lineColor = "black";
-            break;
-        case 7:
-            lineColor = "white";
-            break;
-        case 8:
-            lineColor = "teal";
-            break;
-        case 9:
-            lineColor = "brown";
-            break;
-        default:
-    }
+function LineColor(color) {
+    lineColor = color;
 
     //currently selected shape is free-form line or highlighter
     if (shapeSelected && (shape.name == "F" || shape.name == "H")) { 
@@ -328,37 +269,8 @@ function LineColor(num) {
 }
 
 //Tool fill color is selected
-function TextColor(num) {
-    switch (num) {
-        case 1:
-            textColor = "red";
-            break;
-        case 2:
-            textColor = "blue";
-            break;
-        case 3:
-            textColor = "green";
-            break;
-        case 4:
-            textColor = "yellow";
-            break;
-        case 5:
-            textColor = "purple";
-            break;
-        case 6:
-            textColor = "black";
-            break;
-        case 7:
-            textColor = "white";
-            break;
-        case 8:
-            textColor = "teal";
-            break;
-        case 9:
-            textColor = "brown";
-            break;
-        default:
-    }
+function TextColor(color) {
+    textColor = color;
 
     if (textClicked) {
         shape.fillColor = textColor;
@@ -369,48 +281,17 @@ function TextColor(num) {
 }
 
 //tool outline color is selected
-function ToolOutlineColor(num) {
-        switch (num) {
-            case 1:
-                toolOutlinecolor = "red"
-                break;
-            case 2:
-                toolOutlinecolor = "blue"
-                break;
-            case 3:
-                toolOutlinecolor = "green"
-                break;
-            case 4:
-                toolOutlinecolor = "yellow"
-                break;
-            case 5:
-                toolOutlinecolor = "purple"
-                break;
-            case 6:
-                toolOutlinecolor = "black"
-                break;
-            case 7:
-                toolOutlinecolor = "white"
-                break;
-            case 8:
-                toolOutlinecolor = "teal"
-                break;
-            case 9:
-                toolOutlinecolor = "brown"
-                break;
-            case 10:
-                toolOutlinecolor = "transparent"
-                break;
-            default:
-        }
+function ToolOutlineColor(color) {
+    toolOutlinecolor = color;
 
-        if (shapeSelected && shape.name != "F" && shape.name != "H" && shape.name != "X" && shape.name != "Z") {
-            shape.outlineColor = toolOutlinecolor;
-            jotCanvas.Draw();
+    if (shapeSelected && shape.name != "F" && shape.name != "H" && shape.name != "X" && shape.name != "Z") {
+        shape.outlineColor = toolOutlinecolor;
+        jotCanvas.Draw();
 
-            if (shapeSelected)
-                shape.DrawBox(context);
+        if (shapeSelected) {
+            shape.DrawBox(context);
         }
+    }
 }
 
 //tool is selected
@@ -629,9 +510,8 @@ function MouseDown (evt) {
 
 //Function that is called when mouse is moved on canvas
 function MouseMove(evt) {
-
+    var mousePos = getMousePosition(canvas, evt);
     if (mouseclicked) {
-        var mousePos = getMousePosition(canvas, evt);
 
         if (!shapeSelected && !textClicked) {
 
@@ -643,7 +523,7 @@ function MouseMove(evt) {
                     shape = new Circle(startX, startY, mousePos.x, mousePos.y, toolColor, toolOutlinecolor, lineThickness);
                     break;
                 case 2: //rectangle
-                    shape = new Rectangle(startX, startY, mousePos.x, mousePos.y, toolColor, toolOutlinecolor, lineThickness);
+                    shape = new Rectangle(startX, startY, mousePos.x, mousePos.y, toolColor, toolOutlinecolor, lineThickness, rotation);
                     break;
                 case 3: //line
                     shape = new Line(startX, startY, mousePos.x, mousePos.y, toolColor, toolOutlinecolor, lineThickness);
@@ -683,6 +563,15 @@ function MouseMove(evt) {
             jotCanvas.Draw();
             shape.DrawBox(context);
         }
+    }
+
+    // See if the shapes need to update.
+    var i = jotCanvas.marks.length - 1;
+
+    // Loop backwards through all of the marks
+    while(i >= 0) {
+        jotCanvas.marks[i].MouseMove(mousePos.x, mousePos.y);
+        i--;
     }
 }
 
@@ -745,13 +634,17 @@ function MouseUp (evt) {
             {
                 jotCanvas.Apply(shape);
                 jotCanvas.Draw();
+
+
                 ResetUndo();
+                // We want to select the shape after we are done drawling it.
+                // Draw the selected shape around the mark.
+                shape.DrawBox(context);
+                shapeSelected = true;
                 selectedIndex = jotCanvas.marks.length - 1;
             }
-
         }
-        else
-        {
+        else {
             shape.Move(mousePos.x, mousePos.y);
             jotCanvas.Draw();
             shape.DrawBox(context);
