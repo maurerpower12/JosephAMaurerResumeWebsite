@@ -3,14 +3,13 @@
 
 var introArray = [
   "PugetSound.jpg",
-  "Bird.mov",
-  "Zephyr.mov",
-  "SantaMonica.mov",
-  "River.mov",
-  "Sunrise.mov",
-  "FireLookout.mov",
-  "Fly.mov",
-  "Rose.jpg",
+  "Bird.mp4",
+  "Zephyr.mp4",
+  "SantaMonica.mp4",
+  "River.mp4",
+  "Sunrise.mp4",
+  "FireLookout.mp4",
+  "Fly.mp4",
   "Rainbow.jpg",
   "CraterLake.jpg"
 ];
@@ -46,7 +45,19 @@ var introArray = [
 
 $(document).ready(function() {
   // Load a random background image
-  $('#mapBackground').css('background-image', 'url(./img/Lyfe/'+ random_item(introArray) +')');
+  var randomBackground = './img/Lyfe/'+ random_item(introArray);
+  if(randomBackground.endsWith('mp4')) {
+    $('#mapBackground').css('display', 'none');
+    var video = document.getElementById('backgroundVideo');
+    var source = document.getElementById('backgroundVideoSource');
+    source.src = randomBackground;
+    video.load();
+    video.play();
+  }
+  else {
+    $('#backgroundVideo').css('display', 'none');
+    $('#mapBackground').css('background-image', 'url('+ randomBackground +')');
+  }
 })
 
 function random_item(items) {
