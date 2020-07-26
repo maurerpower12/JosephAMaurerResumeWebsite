@@ -22,55 +22,57 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <!-- Custom Fonts -->
-        <script src="https://kit.fontawesome.com/c372db8bc7.js" crossorigin="anonymous"></script>
+        <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
         </head>
 
         <body>
             <!-- Code here for top menu -->
             <nav id="topNav" class="navbar navbar-dark bg-dark">
                 <div class="mx-auto" style="display:inline-flex;">
-                    <!-- Sections with the buttons for the tool bar -->
-                    <span title="Text">
-                        <button id="btn1" type="button" onclick="ToolFunction(9)">
-                            <img src="Jot_Icons/Text.png" class="nav-icon"/>
-                        </button>
-                    </span>
-
-                    <span title="Draw and Highligher">
-                        <button id="btn2" type="button">
-                            <img src="Jot_Icons/brush.png"  class="nav-icon"/>
-                        </button>
-                    </span>
-    
-                    <span title="Shapes">
-                        <button id="btn3" type="button">
-                            <img src="Jot_Icons/Shapes.png"  class="nav-icon"/>
-                        </button>
-                    </span>
-    
-                    <span title="Share/Export">
-                        <button id="ShareNoteButton" type="button">
-                            <i class='fa fa-share-alt fa-3x nav-icon'aria-hidden='true' 
-                                style="color: #b40f18;"></i>
+                    <div id="toolSelector" class="btn-group btn-group-toggle" data-toggle="buttons-radio">
+                        <!-- Sections with the buttons for the tool bar -->
+                        <span title="Text">
+                            <button id="btn1" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <img src="Jot_Icons/Text.png" class="nav-icon-red" />
                             </button>
-                    </span>
-    
-                    <span title="Settings">
-                        <button id='btn4' type="button">
-                            <img src="Jot_Icons/Settings.png"  class="nav-icon"/>
-                        </button>
-                    </span>
+                        </span>
+                
+                        <span title="Draw and Highligher">
+                            <button id="btn2" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <i class="fas fa-paint-brush fa-3x nav-icon-red"></i>
+                            </button>
+                        </span>
+                
+                        <span title="Shapes">
+                            <button id="btn3" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <i class="fas fa-shapes fa-3x nav-icon-red"></i>
+                            </button>
+                        </span>
+                
+                        <span title="Share">
+                            <button id="ShareNoteButton" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <i class='fa fa-share-alt fa-3x nav-icon-red' aria-hidden='true'></i>
+                            </button>
+                        </span>
+                
+                        <span title="Settings">
+                            <button id='btn4' name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <i class="fas fa-cog fa-3x nav-icon-red"></i>
+                            </button>
+                        </span>
+                    </div>
                     <!--  END Sections with the buttons for the tool bar -->
                 </div>
 
                 <!-- Menu icon in the top right corner  -->
                 <div class="pull-right hidden-sm-down">
                     <a id="nav-expander">
-                        <i class='fas fa-brush fa-2x nav-icon'aria-hidden='true'></i>
+                        <button class="btn btn-outline-light m-1">
+                            <i class='fas fa-sliders-h fa-2x nav-icon'aria-hidden='true'></i>
+                        </button>
                     </a>
                 </div>
             </nav>
-
 
             <!-- Modal for display help -->
             <div id="Helpmodal" class="modal fade" role="dialog">
@@ -103,7 +105,6 @@
         
                 </div>
             </div>
-
 
             <!-- Modal for displaying background templates -->
             <div id="TemplateModal" class="modal fade" role="dialog">
@@ -281,7 +282,7 @@
             <!--  Control for the canvas -->
             <div class="container-fluid p-0 m-0">
                 <div class="row justify-content-md-center">
-                    <div class="col-9 p-0 ml-5 mr-0">
+                    <div class="canvas-container">
                         <canvas id="myCanvas" height="1300" width="1000">
                             Your browser does not support HTML5 canvas :(
                         </canvas>
@@ -345,47 +346,47 @@
                                 <ul class="list-unstyled main-menu" id="tool-bar-draw">
                                     <h4>Draw Tool</h4>
             
-                                    <div class="btn-group btn-group-toggle m-3" role="group" aria-label="Draw Tools">
-                                        <button type="button" class="btn btn-light p-0" id="PenTool">
-                                            <div id="Pen-tool" class="col-sm-2" onclick="ToolFunction(7)">
-                                                <span title="Pencil">
-                                                    <i class="material-icons" style="font-size: 35px;">
-                                                        gesture
-                                                    </i>
-                                                </span>
-                                            </div>
-                                        </button>
-                                        <button type="button" class="btn btn-light p-0" id="HighlighterTool">
-                                            <div id="Highlighter-tool" class="col-sm-2" onclick="ToolFunction(0)">
-                                                <span title="Highligher">
-                                                    <img src="Jot_Icons/Highlighter.svg" style="width: 35px; height: 35px;" />
-                                                </span>
-                                            </div>
-                                        </button>
-                                        <button type="button" class="btn btn-light p-0" id="EraserTool">
-                                            <div onclick="ToolFunction(8)" class="col-sm-2">
-                                                <span title="Eraser"><i class="fa fa-eraser fa-2x" aria-hidden="true"></i></span>
-                                            </div>
-                                        </button>
-                                    </div>
-
-
-                                    <div class="btn-group btn-group-toggle m-3" role="group" aria-label="Pen Styles">
-                                        <button type="button" class="btn btn-light p-0" id="PenStyle">
-                                            <div class="col-sm-2">
-                                                <i class="fas fa-pen fa-2x"></i>
-                                            </div>
-                                        </button>
-                                        <button type="button" class="btn btn-light p-0" id="Felt">
-                                            <div class="col-sm-2">
-                                                <i class="fas fa-marker fa-2x"></i>
-                                            </div>
-                                        </button>
-                                        <button type="button" class="btn btn-light p-0" id="SprayPaint">
-                                            <div class="col-sm-2">
-                                                <i class="fas fa-spray-can fa-2x"></i>
-                                            </div>
-                                        </button>
+                                    <div class="m-3" role="group" aria-label="Draw Tools" id="DrawTools" class="container-fluid">
+                                        <div class="row mt-1">
+                                            <button type="button" class="btn btn-light p-0 mr-1" id="PenTool">
+                                                <div class="col-sm-2">
+                                                    <span title="Pencil">
+                                                        <i class="material-icons" style="font-size: 35px;">
+                                                            gesture
+                                                        </i>
+                                                    </span>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn btn-light p-0 mr-1" id="HighlighterTool">
+                                                <div class="col-sm-2">
+                                                    <span title="Highligher">
+                                                        <img src="Jot_Icons/Highlighter.svg" style="width: 35px; height: 35px;" />
+                                                    </span>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn btn-light p-0" id="EraserTool">
+                                                <div class="col-sm-2">
+                                                    <span title="Eraser"><i class="fa fa-eraser fa-2x" aria-hidden="true"></i></span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <button type="button" class="btn btn-light p-0 mr-1" id="PenStyle">
+                                                <div class="col-sm-2">
+                                                    <i class="fas fa-pen fa-2x"></i>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn btn-light p-0 mr-1" id="Felt">
+                                                <div class="col-sm-2">
+                                                    <i class="fas fa-marker fa-2x"></i>
+                                                </div>
+                                            </button>
+                                            <button type="button" class="btn btn-light p-0" id="SprayPaint">
+                                                <div class="col-sm-2">
+                                                    <i class="fas fa-spray-can fa-2x"></i>
+                                                </div>
+                                            </button>
+                                        </div>
                                     </div>
 
                                     <!-- color picker for the draw tools -->
@@ -417,59 +418,62 @@
             
                                 <ul class="list-unstyled main-menu " id="tool-bar-shapes">
                                     <!-- Shapes Settings -->
-                                    <h4>Shapes Tool</h4>
+                                    <h4>Shape Tool</h4>
 
                                     <!-- Code to display the different shapes options to the user -->
                                     <div id="shapepicker">
-
-                                        <div class="btn-group btn-group-toggle m-3" role="group" aria-label="Draw Tools">
-                                            <button type="button" class="btn btn-light p-0" id="CircleShape">
-                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(1); ">
-                                                    <span title="Circle">
-                                                        <i class="material-icons shape_ico_size">panorama_fish_eye</i>
-                                                    </span>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="btn btn-light p-0" id="OvalShape">
-                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(6)">
-                                                    <span title="Ellipse">
-                                                        <i class="material-icons shape_ico_size">vignette</i>
-                                                    </span>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="btn btn-light p-0" id="RectangleShape">
-                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(2)">
-                                                    <span title="Rectangle"> 
-                                                        <i class="material-icons shape_ico_size">crop_5_4</i>
-                                                    </span>
-                                                </div>
-                                            </button>
-                                        </div>
-
-                                        <div class="btn-group btn-group-toggle m-3" role="group" aria-label="Draw Tools">
-                                            <button type="button" class="btn btn-light p-0" id="LineShape">
-                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(3)">
-                                                    <span title="Line">
-                                                        <i class="material-icons shape_ico_size">linear_scale</i>
-                                                    </span>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="btn btn-light p-0" id="TriangleShape">
-                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(4)">
-                                                    <span title="Triangle">
-                                                        <i class="material-icons shape_ico_size">change_history</i>
-                                                    </span>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="btn btn-light p-0" id="SquareShape">
-                                                <div class="col-sm-4 shapepickercells" onclick="ToolFunction(5)">
-                                                    <span title="Square">
-                                                        <i class="material-icons shape_ico_size"> check_box_outline_blank</i>
-                                                    </span>
-                                                </div>
-                                            </button>
+                                    
+                                        <div class="container-fluid ml-1">
+                                            <div class="row mt-1" role="group" aria-label="Draw Tools">
+                                                <button type="button" class="btn btn-light p-0 mr-1" id="CircleShape">
+                                                    <div class="col-sm-4 shapepickercells">
+                                                        <span title="Circle">
+                                                            <i class="material-icons shape_ico_size">panorama_fish_eye</i>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                                <button type="button" class="btn btn-light p-0 mr-1" id="OvalShape">
+                                                    <div class="col-sm-4 shapepickercells">
+                                                        <span title="Ellipse">
+                                                            <i class="material-icons shape_ico_size">vignette</i>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                                <button type="button" class="btn btn-light p-0" id="RectangleShape">
+                                                    <div class="col-sm-4 shapepickercells">
+                                                        <span title="Rectangle">
+                                                            <i class="material-icons shape_ico_size">crop_5_4</i>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                    
+                                            <div class="row mt-1" role="group" aria-label="Draw Tools">
+                                                <button type="button" class="btn btn-light p-0 mr-1" id="LineShape">
+                                                    <div class="col-sm-4 shapepickercells">
+                                                        <span title="Line">
+                                                            <i class="material-icons shape_ico_size">linear_scale</i>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                                <button type="button" class="btn btn-light p-0 mr-1" id="TriangleShape">
+                                                    <div class="col-sm-4 shapepickercells">
+                                                        <span title="Triangle">
+                                                            <i class="material-icons shape_ico_size">change_history</i>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                                <button type="button" class="btn btn-light p-0" id="SquareShape">
+                                                    <div class="col-sm-4 shapepickercells">
+                                                        <span title="Square">
+                                                            <i class="material-icons shape_ico_size"> check_box_outline_blank</i>
+                                                        </span>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
+
             
                                     <!-- Color picker for different shapes -->
                                     <hr class="m-2">
@@ -540,6 +544,11 @@
                                             aria-hidden="true"></i></button>
             
                                 </ul>
+
+                                <ul class="list-unstyled main-menu " id="debug">
+                                    <div id="xycoordinates"></div>
+                                    <div id="stack"></div>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -547,10 +556,10 @@
             </div>
 
             <!-- Add page/remove icon in the bottom left -->
-            <div class="mx-2" style="position: fixed; bottom: 0; z-index: 1000;">
+            <div class="m-2" style="position: fixed; bottom: 0; z-index: 1000;">
 
-                <div id="AddPageIcon">
-                    <span title="Delete Shape" onclick="DeleteSelectedShape()">
+                <div id="DeleteSelection">
+                    <span title="Delete Shape">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square fa-stack-2x"></i>
                             <i class="fa fa-trash fa-stack-1x fa-inverse" aria-hidden="true"></i>
@@ -558,20 +567,38 @@
                     </span>
                 </div>
 
-                <div id="AddPageIcon">
-                    <span title="Add a Page" onclick="addPage()">
+                <div id="ClearAllIcon">
+                    <span title="Delete Shape">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-plus fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                            <i class="fas fa-ban fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div id="DebugIcon">
+                    <span title="Delete Shape">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-square fa-stack-2x"></i>
+                            <i class="fas fa-bug fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </span>
+                    </span>
+                </div>
+
+                <div id="UndoIcon">
+                    <span title="Undo">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-square fa-stack-2x"></i>
+                            <i class="fa fa-undo fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                     </span>
                 </div>
             
-                <div id="RemovePageIcon">
-                    <span title="Remove a Page" onclick="removePage()">
+                <div id="RedoIcon">
+                    <span title="Redo">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-minus fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                            <i class="fa fa-redo fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                     </span>
                 </div>
@@ -586,270 +613,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Custom Canvas marks scripts -->
-    <script type="text/javascript" src="JavaScript/Canvas.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/JotCanvas.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Circle.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Ellipse.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Eraser.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/FreeFormLine.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/JotCanvas.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Line.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Rectangle.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Square.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Triangle.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Text.js"></script>
-    <script type="text/javascript" src="JavaScript/Shapes/Highlighter.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Navigation Menu Slider
-            $('#nav-expander').on('click', function (e) {
-                e.preventDefault();
-                $('#sidePanel').toggle();
-            });
-
-            $('#nav-close').on('click', function (e) {
-                e.preventDefault();
-                $('body').removeClass('nav-expanded');
-                
-                $('#tool-bar').hide();
-                $('body').toggleClass('nav-expanded');
-            });
-
-            // These function show and hide the different settings panels for each option in the tool bar
-            $('#btn1').click(function () { // btn 1 maps to text settings
-                $('#tool-bar-draw').hide();
-                $('#tool-bar-shapes').hide();
-                $('#tool-bar-settings').hide();
-                $('#tool-bar-text').show();
-                $('#sidePanel').show();
-            });
-            $('#btn2').click(function () { // btn 2 maps to draw settings 
-                $('#tool-bar-text').hide();
-                $('#tool-bar-shapes').hide();
-                $('#tool-bar-settings').hide();
-                $('#tool-bar-draw').show();
-                $('#sidePanel').show();
-            });
-            $('#btn3').click(function () { // btn 3 maps to the shapes settings
-                $('#tool-bar-text').hide();
-                $('#tool-bar-settings').hide();
-                $('#tool-bar-draw').hide();
-                $('#tool-bar-shapes').show();
-                $('#sidePanel').show();
-            });
-            $('#btn4').click(function () { // btn 4 maps to the settings
-                $('#tool-bar-text').hide();
-                $('#tool-bar-draw').hide();
-                $('#tool-bar-shapes').hide();
-                $('#tool-bar-settings').show();
-                $('#sidePanel').show();
-            });
-
-            $('#ShareNoteButton').click(function () {
-                $("#ShareNoteModal").appendTo("body").modal('show');
-            });
-            $('#TemplateButton').click(function () {
-                $("#TemplateModal").appendTo("body").modal('show');
-            });
-
-            // Hide the pop up so that it isn't displays when the page first loads
-            $("#pleaseWaitDialog").hide(); // hide the loading screen things
-            $("#TemplateModal").hide(); // hide the template with the modal
-            has_shown_save = false;
-
-            // hide the layers for the tools
-            $('#tool-bar-text').hide();
-            $('#tool-bar-draw').hide();
-            $('#tool-bar-shapes').hide();
-            $('#tool-bar-settings').hide();
-
-            // Draw Tools Buttons
-            $("#PenTool").click(function () { 
-                $( "#PenTool" ).removeClass("disabled");
-                $( "#HighlighterTool" ).addClass("disabled");
-                $( "#EraserTool" ).addClass("disabled");
-            });
-            $("#HighlighterTool").click(function () { 
-                $( "#PenTool" ).addClass("disabled");
-                $( "#HighlighterTool" ).removeClass("disabled");
-                $( "#EraserTool" ).addClass("disabled");
-            });
-
-            // Shape Tool Buttons
-            $("#CircleShape").click(function (e) { 
-                disableShapeButtons();
-                $(this).removeClass("disabled");
-                $(this).addClass("active");
-            });
-            $("#OvalShape").click(function () {
-                disableShapeButtons();
-                $(this).removeClass("disabled");
-                $(this).addClass("active");
-            });
-            $("#RectangleShape").click(function () { 
-                disableShapeButtons();
-                $(this).removeClass("disabled");
-                $(this).addClass("active");
-            });
-            $("#LineShape").click(function () { 
-                disableShapeButtons();
-                $(this).removeClass("disabled");
-                $(this).addClass("active");
-            });
-            $("#TriangleShape").click(function () { 
-                $("#shapepicker button").each(function(btn){
-                    $( this).addClass("disabled");
-                })
-                $(this).removeClass("disabled");
-                $(this).addClass("active");
-            });
-            $("#SquareShape").click(function () { 
-                disableShapeButtons();
-                $(this).removeClass("disabled");
-                $(this).addClass("active");
-            });
-            // Disables all buttons in the shape picker
-            function disableShapeButtons() {
-                $("#shapepicker button").each(function(btn){
-                    $( this ).addClass("disabled");
-                })
-            };
-
-            $("#shapeFillColor").on("change", function (event) {
-                ToolColor(event.target.value);
-            });
-
-            $("#shapeOutlineColor").on("change", function (event) {
-                ToolOutlineColor(event.target.value);
-            });
-
-            $("#penColor").on("change", function (event) {
-                LineColor(event.target.value);
-            });
-
-            $("#textColor").on("change", function (event) {
-                TextColor(event.target.value);
-            });
-
-            $("#penSize").on("change", function (event) {
-                ThicknessFunction(event.target.value);
-
-                document.getElementById("penSizeSample").setAttribute('r', event.target.value );
-            });
-
-            $("#shapeSize").on("change", function (event) {
-                console.log(event.target.value);
-                OutlineThicknessFunction(this.value);
-
-                document.getElementById("shapeSizeSample").setAttribute('r', event.target.value );
-            });
-        });
-
-        // Can NOT be moved to a seperate file
-        // Switch for the different CTRL traps that our site uses
-        $(window).bind('keydown', function (event) {
-            if (event.ctrlKey || event.metaKey) {
-                switch (String.fromCharCode(event.which).toLowerCase()) {
-                    case 's': // CTRL S calls save
-                        event.preventDefault();
-                        break;
-                    case 'z': // CTRL Z calls undo
-                        event.preventDefault();
-                        undo();
-                        break;
-                    case 'p': // CTRL P calls print
-                        event.preventDefault();
-                        Print();
-                        break;
-                    case 'q': // CTRL Q calls redo
-                        event.preventDefault();
-                        redo();
-                        break;
-                    case 'h': // CTRL H displays the help section
-                        event.preventDefault();
-                        $("#Helpmodal").appendTo("body").modal('show');
-                        break;
-                    case '1': // CTRL 1 Selects the Circle Tool
-                        event.preventDefault();
-                        ToolFunction(1);
-                        break;
-                    case '2': // CTRL 2 Selects the Rectangle Tool
-                        event.preventDefault();
-                        ToolFunction(2);
-                        break;
-                    case '3': // CTRL 3 Selects the Line Tool
-                        event.preventDefault();
-                        ToolFunction(3);
-                        break;
-                    case '4': // CTRL 4 Selects the Triangle Tool
-                        event.preventDefault();
-                        ToolFunction(4);
-                        break;
-                    case '5': // CTRL 5 Selects the Square Tool
-                        event.preventDefault();
-                        ToolFunction(5);
-                        break;
-                    case '6': // CTRL 6 Selects the FreeForm Tool
-                        event.preventDefault();
-                        ToolFunction(7);
-                        break;
-                    case '7': // CTRL 7 Selects the Eraser Tool
-                        event.preventDefault();
-                        ToolFunction(8);
-                        break;
-                    case '8': // CTRL 8 Selects the Text Tool
-                        event.preventDefault();
-                        ToolFunction(9);
-                        break;
-                }
-            }
-        });
-
-        // This function flips the tool bar from the side of the screen that its on to the other
-        // For example if the tool bar is on the right hand side, it will flip to the other side
-        // The add page icon will also flip side from left to right so that it won't conflict
-        // Finally the canvas will shift over slightly so the tool bar doesn't cover it 
-        // and to utilize the screen resolution
-        var leftmode = false;
-        function lefthandedmode() {
-            leftmode = !leftmode; // toggle val
-            var tool = document.getElementById("sideBar"); // tool bar 
-            var exp = document.getElementById("nav-expander"); // expander to unhide tool bar
-            var add = document.getElementById("AddPageIcon"); // need to flip the add page icon to the other side
-            var rem = document.getElementById("RemovePageIcon");
-            var canvas = document.getElementById("myCanvas");
-
-            if (leftmode) {
-                tool.style.left = '0em';
-                // reset the expander to the left
-                exp.style.left = '0em';
-                exp.style.right = 'auto';
-                // flip add page icon
-                add.style.right = '0em';
-                add.style.left = 'auto';
-                // flip remove page icon
-                rem.style.right = '3em';
-                rem.style.left = 'auto';
-                // Move the canvas over so you can see it
-                canvas.style.marginLeft = '135px';
-            }
-            else {
-                tool.style.right = '0em';
-                tool.style.left = 'auto';
-                // reset the expander to the right
-                exp.style.right = '0em';
-                exp.style.left = 'auto';
-                // flip add page icon
-                add.style.left = '0em';
-                add.style.right = 'auto';
-                // flip remove page icon
-                rem.style.left = '3em';
-                rem.style.right = 'auto';
-                // remove margin left
-                canvas.style.marginLeft = 'auto';
-            }
-        }
-    </script>
+    <script type="text/javascript" src="./JavaScript/Canvas.js"></script>
+    <script type="module" src="./JavaScript/Shapes/JotCanvas.js"></script>
+    <script type="module" src="./JavaScript/Shapes.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Circle.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Ellipse.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Eraser.js"></script>
+    <script type="module" src="./JavaScript/Shapes/FreeFormLine.js"></script>
+    <script type="module" src="./JavaScript/Shapes/JotCanvas.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Line.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Rectangle.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Square.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Triangle.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Text.js"></script>
+    <script type="module" src="./JavaScript/Shapes/Highlighter.js"></script>
+    <script type="module" src="./JavaScript/DrawPage.js"></script>
 </html>

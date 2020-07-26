@@ -11,15 +11,21 @@
 //          
 //******************************************************************************************************
 
-
-$("#textinput").focus();
-$("#textinput").click();
-$("#textinput").trigger("tap");
+import {Circle} from './Shapes/Circle.js';
+import {Ellipse} from './Shapes/Ellipse.js';
+import {Eraser} from './Shapes/Eraser.js';
+import {FreeFormLine} from './Shapes/FreeFormLine.js';
+import {Highlighter} from './Shapes/Highlighter.js';
+import {JotCanvas} from './Shapes/JotCanvas.js';
+import {Line} from './Shapes/Line.js';
+import {Rectangle} from './Shapes/Rectangle.js';
+import {Square} from './Shapes/Square.js';
+import {Text} from './Shapes/Text.js';
+import {Triangle} from './Shapes/Triangle.js';
 
 // This javascript controls which template is being put in the background.
 var bgnum = 0;
 var m_background = new Image();
-var m_save_string = ""; // this is the string that will hold the temp string of the serialized data
 
 var startX = 0; //shape start X coordinate
 var startY = 0; //shape start Y coordinate
@@ -31,10 +37,10 @@ var selectedIndex = -1;
 
 var currentTool = -1; //currently selected tool
 
-var lineColor = "red"; //free-form line and highlighter color
+var lineColor = "black"; //free-form line and highlighter color
 var lineThickness = 10;
 
-var toolColor = "red"; //shape color
+var toolColor = "black"; //shape color
 var toolOutlinecolor = "black"; //shape outline color
 var outlineThickness = 10; //outline thickness of shapes
 var rotation = 0;
@@ -50,8 +56,8 @@ var canvas = document.getElementById("myCanvas"); //canvas
 var context = canvas.getContext("2d"); //canvas context
 var jotCanvas = new JotCanvas(); //holds marks list and number of pages on note
 
-var cursorTimer = setInterval(DrawCursor, 500); //timer for drawing cursor
-var cursor = true; //variable that determines weather cursor should be drawn
+// var cursorTimer = setInterval(DrawCursor, 500); //timer for drawing cursor
+// var cursor = true; //variable that determines weather cursor should be drawn
 
 var redostack = []; //stack to hold the undone stuff
 var index_redo = 0; //max items that can currently be redone
@@ -62,24 +68,22 @@ var lastmove = null;
 
 
 //Draws blinking cursor
-function DrawCursor() {
-    if (cursor && textClicked) {
-        jotCanvas.Draw();
-        shape.DrawCursor(context);
-        shape.DrawBox(context);
-        cursor = false;
-    }
-    else if (textClicked) {
-        jotCanvas.Draw();
-        shape.DrawBox(context);
-        cursor = true;
-    }
-}
+// function DrawCursor() {
+//     if (cursor && textClicked) {
+//         jotCanvas.Draw();
+//         shape.DrawCursor(context);
+//         shape.DrawBox(context);
+//         cursor = false;
+//     }
+//     else if (textClicked) {
+//         jotCanvas.Draw();
+//         shape.DrawBox(context);
+//         cursor = true;
+//     }
+// }
 
 //Sets background from selection
-function bgFunction(num) {
-    //m_save_string += JSON.stringify(m_marks);
-
+export function setBackground(num) {
     bgnum = num;
     var loc = window.location.pathname;
 
@@ -168,7 +172,7 @@ function bgFunction(num) {
 
 //function to load the user def image 
 var a_str;
-function userdefset(db_str) {
+export function userdefset(db_str) {
     var image = new Image();
     image.src = db_str;
     image.onload = function () {
@@ -184,7 +188,7 @@ function userdefset(db_str) {
 
 // var inputElement = document.getElementById("input");
 // inputElement.addEventListener("change", handleFiles, false);
-function handleFiles(e) {
+export function handleFiles(e) {
     destinationCanvas = document.createElement("canvas");
     destinationCanvas.width = canvas.width;
     destinationCanvas.height = canvas.height;
@@ -210,7 +214,7 @@ function handleFiles(e) {
 }
 
 //Sets thickness of shape outline
-function ThicknessFunction(num) {
+export function ThicknessFunction(num) {
     lineThickness = num;
 
     if (shapeSelected && shape.name != "X" && (shape.name == "F" 
@@ -226,7 +230,7 @@ function ThicknessFunction(num) {
     }
 }
 
-function OutlineThicknessFunction(num) {
+export function OutlineThicknessFunction(num) {
     outlineThickness = num;
 
     if (shapeSelected && shape.name != "H" && shape.name != "F" && shape.name 
@@ -242,7 +246,7 @@ function OutlineThicknessFunction(num) {
 }
 
 //shape fill color is selected
-function ToolColor(color) {
+export function ToolColor(color) {
     toolColor = color;
 
     //currently selected shape is not free-form line, text, or highlighter
@@ -258,7 +262,7 @@ function ToolColor(color) {
 }
 
 //line fill color is selected
-function LineColor(color) {
+export function LineColor(color) {
     lineColor = color;
 
     //currently selected shape is free-form line or highlighter
@@ -269,7 +273,7 @@ function LineColor(color) {
 }
 
 //Tool fill color is selected
-function TextColor(color) {
+export function TextColor(color) {
     textColor = color;
 
     if (textClicked) {
@@ -281,7 +285,7 @@ function TextColor(color) {
 }
 
 //tool outline color is selected
-function ToolOutlineColor(color) {
+export function ToolOutlineColor(color) {
     toolOutlinecolor = color;
 
     if (shapeSelected && shape.name != "F" && shape.name != "H" && shape.name != "X" && shape.name != "Z") {
@@ -295,7 +299,7 @@ function ToolOutlineColor(color) {
 }
 
 //tool is selected
-function ToolFunction(num) {
+export function SelectTool(num) {
     currentTool = num;
 }
 
@@ -304,7 +308,6 @@ function DeleteSelectedShape() {
         var temp = jotCanvas.marks.slice(0, selectedIndex);
         var temp2 = jotCanvas.marks.slice(selectedIndex + 1, jotCanvas.marks.length);
         jotCanvas.marks = temp.concat(temp2);
-        m_marks = jotCanvas.marks;
         jotCanvas.Draw();
         shapeSelected = false;
         selectedIndex = -2;
@@ -511,6 +514,9 @@ function MouseDown (evt) {
 //Function that is called when mouse is moved on canvas
 function MouseMove(evt) {
     var mousePos = getMousePosition(canvas, evt);
+    document.getElementById("xycoordinates").innerHTML = 
+        "Coordinates: (" + mousePos.x.toFixed(2) + ", " + mousePos.y.toFixed(2) + ")";
+
     if (mouseclicked) {
 
         if (!shapeSelected && !textClicked) {
@@ -557,8 +563,7 @@ function MouseMove(evt) {
                 shape.Draw(context);
             }
         }
-        else
-        {
+        else {
             shape.Move(mousePos.x, mousePos.y);
             jotCanvas.Draw();
             shape.DrawBox(context);
@@ -622,7 +627,7 @@ function MouseUp (evt) {
                     if (mobile) {
                         var temp2 = window.prompt("Enter Text: ");
                         for (var i = 0; i < temp2.length; i++) {
-                            shape.AddText(temp2[i]);
+                            shape.AddText(context, temp2[i]);
                         }
                     }
 
@@ -707,7 +712,7 @@ function Selection(x,y) {
 }
 
 //mark is undone
-function undo() {
+export function Undo() {
     if (index_redo < max_undo) {
         redostack.push(jotCanvas.marks.pop());
         index_redo++;
@@ -734,7 +739,7 @@ function ResetUndo()
 }
 
 //mark is redone
-function redo() {
+export function Redo() {
     if (index_redo != 0) {
         jotCanvas.Apply(redostack.pop());
         index_redo--;
@@ -742,8 +747,13 @@ function redo() {
     }
 }
 
+// Clears the canvas
+export function ClearAll() {
+    jotCanvas.ResetCanvas();
+}
+
 //function that changes font of text drawn on canvas
-function ChangeFont() {
+export function ChangeFont() {
     var SelectList = $('select#font');
     var selectedValue = $('option:selected', SelectList).val();
 
@@ -759,7 +769,7 @@ function ChangeFont() {
 
 //function that changes bold/italic/underline status of 
 //text drawn on canvas
-function BIU(type) {
+export function BIU(type) {
     if (style != type)
         style = type;
     else
@@ -775,7 +785,7 @@ function BIU(type) {
 }
 
 //changes size of text drawn on canvas
-function ChangeFontSize(font_size) {
+export function ChangeFontSize(font_size) {
     showValue(font_size);
     
     textSize = parseInt(font_size);

@@ -150,11 +150,11 @@ canvas {
 }
 
 /*css here to control the right side bar*/
-button {
+/* button {
     background: none;
     outline: 0;
     border: 0px;
-}
+} */
 
 a.nav-expander {
     background: none repeat scroll 0 0 #18191b;
@@ -218,6 +218,12 @@ a.nav-expander.fixed {
 .nav-icon {
     width: 50px;
     vertical-align: top;
+}
+
+.nav-icon-red {
+    width: 50px;
+    vertical-align: top;
+    color: #9b0716;
 }
 
 .nav-expanded nav {
@@ -388,7 +394,7 @@ body.nav-expanded {
 }
 
 .shape_ico_size {
-    font-size: 35px;
+    font-size: 35px !important;
     text-align: center;
     display: inline-block;
 }
@@ -411,7 +417,7 @@ body.nav-expanded {
     overflow-y: auto;
 }
 
-/*Code below is for siwtches on the settings page*/
+/*Code below is for switches on the settings page*/
 .switch {
   position: relative;
   display: inline-block;
@@ -509,3 +515,8 @@ input:checked + .slider:before {
 hr {
     background-color: lightgray;
 }
+
+#canvas-container {
+    width: 100%;
+    text-align:center;
+ }

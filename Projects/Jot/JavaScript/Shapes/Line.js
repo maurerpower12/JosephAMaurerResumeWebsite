@@ -1,49 +1,76 @@
 ﻿//LINE CLASS
-var Line = function (startX, startY, endX, endY, fillColor, outlineColor, outlineThickness) {
-    this.name = 'L';
-    if (startX === undefined) {
-        this.startX = 0;
-        this.startY = 0;
-        this.endX = 0;
-        this.endY = 0;
+class Line {
+    constructor(startX, startY, endX, endY, fillColor, outlineColor, outlineThickness) {
+        this.name = 'L';
+        if (startX === undefined) {
+            this.startX = 0;
+            this.startY = 0;
+            this.endX = 0;
+            this.endY = 0;
 
-        this.fillColor = null;
+            this.fillColor = null;
 
-        this.outlineThickness = 0;
+            this.outlineThickness = 0;
+        }
+        else {
+            this.startX = startX;
+            this.startY = startY;
+
+            this.endX = endX;
+            this.endY = endY;
+
+            this.fillColor = fillColor;
+            this.outlineColor = outlineColor;
+            this.outlineThickness = outlineThickness;
+        }
     }
-    else {
-        this.startX = startX;
-        this.startY = startY;
-
-        this.endX = endX;
-        this.endY = endY;
+    SetDimensions(startX, startY, endX, endY, fillColor, outlineColor, outlineThickness) {
+        this.startX = parseFloat(startX);
+        this.startY = parseFloat(startY);
+        this.endX = parseFloat(endX);
+        this.endY = parseFloat(endY);
 
         this.fillColor = fillColor;
+
         this.outlineColor = outlineColor;
+
         this.outlineThickness = outlineThickness;
+    }
+    //Draws line on Canvas
+    Draw(context) {
+        context.beginPath();
+        context.lineWidth = this.outlineThickness;
+        context.strokeStyle = this.fillColor;
+        context.lineCap = 'butt';
+        context.moveTo(this.startX, this.startY);
+        context.lineTo(this.endX, this.endY);
+        context.stroke();
+    }
+    /**
+     * Returns true if the x,y is within the shape.
+     * @Contains
+     */
+    Contains(x, y) {
+        return false;
+    }
+    /**
+     * Draws the selection box aroud the shape.
+     * @DrawBox
+     */
+    DrawBox(context) {
+    }
+    /**
+     * Moves the object around the canvas.
+     * @Move
+     */
+    Move(x, y) {
+    }
+    /**
+     * Called everytime the mouse moves over the canvas.
+     * @MouseMove
+     */
+    MouseMove(x, y) {
     }
 }
 
-Line.prototype.SetDimensions = function (startX, startY, endX, endY, fillColor, outlineColor, outlineThickness) {
-    this.startX = parseFloat( startX);
-    this.startY = parseFloat( startY);
-    this.endX = parseFloat( endX);
-    this.endY = parseFloat( endY);
-
-    this.fillColor = fillColor;
-
-    this.outlineColor = outlineColor;
-
-    this.outlineThickness = outlineThickness;
-}
-
-//Draws line on Canvas
-Line.prototype.Draw = function (context) {
-    context.beginPath();
-    context.lineWidth = this.outlineThickness;
-    context.strokeStyle = this.fillColor;
-    context.lineCap = 'butt';
-    context.moveTo(this.startX, this.startY);
-    context.lineTo(this.endX, this.endY);
-    context.stroke();
-}
+export { Line };
