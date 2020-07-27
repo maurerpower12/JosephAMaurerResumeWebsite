@@ -56,9 +56,6 @@ var canvas = document.getElementById("myCanvas"); //canvas
 var context = canvas.getContext("2d"); //canvas context
 var jotCanvas = new JotCanvas(); //holds marks list and number of pages on note
 
-// var cursorTimer = setInterval(DrawCursor, 500); //timer for drawing cursor
-// var cursor = true; //variable that determines weather cursor should be drawn
-
 var redostack = []; //stack to hold the undone stuff
 var index_redo = 0; //max items that can currently be redone
 var max_undo = 0; //max items that can currently be undone
@@ -66,29 +63,35 @@ var max_undo = 0; //max items that can currently be undone
 var mobile = false;
 var lastmove = null;
 
+setInterval(DrawCursor, 500); //timer for drawing cursor
+var cursor = true; //variable that determines weather cursor should be drawn
 
 //Draws blinking cursor
-// function DrawCursor() {
-//     if (cursor && textClicked) {
-//         jotCanvas.Draw();
-//         shape.DrawCursor(context);
-//         shape.DrawBox(context);
-//         cursor = false;
-//     }
-//     else if (textClicked) {
-//         jotCanvas.Draw();
-//         shape.DrawBox(context);
-//         cursor = true;
-//     }
-// }
+function DrawCursor() {
+    jotCanvas.Draw();
+    if (cursor && textClicked) {
+        shape.DrawCursor(context);
+        shape.DrawBox(context);
+    }
+    else if(textClicked) {
+        shape.DrawBox(context);
+    }
+    cursor = !cursor;
+}
+
+// Set all the default values.
+$("#FontSize").val(textSize);
+
 
 //Sets background from selection
 export function setBackground(num) {
     bgnum = num;
-    var loc = window.location.pathname;
 
     var startingpath = 'Background%20Templates/jpg/';
     var startingcolors = 'Background%20Templates/color/';
+    if(num == -12) {
+        return;
+    }
 
     if (num == 0) { // case for a no background selected white background
         m_background.src = startingpath + "white.jpg";
@@ -138,16 +141,6 @@ export function setBackground(num) {
     else if (num == 16) {
         m_background.src = startingpath + 'ruled margin 2.jpeg';
     }
-    else if (num == 17) { // TODO Fix to allow pdf
-        //c.style.backgroundImage = "url('../Background Templates/storyboard 6 pages.pdf')";
-    }
-    else if (num == -12) {
-        console.log("User def loading...");
-        GetUserDef();
-        console.log("User def loading finished");
-        //HideLoadingScreen(); // Hide the loading screen
-        return; // break out early so you dont try to load the bg source again
-    }
     else if (num == 18) { // case for blue background
         m_background.src = startingcolors + 'blue.jpg';
     }
@@ -160,56 +153,19 @@ export function setBackground(num) {
     else { // default
         m_background.src = startingcolors + "white.jpg";
     }
-
-    canvas.style.backgroundImage = "url('" + m_background.src + "')";
-
     m_background.onload = function () {
-        b.globalCompositeOperation = "source-over";
-        jotCanvas.SetBackground();
-        HideLoadingScreen(); // Hide the loading screen
+        jotCanvas.SetBackground(m_background);
     }
 }
 
 //function to load the user def image 
-var a_str;
-export function userdefset(db_str) {
-    var image = new Image();
-    image.src = db_str;
-    image.onload = function () {
-        canvas.style.backgroundImage = "url('" + image.src + "')";  // set the image as the background
-        context.globalCompositeOperation = "source-over";
-        m_background.src = image.src;
-        jotCanvas.SetBackground();
-        HideLoadingScreen(); // Hide the loading screen
+export function handleFiles(file) {
+    if (checkFile(file)) {
+        m_background.src = URL.createObjectURL(file);
+        bgnum = -12;
     }
-    bgnum = -12;
-    a_str = db_str;
-}
-
-// var inputElement = document.getElementById("input");
-// inputElement.addEventListener("change", handleFiles, false);
-export function handleFiles(e) {
-    destinationCanvas = document.createElement("canvas");
-    destinationCanvas.width = canvas.width;
-    destinationCanvas.height = canvas.height;
-    destinationcontext = destinationCanvas.getContext('2d');
-
-    var _file = this.files[0];
-    if (checkFile(_file)) {
-        var url = URL.createObjectURL(_file);
-        var img = new Image();
-        img.src = url;
-        bgnum = -12; // set the background number.
-        img.onload = function () {
-            canvas.style.backgroundImage = "url('" + img.src + "')";  // set the image as the background
-            m_background.src = img.src;
-            jotCanvas.SetBackground();
-
-            var pageHeight = (canvas.height / jotCanvas.pages);
-            destinationcontext.drawImage(m_background, 0, 0, canvas.width, pageHeight);
-
-            a_str = destinationCanvas.toDataURL('image/jpeg', 0.5);
-        }
+    else {
+        console.log("invalid file");
     }
 }
 
@@ -325,8 +281,7 @@ function getMousePosition(canvas, evt) {
 
 //Function that listens to keyboard input for character keys
 document.addEventListener('keypress', function (evt) {
-    if(textClicked)
-    {
+    if(textClicked) {
         switch (evt.keyCode) {
             case 13: //enter
                 shape.AddLine();
@@ -627,7 +582,7 @@ function MouseUp (evt) {
                     if (mobile) {
                         var temp2 = window.prompt("Enter Text: ");
                         for (var i = 0; i < temp2.length; i++) {
-                            shape.AddText(context, temp2[i]);
+                            shape.AddText(temp2[i]);
                         }
                     }
 
@@ -770,10 +725,12 @@ export function ChangeFont() {
 //function that changes bold/italic/underline status of 
 //text drawn on canvas
 export function BIU(type) {
-    if (style != type)
+    if (style != type) {
         style = type;
-    else
+    }
+    else {
         style = "normal";
+    }
     
 
     if (textClicked) {
@@ -786,7 +743,7 @@ export function BIU(type) {
 
 //changes size of text drawn on canvas
 export function ChangeFontSize(font_size) {
-    showValue(font_size);
+    //showValue(font_size);
     
     textSize = parseInt(font_size);
     

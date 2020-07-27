@@ -3,7 +3,7 @@ import {SelectTool, Undo, Redo, ClearAll,
     ChangeFont, BIU, ChangeFontSize,
     ToolColor, LineColor, TextColor,
     ToolOutlineColor, OutlineThicknessFunction,
-    ThicknessFunction, handleFiles, userdefset,
+    ThicknessFunction, handleFiles,
     setBackground
 } from './Shapes.js';
 
@@ -64,6 +64,23 @@ $(document).ready(function () {
     });
     $('#TemplateButton').click(function () {
         $("#TemplateModal").appendTo("body").modal('show');
+    });
+
+    // Text Tools Buttons
+    $("#BoldText").click(function () { 
+        disableDrawTools();
+        $(this).addClass("active");
+        BIU('bold');
+    });
+    $("#ItalicText").click(function () { 
+        disableDrawTools();
+        $(this).addClass("active");
+        BIU('italic');
+    });
+    $("#SmallCapsText").click(function () { 
+        disableDrawTools();
+        $(this).addClass("active");
+        BIU('small-caps');
     });
 
     // Draw Tools Buttons
@@ -162,6 +179,68 @@ $(document).ready(function () {
         Redo();
     });
     
+
+    $("#DownloadCanvas").click(function () { 
+        console.log(this.id);
+        downloadCanvas(this);
+    });
+    $("#WhiteBackground").click(function () { 
+        setBackground(0);
+    });
+    $("#NarrowRuledBackground").click(function () { 
+        setBackground(1);
+    });
+    $("#TodoBackground").click(function () { 
+        setBackground(2);
+    });
+    $("#DotGridBackground").click(function () { 
+        setBackground(3);
+    });
+    $("#GraphBackground").click(function () { 
+        setBackground(4);
+    });
+    $("#EngineeringBackground").click(function () { 
+        setBackground(6);
+    });
+    $("#CalendarWeekBackground").click(function () { 
+        setBackground(7);
+    });
+    $("#MeetingNotesBasicBackground").click(function () { 
+        setBackground(8);
+    });
+    $("#MusicStavesBackground").click(function () { 
+        setBackground(9);
+    });
+    $("#BaseballBackground").click(function () { 
+        setBackground(10);
+    });
+    $("#BasketballBackground").click(function () { 
+        setBackground(11);
+    });
+    $("#FootballBackground").click(function () { 
+        setBackground(12);
+    });
+    $("#SoccerBackground").click(function () { 
+        setBackground(13);
+    });
+    $("#LegalNotesBackground").click(function () { 
+        setBackground(14);
+    });
+    $("#MeetingNotesBackground").click(function () { 
+        setBackground(15);
+    });
+    $("#RuledMarginBackground").click(function () { 
+        setBackground(16);
+    });
+    $("#BlueBackground").click(function () { 
+        setBackground(18);
+    });
+    $("#GreenBackground").click(function () { 
+        setBackground(19);
+    });
+    $("#RedBackground").click(function () { 
+        setBackground(20);
+    });
     // ------ End On Click Event Functions
 
     $("#shapeFillColor").on("change", function (event) {
@@ -193,6 +272,26 @@ $(document).ready(function () {
         document.getElementById("shapeSizeSample").setAttribute('r', event.target.value);
     });
 
+    $("#BackgroundFileInput").on("change", function (event) {
+        var file = $(this).prop('files')[0];
+        console.log("Uploading file: " + file.name);
+        handleFiles(file);
+    });
+
+    $("#LeftHandMode").on("change", function (event) {
+        lefthandedmode();
+    });
+
+    $("#FontSize").on("change", function (event) {
+        console.log("Changing Font Size to: " + this.value);
+        ChangeFontSize(this.value);
+    });
+
+    $("#Font").on("change", function (event) {
+        console.log("Changing Font to: " + this.value);
+        ChangeFont(this.value);
+    });
+
     // Disables all buttons in the shape picker
     function disableShapeButtons() {
         $("#shapepicker button").each(function(btn){
@@ -210,7 +309,6 @@ $(document).ready(function () {
     // Disable all Draw Tool Buttons
     function disableDrawTools() {
         $("#DrawTools button").each(function(){
-            console.log(this);
             $( this ).addClass("disabled");
         })
     };
@@ -272,22 +370,6 @@ $(window).bind('keydown', function (event) {
         }
     }
 });
-
-
-
-function bgFunction(index) {
-    setBackground(index);
-}
-
-
-
-
-
-
-
-
-
-
 
 // This function flips the tool bar from the side of the screen that its on to the other
 // For example if the tool bar is on the right hand side, it will flip to the other side

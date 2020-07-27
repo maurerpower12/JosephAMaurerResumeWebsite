@@ -15,7 +15,7 @@
         <meta property="og:image:width" content="2989" />
         <meta property="og:image:height" content="598" />
         
-        <title>Jot by Verge Sample Note</title>
+        <title>Jot Note by Verge</title>
 
         <link href="Styles/DrawPage.css" rel="stylesheet" />
 
@@ -80,8 +80,8 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close">&times;</button>
                             <h4 class="modal-title">Help</h4>
+                            <button type="button" class="close float-right">&times;</button>
                         </div>
                         <div class="modal-body" style="padding: 40px 50px;">
                             <p>CTRL S - saves the note </p>
@@ -113,117 +113,122 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">Background Templates</h4>
+                            <button type="button" class="close float-right" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body" style="padding: 40px 50px;">
                             <div class="row">
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(1);">
+                                    <a id="NarrowRuledBackground">
                                         <img src="Background%20Templates/jpg/narrow%20ruled%202.jpeg"
                                             class="thumbnail img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(2);">
+                                    <a id="TodoBackground">
                                         <img src="Background%20Templates/jpg/todo%202.jpeg" class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(3)">
+                                    <a id="DotGridBackground">
                                         <img src="Background%20Templates/jpg/dot%20grid%20med%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(4)">
+                                    <a id="GraphBackground">
                                         <img src="Background%20Templates/jpg/graph%202.jpeg" class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(6)">
+                                    <a id="EngineeringBackground">
                                         <!-- Engineering -->
                                         <img src="Background%20Templates/jpg/engineering_grey%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(7)">
+                                    <a id="CalendarWeekBackground">
                                         <img src="Background%20Templates/jpg/calendar%20week%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(8)">
+                                    <a id="MeetingNotesBasicBackground">
                                         <img src="Background%20Templates/jpg/meeting%20notes%20basic%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(15)">
+                                    <a id="MeetingNotesBackground">
                                         <img src="Background%20Templates/jpg/meeting%20notes%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(14)">
-                                        <img src="Background%20Templates/jpg/legal%202.jpeg" class="thumbnail img-responsive" />
+                                    <a id="LegalNotesBackground">
+                                        <img src="Background%20Templates/jpg/legal%202.jpeg"
+                                            class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(16)">
+                                    <a id="RuledMarginBackground">
                                         <img src="Background%20Templates/jpg/ruled%20margin%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(9)">
+                                    <a id="MusicStavesBackground">
                                         <img src="Background%20Templates/jpg/music%20staves%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(10)">
+                                    <a id="BaseballBackground">
                                         <img src="Background%20Templates/jpg/baseball%20portrait%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(11)">
+                                    <a id="BasketballBackground">
                                         <img src="Background%20Templates/jpg/basketball%20landscape%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(12)">
+                                    <a id="FootballBackground">
                                         <img src="Background%20Templates/jpg/football%20landscape%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(13)">
+                                    <a id="SoccerBackground">
                                         <img src="Background%20Templates/jpg/soccer%20landscape%202.jpeg"
                                             class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(18)">
-                                        <img src="Background%20Templates/color/blue.jpg" class="thumbnail img-responsive" />
+                                    <a id="BlueBackground">
+                                        <img src="Background%20Templates/color/blue.jpg" 
+                                            class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(19)">
-                                        <img src="Background%20Templates/color/Green.jpg" class="thumbnail img-responsive" />
+                                    <a id="GreenBackground">
+                                        <img src="Background%20Templates/color/Green.jpg" 
+                                            class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(20)">
-                                        <img src="Background%20Templates/color/red.jpg" class="thumbnail img-responsive" />
+                                    <a id="RedBackground">
+                                        <img src="Background%20Templates/color/red.jpg" 
+                                            class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
-                                    <a onclick="bgFunction(0)">
-                                        <img src="Background%20Templates/color/white.jpg" class="thumbnail img-responsive" />
+                                    <a id="WhiteBackground">
+                                        <img src="Background%20Templates/color/white.jpg" 
+                                            class="thumbnail img-responsive" />
                                     </a>
                                 </div>
                             </div>
@@ -245,8 +250,8 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button class="close" type="submit" data-dismiss="modal">&times;</button>
                             <h4 class="modal-title">Who do you want to share this note with?</h4>
+                            <button class="close float-right" type="submit" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body" style="padding: 40px 50px;">
                             <p style="color: #b40f18;">This feature is diabled, feel free to screenshot your
@@ -277,7 +282,6 @@
                     </div>
                 </div>
             </div>
-            
 
             <!--  Control for the canvas -->
             <div class="container-fluid p-0 m-0">
@@ -294,33 +298,13 @@
                                 <ul class="list-unstyled main-menu" id="tool-bar-text">
                                     <!-- Text Modal -->
                                     <h4>Text Tool</h4>
-            
-                                    <br />
-                                    <p>Select Text Size</p>
-                                    <input type="range" id="textRange" min="5" max="90" step="1" value="30"
-                                        onchange="ChangeFontSize(this.value);">
-                                    <span id="textsize" style="color: white">30</span>
-                                    <br />
-                                    <div class="col-center-block" style="align-content: center;" id="stylepicker">
-                                        <span class="stylepickercells" style="font-weight: bold" onclick="BIU('bold');"><i
-                                                class="material-icons">format_bold</i></span>
-                                        <span class="stylepickercells" style="font-style: italic" onclick="BIU('italic');"><i
-                                                class="material-icons">format_italic</i></span>
-                                        <span class="stylepickercells" style="font-style: italic; font-weight: bold"
-                                            onclick="BIU('italic bold');"><i class="material-icons">format_bold</i><i
-                                                class="material-icons">format_italic</i></span>
-                                        <span class="stylepickercells" onclick="BIU('small-caps');"><i
-                                                class="material-icons">text_fields</i></span>
-                                    </div>
-
-                                    <hr class="m-2">
 
                                     <div class="d-flex m-2">
                                         <div>
-                                            Font
+                                            <p>Font:</p>
                                         </div>
                                         <div class="ml-auto">
-                                            <select id="font" onchange="ChangeFont(this);">
+                                            <select id="Font">
                                                 <option style="font-family: arial;">Arial</option>
                                                 <option style="font-family: Verdana;">Verdana</option>
                                                 <option style="font-family: Times New Roman;">Times New Roman</option>
@@ -332,10 +316,71 @@
                                             </select>
                                         </div>
                                     </div>
+
+                                    <div class="d-flex m-2">
+                                        <div>
+                                            <p>Size:</p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <select id="FontSize">
+                                                <option>15</option>
+                                                <option>20</option>
+                                                <option>25</option>
+                                                <option>30</option>
+                                                <option>35</option>
+                                                <option>40</option>
+                                                <option>45</option>
+                                                <option>50</option>
+                                                <option>55</option>
+                                                <option>60</option>
+                                                <option>65</option>
+                                                <option>70</option>
+                                                <option>75</option>
+                                                <option>80</option>
+                                                <option>85</option>
+                                                <option>90</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- <input type="range" id="textRange" min="5" max="90" step="1" value="30"
+                                        onchange="ChangeFontSize(this.value);"> -->
+                                    <!-- <span id="textsize" style="color: white">30</span> -->
+
+                                    <div class="d-flex m-2">
+                                        <div>
+                                            <p>Style:</p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div class="btn-group" role="group" aria-label="Style" id="stylepicker">
+                                                <button type="button" class="btn btn-light">
+                                                    <span class="stylepickercells" style="font-weight: bold" id="BoldText">
+                                                        <i class="material-icons">format_bold</i>
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="btn btn-light">
+                                                    <span class="stylepickercells" style="font-style: italic" id="ItalicText">
+                                                        <i class="material-icons">format_italic</i>
+                                                    </span>
+                                                </button>
+                                                <!-- <button type="button" class="btn btn-light">
+                                                    <span class="stylepickercells" onclick="">
+                                                        <span class="material-icons">
+                                                            format_underlined
+                                                            </span>
+                                                    </span>
+                                                </button> -->
+                                                <button type="button" class="btn btn-light">
+                                                    <span class="stylepickercells" id="SmallCapsText">
+                                                        <i class="material-icons">text_fields</i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                     
                                     <div class="d-flex m-2">
                                         <div>
-                                            Color
+                                            <p>Color:</p>
                                         </div>
                                         <div class="ml-auto">
                                             <input type="color" id="textColor" name="textColor" value="black" >
@@ -477,6 +522,7 @@
             
                                     <!-- Color picker for different shapes -->
                                     <hr class="m-2">
+                                    <h5>Style</h5>
                                     <div class="d-flex">
                                         <div>
                                             Fill Color
@@ -485,19 +531,17 @@
                                             <input type="color" id="shapeFillColor" name="shapeFillColor" value="black" >
                                         </div>
                                     </div>
-                                    <hr class="m-2">
-                                    <h5>Outline</h5>
                                     <div>
                                         <div class="d-flex">
                                             <div>
-                                                Color
+                                                Outline Color
                                             </div>
                                             <div class="ml-auto">
                                                 <input type="color" id="shapeOutlineColor" name="shapeOutlineColor" value="black" >
                                             </div>
                                         </div>
                                         <div class="ml-auto">
-                                            Size
+                                            Outline Size
                                             <div style="text-align: center; display: inline-flex;">
                                                 <input id="shapeSize" type="range" min="1" max="10" step="1">
                                                 <div>
@@ -513,35 +557,36 @@
                                 <ul class="list-unstyled main-menu " id="tool-bar-settings">
                                     <!-- Settings Modal -->
                                     <h4>Settings</h4>
-            
-            
-                                    <span title="undo"><button type="button" onclick="undo()"><i
-                                                class="material-icons">undo</i></button></span>
-                                    <span title="redo"><button type="button" onclick="redo()"><i
-                                                class="material-icons">redo</i></button></span>
-                                    <span title="print"><button type="button" onclick="Print()"><i class="fa fa-print fa-2x"
-                                                aria-hidden="true"></i></button></span>
-                                    <span title="download"><button type="button" onclick="downloadCanvas()"><i
-                                                class="fa fa-download fa-2x" aria-hidden="true"></i></button></span>
-                                    <button id="TemplateButton" type="button" class="btn btn-default btn-block">Background
-                                        Templates</button>
-            
-                                    <h5>Set your own template</h5>
-                                    <input class="btn btn-default btn-block" type="file" id="input" accept="image/jpeg, image/png"
-                                        onchange="handleFiles(this.files); " />
+  
+                                    <button type="button" class="btn btn-light" onclick="$('#Helpmodal').appendTo('body').modal('show');">
+                                        <i class="fa fa-question-circle" aria-hidden="true"> Help
+                                        </i>
+                                    </button>
+                                    <span title="download">
+                                        <button type="button" class="btn btn-light" id="DownloadCanvas">
+                                            <i class="fa fa-download" aria-hidden="true"></i> Download
+                                        </button>
+                                        <a id="DownloadLink" download="JotSampleNote.jpg" href=""></a>
+                                    </span>
+                                    
                                     <br />
-            
-                                    <br /><br />
+                                    <hr />
+                                    <h5>Background Image</h5>
+                                    <button id="TemplateButton" type="button" class="btn btn-light">
+                                        Templates
+                                    </button>
+                                    <br />
+                                    -- or --
+                                    <br />
+                                    <input class="btn btn-light" type="file" accept="image/jpeg, image/png" style="width:100%;" id="BackgroundFileInput" />
+                                    <br />
+                                    <br />
+                                    <hr />
                                     <h5>Left Hand mode</h5>
                                     <label class="switch" style="left: 5px; right: -5px;">
-                                        <input class="savecheckbox" type="checkbox" onchange="lefthandedmode();">
+                                        <input class="savecheckbox" type="checkbox" id="LeftHandMode">
                                         <div class="slider round" id="leftslider"></div>
                                     </label>
-            
-                                    <button type="button" onclick=" $('#Helpmodal').appendTo('body').modal('show');"><i
-                                            class="fa fa-question-circle"
-                                            style="position:absolute; bottom: 0px !important; right: 0px !important;"
-                                            aria-hidden="true"></i></button>
             
                                 </ul>
 

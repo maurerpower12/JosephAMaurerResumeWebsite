@@ -41,12 +41,6 @@ class Text {
             y > this.startY && y < (this.startY + this.height)) {
 
             found = true;
-
-            //cursorXposition = 0;
-            //yCursor = parseInt((y - this.startY) / this.size);
-            //while ((this.content.length - 1) < yCursor)
-            //    this.content.push("");
-            //cursorYposition = yCursor
         }
         return found;
     }
@@ -76,11 +70,12 @@ class Text {
     }
     //Text is drawn on the canvas
     Draw(context) {
+        var canvas = document.getElementById("myCanvas"); //canvas
+        var context = canvas.getContext("2d"); //canvas context
         context.beginPath();
         //console.log("style: " + this.style);
         context.font = null;
-        font = this.style + " " + this.size + "px " + this.font;
-        context.font = font;
+        context.font = this.style + " " + this.size + "px " + this.font;;
         context.fillStyle = this.fillColor;
 
         // i is line no
@@ -117,9 +112,11 @@ class Text {
         context.fillText('|', x - (3.5 * (this.size / 30)), (this.startY + (cursorYposition * this.size) + this.size));
     }
     //Character is added to text
-    AddText(context, text) {
+    AddText(text) {
         console.log("style: " + this.style);
 
+        var canvas = document.getElementById("myCanvas"); //canvas
+        var context = canvas.getContext("2d"); //canvas context
 
 
         var content = this.content.slice(); //content before text added
@@ -332,5 +329,4 @@ class Text {
     MouseMove(x, y) {
     }
 }
-
 export { Text };
