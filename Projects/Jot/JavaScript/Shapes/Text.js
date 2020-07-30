@@ -1,19 +1,25 @@
-﻿let cursorXposition = 0;
+﻿import {selectionHandles, drawResize, setCursorStyle, checkResize, drawResizerOutline} 
+                from './Resize.js';
+
+let cursorXposition = 0;
 let cursorYposition = 0;
+export const fontStyles = {normal: 0, bold: 1, italic: 2, smallCaps: 3 }
 
 //constructor for text
 class Text {
-    constructor(startX, startY, endX, endY, fillColor, fontfamily, style, size) {
+    constructor(startX, startY, endX, endY, fillColor = "black", 
+                fontfamily = "Arial", style = fontStyles.normal, size = 30) {
         cursorXposition = 0;
         cursorYposition = 0;
 
-        this.name = 'X';
+        this.name = 'Text';
         this.startX = startX;
         this.startY = startY;
 
         this.fillColor = fillColor;
 
         this.style = style;
+        this.fontStyles = [];
         this.size = size;
         this.font = fontfamily;
 
@@ -36,17 +42,19 @@ class Text {
     }
     Contains(x, y) {
         var found = false;
-        //var yCursor = 0;
         if (x > this.startX && x < (this.startX + this.width) &&
             y > this.startY && y < (this.startY + this.height)) {
 
             found = true;
         }
+        else {
+            found = (checkResize(x, y) >= 0);
+        }
         return found;
     }
     SetCursors(x, y, context) {
         var found = false;
-        context.font = this.style + " " + this.size + "px " + this.font;
+        this.SetFontContext(context);
         var x1 = context.measureText(this.content[cursorYposition].substr(0, 1)).width;
         x -= this.startX;
 
@@ -70,55 +78,45 @@ class Text {
     }
     //Text is drawn on the canvas
     Draw(context) {
-        var canvas = document.getElementById("myCanvas"); //canvas
-        var context = canvas.getContext("2d"); //canvas context
+        // Save the context state before modifiying.
+        context.save();
         context.beginPath();
-        //console.log("style: " + this.style);
-        context.font = null;
-        context.font = this.style + " " + this.size + "px " + this.font;;
+        this.SetFontContext(context);
         context.fillStyle = this.fillColor;
 
         // i is line no
         for (var i = 0; i < this.content.length; i++) {
+            //this.SetFontContext(context);
 
-            context.font = this.style + " " + this.size + " pt " + this.font;
-
-
-            var content = this.content[i];
-
-
-            context.fillText(content, this.startX, (this.startY + i * this.size) + this.size);
+            context.fillText(this.content[i], this.startX, (this.startY + i * this.size) + this.size);
             // i is line no
             // this.size is font size
         }
 
         context.closePath();
+
+        // Save the context state before modifiying.
+        context.restore();
     }
     //Draws textbox
     DrawBox(context) {
-        context.beginPath();
-        context.rect(this.startX, this.startY, this.width, this.height);
-        context.lineWidth = 3;
-        context.strokeStyle = "Grey";
-        context.stroke();
+        var startX = this.startX;
+        var startY = this.startY;
+        var width = this.width;
+        var height = this.height;
+
+        drawResizerOutline(context, startX, startY, width, height);
     }
     //Draws cursor
     DrawCursor(context) {
-        context.font = this.style + " " + this.size + "px " + this.font;
-
+        this.SetFontContext(context);
         var x = context.measureText(this.content[cursorYposition].substr(0, cursorXposition)).width + this.startX - 1;
         //console.log(x);
         context.fillStyle = "black";
         context.fillText('|', x - (3.5 * (this.size / 30)), (this.startY + (cursorYposition * this.size) + this.size));
     }
     //Character is added to text
-    AddText(text) {
-        console.log("style: " + this.style);
-
-        var canvas = document.getElementById("myCanvas"); //canvas
-        var context = canvas.getContext("2d"); //canvas context
-
-
+    AddText(context, text) {
         var content = this.content.slice(); //content before text added
         var origContent = this.content.slice();
         var lineFull = true; //check if current line is full
@@ -140,11 +138,10 @@ class Text {
         var temp; //string that holds line with added character
         var textAdded = false; //check if text was successfully added
 
-        context.font = this.style + this.size + "px " + this.font;
+        this.SetFontContext(context);
 
         while (lineFull && y < maxLines - 1) //last line was full and not add end of box
         {
-
             if (content[y])
                 temp = content[y].slice(0, x) + text + content[y].slice(x); //places text at cursor x position
             else
@@ -213,7 +210,6 @@ class Text {
     }
     //Deletes next character form text
     Delete() {
-
         if (cursorXposition < (this.content[cursorYposition].length)) //cursor not at last postion
         {
             var string = this.content[cursorYposition];
@@ -301,9 +297,17 @@ class Text {
         this.size = size;
     }
     //Changes style of text
-    Change_Font_Style(style1) {
-        this.style = style1;
-
+    Change_Font_Style(style) {
+        if (this.fontStyles.includes(style)) {
+            var index = this.fontStyles.indexOf(style);
+            if (index > -1) {
+                this.fontStyles.splice(index, 1);
+            }
+        }
+        else {
+            this.fontStyles.push(style);
+        }
+        this.style = style;
     }
     //sets text's stuff
     SetDimensions(startX, startY, fillColor, style, size, fontfamily, width, height, lines, content) {
@@ -319,14 +323,87 @@ class Text {
         this.content = content;
     }
     Move(x, y) {
-        this.startX = x - this.width / 2;
-        this.startY = y - this.height / 2;
+        // time ro resize!
+        var oldx = this.startX;
+        var oldy = this.startY;
+
+        var foundIndex = checkResize(x, y);
+
+        if (foundIndex >= 0) {
+            switch (foundIndex) {
+                case 0:
+                    this.width += this.startX - x;
+                    this.height += this.startY - y;
+                    this.startX = x;
+                    this.startY = y;
+                    break;
+                case 1:
+                    this.height += this.startY - y;
+                    this.startY = y;
+                    break;
+                case 2:
+                    this.width = Math.abs(this.startX - x);
+                    this.height += this.startY - y;
+                    this.startY = y;
+                    break;
+                case 3:
+                    this.startX = x;
+                    this.width += (oldx - x);
+                    break;
+                case 4:
+                    this.width = x - this.startX;
+                    break;
+                case 5:
+                    this.width += this.startX - x;
+                    this.height = Math.abs(this.startY - y);
+                    this.startX = x;
+                    break;
+                case 6:
+                    this.height = Math.abs(this.startY - y);
+                    break;
+                case 7:
+                    this.width = Math.abs(this.startX - x);
+                    this.height = Math.abs(this.startY - y);
+                    break;
+                default:
+                    console.log("out of bounds");
+                    break;
+            }
+            // TODO adjust text to fit within the box since we just resized it.
+        }
+        else { // We must be trying to reposition the shape.
+            this.startX = x - this.width / 2;
+            this.startY = y - this.height / 2;
+            //this.startX = Math.round((x - this.width / 2) / grid) * grid;
+            //this.startY = Math.round((y - this.height / 2) / grid) * grid;
+        }
     }
     /**
      * Called everytime the mouse moves over the canvas.
      * @MouseMove
      */
     MouseMove(x, y) {
+        setCursorStyle(x, y, this.startX, this.startY, this.width, this.height);
+    }
+    /**
+     * Sets the font context to match the style.
+     * @SetFontContext
+     */
+    SetFontContext(context) {
+        var style = "";
+        if (this.fontStyles.length == 0) {
+            var style = " normal ";
+        }
+        else {
+            for (var i = 0; i < this.fontStyles.length; i++) {
+                style += " " + this.fontStyles[i] + " ";
+            }
+        }
+
+        var finalStyle = style + this.size + "px " + this.font;
+        //console.log(finalStyle);
+        context.font = finalStyle;
+        //console.log(context.font);
     }
 }
 export { Text };

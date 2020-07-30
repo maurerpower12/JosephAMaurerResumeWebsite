@@ -47,14 +47,9 @@ var rotation = 0;
 
 var shape = null;
 
-var fontfamily = "Arial"; //text font
-var style = "normal"; //text font style (italics/bold/smallcaps/normal)
-var textSize = 30; //size of text
-var textColor = "black"; //color of text
-
 var canvas = document.getElementById("myCanvas"); //canvas
 var context = canvas.getContext("2d"); //canvas context
-var jotCanvas = new JotCanvas(); //holds marks list and number of pages on note
+var jotCanvas = new JotCanvas(canvas, context); //holds marks list and number of pages on note
 
 var redostack = []; //stack to hold the undone stuff
 var index_redo = 0; //max items that can currently be redone
@@ -68,7 +63,7 @@ var cursor = true; //variable that determines weather cursor should be drawn
 
 //Draws blinking cursor
 function DrawCursor() {
-    jotCanvas.Draw();
+    jotCanvas.Draw(context);
     if (cursor && textClicked) {
         shape.DrawCursor(context);
         shape.DrawBox(context);
@@ -78,10 +73,6 @@ function DrawCursor() {
     }
     cursor = !cursor;
 }
-
-// Set all the default values.
-$("#FontSize").val(textSize);
-
 
 //Sets background from selection
 export function setBackground(num) {
@@ -179,7 +170,7 @@ export function ThicknessFunction(num) {
 
         shape.lineThickness = lineThickness;
 
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
 
         if (shapeSelected)
             shape.DrawBox(context);
@@ -194,7 +185,7 @@ export function OutlineThicknessFunction(num) {
     {
         shape.outlineThickness = outlineThickness;
 
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
 
         if (shapeSelected)
             shape.DrawBox(context);
@@ -209,7 +200,7 @@ export function ToolColor(color) {
     if (shapeSelected && shape.name != "F" && shape.name != "H" && 
             shape.name != "X" && shape.name != "Z") { 
         shape.fillColor = toolColor;
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
     }
 
     if(shapeSelected) {
@@ -224,17 +215,15 @@ export function LineColor(color) {
     //currently selected shape is free-form line or highlighter
     if (shapeSelected && (shape.name == "F" || shape.name == "H")) { 
         shape.fillColor = lineColor;
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
     }
 }
 
 //Tool fill color is selected
 export function TextColor(color) {
-    textColor = color;
-
     if (textClicked) {
-        shape.fillColor = textColor;
-        jotCanvas.Draw();
+        shape.fillColor = color;
+        jotCanvas.Draw(context);
         shape.DrawCursor(context);
         shape.DrawBox(context);
     }
@@ -246,7 +235,7 @@ export function ToolOutlineColor(color) {
 
     if (shapeSelected && shape.name != "F" && shape.name != "H" && shape.name != "X" && shape.name != "Z") {
         shape.outlineColor = toolOutlinecolor;
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
 
         if (shapeSelected) {
             shape.DrawBox(context);
@@ -259,12 +248,12 @@ export function SelectTool(num) {
     currentTool = num;
 }
 
-function DeleteSelectedShape() {
+export function DeleteSelectedShape() {
     if (shapeSelected || textClicked) {
         var temp = jotCanvas.marks.slice(0, selectedIndex);
         var temp2 = jotCanvas.marks.slice(selectedIndex + 1, jotCanvas.marks.length);
         jotCanvas.marks = temp.concat(temp2);
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
         shapeSelected = false;
         selectedIndex = -2;
         textClicked = false;
@@ -289,10 +278,10 @@ document.addEventListener('keypress', function (evt) {
                 break;
             default:
                 evt.preventDefault();
-                shape.AddText(String.fromCharCode(evt.keyCode));
+                shape.AddText(context, String.fromCharCode(evt.keyCode));
         }
 
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
         shape.DrawCursor(context);
         shape.DrawBox(context);
     }
@@ -336,7 +325,7 @@ document.addEventListener('keydown', function (evt) {
             default:
         }
 
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
         shape.DrawCursor(context);
         shape.DrawBox(context);
     }
@@ -366,7 +355,7 @@ function AddText(pasteString) {
                 shape.AddText(pasteString[i]);
             }
         }
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
         shape.DrawCursor(context);
         shape.DrawBox(context);
     }
@@ -461,7 +450,7 @@ function MouseDown (evt) {
                 textClicked = false;
         }
 
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
     }
 
 }
@@ -505,8 +494,8 @@ function MouseMove(evt) {
                     shape.AddPoints(mousePos.x, mousePos.y);
                     break;
                 case 9: //Text
-                    shape = new Text(startX, startY, mousePos.x, mousePos.y, textColor, fontfamily, style, textSize);
-                    jotCanvas.Draw();
+                    shape = new Text(startX, startY, mousePos.x, mousePos.y);
+                    jotCanvas.Draw(context);
                     shape.DrawBox(context);
                     break;
 
@@ -514,13 +503,13 @@ function MouseMove(evt) {
             }
 
             if (currentTool >= 0 && currentTool <= 8) {
-                jotCanvas.Draw();
+                jotCanvas.Draw(context);
                 shape.Draw(context);
             }
         }
         else {
             shape.Move(mousePos.x, mousePos.y);
-            jotCanvas.Draw();
+            jotCanvas.Draw(context);
             shape.DrawBox(context);
         }
     }
@@ -572,7 +561,7 @@ function MouseUp (evt) {
                     shape.AddPoints(mousePos.x, mousePos.y);
                     break;
                 case 9: //Text
-                    shape = new Text(startX, startY, mousePos.x, mousePos.y, textColor, fontfamily, style, textSize);
+                    shape = new Text(startX, startY, mousePos.x, mousePos.y);
                     textClicked = true;
                     jotCanvas.Apply(shape);
                     ResetUndo();
@@ -582,7 +571,7 @@ function MouseUp (evt) {
                     if (mobile) {
                         var temp2 = window.prompt("Enter Text: ");
                         for (var i = 0; i < temp2.length; i++) {
-                            shape.AddText(temp2[i]);
+                            shape.AddText(context, temp2[i]);
                         }
                     }
 
@@ -593,7 +582,7 @@ function MouseUp (evt) {
             if (currentTool >= 0 && currentTool <= 8) // tool is selected
             {
                 jotCanvas.Apply(shape);
-                jotCanvas.Draw();
+                jotCanvas.Draw(context);
 
 
                 ResetUndo();
@@ -606,7 +595,7 @@ function MouseUp (evt) {
         }
         else {
             shape.Move(mousePos.x, mousePos.y);
-            jotCanvas.Draw();
+            jotCanvas.Draw(context);
             shape.DrawBox(context);
         }
 
@@ -671,7 +660,7 @@ export function Undo() {
     if (index_redo < max_undo) {
         redostack.push(jotCanvas.marks.pop());
         index_redo++;
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
     }
     else {
         alert("You can not undo any more marks :(");
@@ -680,8 +669,7 @@ export function Undo() {
 
 //function that is called when a new shape is 
 //added to canvas, which increments max undo
-function ResetUndo()
-{
+function ResetUndo() {
     if (index_redo > 0) {
         max_undo = 0;
         index_redo = 0;
@@ -698,7 +686,7 @@ export function Redo() {
     if (index_redo != 0) {
         jotCanvas.Apply(redostack.pop());
         index_redo--;
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
     }
 }
 
@@ -708,15 +696,10 @@ export function ClearAll() {
 }
 
 //function that changes font of text drawn on canvas
-export function ChangeFont() {
-    var SelectList = $('select#font');
-    var selectedValue = $('option:selected', SelectList).val();
-
-    fontfamily = selectedValue;
-   
+export function ChangeFont(selectedValue) {
     if (textClicked) {
-        shape.Change_Font(fontfamily);
-        jotCanvas.Draw();
+        shape.Change_Font(selectedValue);
+        jotCanvas.Draw(context);
         shape.DrawCursor(context);
         shape.DrawBox(context);
     }
@@ -725,17 +708,11 @@ export function ChangeFont() {
 //function that changes bold/italic/underline status of 
 //text drawn on canvas
 export function BIU(type) {
-    if (style != type) {
-        style = type;
-    }
-    else {
-        style = "normal";
-    }
-    
+    console.log("Changing font style to: " + type);
 
     if (textClicked) {
-        shape.Change_Font_Style(style);
-        jotCanvas.Draw();
+        shape.Change_Font_Style(type);
+        jotCanvas.Draw(context);
         shape.DrawCursor(context);
         shape.DrawBox(context);
     }
@@ -743,13 +720,11 @@ export function BIU(type) {
 
 //changes size of text drawn on canvas
 export function ChangeFontSize(font_size) {
-    //showValue(font_size);
-    
-    textSize = parseInt(font_size);
+    var textSize = parseInt(font_size);
     
     if (textClicked) {
         shape.Change_Font_Size(textSize);
-        jotCanvas.Draw();
+        jotCanvas.Draw(context);
         shape.DrawCursor(context);
         shape.DrawBox(context);
     }

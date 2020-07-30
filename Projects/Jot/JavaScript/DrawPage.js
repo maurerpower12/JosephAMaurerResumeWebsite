@@ -4,7 +4,7 @@ import {SelectTool, Undo, Redo, ClearAll,
     ToolColor, LineColor, TextColor,
     ToolOutlineColor, OutlineThicknessFunction,
     ThicknessFunction, handleFiles,
-    setBackground
+    setBackground, DeleteSelectedShape
 } from './Shapes.js';
 
 $(document).ready(function () {
@@ -69,17 +69,17 @@ $(document).ready(function () {
     // Text Tools Buttons
     $("#BoldText").click(function () { 
         disableDrawTools();
-        $(this).addClass("active");
+        $(this).toggleClass("active");
         BIU('bold');
     });
     $("#ItalicText").click(function () { 
         disableDrawTools();
-        $(this).addClass("active");
+        $(this).toggleClass("active");
         BIU('italic');
     });
     $("#SmallCapsText").click(function () { 
         disableDrawTools();
-        $(this).addClass("active");
+        $(this).toggleClass("active");
         BIU('small-caps');
     });
 
@@ -167,7 +167,7 @@ $(document).ready(function () {
 
     // Lower left hand corner button events
     $("#DeleteSelection").click(function () { 
-        
+        DeleteSelectedShape();
     });
     $("#ClearAllIcon").click(function () { 
         ClearAll();
@@ -308,9 +308,10 @@ $(document).ready(function () {
 
     // Disable all Draw Tool Buttons
     function disableDrawTools() {
-        $("#DrawTools button").each(function(){
-            $( this ).addClass("disabled");
-        })
+        // Disabling for now because all buttons can be active at the same time.
+        // $("#DrawTools button").each(function(){
+        //    $( this ).addClass("disabled");
+        //})
     };
 });
 

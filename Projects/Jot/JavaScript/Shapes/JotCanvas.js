@@ -1,12 +1,12 @@
 ﻿//CANVAS CLASS
 class JotCanvas {
-    constructor() {
+    constructor(canvas, context) {
         //console.log(this.marks.serializeArray());
         this.marks = [];
         this.backgroundImage = new Image();
         this.backgroundSet = false;
-        this.canvas = document.getElementById('myCanvas');
-        this.context = this.canvas.getContext('2d');
+        this.canvas = canvas;
+        this.context = context;
         this.pages = 1;
     }
     //Applies mark to canvas and draws marks
@@ -14,17 +14,18 @@ class JotCanvas {
         this.marks.push(mark);
     }
     //Draws all marks on canvas
-    Draw() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height); //clears canvas
-
+    Draw(context) {
         this.canvas.width = this.canvas.width;
         this.canvas.height = this.canvas.height;
-        this.context = this.canvas.getContext('2d');
+        this.context = context;
+
+        //clears canvas
+        //this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
         // Draw the background image first.
         if (this.backgroundSet) {
-            var pageHeight = (this.canvas.height / this.pages);
-            this.context.drawImage(this.backgroundImage, 0, 0, this.canvas.width, pageHeight);
+            this.context.drawImage(this.backgroundImage, 0, 0, this.canvas.width,
+                this.canvas.height / this.pages);
         }
 
         // Draw the shapes on top of the canvas.
@@ -41,10 +42,10 @@ class JotCanvas {
         this.backgroundSet = true;
         this.Draw();
     }
-    ClearCanvas() {
+    ClearCanvas(context) {
         this.canvas.width = this.canvas.width;
         this.canvas.height = this.canvas.height;
-        this.context = this.canvas.getContext('2d');
+        this.context = context
 
         var pageHeight = (this.canvas.height / this.pages);
 
