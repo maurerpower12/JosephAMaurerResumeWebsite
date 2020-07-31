@@ -4,7 +4,7 @@ import {SelectTool, Undo, Redo, ClearAll,
     ToolColor, LineColor, TextColor,
     ToolOutlineColor, OutlineThicknessFunction,
     ThicknessFunction, handleFiles,
-    setBackground, DeleteSelectedShape
+    setBackground, DeleteSelectedShape, ChangeSprayDensity
 } from './Shapes.js';
 
 $(document).ready(function () {
@@ -68,17 +68,17 @@ $(document).ready(function () {
 
     // Text Tools Buttons
     $("#BoldText").click(function () { 
-        disableDrawTools();
+        disableTextStyle();
         $(this).toggleClass("active");
         BIU('bold');
     });
     $("#ItalicText").click(function () { 
-        disableDrawTools();
+        disableTextStyle();
         $(this).toggleClass("active");
         BIU('italic');
     });
     $("#SmallCapsText").click(function () { 
-        disableDrawTools();
+        disableTextStyle();
         $(this).toggleClass("active");
         BIU('small-caps');
     });
@@ -120,6 +120,7 @@ $(document).ready(function () {
         $(this).addClass("active");
         console.log("Spray Paint" + this);
         SelectTool(10);
+        setSprayToolSettings(true);
     });
 
     // Shape Tool Buttons
@@ -293,6 +294,11 @@ $(document).ready(function () {
         ChangeFont(this.value);
     });
 
+    $("#SprayDensity").on("change", function (event) {
+        console.log("Changing Density to: " + this.value);
+        ChangeSprayDensity(this.value);
+    });
+
     // Disables all buttons in the shape picker
     function disableShapeButtons() {
         $("#shapepicker button").each(function(btn){
@@ -309,11 +315,32 @@ $(document).ready(function () {
 
     // Disable all Draw Tool Buttons
     function disableDrawTools() {
-        // Disabling for now because all buttons can be active at the same time.
-        // $("#DrawTools button").each(function(){
-        //    $( this ).addClass("disabled");
-        //})
+        $("#DrawTools button").each(function(){
+           $( this ).addClass("disabled");
+        })
+
+        setSprayToolSettings(false);
     };
+
+    // Disable all text style Buttons
+    function disableTextStyle() {
+        // Do nothing since all text styles can be applied at the same time.
+        // $("#TextStyles button").each(function(){
+        //    $( this ).addClass("disabled");
+        // })
+    };
+
+    // Show any settings for the spray tool
+    function setSprayToolSettings(visible) {
+        if (visible) {
+            $('#SprayDensityContainer').css("visibility", "visible");
+            $('#DrawToolSizeContainer').css("visibility", "hidden");
+        }
+        else {
+            $('#SprayDensityContainer').css("visibility", "hidden");
+            $('#DrawToolSizeContainer').css("visibility", "visible");
+        }
+    }
 });
 
 $(document).on('click', '[name="toolSelectorBtn"]', function(e) {

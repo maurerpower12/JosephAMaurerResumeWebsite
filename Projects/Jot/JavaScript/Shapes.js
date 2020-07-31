@@ -448,7 +448,7 @@ function MouseDown (evt) {
                 textClicked = false;
                 break;
             case 10: // Spray Paint 
-                shape = new SprayPaintLine(lineColor, lineThickness);
+                shape = new SprayPaintLine(lineColor, $("#SprayDensity").val());
                 shape.AddPoints(mousePos.x, mousePos.y);
                 textClicked = false;
                 break;
@@ -738,5 +738,14 @@ export function ChangeFontSize(font_size) {
         jotCanvas.Draw(context);
         shape.DrawCursor(context);
         shape.DrawBox(context);
+    }
+}
+
+//changes size of text drawn on canvas
+export function ChangeSprayDensity(density) {
+    var density = parseFloat(density);
+    
+    if (shape != null && currentTool == 10) {
+        shape.density = density;
     }
 }

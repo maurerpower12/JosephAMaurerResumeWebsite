@@ -1,13 +1,13 @@
 var lastUpdate = 0;
-var delay = 20;
+var delay = 15;
 
 //SPRAY-PAINT LINE CLASS
 class SprayPaintLine {
-    constructor(color, thickness, density = 40) {
+    constructor(color, density = 40) {
         this.name = 'Spray Paint';
         this.fillColor = color;
-        this.spots = [];
         this.density = density;
+        this.spots = [];
     }
     //Adds point to free form line
     AddPoints(pointx, pointy) {
@@ -19,6 +19,7 @@ class SprayPaintLine {
     }
     //Draws free form line on canvas
     Draw(context) {
+        context.save();
         context.lineJoin = context.lineCap = 'round';
         context.fillStyle = this.fillColor;
         // loop through all of the spots.
@@ -27,6 +28,8 @@ class SprayPaintLine {
             context.globalAlpha = spot['alpha'];
             context.fillRect(spot['xPos'], spot['yPos'], spot['width'], spot['height']);
         }
+        // Restore the context so that any global alpha calls get reset.
+        context.restore();
     }
     /**
      * Returns true if the x,y is within the shape.
@@ -48,6 +51,10 @@ class SprayPaintLine {
      * @MouseMove
      */
     MouseMove(x, y) {}
+    /**
+     * Adds random spray points to the list.
+     * @Spray
+     */
     Spray(x, y) {
         for (var i = this.density; i--;) {
             var angle = getRandomFloat(0, Math.PI * 2);
