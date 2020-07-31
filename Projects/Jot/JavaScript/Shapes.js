@@ -22,6 +22,7 @@ import {Rectangle} from './Shapes/Rectangle.js';
 import {Square} from './Shapes/Square.js';
 import {Text} from './Shapes/Text.js';
 import {Triangle} from './Shapes/Triangle.js';
+import {SprayPaintLine} from './Shapes/SprayPaintLine.js';
 
 // This javascript controls which template is being put in the background.
 var bgnum = 0;
@@ -58,7 +59,7 @@ var max_undo = 0; //max items that can currently be undone
 var mobile = false;
 var lastmove = null;
 
-setInterval(DrawCursor, 500); //timer for drawing cursor
+//setInterval(DrawCursor, 500); //timer for drawing cursor
 var cursor = true; //variable that determines weather cursor should be drawn
 
 //Draws blinking cursor
@@ -446,6 +447,11 @@ function MouseDown (evt) {
             case 9: //text
                 textClicked = false;
                 break;
+            case 10: // Spray Paint 
+                shape = new SprayPaintLine(lineColor, lineThickness);
+                shape.AddPoints(mousePos.x, mousePos.y);
+                textClicked = false;
+                break;
             default:
                 textClicked = false;
         }
@@ -498,11 +504,13 @@ function MouseMove(evt) {
                     jotCanvas.Draw(context);
                     shape.DrawBox(context);
                     break;
-
+                case 10: // Spray Paint 
+                    shape.AddPoints(mousePos.x, mousePos.y);
+                    break;
                 default:
             }
 
-            if (currentTool >= 0 && currentTool <= 8) {
+            if (currentTool >= 0 && currentTool <= 8 || currentTool == 10) {
                 jotCanvas.Draw(context);
                 shape.Draw(context);
             }
@@ -576,10 +584,13 @@ function MouseUp (evt) {
                     }
 
                     break;
+                case 10: // Spray Paint 
+                    shape.AddPoints(mousePos.x, mousePos.y);
+                    break;
                 default:
             }
 
-            if (currentTool >= 0 && currentTool <= 8) // tool is selected
+            if (currentTool >= 0 && currentTool <= 8 || currentTool == 10) // tool is selected
             {
                 jotCanvas.Apply(shape);
                 jotCanvas.Draw(context);

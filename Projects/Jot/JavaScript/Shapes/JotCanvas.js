@@ -29,10 +29,14 @@ class JotCanvas {
         }
 
         // Draw the shapes on top of the canvas.
-        document.getElementById("stack").innerHTML = "";
+        var stackElement = document.getElementById("stack");
+        var debugHidden = document.getElementById("debug").style.display == 'none';
+        stackElement.innerHTML = "";
         for (var i = 0; i < this.marks.length; i++) { //Draws each mark on canvas
             this.marks[i].Draw(this.context);
-            document.getElementById("stack").innerHTML += JSON.stringify(this.marks[i], null, 4);
+            if(!debugHidden) {
+                stackElement.innerHTML += JSON.stringify(this.marks[i], null, 4);
+            }
         }
 
     }

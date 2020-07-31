@@ -118,7 +118,8 @@ $(document).ready(function () {
         disableDrawTools();
         $(this).removeClass("disabled");
         $(this).addClass("active");
-        console.log("can't set the draw tool type yet" + this);
+        console.log("Spray Paint" + this);
+        SelectTool(10);
     });
 
     // Shape Tool Buttons
