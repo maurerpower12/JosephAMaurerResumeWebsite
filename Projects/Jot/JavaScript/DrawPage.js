@@ -2,9 +2,9 @@
 import {SelectTool, Undo, Redo, ClearAll, 
     ChangeFont, BIU, ChangeFontSize,
     ToolColor, LineColor, TextColor,
-    ToolOutlineColor, OutlineThicknessFunction,
-    ThicknessFunction, handleFiles,
-    setBackground, DeleteSelectedShape, ChangeSprayDensity
+    ToolOutlineColor, OutlineThickness,
+    LineThickness, DeleteSelectedShape,
+    ChangeSprayDensity, SetBackgroundSource, DownloadCanvas
 } from './Shapes.js';
 
 $(document).ready(function () {
@@ -183,65 +183,65 @@ $(document).ready(function () {
     
 
     $("#DownloadCanvas").click(function () { 
-        console.log(this.id);
-        downloadCanvas(this);
+        DownloadCanvas();
     });
+    // Selects the background image based off the selected image
     $("#WhiteBackground").click(function () { 
-        setBackground(0);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#NarrowRuledBackground").click(function () { 
-        setBackground(1);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#TodoBackground").click(function () { 
-        setBackground(2);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#DotGridBackground").click(function () { 
-        setBackground(3);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#GraphBackground").click(function () { 
-        setBackground(4);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#EngineeringBackground").click(function () { 
-        setBackground(6);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#CalendarWeekBackground").click(function () { 
-        setBackground(7);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#MeetingNotesBasicBackground").click(function () { 
-        setBackground(8);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#MusicStavesBackground").click(function () { 
-        setBackground(9);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#BaseballBackground").click(function () { 
-        setBackground(10);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#BasketballBackground").click(function () { 
-        setBackground(11);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#FootballBackground").click(function () { 
-        setBackground(12);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#SoccerBackground").click(function () { 
-        setBackground(13);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#LegalNotesBackground").click(function () { 
-        setBackground(14);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#MeetingNotesBackground").click(function () { 
-        setBackground(15);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#RuledMarginBackground").click(function () { 
-        setBackground(16);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#BlueBackground").click(function () { 
-        setBackground(18);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#GreenBackground").click(function () { 
-        setBackground(19);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     $("#RedBackground").click(function () { 
-        setBackground(20);
+        SetBackgroundSource($(this).children('img')[0].src);
     });
     // ------ End On Click Event Functions
 
@@ -262,14 +262,14 @@ $(document).ready(function () {
     });
 
     $("#penSize").on("change", function (event) {
-        ThicknessFunction(event.target.value);
+        LineThickness(event.target.value);
 
         document.getElementById("penSizeSample").setAttribute('r', event.target.value);
     });
 
     $("#shapeSize").on("change", function (event) {
         console.log(event.target.value);
-        OutlineThicknessFunction(this.value);
+        OutlineThickness(this.value);
 
         document.getElementById("shapeSizeSample").setAttribute('r', event.target.value);
     });
@@ -277,7 +277,13 @@ $(document).ready(function () {
     $("#BackgroundFileInput").on("change", function (event) {
         var file = $(this).prop('files')[0];
         console.log("Uploading file: " + file.name);
-        handleFiles(file);
+
+        if(CheckFile(file)) {
+            SetBackgroundSource(URL.createObjectURL(file));
+        }
+        else {
+            console.error("Invalid File " + file);
+        }
     });
 
     $("#LeftHandMode").on("change", function (event) {
@@ -443,4 +449,28 @@ function lefthandedmode() {
         // remove margin left
         canvas.style.marginLeft = 'auto';
     }
+}
+
+/**
+ * Validates that a file is the correct type and size for upload.
+ * @CheckFile
+ */
+function CheckFile(file) {
+    var sFileName = file.name;
+    var validFileExtensions = [".jpg", ".jpeg", ".gif", ".png"];
+    var sFileExtension = sFileName.split('.')[sFileName.split('.').length - 1].toLowerCase();
+    var iFileSize = file.size;
+    var iConvert = (file.size / 1048576).toFixed(2); // round it off to only 2 decimal points
+    console.log("Uploaded file size: " + iFileSize);
+    if (!(sFileExtension === "jpg" ||
+            sFileExtension === "jpeg" ||
+            sFileExtension === "png")) {
+        txt = "File type : " + sFileExtension + "\n\n";
+        txt += "Size: " + iConvert + " MB \n\n";
+        txt += "Please make sure your file is in jpg, or png format.\n\n";
+        alert(txt);
+        return false;
+    }
+    return true;
+
 }

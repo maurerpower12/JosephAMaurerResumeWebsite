@@ -9,11 +9,17 @@ class JotCanvas {
         this.context = context;
         this.pages = 1;
     }
-    //Applies mark to canvas and draws marks
+    /**
+     * Applies mark to canvas and draws marks.
+     * @Draw
+     */
     Apply(mark) {
         this.marks.push(mark);
     }
-    //Draws all marks on canvas
+    /**
+     * Draws all marks on canvas.
+     * @Draw
+     */
     Draw(context) {
         this.canvas.width = this.canvas.width;
         this.canvas.height = this.canvas.height;
@@ -38,14 +44,19 @@ class JotCanvas {
                 stackElement.innerHTML += JSON.stringify(this.marks[i], null, 4);
             }
         }
-
     }
-    //Canvas background is duplicated for each page
+    /**
+     * Sets the background image.
+     * @SetBackground
+     */
     SetBackground(m_background) {
         this.backgroundImage = m_background;
         this.backgroundSet = true;
-        this.Draw();
     }
+    /**
+     * Draws a clear rect over the canvas.
+     * @ClearCanvas
+     */
     ClearCanvas(context) {
         this.canvas.width = this.canvas.width;
         this.canvas.height = this.canvas.height;
@@ -53,18 +64,28 @@ class JotCanvas {
 
         var pageHeight = (this.canvas.height / this.pages);
 
-
         for (var i = 0; i < this.pages; i++) {
             var y1 = i * (this.canvas.height / this.pages);
 
             this.context.clearRect(0, y1, this.canvas.width, pageHeight);
         }
     }
+    /**
+     * Resets any canvas data.
+     * @DownloadCanvas
+     */
     ResetCanvas() {
         this.ClearCanvas();
         this.marks = [];
         this.context.restore();
         this.Draw();
+    }
+    /**
+     * Returns the canvas data.
+     * @GetCanvasData
+     */
+    GetCanvasData() {
+        return this.canvas.toDataURL();
     }
 }
 

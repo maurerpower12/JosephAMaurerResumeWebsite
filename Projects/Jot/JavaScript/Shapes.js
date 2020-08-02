@@ -25,8 +25,8 @@ import {Triangle} from './Shapes/Triangle.js';
 import {SprayPaintLine} from './Shapes/SprayPaintLine.js';
 
 // This javascript controls which template is being put in the background.
-var bgnum = 0;
 var m_background = new Image();
+m_background.onload = OnBackgroundImageLoaded;
 
 var startX = 0; //shape start X coordinate
 var startY = 0; //shape start Y coordinate
@@ -62,7 +62,10 @@ var lastmove = null;
 //setInterval(DrawCursor, 500); //timer for drawing cursor
 var cursor = true; //variable that determines weather cursor should be drawn
 
-//Draws blinking cursor
+/**
+ * Draws a blinking cursor.
+ * @function DrawCursor
+ */
 function DrawCursor() {
     jotCanvas.Draw(context);
     if (cursor && textClicked) {
@@ -75,94 +78,30 @@ function DrawCursor() {
     cursor = !cursor;
 }
 
-//Sets background from selection
-export function setBackground(num) {
-    bgnum = num;
+/**
+ * Sets background from a passed source
+ * @function SetBackgroundSource
+ */
+export function SetBackgroundSource(source) {
+    m_background.src = source;
+}
 
-    var startingpath = 'Background%20Templates/jpg/';
-    var startingcolors = 'Background%20Templates/color/';
-    if(num == -12) {
-        return;
-    }
-
-    if (num == 0) { // case for a no background selected white background
-        m_background.src = startingpath + "white.jpg";
-    }
-    if (num == 1) {
-        m_background.src = startingpath + 'narrow ruled 2.jpeg';
-    }
-    else if (num == 2) {
-        m_background.src = startingpath + 'todo 2.jpeg';
-    }
-    else if (num == 3) {
-        m_background.src = startingpath + 'dot grid med 2.jpeg';
-    }
-    else if (num == 4) {
-        m_background.src = startingpath + 'graph 2.jpeg';
-    }
-    else if (num == 6) {
-        m_background.src = startingpath + 'engineering_grey 2.jpeg';
-    }
-    else if (num == 7) {
-        m_background.src = startingpath + 'calendar week 2.jpeg';
-    }
-    else if (num == 8) {
-        m_background.src = startingpath + 'meeting notes basic 2.jpeg';
-    }
-    else if (num == 9) {
-        m_background.src = startingpath + 'music staves 2.jpeg';
-    }
-    else if (num == 10) {
-        m_background.src = startingpath + 'baseball portrait 2.jpeg';
-    }
-    else if (num == 11) {
-        m_background.src = startingpath + 'basketball landscape 2.jpeg';
-    }
-    else if (num == 12) {
-        m_background.src = startingpath + 'football landscape 2.jpeg';
-    }
-    else if (num == 13) {
-        m_background.src = startingpath + 'soccer landscape 2.jpeg';
-    }
-    else if (num == 14) {
-        m_background.src = startingpath + 'legal 2.jpeg';
-    }
-    else if (num == 15) {
-        m_background.src = startingpath + 'meeting notes 2.jpeg';
-    }
-    else if (num == 16) {
-        m_background.src = startingpath + 'ruled margin 2.jpeg';
-    }
-    else if (num == 18) { // case for blue background
-        m_background.src = startingcolors + 'blue.jpg';
-    }
-    else if (num == 19) { // case for green background
-        m_background.src = startingcolors + 'Green.jpg';
-    }
-    else if (num == 20) { // case for red background
-        m_background.src = startingcolors + 'red.jpg';
-    }
-    else { // default
-        m_background.src = startingcolors + "white.jpg";
-    }
-    m_background.onload = function () {
+/**
+ * Called when the background image loads.
+ * @function OnBackgroundImageLoaded
+ */
+function OnBackgroundImageLoaded() {
+    if (jotCanvas != null) {
         jotCanvas.SetBackground(m_background);
+        jotCanvas.Draw(context);
     }
 }
 
-//function to load the user def image 
-export function handleFiles(file) {
-    if (checkFile(file)) {
-        m_background.src = URL.createObjectURL(file);
-        bgnum = -12;
-    }
-    else {
-        console.log("invalid file");
-    }
-}
-
-//Sets thickness of shape outline
-export function ThicknessFunction(num) {
+/**
+ * Function to set the line thickness if applicable.
+ * @function LineThickness
+ */
+export function LineThickness(num) {
     lineThickness = num;
 
     if (shapeSelected && shape.name != "X" && (shape.name == "F" 
@@ -178,7 +117,11 @@ export function ThicknessFunction(num) {
     }
 }
 
-export function OutlineThicknessFunction(num) {
+/**
+ * Function to set the outline thickness if applicable.
+ * @function OutlineThickness
+ */
+export function OutlineThickness(num) {
     outlineThickness = num;
 
     if (shapeSelected && shape.name != "H" && shape.name != "F" && shape.name 
@@ -193,7 +136,10 @@ export function OutlineThicknessFunction(num) {
     }
 }
 
-//shape fill color is selected
+/**
+ * Shape fill color is selected.
+ * @function ToolColor
+ */
 export function ToolColor(color) {
     toolColor = color;
 
@@ -209,7 +155,10 @@ export function ToolColor(color) {
     }
 }
 
-//line fill color is selected
+/**
+ * Line fill color is selected.
+ * @function LineColor
+ */
 export function LineColor(color) {
     lineColor = color;
 
@@ -220,7 +169,10 @@ export function LineColor(color) {
     }
 }
 
-//Tool fill color is selected
+/**
+ * Tool fill color is selected.
+ * @function TextColor
+ */
 export function TextColor(color) {
     if (textClicked) {
         shape.fillColor = color;
@@ -230,7 +182,10 @@ export function TextColor(color) {
     }
 }
 
-//tool outline color is selected
+/**
+ * Tool outline color is selected.
+ * @function ToolOutlineColor
+ */
 export function ToolOutlineColor(color) {
     toolOutlinecolor = color;
 
@@ -244,11 +199,18 @@ export function ToolOutlineColor(color) {
     }
 }
 
-//tool is selected
+/**
+ * Selects a tool.
+ * @function SelectTool
+ */
 export function SelectTool(num) {
     currentTool = num;
 }
 
+/**
+ * Deletes the shape if one is selected.
+ * @function DeleteSelectedShape
+ */
 export function DeleteSelectedShape() {
     if (shapeSelected || textClicked) {
         var temp = jotCanvas.marks.slice(0, selectedIndex);
@@ -261,7 +223,10 @@ export function DeleteSelectedShape() {
     }
 }
 
-//gets canvas coordinates
+/**
+ * Gets the canvas coordinates.
+ * @function getMousePosition
+ */
 function getMousePosition(canvas, evt) {
         return {
             x: (evt.clientX - canvas.getBoundingClientRect().left) * (canvas.width / canvas.offsetWidth),
@@ -269,7 +234,10 @@ function getMousePosition(canvas, evt) {
         };
 }
 
-//Function that listens to keyboard input for character keys
+/**
+ * Listens to keyboard input for character keys.
+ * @function addEventListener
+ */
 document.addEventListener('keypress', function (evt) {
     if(textClicked) {
         switch (evt.keyCode) {
@@ -288,7 +256,10 @@ document.addEventListener('keypress', function (evt) {
     }
 }, false);
 
-//Function that listens to keyboard input for non character keys
+/**
+ * Listens to keyboard input for non character keys.
+ * @function addEventListener
+ */
 document.addEventListener('keydown', function (evt) {
     if (textClicked) {
 
@@ -340,12 +311,18 @@ document.addEventListener('keydown', function (evt) {
 
 }, false);
 
-//function to paste text into textbox
-document.addEventListener("paste", function (evt) {
+/**
+ * Pastes text into a textbox.
+ * @function addEventListener
+ */
+document.addEventListener('paste', function (evt) {
     AddText(evt.clipboardData.getData('text/plain'));
 }, false);
 
-
+/**
+ * Adds text to a text shape.
+ * @function AddText
+ */
 function AddText(pasteString) {
     if (textClicked) {
         for (var i = 0; i < pasteString.length; i++) {
@@ -362,25 +339,40 @@ function AddText(pasteString) {
     }
 }
 
-
+/**
+ * Called on mouse down.
+ * @function addEventListener
+ */
 canvas.addEventListener('mousedown', function (evt) {
     if(!mobile) {
         MouseDown(evt);
     }
 }, false);
 
+/**
+ * Called on mouse move.
+ * @function addEventListener
+ */
 canvas.addEventListener('mousemove', function (evt) {
     if (!mobile) {
         MouseMove(evt);
     }
 }, false);
 
+/**
+ * Called on mouse up.
+ * @function addEventListener
+ */
 canvas.addEventListener('mouseup', function (evt) {
     if (!mobile) {
         MouseUp(evt);
     }
 }, false);
 
+/**
+ * Called on touch start. Needed for mobile.
+ * @function addEventListener
+ */
 canvas.addEventListener('touchstart', function (evt) {
     evt.preventDefault();
 
@@ -391,6 +383,10 @@ canvas.addEventListener('touchstart', function (evt) {
     MouseDown(evt);
 }, false);
 
+/**
+ * Called on touch move. Needed for mobile.
+ * @function addEventListener
+ */
 canvas.addEventListener('touchmove', function (evt) {
     evt.preventDefault();
     evt = evt.touches[0];
@@ -400,6 +396,10 @@ canvas.addEventListener('touchmove', function (evt) {
     MouseMove(evt);
 }, false);
 
+/**
+ * Called on touch end. Needed for mobile.
+ * @function addEventListener
+ */
 canvas.addEventListener('touchend', function (evt) {
     evt.preventDefault();
     evt = lastmove;
@@ -408,6 +408,10 @@ canvas.addEventListener('touchend', function (evt) {
     MouseUp(evt);
 }, false);
 
+/**
+ * Called on touch cancel. Needed for mobile.
+ * @function addEventListener
+ */
 canvas.addEventListener('touchcancel', function (evt) {
     evt.preventDefault();
     evt = evt.touches[0];
@@ -416,7 +420,10 @@ canvas.addEventListener('touchcancel', function (evt) {
     MouseUp(evt);
 }, false);
 
-//Function that is called when mouse is clicked on the canvas
+/**
+ * Called when mouse is clicked on the canvas.
+ * @function MouseDown
+ */
 function MouseDown (evt) {
     var mousePos = getMousePosition(canvas, evt);
     startX = mousePos.x
@@ -461,7 +468,10 @@ function MouseDown (evt) {
 
 }
 
-//Function that is called when mouse is moved on canvas
+/**
+ * Called when mouse is moved on canvas.
+ * @function MouseMove
+ */
 function MouseMove(evt) {
     var mousePos = getMousePosition(canvas, evt);
     document.getElementById("xycoordinates").innerHTML = 
@@ -532,7 +542,10 @@ function MouseMove(evt) {
     }
 }
 
-//Function that is called when mouse is released on canvas
+/**
+ * Called when mouse is released on canvas.
+ * @function MouseUp
+ */
 function MouseUp (evt) {
     var mousePos = getMousePosition(canvas, evt) //gets mouse coordinates
 
@@ -618,7 +631,10 @@ function MouseUp (evt) {
     mouseclicked = false;
 }
 
-//Selects shape at coordinates x,y
+/**
+ * Selects shape at coordinates x,y
+ * @function Selection
+ */
 function Selection(x,y) {
     var found = false;
     var i = jotCanvas.marks.length - 1;
@@ -666,7 +682,10 @@ function Selection(x,y) {
     }
 }
 
-//mark is undone
+/**
+ * Undoes the last mark.
+ * @function Undo
+ */
 export function Undo() {
     if (index_redo < max_undo) {
         redostack.push(jotCanvas.marks.pop());
@@ -678,8 +697,10 @@ export function Undo() {
     }
 }
 
-//function that is called when a new shape is 
-//added to canvas, which increments max undo
+/**
+ * called when a new shape is added to canvas, which increments max undo.
+ * @function ResetUndo
+ */
 function ResetUndo() {
     if (index_redo > 0) {
         max_undo = 0;
@@ -692,7 +713,10 @@ function ResetUndo() {
     }
 }
 
-//mark is redone
+/**
+ * Redoes a mark.
+ * @function Redo
+ */
 export function Redo() {
     if (index_redo != 0) {
         jotCanvas.Apply(redostack.pop());
@@ -701,12 +725,18 @@ export function Redo() {
     }
 }
 
-// Clears the canvas
+/**
+ * Clears the canvas.
+ * @function ClearAll
+ */
 export function ClearAll() {
     jotCanvas.ResetCanvas();
 }
 
-//function that changes font of text drawn on canvas
+/**
+ * Changes font of text drawn on canvas.
+ * @function ChangeFont
+ */
 export function ChangeFont(selectedValue) {
     if (textClicked) {
         shape.Change_Font(selectedValue);
@@ -716,8 +746,10 @@ export function ChangeFont(selectedValue) {
     }
 }
 
-//function that changes bold/italic/underline status of 
-//text drawn on canvas
+/**
+ * Function that changes bold/italic/underline status of text drawn on canvas
+ * @function BIU
+ */
 export function BIU(type) {
     console.log("Changing font style to: " + type);
 
@@ -729,7 +761,10 @@ export function BIU(type) {
     }
 }
 
-//changes size of text drawn on canvas
+/**
+ * Changes size of text drawn on canvas.
+ * @function ChangeFontSize
+ */
 export function ChangeFontSize(font_size) {
     var textSize = parseInt(font_size);
     
@@ -741,11 +776,31 @@ export function ChangeFontSize(font_size) {
     }
 }
 
-//changes size of text drawn on canvas
+/**
+ * Changes size of text drawn on canvas.
+ * @function ChangeSprayDensity
+ */
 export function ChangeSprayDensity(density) {
     var density = parseFloat(density);
     
     if (shape != null && currentTool == 10) {
         shape.density = density;
+    }
+}
+
+/**
+ * Downloads the canvas data as an attachment.
+ * @function DownloadCanvas
+ */
+export function DownloadCanvas() {
+    if (jotCanvas != null) {
+        //window.open(canvas.toDataURL());
+        var link = document.createElement('a');
+        link.download = 'JotNote.png';
+        link.href = jotCanvas.GetCanvasData();
+        link.click();
+    }
+    else {
+        console.error("Unable to download because the canvas is empty.");
     }
 }
