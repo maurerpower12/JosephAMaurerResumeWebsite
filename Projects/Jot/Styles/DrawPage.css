@@ -11,6 +11,11 @@
 //
 //
 //******************************************************************************************************/
+@font-face {
+    font-family: Lobster;
+    src: url('../Fonts/Lobster-Regular.ttf');
+}
+
 .info {
     positition: absolute;
 }
