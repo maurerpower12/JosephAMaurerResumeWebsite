@@ -16,6 +16,12 @@
     src: url('../Fonts/Lobster-Regular.ttf');
 }
 
+.JotLogo {
+    font-family: Lobster;
+    color: #9b0716 !important;
+    font-size: 40px;
+}
+
 .info {
     positition: absolute;
 }
@@ -525,3 +531,33 @@ hr {
     width: 100%;
     text-align:center;
  }
+
+  /* Small Devices and lower */
+ @media only screen and (max-width: 768px) {
+     .JotLogo {
+         display: none;
+     }
+
+     #toolSelector span button img {
+        padding-left: 0!important;
+        padding-right: 0!important;
+     }
+     #toolSelector span button i {
+        font-size: 25px!important;
+     }
+     #toolSelector span button img {
+        width: 25px!important;
+     }
+     #nav-expander button i {
+        font-size: 25px!important;
+        width: auto;
+     }
+     .nav-icon-red {
+         width: auto;
+     }
+
+     #LeftHandModeContainer {
+         display: none;
+     }
+
+  }

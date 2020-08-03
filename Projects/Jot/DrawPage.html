@@ -28,6 +28,12 @@
         <body>
             <!-- Code here for top menu -->
             <nav id="topNav" class="navbar navbar-dark bg-dark">
+
+                <!-- Menu icon in the top left corner  -->
+                <div class="pull-left hidden-sm-down">
+                    <a class="JotLogo">Jot</a>
+                </div>
+
                 <div class="mx-auto" style="display:inline-flex;">
                     <div id="toolSelector" class="btn-group btn-group-toggle" data-toggle="buttons-radio">
                         <!-- Sections with the buttons for the tool bar -->
@@ -599,12 +605,14 @@
                                     <input class="btn btn-light" type="file" accept="image/jpeg, image/png" style="width:100%;" id="BackgroundFileInput" />
                                     <br />
                                     <br />
-                                    <hr />
-                                    <h5>Left Hand mode</h5>
-                                    <label class="switch" style="left: 5px; right: -5px;">
-                                        <input class="savecheckbox" type="checkbox" id="LeftHandMode">
-                                        <div class="slider round" id="leftslider"></div>
-                                    </label>
+                                    <div id="LeftHandModeContainer">
+                                        <hr />
+                                        <h5>Left Hand mode</h5>
+                                        <label class="switch" style="left: 5px; right: -5px;">
+                                            <input class="savecheckbox" type="checkbox" id="LeftHandMode">
+                                            <div class="slider round" id="leftslider"></div>
+                                        </label>
+                                    </div>
             
                                 </ul>
 
