@@ -39,7 +39,7 @@
                         <!-- Sections with the buttons for the tool bar -->
                         <span title="Text">
                             <button id="btn1" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
-                                <img src="Jot_Icons/Text.png" class="nav-icon-red" />
+                                <img src="Jot_Icons/Text.png" class="nav-icon-red nav-icon-img"/>
                             </button>
                         </span>
                 
@@ -122,7 +122,7 @@
                             <h4 class="modal-title">Background Templates</h4>
                             <button type="button" class="close float-right" data-dismiss="modal">&times;</button>
                         </div>
-                        <div class="modal-body" style="padding: 40px 50px;">
+                        <div class="modal-body" style="padding: 25px;">
                             <div class="row">
                                 <div class="col-lg-4 col-sm-6 col-xs-12">
                                     <a id="NarrowRuledBackground">
@@ -250,6 +250,50 @@
                 </div>
             </div>
 
+            <!-- Modal for download options -->
+            <div id="DownloadModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title"><i class="fa fa-download" aria-hidden="true"></i> Download</h4>
+                            <button type="button" class="close float-right" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body" style="padding: 25px;">
+
+                            <div class="d-flex m-2">
+                                <div>
+                                    <p>Download As:</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <select id="DownloadType">
+                                        <option>PNG</option>
+                                        <option>JPEG</option>
+                                        <option>JSON</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="d-flex m-2">
+                                <div>
+                                    <p>Quality:</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <input id="DownloadQuality" type="range" min="0" max="1" step=".1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button data-dismiss="modal" type="button" class="btn btn-success btn-default pull-right" id="DownloadCanvas">
+                                <span class="glyphicon glyphicon-ok"></span>Download</button>
+                            <button data-dismiss="modal" type="submit" class="btn btn-danger btn-default pull-left"><span
+                                    class="glyphicon glyphicon-remove"></span>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!--  Modal for sharing a note with another user.  -->
             <div id="ShareNoteModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -260,8 +304,19 @@
                             <button class="close float-right" type="submit" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body" style="padding: 40px 50px;">
-                            <p style="color: #b40f18;">This feature is diabled, feel free to screenshot your
-                                drawling though!</p>
+                            <div class="alert alert-danger" role="alert">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                This feature is disabled because the database 
+                                for this project is currently turned off, but 
+                                feel free to download your note!
+
+                                <br>
+                                <span title="download">
+                                    <button type="button" class="btn btn-light" id="DownloadCanvas">
+                                        <i class="fa fa-download" aria-hidden="true"></i> Download
+                                    </button>
+                                </span>
+                            </div>
                             <p>Enter the email of who you want to share the note with: </p>
                             <p style="color: darkgrey;">For multiple emails, separate the emails with
                                 commas. </p>
@@ -583,28 +638,32 @@
                                     <h4>Settings</h4>
   
                                     <button type="button" class="btn btn-light" onclick="$('#Helpmodal').appendTo('body').modal('show');">
-                                        <i class="fa fa-question-circle" aria-hidden="true"> Help
-                                        </i>
+                                        <i class="fa fa-question-circle" aria-hidden="true"></i> Help
                                     </button>
-                                    <span title="download">
-                                        <button type="button" class="btn btn-light" id="DownloadCanvas">
+                                    <span title="Download">
+                                        <button type="button" class="btn btn-light" id="DownloadSetting">
                                             <i class="fa fa-download" aria-hidden="true"></i> Download
                                         </button>
-                                        <a id="DownloadLink" download="JotSampleNote.jpg" href=""></a>
                                     </span>
                                     
                                     <br />
                                     <hr />
                                     <h5>Background Image</h5>
-                                    <button id="TemplateButton" type="button" class="btn btn-light">
-                                        Templates
+                                    <button id="TemplateButton" type="button" class="btn btn-light" style="width:100%;">
+                                        <i class="far fa-file-alt"></i> Templates
                                     </button>
                                     <br />
                                     -- or --
                                     <br />
                                     <input class="btn btn-light" type="file" accept="image/jpeg, image/png" style="width:100%;" id="BackgroundFileInput" />
                                     <br />
-                                    <br />
+
+                                    <div>
+                                        <hr />
+                                        <h5>Load Note</h5>
+                                        <input class="btn btn-light" type="file" accept=".json" style="width:100%;" id="UploadFileInput" />
+                                    </div>
+
                                     <div id="LeftHandModeContainer">
                                         <hr />
                                         <h5>Left Hand mode</h5>
@@ -614,6 +673,14 @@
                                         </label>
                                     </div>
             
+                                    <div id="DebugIcon">
+                                        <span title="Delete Shape">
+                                            <span class="fa-stack fa-lg">
+                                                <i class="fa fa-square fa-stack-2x"></i>
+                                                <i class="fas fa-bug fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                                            </span>
+                                        </span>
+                                    </div>
                                 </ul>
 
                                 <ul class="list-unstyled main-menu " id="debug">
@@ -639,19 +706,10 @@
                 </div>
 
                 <div id="ClearAllIcon">
-                    <span title="Delete Shape">
+                    <span title="Clear Canvas">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-square fa-stack-2x"></i>
                             <i class="fas fa-ban fa-stack-1x fa-inverse" aria-hidden="true"></i>
-                        </span>
-                    </span>
-                </div>
-
-                <div id="DebugIcon">
-                    <span title="Delete Shape">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fas fa-bug fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                     </span>
                 </div>

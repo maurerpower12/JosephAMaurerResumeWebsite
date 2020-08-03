@@ -50,8 +50,10 @@ class JotCanvas {
      * @SetBackground
      */
     SetBackground(m_background) {
-        this.backgroundImage = m_background;
-        this.backgroundSet = true;
+        if (m_background != null) {
+            this.backgroundImage = m_background;
+            this.backgroundSet = true;
+        }
     }
     /**
      * Draws a clear rect over the canvas.
@@ -75,7 +77,7 @@ class JotCanvas {
      * @DownloadCanvas
      */
     ResetCanvas() {
-        this.ClearCanvas();
+        this.ClearCanvas(this.context);
         this.marks = [];
         this.context.restore();
         this.Draw();
@@ -84,8 +86,8 @@ class JotCanvas {
      * Returns the canvas data.
      * @GetCanvasData
      */
-    GetCanvasData() {
-        return this.canvas.toDataURL();
+    GetCanvasData(type, quality = 1.0) {
+        return this.canvas.toDataURL('image/' + type, quality);
     }
 }
 

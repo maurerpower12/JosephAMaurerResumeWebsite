@@ -200,7 +200,6 @@ a.nav-expander.fixed {
     display: inline-flex;
     position: fixed;
     top: 0;
-    height: 65px;
 }
 
 #sidePanel {
@@ -223,7 +222,8 @@ a.nav-expander.fixed {
   }
   @media screen and (max-width: 480px) {
       #sidePanel {
-          display: none;
+          /* Make the side panel the entire width of the screen on mobile */
+          width: 100%;
       }
     }
 .nav-icon {
@@ -416,10 +416,12 @@ body.nav-expanded {
     height: 190px !important;
     width: 100%;
 
-}
-.thumbnail:hover {
     border-style: solid;
-    border-width: medium;
+    border-width: thin;
+    border-color: lightgrey;
+}
+
+.thumbnail:hover {
     border-color: lightblue;
 }
 
@@ -559,5 +561,19 @@ hr {
      #LeftHandModeContainer {
          display: none;
      }
+     .nav-icon-img {
+       height: auto;
+     }
+     #topNav {
+         height: 50px;
+     }
+  }
+  @media only screen and (min-width: 768px) {
+      .nav-icon-img {
+        height: 48px;
+      }
 
+    #topNav {
+        height: 65px;
+    }
   }

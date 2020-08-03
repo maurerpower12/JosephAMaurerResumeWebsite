@@ -4,7 +4,7 @@ import {SelectTool, Undo, Redo, ClearAll,
     ToolColor, LineColor, TextColor,
     ToolOutlineColor, OutlineThickness,
     LineThickness, DeleteSelectedShape,
-    ChangeSprayDensity, SetBackgroundSource, DownloadCanvas
+    ChangeSprayDensity, SetBackgroundSource, DownloadCanvas, UploadCanvas
 } from './Shapes.js';
 
 $(document).ready(function () {
@@ -183,8 +183,16 @@ $(document).ready(function () {
     
 
     $("#DownloadCanvas").click(function () { 
-        DownloadCanvas();
+        var type = $("#DownloadType").val();
+        var quality = $("#DownloadQuality").val();
+        console.log("Downloading As " + type + " with quality " + quality);
+        DownloadCanvas(type, quality);
     });
+
+    $("#DownloadSetting").click(function () { 
+        $("#DownloadModal").appendTo("body").modal('show');
+    });
+
     // Selects the background image based off the selected image
     $("#WhiteBackground").click(function () { 
         SetBackgroundSource($(this).children('img')[0].src);
@@ -285,6 +293,17 @@ $(document).ready(function () {
             console.error("Invalid File " + file);
         }
     });
+
+    var reader = new FileReader();
+    $("#UploadFileInput").on("change", function (event) {
+        var file = $(this).prop('files')[0];
+        console.log("Loading file: " + file.name);
+        reader.readAsText(file);
+    });
+    // Called when the upload file loads.
+    reader.onload = function () {
+        UploadCanvas(reader.result);
+    };
 
     $("#LeftHandMode").on("change", function (event) {
         lefthandedmode();

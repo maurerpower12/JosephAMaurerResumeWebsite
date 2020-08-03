@@ -792,15 +792,101 @@ export function ChangeSprayDensity(density) {
  * Downloads the canvas data as an attachment.
  * @function DownloadCanvas
  */
-export function DownloadCanvas() {
+export function DownloadCanvas(type, quality) {
     if (jotCanvas != null) {
-        //window.open(canvas.toDataURL());
-        var link = document.createElement('a');
-        link.download = 'JotNote.png';
-        link.href = jotCanvas.GetCanvasData();
-        link.click();
+        if (type == 'JPEG' || type == 'PNG') {
+            var link = document.createElement('a');
+            link.download = 'JotNote.' + type;
+            link.href = jotCanvas.GetCanvasData(type.toLowerCase(), quality);
+            document.body.appendChild(link);
+            link.click();
+            document.body.appendChild(link);
+        }
+        else if (type == 'JSON') {
+            //var canvasContent = jotCanvas.GetCanvasData();
+            var metaData = JSON.stringify({date: Date.now(), jotCanvas: jotCanvas});
+            var file = new Blob([metaData], {
+                type: 'application/json'
+            });
+
+            // trigger a click event on an <a> tag to open the file explorer
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(file);
+            link.download = 'JotNote.json';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
     }
     else {
         console.error("Unable to download because the canvas is empty.");
     }
+}
+
+/**
+ * Attempts to load note data from a file.
+ * 
+    //jotCanvas = Object.assign(jotCanvas, fileData.jotCanvas);
+    //jotCanvas = fileData.jotCanvas;
+ * @function UploadCanvas
+ */
+export function UploadCanvas(file) {
+    var fileData = JSON.parse(file);
+    var marks = fileData.jotCanvas.marks;
+    jotCanvas = new JotCanvas(canvas, context);
+
+    // Set the background image.
+    if (fileData.backgroundImage != null) {
+        SetBackgroundSource(fileData.backgroundImage);
+    }
+
+    console.log(marks.length);
+    // Loop through all of the marks and recreate them
+    for(var markIndex = 0; markIndex < marks.length; markIndex++) {
+        var obj = marks[markIndex];
+        console.log(markIndex + " " + obj.name);
+        switch (obj.name) {
+            case "H": //Highlighter
+                shape = new Highlighter(obj.startX, obj.startY, obj.endX, obj.endY, obj.fillColor, null, obj.lineThickness);
+                break;
+            case "C": //circle
+                shape = new Circle();
+                break;
+            case "R": //rectangle
+                shape = new Rectangle();
+                break;
+            case "L": //line
+                shape = new Line();
+                break;
+            case "T": //triangle
+                shape = new Triangle();
+                break;
+            case "S": //square
+                shape = new Square();
+                break;
+            case "E": //Ellipse
+                shape = new Ellipse();
+                break;
+            case "F": //Free-Form Line
+                shape = new FreeFormLine(obj.fillColor, obj.lineThickness);
+                shape.xPoints = obj.xPoints;
+                shape.yPoints = obj.yPoints;
+                break;
+            case "E": //Eraser Line
+                shape = new Eraser();
+                break;
+            case "Text": //Text
+                shape = new Text();
+                break;
+            case 'Spray Paint': // Spray Paint 
+                shape = new SprayPaintLine();
+                shape.AddPoints(mousePos.x, mousePos.y);
+                break;
+            default:
+        }
+        jotCanvas.Apply(shape);
+    }
+
+    console.log("Loaded note from: " + Date(fileData.date).toString());
+    jotCanvas.Draw(context);
 }
