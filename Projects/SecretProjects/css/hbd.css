@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    color: #343a40;
+  }
+  
+
+  body {
+    font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    padding-top: 54px;
+    color: #868e96;
+  }
+
+  .countdown-section {
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+
+  /* Small Devices and lower */
+ @media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+  li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 3.5px;
+    text-transform: uppercase;
+  }
+  
+  li span {
+    display: block;
+    font-size: 3rem;
+  }
+ }
+
+ @media only screen and (min-width: 768px) {
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+}
