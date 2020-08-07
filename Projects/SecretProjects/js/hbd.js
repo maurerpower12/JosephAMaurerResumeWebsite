@@ -42,6 +42,10 @@ let x = setInterval(function () {
         document.getElementById('countdown').style.visibility = "visible";
         document.getElementById('birthday').style.visibility = "hidden";
     }
+
+    $('.carousel').carousel({
+        interval: 2000
+      })
 })();
 
 function showBirthdayScreen() {

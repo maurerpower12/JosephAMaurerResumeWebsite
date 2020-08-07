@@ -5,7 +5,7 @@ const second = 1000,
     hour = minute * 60,
     day = hour * 24;
 let CountDownDateElement = document.getElementById('CountDownDate');
-let countDownDate = new Date('August 5, 2020 22:06:30 GMT-7');
+let countDownDate = new Date('August 6, 2020 15:00:00 GMT-7');
 let isBirthday = false;
 let bdaySurpriseShowing = false;
 let x = setInterval(function () {
@@ -42,11 +42,17 @@ let x = setInterval(function () {
         document.getElementById('countdown').style.visibility = "visible";
         document.getElementById('birthday').style.visibility = "hidden";
     }
+
+    $('.carousel').carousel({
+        interval: 2000
+      })
 })();
 
 function showBirthdayScreen() {
     if (!bdaySurpriseShowing) {
         bdaySurpriseShowing = true;
+        //document.getElementById('age').innerText = 29;
+
         document.getElementById('countdown').style.visibility = "hidden";
         document.getElementById('birthday').style.visibility = "visible";
 
