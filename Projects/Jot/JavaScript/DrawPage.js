@@ -4,10 +4,13 @@ import {SelectTool, Undo, Redo, ClearAll,
     ToolColor, LineColor, TextColor,
     ToolOutlineColor, OutlineThickness,
     LineThickness, DeleteSelectedShape,
-    ChangeSprayDensity, SetBackgroundSource, DownloadCanvas, UploadCanvas
+    ChangeSprayDensity, SetBackgroundSource, DownloadCanvas, UploadCanvas,
+    DecodeImageData
 } from './Shapes.js';
 
 $(document).ready(function () {
+    const backgroundImageReader = new FileReader();
+
     // Hide the pop up so that it isn't displays when the page first loads
     $("#TemplateModal").hide(); // hide the template with the modal
 
@@ -196,63 +199,68 @@ $(document).ready(function () {
     });
 
     // Selects the background image based off the selected image
-    $("#WhiteBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+    $("#WhiteBackground").click(function () {
+        //uploadTemplateFile($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#NarrowRuledBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#TodoBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#DotGridBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#GraphBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#EngineeringBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#CalendarWeekBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#MeetingNotesBasicBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#MusicStavesBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#BaseballBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#BasketballBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#FootballBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#SoccerBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#LegalNotesBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#MeetingNotesBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#RuledMarginBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#BlueBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#GreenBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
     $("#RedBackground").click(function () { 
-        SetBackgroundSource($(this).children('img')[0].src);
+        uploadTemplateFile($(this).children('img')[0]);
     });
+    function uploadTemplateFile(source) {
+        //SetBackgroundSource(getBase64Image(source));
+        DecodeImageData(source);
+    };
     // ------ End On Click Event Functions
 
     $("#shapeFillColor").on("change", function (event) {
@@ -289,22 +297,26 @@ $(document).ready(function () {
         console.log("Uploading file: " + file.name);
 
         if(CheckFile(file)) {
-            SetBackgroundSource(URL.createObjectURL(file));
+            backgroundImageReader.readAsDataURL(file);
         }
         else {
             console.error("Invalid File " + file);
         }
     });
+    // Called when the upload file loads.
+    backgroundImageReader.onload = function () {
+        SetBackgroundSource(backgroundImageReader.result);
+    };
 
-    var reader = new FileReader();
+    var loadNoteReader = new FileReader();
     $("#UploadFileInput").on("change", function (event) {
         var file = $(this).prop('files')[0];
         console.log("Loading file: " + file.name);
-        reader.readAsText(file);
+        loadNoteReader.readAsText(file);
     });
     // Called when the upload file loads.
-    reader.onload = function () {
-        UploadCanvas(reader.result);
+    loadNoteReader.onload = function () {
+        UploadCanvas(loadNoteReader.result);
     };
 
     $("#LeftHandMode").on("change", function (event) {

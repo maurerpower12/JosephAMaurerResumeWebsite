@@ -50,10 +50,10 @@ class JotCanvas {
      * Sets the background image.
      * @SetBackground
      */
-    SetBackground(m_background) {
-        if (m_background != null) {
-            this.backgroundImage = m_background;
-            this.backgroundSourceData = m_background;
+    SetBackground(backgroundImage) {
+        if (backgroundImage != null) {
+            this.backgroundImage = backgroundImage;
+            this.backgroundSourceData = backgroundImage.src;
             this.backgroundSet = true;
         }
     }

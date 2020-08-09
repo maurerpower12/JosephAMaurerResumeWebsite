@@ -27,6 +27,7 @@ import {SprayPaintLine} from './Shapes/SprayPaintLine.js';
 // This javascript controls which template is being put in the background.
 var m_background = new Image();
 m_background.onload = OnBackgroundImageLoaded;
+m_background.onerror = OnBackgroundImageError;
 
 var startX = 0; //shape start X coordinate
 var startY = 0; //shape start Y coordinate
@@ -83,6 +84,7 @@ function DrawCursor() {
  * @function SetBackgroundSource
  */
 export function SetBackgroundSource(source) {
+    m_background.onload = OnBackgroundImageLoaded;
     m_background.src = source;
 }
 
@@ -95,6 +97,14 @@ function OnBackgroundImageLoaded() {
         jotCanvas.SetBackground(m_background);
         jotCanvas.Draw(context);
     }
+}
+
+/**
+ * Called when the background image fails to load.
+ * @function OnBackgroundImageError
+ */
+function OnBackgroundImageError(event) {
+    alert("Error occurred while loading image " + event.src);
 }
 
 /**
@@ -625,7 +635,7 @@ function MouseUp (evt) {
 
     }
     else {
-        shape = null;
+        //shape = null;
         Selection(mousePos.x, mousePos.y);
     }
     mouseclicked = false;
@@ -826,8 +836,6 @@ export function DownloadCanvas(type, quality) {
 /**
  * Attempts to load note data from a file.
  * 
-    //jotCanvas = Object.assign(jotCanvas, fileData.jotCanvas);
-    //jotCanvas = fileData.jotCanvas;
  * @function UploadCanvas
  */
 export function UploadCanvas(file) {
@@ -836,8 +844,8 @@ export function UploadCanvas(file) {
     jotCanvas = new JotCanvas(canvas, context);
 
     // Set the background image.
-    if (fileData.backgroundImage != null) {
-        SetBackgroundSource(fileData.backgroundImage);
+    if (fileData.jotCanvas.backgroundSourceData != null) {
+        SetBackgroundSource(fileData.jotCanvas.backgroundSourceData);
     }
 
     // Loop through all of the marks and recreate them
@@ -900,4 +908,22 @@ export function UploadCanvas(file) {
 
     console.log("Loaded note from: " + Date(fileData.date).toString());
     jotCanvas.Draw(context);
+}
+
+/**
+ * Convert an image into Base64 Data and set it on the canvas.
+ * (This code isn't the best, but it does the job.)
+ * 
+ * @function DecodeImageData
+ */
+export function DecodeImageData(img) {
+    // Create a temp canvas to hold the image data.
+    var tempCanvas = document.createElement("canvas");
+    tempCanvas.width = canvas.width;
+    tempCanvas.height = canvas.height;
+    var ctx = tempCanvas.getContext("2d");
+    // Draw the image onto the canvas
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    // Export the canvas as a png from the real canvas to set it's background as.
+    SetBackgroundSource(tempCanvas.toDataURL("image/png"));
 }
