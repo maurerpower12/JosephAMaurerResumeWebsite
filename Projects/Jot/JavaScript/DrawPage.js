@@ -177,7 +177,10 @@ $(document).ready(function () {
         DeleteSelectedShape();
     });
     $("#ClearAllIcon").click(function () { 
-        ClearAll();
+        var response = confirm("Are you sure you want to reset the note?");
+        if (response == true) {
+            ClearAll();
+        }
     });
     $("#UndoIcon").click(function () { 
         Undo();
