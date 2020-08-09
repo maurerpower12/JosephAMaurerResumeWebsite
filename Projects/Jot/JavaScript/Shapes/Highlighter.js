@@ -2,22 +2,12 @@
 class Highlighter {
     constructor(startX, startY, endX, endY, fillColor, outlineColor, lineThickness) {
         this.name = 'H';
-        if (startX === undefined) {
-            this.startX = 0;
-            this.startY = 0;
-            this.endX = 0;
-            this.endY = 0;
-            this.fillColor = null;
-            this.lineThickness = 0;
-        }
-        else {
-            this.startX = startX;
-            this.startY = startY;
-            this.endX = endX;
-            this.endY = endY;
-            this.fillColor = fillColor;
-            this.lineThickness = lineThickness;
-        }
+        this.startX = startX;
+        this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
+        this.fillColor = fillColor;
+        this.lineThickness = lineThickness;
     }
     SetDimensions(startX, startY, endX, endY, fillColor, lineThickness) {
         this.startX = parseFloat(startX);

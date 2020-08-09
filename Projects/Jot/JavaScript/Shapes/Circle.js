@@ -9,33 +9,23 @@ class Circle {
      */
     constructor(startX, startY, endX, endY, fillColor, outlineColor, outlineThickness) {
         this.name = 'C';
-        if (startX === undefined) {
-            this.startX = 0;
-            this.startY = 0;
-            this.centerX = 0;
-            this.centerY = 0;
-            this.radius = 0;
 
-            this.fillColor = null;
-            this.outlineColor = null;
-            this.outlineThickness = 0;
+        this.startX = startX;
+        this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
+
+        this.centerX = (endX + startX) / 2;
+        this.centerY = (endY + startY) / 2;
+
+        this.radius = (endX - startX) / 2;
+        if (this.radius < 1) {
+            this.radius *= -1;
         }
-        else {
-            this.startX = startX;
-            this.startY = startY;
 
-            this.centerX = (endX + startX) / 2;
-            this.centerY = (endY + startY) / 2;
-
-            this.radius = (endX - startX) / 2;
-            if (this.radius < 1) {
-                this.radius *= -1;
-            }
-
-            this.fillColor = fillColor;
-            this.outlineColor = outlineColor;
-            this.outlineThickness = outlineThickness;
-        }
+        this.fillColor = fillColor;
+        this.outlineColor = outlineColor;
+        this.outlineThickness = outlineThickness;
     }
     /**
      * Sets circle's dimensions.

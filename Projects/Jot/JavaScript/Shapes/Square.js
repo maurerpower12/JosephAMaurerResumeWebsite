@@ -2,36 +2,26 @@
 class Square {
     constructor(startX, startY, endX, endY, fillColor, outlineColor, outlineThickness) {
         this.name = 'S';
-        if (startX === undefined) {
-            this.startX = 0;
-            this.startY = 0;
-            this.width = 0;
-            this.height = 0;
+        this.startX = startX;
+        this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
 
-            this.fillColor = null;
-            this.outlineColor = null;
-            this.outlineThickness = 0;
+        this.width = (endX - startX);
+        if (this.width < 0) {
+            this.startX += this.width;
+            this.width *= -1;
         }
-        else {
-            this.startX = startX;
-            this.startY = startY;
 
-            this.width = (endX - startX);
-            if (this.width < 0) {
-                this.startX += this.width;
-                this.width *= -1;
-            }
-
-            this.height = Math.abs(this.width);
-            if ((endY - startY) < 0) {
-                this.startY -= this.height;
-                //this.height *= -1;
-            }
-
-            this.fillColor = fillColor;
-            this.outlineColor = outlineColor;
-            this.outlineThickness = outlineThickness;
+        this.height = Math.abs(this.width);
+        if ((endY - startY) < 0) {
+            this.startY -= this.height;
+            //this.height *= -1;
         }
+
+        this.fillColor = fillColor;
+        this.outlineColor = outlineColor;
+        this.outlineThickness = outlineThickness;
     }
     Contains(x, y) {
         var found = false;

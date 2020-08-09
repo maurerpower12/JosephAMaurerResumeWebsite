@@ -2,32 +2,26 @@
 class Ellipse {
     constructor(startX, startY, endX, endY, fillColor, outlineColor, outlineThickness) {
         this.name = 'E';
-        if (startX === undefined) {
-            this.centerX = 0;
-            this.centerY = 0;
-            this.radiusx = 0;
-            this.radiusy = 0;
 
-            this.fillColor = null;
-            this.outlineColor = null;
-            this.outlineThickness = 0;
-        }
-        else {
-            this.centerX = (endX + startX) / 2;
-            this.centerY = (endY + startY) / 2;
+        this.startX = startX;
+        this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
 
-            this.radiusx = (endX - startX) / 2;
-            if (this.radiusx < 0)
-                this.radiusx *= -1;
+        this.centerX = (endX + startX) / 2;
+        this.centerY = (endY + startY) / 2;
 
-            this.radiusy = (endY - startY) / 2;
-            if (this.radiusy < 0)
-                this.radiusy *= -1;
+        this.radiusx = (endX - startX) / 2;
+        if (this.radiusx < 0)
+            this.radiusx *= -1;
 
-            this.fillColor = fillColor;
-            this.outlineColor = outlineColor;
-            this.outlineThickness = outlineThickness;
-        }
+        this.radiusy = (endY - startY) / 2;
+        if (this.radiusy < 0)
+            this.radiusy *= -1;
+
+        this.fillColor = fillColor;
+        this.outlineColor = outlineColor;
+        this.outlineThickness = outlineThickness;
     }
     SetDimensions(centerX, centerY, radiusx, radiusy, fillColor, outlineColor, outlineThickness) {
         this.centerX = parseFloat(centerX);

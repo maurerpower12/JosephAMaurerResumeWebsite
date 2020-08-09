@@ -840,47 +840,58 @@ export function UploadCanvas(file) {
         SetBackgroundSource(fileData.backgroundImage);
     }
 
-    console.log(marks.length);
     // Loop through all of the marks and recreate them
     for(var markIndex = 0; markIndex < marks.length; markIndex++) {
         var obj = marks[markIndex];
-        console.log(markIndex + " " + obj.name);
         switch (obj.name) {
             case "H": //Highlighter
-                shape = new Highlighter(obj.startX, obj.startY, obj.endX, obj.endY, obj.fillColor, null, obj.lineThickness);
+                shape = new Highlighter(obj.startX, obj.startY, obj.endX, 
+                    obj.endY, obj.fillColor, null, obj.lineThickness);
                 break;
             case "C": //circle
-                shape = new Circle();
+                shape = new Circle(obj.startX, obj.startY, obj.endX, obj.endY, 
+                    obj.fillColor, obj.outlineColor, obj.outlineThickness);
                 break;
             case "R": //rectangle
-                shape = new Rectangle();
+                shape = new Rectangle(obj.startX, obj.startY, obj.endX, 
+                    obj.endY, obj.fillColor, obj.outlineColor, 
+                    obj.outlineThickness);
                 break;
             case "L": //line
-                shape = new Line();
+                shape = new Line(obj.startX, obj.startY, obj.endX, obj.endY, 
+                    obj.fillColor, obj.outlineColor, obj.outlineThickness);
                 break;
             case "T": //triangle
-                shape = new Triangle();
+                shape = new Triangle(obj.startX, obj.startY, obj.endX, obj.endY,
+                    obj.fillColor, obj.outlineColor, obj.outlineThickness);
                 break;
             case "S": //square
-                shape = new Square();
+                shape = new Square(obj.startX, obj.startY, obj.endX, obj.endY, 
+                    obj.fillColor, obj.outlineColor, obj.outlineThickness);
                 break;
             case "E": //Ellipse
-                shape = new Ellipse();
+                shape = new Ellipse(obj.startX, obj.startY, obj.endX, obj.endY, 
+                    obj.fillColor, obj.outlineColor, obj.outlineThickness);
                 break;
             case "F": //Free-Form Line
                 shape = new FreeFormLine(obj.fillColor, obj.lineThickness);
                 shape.xPoints = obj.xPoints;
                 shape.yPoints = obj.yPoints;
                 break;
-            case "E": //Eraser Line
-                shape = new Eraser();
+            case "Z": //Eraser Line
+                shape = new Eraser(obj.lineThickness);
+                shape.xPoints = obj.xPoints;
+                shape.yPoints = obj.yPoints;
                 break;
             case "Text": //Text
-                shape = new Text();
+                shape = new Text(obj.startX, obj.startY, obj.endX, obj.endY, 
+                    obj.fillColor, obj.fontFamily, obj.style, obj.size);
+                shape.content = obj.content;
+                shape.font = obj.font;
                 break;
             case 'Spray Paint': // Spray Paint 
-                shape = new SprayPaintLine();
-                shape.AddPoints(mousePos.x, mousePos.y);
+                shape = new SprayPaintLine(obj.fillColor, obj.density);
+                shape.spots = obj.spots;
                 break;
             default:
         }

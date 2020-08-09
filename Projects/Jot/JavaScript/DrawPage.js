@@ -135,6 +135,8 @@ $(document).ready(function () {
         disableShapeButtons();
         $(this).removeClass("disabled");
         $(this).addClass("active");
+
+        SelectTool(6);
     });
     $("#RectangleShape").click(function () { 
         disableShapeButtons();

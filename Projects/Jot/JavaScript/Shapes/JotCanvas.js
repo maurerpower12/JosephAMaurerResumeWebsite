@@ -4,6 +4,7 @@ class JotCanvas {
         //console.log(this.marks.serializeArray());
         this.marks = [];
         this.backgroundImage = new Image();
+        this.backgroundSourceData = "";
         this.backgroundSet = false;
         this.canvas = canvas;
         this.context = context;
@@ -52,6 +53,7 @@ class JotCanvas {
     SetBackground(m_background) {
         if (m_background != null) {
             this.backgroundImage = m_background;
+            this.backgroundSourceData = m_background;
             this.backgroundSet = true;
         }
     }

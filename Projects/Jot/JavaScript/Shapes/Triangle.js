@@ -9,33 +9,18 @@ class Triangle {
      */
     constructor(startX, startY, endX, endY, fillColor, outlineColor, outlineThickness) {
         this.name = 'T';
-        if (startX === undefined) {
-            this.startX = 0;
-            this.startY = 0;
-            this.endX = 0;
-            this.endY = 0;
+        this.startX = startX;
+        this.startY = startY;
 
-            this.width = 0;
-            this.height = 0;
+        this.endX = endX;
+        this.endY = endY;
 
-            this.fillColor = null;
-            this.outlineColor = null;
-            this.outlineThickness = 0;
-        }
-        else {
-            this.startX = startX;
-            this.startY = startY;
+        this.width = 0;
+        this.height = 0;
 
-            this.endX = endX;
-            this.endY = endY;
-
-            this.width = 0;
-            this.height = 0;
-
-            this.fillColor = fillColor;
-            this.outlineColor = outlineColor;
-            this.outlineThickness = outlineThickness;
-        }
+        this.fillColor = fillColor;
+        this.outlineColor = outlineColor;
+        this.outlineThickness = outlineThickness;
     }
     /**
      * Sets circle's dimensions.

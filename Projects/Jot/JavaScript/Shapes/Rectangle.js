@@ -9,39 +9,30 @@ class Rectangle {
      */
     constructor(startX, startY, endX, endY, fillColor, outlineColor, outlinethickness, rotation) {
         this.name = 'R';
-        if (startX === undefined) {
-            this.startX = 0;
-            this.startY = 0;
-            this.width = 0;
-            this.height = 0;
+        
+        this.startX = startX;
+        this.startY = startY;
 
-            this.fillColor = null;
-            this.outlineColor = null;
-            this.outlineThickness = 0;
-            this.rotation = 0;
+        this.endX = endX;
+        this.endY = endY;
+
+        this.width = (endX - startX);
+        if (this.width < 0) {
+            this.startX += this.width;
+            this.width *= -1;
         }
-        else {
-            this.startX = startX;
-            this.startY = startY;
 
-            this.width = (endX - startX);
-            if (this.width < 0) {
-                this.startX += this.width;
-                this.width *= -1;
-            }
-
-            this.height = (endY - startY);
-            if (this.height < 0) {
-                this.startY += this.height;
-                this.height *= -1;
-            }
-
-            this.fillColor = fillColor;
-            this.outlineColor = outlineColor;
-            this.outlineThickness = outlinethickness;
-
-            this.rotation = rotation;
+        this.height = (endY - startY);
+        if (this.height < 0) {
+            this.startY += this.height;
+            this.height *= -1;
         }
+
+        this.fillColor = fillColor;
+        this.outlineColor = outlineColor;
+        this.outlineThickness = outlinethickness;
+
+        this.rotation = rotation;
     }
     /**
      * Returns true if the x,y is within the shape.

@@ -15,6 +15,8 @@ class Text {
         this.name = 'Text';
         this.startX = startX;
         this.startY = startY;
+        this.endX = endX;
+        this.endY = endY;
 
         this.fillColor = fillColor;
 
@@ -323,7 +325,7 @@ class Text {
         this.content = content;
     }
     Move(x, y) {
-        // time ro resize!
+        // time to resize!
         var oldx = this.startX;
         var oldy = this.startY;
 
