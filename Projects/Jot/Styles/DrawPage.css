@@ -209,10 +209,33 @@ a.nav-expander.fixed {
     height: 100%;
     overflow: auto;
     position: fixed;
-    right: 0em;
     font-size: 15px;
     z-index: 12;
     top: 65px;
+    right: 0em;
+    display: none;
+}
+
+.right-sidePanel {
+    right: 0em;
+}
+
+.left-sidePanel {
+    left: 0em;
+}
+
+#QuickActions {
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.right-QuickActions {
+    right: 0em;
+}
+
+.left-LeftQuickActions {
+    left: 0em;
 }
 
 @media screen and (min-width: 480px) {

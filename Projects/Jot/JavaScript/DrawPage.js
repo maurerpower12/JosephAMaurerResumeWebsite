@@ -442,46 +442,42 @@ $(window).bind('keydown', function (event) {
     }
 });
 
-// This function flips the tool bar from the side of the screen that its on to the other
-// For example if the tool bar is on the right hand side, it will flip to the other side
-// The add page icon will also flip side from left to right so that it won't conflict
-// Finally the canvas will shift over slightly so the tool bar doesn't cover it 
-// and to utilize the screen resolution
 var leftmode = false;
+/**
+ * This function flips the tool bar from the side of the screen that its on to the other
+ * For example if the tool bar is on the right hand side, it will flip to the other side
+ * The add page icon will also flip side from left to right so that it won't conflict
+ * Finally the canvas will shift over slightly so the tool bar doesn't cover it 
+ * and to utilize the screen resolution
+ * @lefthandedmode
+ */
 function lefthandedmode() {
     leftmode = !leftmode; // toggle val
-    var tool = document.getElementById("sideBar"); // tool bar 
-    var exp = document.getElementById("nav-expander"); // expander to unhide tool bar
-    var add = document.getElementById("AddPageIcon"); // need to flip the add page icon to the other side
-    var rem = document.getElementById("RemovePageIcon");
+    var sidePanel = document.getElementById("sidePanel");
+    var quickTools = document.getElementById("QuickActions");
     var canvas = document.getElementById("myCanvas");
 
     if (leftmode) {
-        tool.style.left = '0em';
-        // reset the expander to the left
-        exp.style.left = '0em';
-        exp.style.right = 'auto';
-        // flip add page icon
-        add.style.right = '0em';
-        add.style.left = 'auto';
-        // flip remove page icon
-        rem.style.right = '3em';
-        rem.style.left = 'auto';
+        // Move the side Panel
+        sidePanel.classList.remove('right-sidePanel');
+        sidePanel.classList.add('left-sidePanel');
+
+        // Move the tools in the lower corner
+        quickTools.classList.add('right-QuickActions');
+        quickTools.classList.remove('left-QuickActions');
+
         // Move the canvas over so you can see it
-        canvas.style.marginLeft = '135px';
+        canvas.style.marginLeft = '195px';
     }
     else {
-        tool.style.right = '0em';
-        tool.style.left = 'auto';
-        // reset the expander to the right
-        exp.style.right = '0em';
-        exp.style.left = 'auto';
-        // flip add page icon
-        add.style.left = '0em';
-        add.style.right = 'auto';
-        // flip remove page icon
-        rem.style.left = '3em';
-        rem.style.right = 'auto';
+        // Move the side Panel
+        sidePanel.classList.remove('left-sidePanel');
+        sidePanel.classList.add('right-sidePanel');
+
+        // Move the tools in the lower corner
+        quickTools.classList.add('left-QuickActions');
+        quickTools.classList.remove('right-QuickActions');
+
         // remove margin left
         canvas.style.marginLeft = 'auto';
     }
