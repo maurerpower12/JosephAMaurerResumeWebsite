@@ -8,8 +8,17 @@ import {SelectTool, Undo, Redo, ClearAll,
     DecodeImageData
 } from './Shapes.js';
 
+const LeftHandedSettingName = "LEFT_HANDED_MODE";
+var leftmode = false;
+
 $(document).ready(function () {
     const backgroundImageReader = new FileReader();
+    const loadNoteReader = new FileReader();
+
+    // Update the left handed mode from local storage.
+    leftmode = localStorage.getItem(LeftHandedSettingName) == "true";
+    $("#LeftHandMode").attr("checked", leftmode);
+    UpdateLeftHandedMode(leftmode);
 
     // Hide the pop up so that it isn't displays when the page first loads
     $("#TemplateModal").hide(); // hide the template with the modal
@@ -203,7 +212,6 @@ $(document).ready(function () {
 
     // Selects the background image based off the selected image
     $("#WhiteBackground").click(function () {
-        //uploadTemplateFile($(this).children('img')[0].src);
         uploadTemplateFile($(this).children('img')[0]);
     });
     $("#NarrowRuledBackground").click(function () { 
@@ -261,7 +269,6 @@ $(document).ready(function () {
         uploadTemplateFile($(this).children('img')[0]);
     });
     function uploadTemplateFile(source) {
-        //SetBackgroundSource(getBase64Image(source));
         DecodeImageData(source);
     };
     // ------ End On Click Event Functions
@@ -311,7 +318,6 @@ $(document).ready(function () {
         SetBackgroundSource(backgroundImageReader.result);
     };
 
-    var loadNoteReader = new FileReader();
     $("#UploadFileInput").on("change", function (event) {
         var file = $(this).prop('files')[0];
         console.log("Loading file: " + file.name);
@@ -323,7 +329,7 @@ $(document).ready(function () {
     };
 
     $("#LeftHandMode").on("change", function (event) {
-        lefthandedmode();
+        LeftHandedMode();
     });
 
     $("#FontSize").on("change", function (event) {
@@ -442,7 +448,6 @@ $(window).bind('keydown', function (event) {
     }
 });
 
-var leftmode = false;
 /**
  * This function flips the tool bar from the side of the screen that its on to the other
  * For example if the tool bar is on the right hand side, it will flip to the other side
@@ -451,13 +456,18 @@ var leftmode = false;
  * and to utilize the screen resolution
  * @lefthandedmode
  */
-function lefthandedmode() {
-    leftmode = !leftmode; // toggle val
+function LeftHandedMode() {
+    leftmode = leftmode == true ? false : true; // toggle val
+    localStorage.setItem(LeftHandedSettingName, leftmode);
+    UpdateLeftHandedMode(leftmode);
+}
+
+function UpdateLeftHandedMode(mode) {
     var sidePanel = document.getElementById("sidePanel");
     var quickTools = document.getElementById("QuickActions");
     var canvas = document.getElementById("myCanvas");
 
-    if (leftmode) {
+    if (mode == true) {
         // Move the side Panel
         sidePanel.classList.remove('right-sidePanel');
         sidePanel.classList.add('left-sidePanel');
