@@ -76,11 +76,14 @@ class JotCanvas {
     }
     /**
      * Resets any canvas data.
-     * @DownloadCanvas
+     * @ResetCanvas
      */
     ResetCanvas() {
         this.ClearCanvas(this.context);
         this.marks = [];
+        this.backgroundImage = new Image();
+        this.backgroundSourceData = "";
+        this.backgroundSet = false;
         this.context.restore();
         this.Draw();
     }

@@ -25,7 +25,7 @@ class Highlighter {
         context.beginPath();
         var alpha = 0.4;
 
-        context.lineWidth = this.lineThickness + 10;
+        context.lineWidth = this.lineThickness + 3;
         var color = new RGBColor(this.fillColor);
         if (color.ok) { // 'ok' is true when the parsing was a success
             context.strokeStyle = "rgba(" + color.r + ", " + color.g + ", " + color.b + ", " + alpha + ")";

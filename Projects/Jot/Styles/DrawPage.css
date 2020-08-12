@@ -250,12 +250,11 @@ a.nav-expander.fixed {
       }
     }
 .nav-icon {
-    width: 50px;
     vertical-align: top;
 }
 
 .nav-icon-red {
-    width: 50px;
+    width: 30px;
     vertical-align: top;
     color: #9b0716;
 }
@@ -556,6 +555,13 @@ hr {
     width: 100%;
     text-align:center;
  }
+ .close-btn {
+     color: white;
+ }
+
+ .sidePanelHeader {
+     display: inline-flex;
+ }
 
   /* Small Devices and lower */
  @media only screen and (max-width: 768px) {
@@ -590,10 +596,16 @@ hr {
      #topNav {
          height: 50px;
      }
+     #sidePanel {
+         top: 50px !important;
+     }
+     #nav-expander {
+         display: none;
+     }
   }
   @media only screen and (min-width: 768px) {
       .nav-icon-img {
-        height: 48px;
+        height: 32px;
       }
 
     #topNav {

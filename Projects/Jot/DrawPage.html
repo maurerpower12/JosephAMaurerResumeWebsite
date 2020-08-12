@@ -37,46 +37,43 @@
                 <div class="mx-auto" style="display:inline-flex;">
                     <div id="toolSelector" class="btn-group btn-group-toggle" data-toggle="buttons-radio">
                         <!-- Sections with the buttons for the tool bar -->
+                        <span title="Cursor">
+                            <button id="btn0" name="cursorSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <i class="fas fa-arrows-alt fa-2x nav-icon-red"></i>
+                            </button>
+                        </span>
+
                         <span title="Text">
                             <button id="btn1" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
                                 <img src="Jot_Icons/Text.png" class="nav-icon-red nav-icon-img"/>
                             </button>
                         </span>
                 
-                        <span title="Draw and Highligher">
+                        <span title="Draw">
                             <button id="btn2" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
-                                <i class="fas fa-paint-brush fa-3x nav-icon-red"></i>
+                                <i class="fas fa-paint-brush fa-2x nav-icon-red"></i>
                             </button>
                         </span>
                 
+                        <span title="Eraser">
+                            <button id="btn3" name="eraserSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <i class="fas fa-eraser fa-2x nav-icon-red"></i>
+                            </button>
+                        </span>
+
                         <span title="Shapes">
-                            <button id="btn3" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
-                                <i class="fas fa-shapes fa-3x nav-icon-red"></i>
-                            </button>
-                        </span>
-                
-                        <span title="Share">
-                            <button id="ShareNoteButton" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
-                                <i class='fa fa-share-alt fa-3x nav-icon-red' aria-hidden='true'></i>
+                            <button id="btn4" name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <i class="fas fa-shapes fa-2x nav-icon-red"></i>
                             </button>
                         </span>
                 
                         <span title="Settings">
-                            <button id='btn4' name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
-                                <i class="fas fa-cog fa-3x nav-icon-red"></i>
+                            <button id='btn5' name="toolSelectorBtn" type="button" class="navBtn btn btn-outline-secondary m-1">
+                                <i class="fas fa-cog fa-2x nav-icon-red"></i>
                             </button>
                         </span>
                     </div>
                     <!--  END Sections with the buttons for the tool bar -->
-                </div>
-
-                <!-- Menu icon in the top right corner  -->
-                <div class="pull-right hidden-sm-down">
-                    <a id="nav-expander">
-                        <button class="btn btn-outline-light m-1">
-                            <i class='fas fa-sliders-h fa-2x nav-icon'aria-hidden='true'></i>
-                        </button>
-                    </a>
                 </div>
             </nav>
 
@@ -294,56 +291,6 @@
                 </div>
             </div>
 
-            <!--  Modal for sharing a note with another user.  -->
-            <div id="ShareNoteModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Who do you want to share this note with?</h4>
-                            <button class="close float-right" type="submit" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body" style="padding: 40px 50px;">
-                            <div class="alert alert-danger" role="alert">
-                                <i class="fas fa-exclamation-triangle"></i>
-                                This feature is disabled because the database 
-                                for this project is currently turned off, but 
-                                feel free to download your note!
-
-                                <br>
-                                <span title="download">
-                                    <button type="button" class="btn btn-light" id="DownloadCanvas">
-                                        <i class="fa fa-download" aria-hidden="true"></i> Download
-                                    </button>
-                                </span>
-                            </div>
-                            <p>Enter the email of who you want to share the note with: </p>
-                            <p style="color: darkgrey;">For multiple emails, separate the emails with
-                                commas. </p>
-
-                            <input type="text" id="DestEmailEntry" class="form-control"
-                                required="required" />
-                            <div>
-                                <label class="radio-inline">Read Only</label>
-                                <input type="radio" id="read-only-permission" name="optradio" value="0"
-                                    required="required" />
-                                <label class="radio-inline">Edit</label>
-                                <input type="radio" id="edit-permission" name="optradio" value="1" />
-                            </div>
-                        </div>
-
-                        <div class="modal-footer">
-                            <button data-dismiss="modal" type="button"
-                                class="btn btn-success btn-default pull-right"><span
-                                    class="glyphicon glyphicon-ok"></span>Send</button>
-                            <button data-dismiss="modal" type="submit"
-                                class="btn btn-danger btn-default pull-left"><span
-                                    class="glyphicon glyphicon-remove"></span>Cancel</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!--  Control for the canvas -->
             <div class="container-fluid p-0 m-0">
                 <div class="row justify-content-md-center">
@@ -358,7 +305,12 @@
                             <div class="dropdown">
                                 <ul class="list-unstyled main-menu" id="tool-bar-text">
                                     <!-- Text Modal -->
-                                    <h4>Text Tool</h4>
+                                    <div class="sidePanelHeader d-flex">
+                                        <h4>Text Tool</h4>
+                                        <button type="button" class="close ml-auto" id="nav-closer">
+                                            <i class="fas fa-window-close close-btn"></i>
+                                        </button>
+                                    </div>
 
                                     <div class="d-flex m-2">
                                         <div>
@@ -387,7 +339,7 @@
                                                 <option>15</option>
                                                 <option>20</option>
                                                 <option>25</option>
-                                                <option>30</option>
+                                                <option selected>30</option>
                                                 <option>35</option>
                                                 <option>40</option>
                                                 <option>45</option>
@@ -439,9 +391,14 @@
                                         </div>
                                     </div>
                                 </ul>
-            
+
                                 <ul class="list-unstyled main-menu" id="tool-bar-draw">
-                                    <h4>Draw Tool</h4>
+                                    <div class="sidePanelHeader d-flex">
+                                        <h4>Draw Tool</h4>
+                                        <button type="button" class="close ml-auto" id="nav-closer">
+                                            <i class="fas fa-window-close close-btn"></i>
+                                        </button>
+                                    </div>
             
                                     <div class="m-3" role="group" aria-label="Draw Tools" id="DrawTools" class="container-fluid">
                                         <div class="row mt-1">
@@ -461,23 +418,6 @@
                                                     </span>
                                                 </div>
                                             </button>
-                                            <button type="button" class="btn btn-light p-0" id="EraserTool">
-                                                <div class="col-sm-2">
-                                                    <span title="Eraser"><i class="fa fa-eraser fa-2x" aria-hidden="true"></i></span>
-                                                </div>
-                                            </button>
-                                        </div>
-                                        <div class="row mt-1">
-                                            <button type="button" class="btn btn-light p-0 mr-1" id="PenStyle">
-                                                <div class="col-sm-2">
-                                                    <i class="fas fa-pen fa-2x"></i>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="btn btn-light p-0 mr-1" id="Felt">
-                                                <div class="col-sm-2">
-                                                    <i class="fas fa-marker fa-2x"></i>
-                                                </div>
-                                            </button>
                                             <button type="button" class="btn btn-light p-0" id="SprayPaint">
                                                 <div class="col-sm-2">
                                                     <i class="fas fa-spray-can fa-2x"></i>
@@ -488,32 +428,41 @@
 
                                     <!-- color picker for the draw tools -->
                                     <hr class="m-2">
-                                    <div class="d-flex">
+                                    <div class="d-flex m-2">
                                         <div>
-                                            Color
+                                            <p>Color</p>
                                         </div>
                                         <div class="ml-auto">
                                             <input type="color" id="penColor" name="penColor" value="black" >
                                         </div>
                                     </div>
-                                    <div id="DrawToolSizeContainer" class="d-flex">
+                                    <div id="DrawToolSizeContainer" class="d-flex m-2">
                                         <div>
-                                            Size
+                                            <p>Size</p>
+                                            <svg height="40" width="40" class="mx-auto">
+                                                <circle cx="15" cy="20" r="10" stroke="white" fill="white" stroke-width="3" fill="black" id="penSizeSample"/>
+                                            </svg>
                                         </div>
                                         <div class="ml-auto">
-                                            <div style="text-align: center; display: inline-flex;">
-                                                <input id="penSize" type="range" min="1" max="10" step="1">
-                                                <div>
-                                                    <svg height="40" width="40">
-                                                        <circle cx="15" cy="20" r="1" stroke="white" fill="white" stroke-width="3" fill="black" id="penSizeSample"/>
-                                                    </svg>
-                                                </div>
+                                            <div>
+                                                <select id="penSize">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option selected>10</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div id="SprayDensityContainer" class="d-flex m-2" style="visibility: hidden;">
                                         <div>
-                                            <p>Density:</p>
+                                            <p>Density</p>
                                         </div>
                                         <div class="ml-auto">
                                             <select id="SprayDensity">
@@ -539,10 +488,49 @@
                                         </div>
                                     </div>
                                 </ul>
+
+                                <ul class="list-unstyled main-menu" id="tool-bar-eraser">
+                                    <div class="sidePanelHeader d-flex">
+                                        <h4>Eraser Tool</h4>
+                                        <button type="button" class="close ml-auto" id="nav-closer">
+                                            <i class="fas fa-window-close close-btn"></i>
+                                        </button>
+                                    </div>
+                                    
+                                    <div id="DrawToolSizeContainer" class="d-flex m-2">
+                                        <div>
+                                            <p>Size</p>
+                                            <svg height="40" width="40" class="mx-auto">
+                                                <circle cx="15" cy="20" r="10" stroke="white" fill="white" stroke-width="3" fill="black" id="penSizeSample"/>
+                                            </svg>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div>
+                                                <select id="penSize">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option selected>10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
             
-                                <ul class="list-unstyled main-menu " id="tool-bar-shapes">
+                                <ul class="list-unstyled main-menu" id="tool-bar-shapes">
                                     <!-- Shapes Settings -->
-                                    <h4>Shape Tool</h4>
+                                    <div class="sidePanelHeader d-flex">
+                                        <h4>Shape Tool</h4>
+                                        <button type="button" class="close ml-auto" id="nav-closer">
+                                            <i class="fas fa-window-close close-btn"></i>
+                                        </button>
+                                    </div>
 
                                     <!-- Code to display the different shapes options to the user -->
                                     <div id="shapepicker">
@@ -600,32 +588,47 @@
 
                                     <!-- Color picker for different shapes -->
                                     <hr class="m-2">
-                                    <h5>Style</h5>
-                                    <div class="d-flex">
-                                        <div>
-                                            Fill Color
-                                        </div>
-                                        <div class="ml-auto">
-                                            <input type="color" id="shapeFillColor" name="shapeFillColor" value="black" >
-                                        </div>
-                                    </div>
-                                    <div>
+                                    <div class="m-2">
+                                        <h5>Style</h5>
                                         <div class="d-flex">
                                             <div>
-                                                Outline Color
+                                                Fill Color
                                             </div>
                                             <div class="ml-auto">
-                                                <input type="color" id="shapeOutlineColor" name="shapeOutlineColor" value="black" >
+                                                <input type="color" id="shapeFillColor" name="shapeSizeSample" value="black" >
                                             </div>
                                         </div>
-                                        <div class="ml-auto">
-                                            Outline Size
-                                            <div style="text-align: center; display: inline-flex;">
-                                                <input id="shapeSize" type="range" min="1" max="10" step="1">
+                                        <div>
+                                            <div class="d-flex">
                                                 <div>
-                                                    <svg height="40" width="40">
-                                                        <circle cx="15" cy="20" r="1" stroke="white" fill="white" stroke-width="3" fill="black" id="shapeSizeSample"/>
+                                                    Outline Color
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <input type="color" id="shapeOutlineColor" name="shapeOutlineColor" value="black" >
+                                                </div>
+                                            </div>
+                                            <div id="DrawToolSizeContainer" class="d-flex">
+                                                <div>
+                                                    <p>Outline Size</p>
+                                                    <svg height="40" width="40" class="mx-auto">
+                                                        <circle cx="15" cy="20" r="10" stroke="white" fill="white" stroke-width="3" fill="black" id="shapeSizeSample"/>
                                                     </svg>
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <div>
+                                                        <select id="shapeSize">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option selected>10</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -634,7 +637,12 @@
             
                                 <ul class="list-unstyled main-menu " id="tool-bar-settings">
                                     <!-- Settings Modal -->
-                                    <h4>Settings</h4>
+                                    <div class="sidePanelHeader d-flex">
+                                        <h4>Settings</h4>
+                                        <button type="button" class="close ml-auto" id="nav-closer">
+                                            <i class="fas fa-window-close close-btn"></i>
+                                        </button>
+                                    </div>
   
                                     <button type="button" class="btn btn-light" onclick="$('#Helpmodal').appendTo('body').modal('show');">
                                         <i class="fa fa-question-circle" aria-hidden="true"></i> Help
@@ -683,6 +691,12 @@
                                 </ul>
 
                                 <ul class="list-unstyled main-menu " id="debug">
+                                    <div class="sidePanelHeader d-flex">
+                                        <h4>Debug</h4>
+                                        <button type="button" class="close ml-auto" id="nav-closer">
+                                            <i class="fas fa-window-close close-btn"></i>
+                                        </button>
+                                    </div>
                                     <div id="xycoordinates"></div>
                                     <div id="stack"></div>
                                 </ul>
@@ -694,7 +708,6 @@
 
             <!-- Add page/remove icon in the bottom left -->
             <div class="m-2 left-QuickActions" id="QuickActions">
-
                 <div id="DeleteSelection">
                     <span title="Delete Shape">
                         <span class="fa-stack fa-lg">

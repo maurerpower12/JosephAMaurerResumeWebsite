@@ -30,10 +30,14 @@ $(document).ready(function () {
     $('#tool-bar-settings').hide();
 
     // Navigation Menu Slider
-    $('#nav-expander').on('click', function (e) {
+    var panels = document.querySelectorAll("#nav-closer");
+    for (var i = 0; i < panels.length; i++) {
+        panels[i].addEventListener("click", NavCloser);
+    }
+    function NavCloser(e) {
         e.preventDefault();
-        $('#sidePanel').toggle();
-    });
+        $('#sidePanel').hide();
+    }
 
     $('#nav-close').on('click', function (e) {
         e.preventDefault();
@@ -44,6 +48,11 @@ $(document).ready(function () {
     });
 
     // These function show and hide the different settings panels for each option in the tool bar
+    $('#btn0').click(function () { // btn 0 maps to cursor settings
+        disableMenuItems();
+        $('#sidePanel').hide();
+        SelectTool(-1);
+    });
     $('#btn1').click(function () { // btn 1 maps to text settings
         disableMenuItems();
         $('#tool-bar-text').show();
@@ -55,12 +64,18 @@ $(document).ready(function () {
         $('#tool-bar-draw').show();
         $('#sidePanel').show();
     });
-    $('#btn3').click(function () { // btn 3 maps to the shapes settings
+    $('#btn3').click(function () { // btn 3 maps to the eraser settings
+        disableMenuItems();
+        $('#tool-bar-eraser').show();
+        $('#sidePanel').show();
+        SelectTool(8);
+    });
+    $('#btn4').click(function () { // btn 3 maps to the shapes settings
         disableMenuItems();
         $('#tool-bar-shapes').show();
         $('#sidePanel').show();
     });
-    $('#btn4').click(function () { // btn 4 maps to the settings
+    $('#btn5').click(function () { // btn 4 maps to the settings
         disableMenuItems();
         $('#tool-bar-settings').show();
         $('#sidePanel').show();
@@ -382,11 +397,13 @@ $(document).ready(function () {
     function setSprayToolSettings(visible) {
         if (visible) {
             $('#SprayDensityContainer').css("visibility", "visible");
+            $('#DrawToolSizeContainer').height("0px");
             $('#DrawToolSizeContainer').css("visibility", "hidden");
         }
         else {
             $('#SprayDensityContainer').css("visibility", "hidden");
             $('#DrawToolSizeContainer').css("visibility", "visible");
+            $('#DrawToolSizeContainer').height("auto");
         }
     }
 });
@@ -409,7 +426,7 @@ $(window).bind('keydown', function (event) {
             case 's': // CTRL S calls save
                 break;
             case 'z': // CTRL Z calls undo
-                undo();
+                Undo();
                 break;
             case 'p': // CTRL P calls print
                 Print();
