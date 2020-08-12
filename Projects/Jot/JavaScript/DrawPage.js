@@ -5,7 +5,7 @@ import {SelectTool, Undo, Redo, ClearAll,
     ToolOutlineColor, OutlineThickness,
     LineThickness, DeleteSelectedShape,
     ChangeSprayDensity, SetBackgroundSource, DownloadCanvas, UploadCanvas,
-    DecodeImageData
+    DecodeImageData, SetCanvasDimensions
 } from './Shapes.js';
 
 const LeftHandedSettingName = "LEFT_HANDED_MODE";
@@ -360,6 +360,15 @@ $(document).ready(function () {
     $("#SprayDensity").on("change", function (event) {
         console.log("Changing Density to: " + this.value);
         ChangeSprayDensity(this.value);
+    });
+
+    $("#CanvasWidth").on("change", function (event) {
+        console.log("Changing CanvasWidth to: " + this.value);
+        SetCanvasDimensions(this.value, $("#CanvasHeight").val());
+    });
+    $("#CanvasHeight").on("change", function (event) {
+        console.log("Changing CanvasHeight to: " + this.value);
+        SetCanvasDimensions($("#CanvasWidth").val(), this.value);
     });
 
     // Disables all buttons in the shape picker

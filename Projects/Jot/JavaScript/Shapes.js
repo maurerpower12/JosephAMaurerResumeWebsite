@@ -52,6 +52,9 @@ var shape = null;
 var canvas = document.getElementById("myCanvas"); //canvas
 var context = canvas.getContext("2d"); //canvas context
 var jotCanvas = new JotCanvas(canvas, context); //holds marks list and number of pages on note
+// Update the UI with the default values.
+$("#CanvasHeight").val(jotCanvas.height);
+$("#CanvasWidth").val(jotCanvas.width);
 
 var redostack = []; //stack to hold the undone stuff
 var index_redo = 0; //max items that can currently be redone
@@ -59,6 +62,7 @@ var max_undo = 0; //max items that can currently be undone
 
 var mobile = false;
 var lastmove = null;
+
 
 //setInterval(DrawCursor, 500); //timer for drawing cursor
 var cursor = true; //variable that determines weather cursor should be drawn
@@ -95,6 +99,8 @@ export function SetBackgroundSource(source) {
 function OnBackgroundImageLoaded() {
     if (jotCanvas != null) {
         jotCanvas.SetBackground(m_background);
+        $("#CanvasHeight").val(m_background.height);
+        $("#CanvasWidth").val(m_background.width);
         jotCanvas.Draw(context);
     }
 }
@@ -926,4 +932,13 @@ export function DecodeImageData(img) {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     // Export the canvas as a png from the real canvas to set it's background as.
     SetBackgroundSource(tempCanvas.toDataURL("image/png"));
+}
+
+/**
+ * Sets the canvas dimensions.
+ * 
+ * @function SetCanvasDimensions
+ */
+export function SetCanvasDimensions(width, height) {
+    jotCanvas.SetDimensions(width, height);
 }

@@ -8,6 +8,8 @@ class JotCanvas {
         this.backgroundSet = false;
         this.canvas = canvas;
         this.context = context;
+        this.width = canvas.width;
+        this.height = canvas.height;
         this.pages = 1;
     }
     /**
@@ -22,8 +24,8 @@ class JotCanvas {
      * @Draw
      */
     Draw(context) {
-        this.canvas.width = this.canvas.width;
-        this.canvas.height = this.canvas.height;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
         this.context = context;
 
         //clears canvas
@@ -55,6 +57,7 @@ class JotCanvas {
             this.backgroundImage = backgroundImage;
             this.backgroundSourceData = backgroundImage.src;
             this.backgroundSet = true;
+            this.SetDimensions(this.backgroundImage.width, this.backgroundImage.height);
         }
     }
     /**
@@ -62,8 +65,8 @@ class JotCanvas {
      * @ClearCanvas
      */
     ClearCanvas(context) {
-        this.canvas.width = this.canvas.width;
-        this.canvas.height = this.canvas.height;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
         this.context = context
 
         var pageHeight = (this.canvas.height / this.pages);
@@ -93,6 +96,17 @@ class JotCanvas {
      */
     GetCanvasData(type, quality = 1.0) {
         return this.canvas.toDataURL('image/' + type, quality);
+    }
+    /**
+     * Sets the canvas dimensions.
+     * @SetDimensions
+     */
+    SetDimensions(newWidth, newHeight) {
+        this.width = newWidth;
+        this.height = newHeight;
+
+        this.canvas.width = newWidth;
+        this.canvas.height = newHeight;
     }
 }
 
