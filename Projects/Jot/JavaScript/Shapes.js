@@ -849,8 +849,12 @@ export function UploadCanvas(file) {
     var marks = fileData.jotCanvas.marks;
     jotCanvas = new JotCanvas(canvas, context);
 
+    jotCanvas.width = fileData.jotCanvas.width;
+    jotCanvas.height = fileData.jotCanvas.height;
+
     // Set the background image.
-    if (fileData.jotCanvas.backgroundSourceData != null) {
+    if (fileData.jotCanvas.backgroundSet == true && 
+        fileData.jotCanvas.backgroundSourceData != null) {
         SetBackgroundSource(fileData.jotCanvas.backgroundSourceData);
     }
 
@@ -941,4 +945,5 @@ export function DecodeImageData(img) {
  */
 export function SetCanvasDimensions(width, height) {
     jotCanvas.SetDimensions(width, height);
+    jotCanvas.Draw(context);
 }
