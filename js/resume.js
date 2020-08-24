@@ -3,7 +3,7 @@
 
 var introArray = [
   "PugetSound.jpg",
-  "Bird.mp4",
+  "Fountain.mp4",
   "Zephyr.mp4",
   "SantaMonica.mp4",
   "River.mp4",
