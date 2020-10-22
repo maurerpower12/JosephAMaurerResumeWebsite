@@ -6,7 +6,6 @@ var introArray = [
   "Fountain.mp4",
   "Zephyr.mp4",
   "SantaMonica.mp4",
-  "River.mp4",
   "Sunrise.mp4",
   "FireLookout.mp4",
   "Fly.mp4",

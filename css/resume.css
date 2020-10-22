@@ -79,6 +79,14 @@ p.lead {
   font-size: 1.25rem;
 }
 
+.title span {
+  border-radius: 5px;
+  background-color: rgba(18, 19, 20, 0.25) !important;
+  white-space: nowrap;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .social-icons a {
   display: inline-block;
   height: 3.5rem;
@@ -407,7 +415,7 @@ li:hover li:active {
   max-width: 550px;
 }
 
-.mapOverlay-btn {
+.social-icons a {
   flex: 1 1 auto;
   margin-right: 10px;
   text-align: center;
@@ -419,28 +427,17 @@ li:hover li:active {
   white-space: nowrap;
  }
 
-@media (max-width: 350px) {
-  .mapOverlay-btn {
-    /* Don't bother displaying nav buttons on a display this small */
-    display: none;
-   }
-}
-
 @media (max-width: 400px) {
-  .mapOverlay-btn {
-    /* shrink the buttons a little */
-    padding: 0px !important;
-   }
    #cause {
      padding-left: 25px;
    }
 }
 
-.mapOverlay-btn:hover {
+.social-icons a:hover {
   background-color: rgba(18, 19, 20, 0.95) !important;
 }
 
-.mapOverlay-btn a{
+.social-icons-btn a{
   color: #ffffff !important;
 }
 
