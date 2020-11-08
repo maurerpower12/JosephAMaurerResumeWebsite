@@ -1,16 +1,14 @@
+/* Copyright (C) 2020 Joseph Maurer - All Rights Reserved */
 
 // This is a list of the possible background images
 
 var introArray = [
-  "PugetSound.jpg",
   "Fountain.mp4",
   "Zephyr.mp4",
   "SantaMonica.mp4",
   "Sunrise.mp4",
   "FireLookout.mp4",
-  "Fly.mp4",
-  "Rainbow.jpg",
-  "CraterLake.jpg"
+  "Fly.mp4"
 ];
 
 (function($) {
@@ -46,7 +44,7 @@ $(document).ready(function() {
   // Load a random background image
   var randomBackground = './img/Lyfe/'+ random_item(introArray);
   if(randomBackground.endsWith('mp4')) {
-    $('#mapBackground').css('display', 'none');
+    console.log("Playing background video: " + randomBackground);
     var video = document.getElementById('backgroundVideo');
     var source = document.getElementById('backgroundVideoSource');
     source.src = randomBackground;
@@ -55,7 +53,6 @@ $(document).ready(function() {
   }
   else {
     $('#backgroundVideo').css('display', 'none');
-    $('#mapBackground').css('background-image', 'url('+ randomBackground +')');
   }
 })
 

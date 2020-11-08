@@ -1,4 +1,5 @@
 /* 
+ * Copyright (C) 2020 Joseph Maurer - All Rights Reserved
  * Derived from https://tlijm.csb.app with heavy modifications 
  * Licensed under MIT
 */
@@ -140,7 +141,7 @@ async function poweroff() {
 }
 
 async function setNavBarStatus(status = false) {
-    document.getElementById("navbarSupportedContent").style.visibility = (status ? "visible": "hidden");
+    document.getElementById("sideNav").style.visibility = (status ? "visible": "hidden");
 }
 
 export {type, poweroff};

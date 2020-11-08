@@ -1,4 +1,5 @@
 /* 
+ * Copyright (C) 2020 Joseph Maurer - All Rights Reserved
  * Derived from https://tlijm.csb.app with heavy modifications 
  * Licensed under MIT
 */
@@ -20,12 +21,11 @@ var introArray = [[
     "> SUDO g++ joe.cpp",
     "int main()",
     "{",
-    "      cout << \"Hello, world!\" << endl;",
+    "      cout << \"Hello, world!\";",
     "}"
 ]];
 
 $(document).ready(function() {
-    $('.navbar-nav').attr('disabled','disabled');
     type(random_item(introArray));
 })
 
