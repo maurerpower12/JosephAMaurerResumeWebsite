@@ -471,13 +471,6 @@ li:hover li:active {
   }
 }
 
-.card-body a {
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  padding: 5px;
-}
-
 .card-footer {
   position: absolute;
   bottom: 0;
@@ -623,4 +616,17 @@ li:hover li:active {
 
 #home {
   height: 100vh;
+}
+
+.metadata small {
+  color: var(--gold-accent-color)!important;
+}
+
+.profile-card-1 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+  border:none;
 }
