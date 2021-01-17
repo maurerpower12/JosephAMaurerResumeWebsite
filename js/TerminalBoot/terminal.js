@@ -5,7 +5,7 @@
 */
 
 /*
-* True if the laoding screen is still showing.
+* True if the loading screen is still showing.
 */
 var loading = false;
 
@@ -20,7 +20,7 @@ async function type(
         // Initial wait before typing.
         initialWait = 10,
         // Wait after done typing.
-        finalWait = 750,
+        finalWait = 1050,
         // True uses the passed container, else we make a new div.
         useContainer = false
     } = {},

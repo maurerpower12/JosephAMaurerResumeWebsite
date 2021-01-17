@@ -6,24 +6,9 @@
 
 import {type, poweroff} from "./terminal.js";
 
-var introArray = [[
-    "> whoami",
-    "Joseph Maurer's Portfolio",
-    "",
-    "> BOOT Portfolio ",
-    "Initiating boot sequence..........",
-], [
-    "> BOOT Joseph Maurer's Portfolio",
-    "Verifying oit.dll.....",
-    "Applying unr.exe.....",
-    "Launching prospect.app.....",
-], [
-    "> SUDO g++ joe.cpp",
-    "int main()",
-    "{",
-    "      cout << \"Hello, world!\";",
-    "}"
-]];
+var introArray = [
+    "> LOADING....."
+];
 
 $(document).ready(function() {
     type(random_item(introArray));
