@@ -353,9 +353,29 @@ li:hover li:active {
   animation-timing-function: ease-in-out;
 }
 
+/* This is for the initals on the loading screen */
+#loadingInitials {
+  stroke-dasharray: 0 740;
+  stroke-dashoffset: -500;
+  stroke-width: 0.5px;
+  fill: transparent;
+  stroke: var(--gold-accent-color);
+  border-bottom: 5px;
+  animation-name: animate-stroke;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 @keyframes animate-stroke {
-  0%  { stroke-width: .5px; stroke-dashoffset: -500; stroke-dasharray: 0 740; }
+  0%  { stroke-width: 0.5px; stroke-dashoffset: -500; stroke-dasharray: 0 740; }
   100%  { stroke-width: 3.5px; stroke-dashoffset: 0; stroke-dasharray: 9999; }
+}
+
+@keyframes animate-stroke-and-fill {
+  0%  { stroke-width: 0.5px; stroke-dashoffset: -500; stroke-dasharray: 0 740; fill: transparent; }
+  100%  { stroke-width: 10px; stroke-dashoffset: 0; stroke-dasharray: 9999; fill: var(--gold-accent-color);}
 }
 
 /* Before and After lines */

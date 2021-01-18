@@ -16,7 +16,7 @@ async function type(
     text,
     {
         // Wait between chars.
-        wait = 50,
+        wait = 400,
         // Initial wait before typing.
         initialWait = 10,
         // Wait after done typing.
