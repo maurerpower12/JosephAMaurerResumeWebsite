@@ -375,7 +375,7 @@ li:hover li:active {
 
 @keyframes animate-stroke-and-fill {
   0%  { stroke-width: 0.5px; stroke-dashoffset: -500; stroke-dasharray: 0 740; fill: transparent; }
-  100%  { stroke-width: 10px; stroke-dashoffset: 0; stroke-dasharray: 9999; fill: var(--gold-accent-color);}
+  100%  { stroke-width: 3.5px; stroke-dashoffset: 0; stroke-dasharray: 9999; fill: var(--gold-accent-color);}
 }
 
 /* Before and After lines */
