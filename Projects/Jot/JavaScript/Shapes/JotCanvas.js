@@ -38,14 +38,8 @@ class JotCanvas {
         }
 
         // Draw the shapes on top of the canvas.
-        var stackElement = document.getElementById("stack");
-        var debugHidden = document.getElementById("debug").style.display == 'none';
-        stackElement.innerHTML = "";
-        for (var i = 0; i < this.marks.length; i++) { //Draws each mark on canvas
+        for (var i = 0; i < this.marks.length; i++) {
             this.marks[i].Draw(this.context);
-            if(!debugHidden) {
-                stackElement.innerHTML += JSON.stringify(this.marks[i], null, 4);
-            }
         }
     }
     /**
@@ -107,6 +101,17 @@ class JotCanvas {
 
         this.canvas.width = newWidth;
         this.canvas.height = newHeight;
+    }
+    /**
+     * Prints JSON of the canvas content
+     * @ToString
+     */
+    ToString() {
+        var stackElement = "";
+        for (var i = 0; i < this.marks.length; i++) {
+            stackElement += JSON.stringify(this.marks[i], null, 4);
+        }
+        return stackElement;
     }
 }
 

@@ -5,7 +5,7 @@ import {SelectTool, Undo, Redo, ClearAll,
     ToolOutlineColor, OutlineThickness,
     LineThickness, DeleteSelectedShape,
     ChangeSprayDensity, SetBackgroundSource, DownloadCanvas, UploadCanvas,
-    DecodeImageData, SetCanvasDimensions
+    DecodeImageData, SetCanvasDimensions, CanvasContent
 } from './Shapes.js';
 
 const LeftHandedSettingName = "LEFT_HANDED_MODE";
@@ -82,6 +82,10 @@ $(document).ready(function () {
     });
     $('#DebugIcon').click(function () { // btn 4 maps to the settings
         disableMenuItems();
+
+        var stackElement = document.getElementById("stack");
+        //var debugHidden = document.getElementById("debug").style.display == 'none';
+        stackElement.innerHTML = CanvasContent();
         $('#debug').show();
         $('#sidePanel').show();
     });
