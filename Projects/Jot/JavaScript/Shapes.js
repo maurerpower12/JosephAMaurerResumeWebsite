@@ -947,3 +947,12 @@ export function SetCanvasDimensions(width, height) {
     jotCanvas.SetDimensions(width, height);
     jotCanvas.Draw(context);
 }
+
+/**
+ * Content of the canvas.
+ * 
+ * @function CanvasContent
+ */
+export function CanvasContent() {
+    return jotCanvas.ToString();
+}

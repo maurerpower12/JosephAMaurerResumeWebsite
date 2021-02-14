@@ -141,7 +141,10 @@ async function poweroff() {
 }
 
 async function setNavBarStatus(status = false) {
-    document.getElementById("sideNav").style.visibility = (status ? "visible": "hidden");
+    var nav = document.getElementById("sideNav");
+    if(nav) {
+        nav.style.visibility = (status ? "visible": "hidden");
+    }
 }
 
 export {type, poweroff};

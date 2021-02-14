@@ -4,13 +4,20 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
   <meta name="keywords" content="Software Engineer, Portfolio, Developer, Coding, C#, C++, Swift, Personal Website">
-  <meta name="description" content="Portfolio for Joseph A Maurer, a Software Engineer in Reno, NV">
-  <meta http-equiv="refresh" content="10; URL='https://www.josephamaurer.com'" />
+  <meta name="description" content="Blog for Joseph A Maurer, a Software Engineer in Reno, NV">
+  <meta name="author" content="Joseph A Maurer">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
 
-  <title>Joe Maurer &mdash; © 2020</title>
+  <!-- Open Graph Support -->
+  <meta property="og:title" content="Joseph A Maurer &mdash; Software Engineer" />
+  <meta property="og:description" content="A collection of personal blog posts about trending technologies and other topics of interest currated" />
+  <meta property="og:image" content="https://www.josephamaurer.com/img/BlogPreview.png" />
+  <meta property="og:image:width" content="2989" />
+  <meta property="og:image:height" content="598" />
+
+  <title>Joe Maurer &mdash; Blog © 2021</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,24 +29,31 @@
 
   <!-- Custom styles for this template -->
   <link href="css/resume.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
+
   <div id="NavBarComponent">
     <!-- At runtime, nav bar component loads here -->
   </div>
 
   <div class="container-fluid p-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="home">
+    
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="blog">
       <div class="w-100">
-        <h1>404 - Page Not Found</h1>
-        <p>
-          Sorry, the page you were looking for couldn't be found.
-          <br>
-          We will automatically redirect you in 10 seconds.
-        </p>
+        <div class="lined">
+          <h2 class="d-sm-inline">Personal Blog</h2>
+          <p class="d-sm-inline">A collection of personal blog posts about trending technologies and other topics of interest.</p>
+        </div>
+        <br>
+        <br>
+
+        <div class="container mt-5 pt-5" id="medium">
+          <div class="justify-content-center" id="jsonContent">
+            <!-- RSS data is dynamically populated here -->
+          </div>
+        </div>
       </div>
     </section>
 
@@ -56,8 +70,11 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
+  <script src="js/Medium.js"></script>
   <script>
-    $('#NavBarComponent').load('components/navigation.html');
+    $('#NavBarComponent').load('components/navigation.html', function() {
+      $('#blogNav').addClass("active");
+    });
     $('#FooterComponent').load('components/footer.html');
   </script>
 </body>
