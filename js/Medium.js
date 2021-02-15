@@ -4,6 +4,7 @@ const maxDescriptionLength = 160;
 const cardsPerRow = 2;
 const maxNumberOfRowsVisible = 2;
 const maxNumberOfRecentPosts = 2;
+var cached_Response;
 
 $(function () {
     var mediumPromise = new Promise(function (resolve) {
@@ -14,6 +15,7 @@ $(function () {
         };
         $.get(' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40josephamaurer', data, function (response) {
         if (response.status == 'ok') {
+                cached_Response = response;
                 var display = '';
                 var postLength = ($content.length) ? response.items.length : maxNumberOfRecentPosts;
 
@@ -33,13 +35,6 @@ $(function () {
                       }
                     //trim the string to the maximum length (ie. 160 chars)
                     textDescription = textDescription.substr(0, maxDescriptionLength);
-
-                    // 2. Constuct the published date in a more readable format
-                    var options = { year: 'numeric', month: 'long', day: 'numeric' };
-                    // remove the time from the date and break into parts
-                    var parts = item.pubDate.split(' ')[0].split('-');
-                    // Please pay attention to the month (parts[1]); JavaScript counts months from 0: January - 0, February - 1, etc.
-                    var pubDate = new Date(parts[0], parts[1] - 1, parts[2]);
 
                     // 3. Format all of the tags
                     var tools = ``;
@@ -65,13 +60,13 @@ $(function () {
                                 <p class="card-text metadata">
                                     <small class="text-muted">
                                         <i class="fas fa-user-circle"></i> &nbsp; ${item.author} &nbsp;
-                                        <i class="fas fa-calendar-alt"></i> &nbsp; ${pubDate.toLocaleDateString("en-US", options)}
+                                        <i class="fas fa-calendar-alt"></i> &nbsp; ${FormatPublishDate(item)}
                                     </small>
                                 </p>
                                 <p class="card-text">${textDescription}...</p>
                                 <div class="project-tools">${tools}</div>
                                 <div class="card-footer">
-                                    <a href="${item.link}" class="d-flex justify-content-end" target="_blank">
+                                    <a class="d-flex justify-content-end goldLink" id="${item.guid}" id="readMoreButton" onClick="reply_click(this.id)">
                                       <p>Read more <i class="fas fa-angle-double-right"></i></p>
                                     </a>
                                 </div>
@@ -107,3 +102,42 @@ $(function () {
 //     rss: 'https://medium.com/feed/@victorscholz'
 // };
 // $.get(' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40victorscholz', data, function (response) {
+
+// This is called when a user selects 'Read More' at the bottom of the card.
+function reply_click(clicked_id) {
+    for(var index=0; index < cached_Response.items.length; index++) {
+        var item = cached_Response.items[index];
+        if (item.guid == clicked_id) {
+            PopulateModal(item);
+        }
+    }
+    // Return false to stop default propagation.
+    return false;
+}
+
+// Populates the data from the link into the modal.
+function PopulateModal(item) {
+    var modal = $("#postModal");
+    if (modal.length) {
+        $("#postModal .modal-title").html(item.title);
+        $("#postModal .modal-body").html(item.description);
+        $("#modal-title-header").attr("href", item.link);
+
+        $(".modal-sub-header #author").html(item.author);
+        $(".modal-sub-header #pubDate").html(FormatPublishDate(item));
+
+        modal.modal();
+    }
+    else {
+        window.open(item.link, "_blank");
+    }
+}
+
+// Constuct the published date in a more readable format
+function FormatPublishDate(item) {
+    // remove the time from the date and break into parts
+    var parts = item.pubDate.split(' ')[0].split('-');
+    // Please pay attention to the month (parts[1]); JavaScript counts months from 0: January - 0, February - 1, etc.
+    pubDate = new Date(parts[0], parts[1] - 1, parts[2]);
+    return pubDate.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })
+}

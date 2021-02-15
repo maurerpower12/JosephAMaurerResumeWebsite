@@ -5,14 +5,14 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-  <meta name="keywords" content="Software Engineer, Portfolio, Developer, Coding, C#, C++, Swift, Personal Website">
+  <meta name="keywords" content="Blog, Technology, Software Engineer, Portfolio, Developer, Coding, C#, C++, Swift, Personal Website, AI, Big Data, Embedded, Systems">
   <meta name="description" content="Blog for Joseph A Maurer, a Software Engineer in Reno, NV">
   <meta name="author" content="Joseph A Maurer">
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
 
   <!-- Open Graph Support -->
   <meta property="og:title" content="Joseph A Maurer &mdash; Software Engineer" />
-  <meta property="og:description" content="A collection of personal blog posts about trending technologies and other topics of interest currated" />
+  <meta property="og:description" content="Thoughts about technologies role in building tomorrow by Joseph Maurer." />
   <meta property="og:image" content="https://www.josephamaurer.com/img/BlogPreview.png" />
   <meta property="og:image:width" content="2989" />
   <meta property="og:image:height" content="598" />
@@ -38,28 +38,140 @@
   </div>
 
   <div class="container-fluid p-0">
-
-    
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="blog">
       <div class="w-100">
-        <div class="lined">
-          <h2 class="d-sm-inline">Personal Blog</h2>
-          <p class="d-sm-inline">A collection of personal blog posts about trending technologies and other topics of interest.</p>
-        </div>
-        <br>
-        <br>
-
-        <div class="container mt-5 pt-5" id="medium">
-          <div class="justify-content-center" id="jsonContent">
-            <!-- RSS data is dynamically populated here -->
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h2>> Pseudo-Theory</h2>
+            <p>Thoughts about technologies role in building tomorrow by Joseph Maurer.</p>
           </div>
+        </div>
+
+        <div class="container mt-5 pt-5 " id="medium">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="justify-content-center" id="jsonContent">
+                <!-- RSS data is dynamically populated here -->
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <section class="widget">
+                <h5>Joseph Maurer</h5>
+                <img src="img/Profile.PNG" alt="Profile" class="img-fluid profile-img rounded">
+                <a href="about.html">About</a>
+              </section>
+
+              <section id="blog_subscription" class="widget">
+                <h5>Subscribe</h5>
+                <input type="text" name="email" style="width:100%;" placeholder="Email Address" value=""
+                  id="subscribe-field-2">
+                <button id="emailSubscribe" class="btn btn-dark btn-block" type="submit">Subscribe</button>
+              </section>
+
+              <section id="archive" class="widget">
+                <h5>Archives</h5>
+                <div>
+                  <select id="archives-dropdown-3" name="archive-dropdown" style="width:100%;">
+                    <option value="">Select Month</option>
+                    <option value=""> January 2021 </option>
+                  </select>
+                </div>
+              </section>
+
+              <section id="blogRoll" class="widget">
+                <h5>Blog Roll</h5>
+                <div>
+                  <ul class="links_blogroll">
+                    <li><a href="http://www.marketingzen.com/blog/" target="_blank">Marketing Zen Blog</a></li>
+                    <li><a href="https://www.jasonmcdonald.org/blog/" target="_blank">Jason McDonald Blog</a></li>
+                  </ul>
+                </div>
+              </section>
+
+              <section id="search" class="widget">
+                <h5>Search</h5>
+                <div>
+                  <form role="search" method="get" class="search-form" action="">
+                    <input type="text" placeholder="Search…" value="" name="s" style="width:100%;">
+                    <button type="submit" class="btn btn-dark btn-block"><i class="fas fa-search"></i>Search</button>
+                  </form>
+                </div>
+              </section>
+              
+              <section id="socialButtons" class="widget">
+                <h5>Follow Me</h5>
+                <!-- Social buttons -->
+                <div class="side-social-icons text-center">
+                  <a href="https://www.facebook.com/JoeMaurer12" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/josephamaurer/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://twitter.com/maurerpwer" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://github.com/maurerpower12" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://medium.com/@josephamaurer" target="_blank">
+                    <i class="fab fa-medium-m"></i>
+                  </a>
+                  <a href="mailto:contact@josephamaurer.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </div>
+                <!-- Social buttons -->
+              </section>
+
+          </div>
+        </div>
+
         </div>
       </div>
     </section>
+  </div>
 
-    <div id="FooterComponent">
-      <!-- At runtime, footer component loads here -->
+  <div class="alert alert-danger alert-dismissible fade" role="alert">
+    <strong>Holy guacamole you still use email?!</strong> 
+    <br/>Failed to register email. 
+    <a href="https://medium.com/@josephamaurer" target="_blank">
+      Follow me on Medium <i class="fab fa-medium-m"></i> for alerts.
+    </a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+    </button>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5><a class="modal-title" id="modal-title-header" target="_blank"></a></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+          </button>
+        </div>
+        <div class="modal-sub-header">
+          <div class="metadata pl-3">
+            <small class="text-muted">
+              <i class="fas fa-user-circle" id="author"></i>
+              <i class="fas fa-calendar-alt" id="pubDate"></i>
+            </small>
+          </div>
+        </div>
+        <div class="modal-body">
+          <!-- Modal content is dynamically filled -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div id="FooterComponent">
+    <!-- At runtime, footer component loads here -->
   </div>
 
   <!-- Bootstrap core JavaScript -->
@@ -76,7 +188,54 @@
       $('#blogNav').addClass("active");
     });
     $('#FooterComponent').load('components/footer.html');
+    $( "#emailSubscribe" ).click(function() {
+      $('.alert').alert();
+      $('.alert').addClass("show");
+    });
   </script>
+  <style>
+    .widget {
+      border-top: 4px solid #1a1a1a;
+      margin-bottom: 3.5em;
+      padding-top: 1.75em;
+    }
+
+    .side-social-icons a {
+      flex: 1 1 auto;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 110% auto;
+      background-color: rgba(18, 19, 20, 0.75) !important;
+      white-space: nowrap;
+
+      display: inline-block;
+      height: 3.5rem;
+      width: 3.5rem;
+      background-color: #495057;
+      color: #fff !important;
+      border-radius: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 3.5rem;
+    }
+
+    .alert {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 20;
+    }
+
+    .alert a {
+      color: black !important;
+      text-decoration: underline;
+    }
+
+    .modal img {
+      width:100%;
+    }
+  </style>
 </body>
 
 </html>
