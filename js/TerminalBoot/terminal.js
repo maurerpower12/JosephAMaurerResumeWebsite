@@ -16,18 +16,17 @@ async function type(
     text,
     {
         // Wait between chars.
-        wait = 200,
+        wait = 125,
         // Initial wait before typing.
-        initialWait = 10,
+        initialWait = 20,
         // Wait after done typing.
-        finalWait = 1050,
+        finalWait = 500,
         // True uses the passed container, else we make a new div.
         useContainer = false
     } = {},
     container = document.querySelector(".terminal")
 ) {
     loading = true;
-    setNavBarStatus(false);
     let typerDiv = useContainer ? container : document.createElement("div");
     typerDiv.classList.add("typer", "active");
     if (!useContainer) {
@@ -62,7 +61,7 @@ async function type(
     }
 
     await pause(finalWait / 1000);
-    poweroff();
+    typerDiv.classList.remove("active");
     return;
 }
 
@@ -118,33 +117,4 @@ function scroll(el = document.querySelector(".terminal")) {
     el.scrollTop = el.scrollHeight;
 }
 
-/**
- * "powers off" the crt monitor
- * */
-async function poweroff() {
-    if (loading) {
-        document.querySelector("#crt").classList.add("poweroff");
-        await pause(0.2);
-
-        setNavBarStatus(true);
-
-        // Remove the loader from view
-        let loaderElement = document.querySelector(".loader");
-        if (loaderElement) {
-            loaderElement.style.visibility = "hidden";
-        }
-
-        // Turn on the name animation.
-        $( "#jm" ).addClass( "fullName" );
-    }
-    loading = false;
-}
-
-async function setNavBarStatus(status = false) {
-    var nav = document.getElementById("sideNav");
-    if(nav) {
-        nav.style.visibility = (status ? "visible": "hidden");
-    }
-}
-
-export {type, poweroff};
+export {type};

@@ -92,7 +92,7 @@
   #input[contenteditable="false"]:after,
   .typer.active:after {
     content: "|";
-    color: #3df218;
+    color: white;
     animation: cursor .5s steps(1) infinite;
     animation-timing-function: step-end;
     margin-left: 1px;

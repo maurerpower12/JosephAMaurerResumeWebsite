@@ -1,6 +1,13 @@
 /* Copyright (C) 2020 Joseph Maurer - All Rights Reserved */
 
+import {type} from "./TerminalBoot/terminal.js";
+
 var numberOfBackgroundEffects = 5;
+var defaultBackgroundColor = 0x222222;
+var goldAccentColor = 0xe4b861;
+var redAccentColor = 9979487;
+var greenAccentColor = 0x89964e;
+var greyAccentColor = 0xafafaf;
 
 $(document).ready(function() {
   var rand = random_Number(numberOfBackgroundEffects);
@@ -15,23 +22,25 @@ $(document).ready(function() {
       scale: 1.00,
       scaleMobile: 1.00,
       spacing: 1.50,
-      chaos: 5.50
+      chaos: 5.50,
+      backgroundColor: defaultBackgroundColor,
+      color: redAccentColor
     })
   }
   else if(rand == 1) {
     VANTA.GLOBE({
       el: "#home",
       mouseControls: true,
-      touchControls: false,
-      gyroControls: true,
+      touchControls: true,
+      gyroControls: false,
       minHeight: 200.00,
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0x9e0404,
-      color2: 0xe4b861,
+      color: redAccentColor,
+      color2: goldAccentColor,
       size: 1.20,
-      backgroundColor: 0x100f14
+      backgroundColor: defaultBackgroundColor
     })
   }
   else if(rand == 2) {
@@ -44,8 +53,8 @@ $(document).ready(function() {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0xe4b861,
-      backgroundColor: 0x222222,
+      color: greyAccentColor,
+      backgroundColor: defaultBackgroundColor,
       points: 9.00,
       maxDistance: 33.00,
       spacing: 20.00
@@ -63,12 +72,12 @@ $(document).ready(function() {
       scaleMobile: 1.00,
       size: 4.70,
       spacing: 37.00,
-      color2: 0x9e0404,
-      color: 0xe4b861,
-      backgroundColor: 0x222222,
+      color2: redAccentColor,
+      color: goldAccentColor,
+      backgroundColor: defaultBackgroundColor,
     })
   }
-  else {
+  else { // Default Option
     VANTA.TOPOLOGY({
       el: "#home",
       mouseControls: true,
@@ -78,10 +87,12 @@ $(document).ready(function() {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0x89964e,
-      backgroundColor: 0x222222,
+      color: greenAccentColor,
+      backgroundColor: defaultBackgroundColor,
     })
   }
+
+  type("Software Engineer — Reno, Nevada");
 })
 
 function random_Number(max) {
