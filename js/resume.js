@@ -1,32 +1,89 @@
 /* Copyright (C) 2020 Joseph Maurer - All Rights Reserved */
 
-// This is a list of the possible background images
-
-var introArray = [
-  "Fountain.mp4",
-  "Zephyr.mp4",
-  "SantaMonica.mp4",
-  "Sunrise.mp4",
-  "FireLookout.mp4",
-  "Fly.mp4"
-];
+var numberOfBackgroundEffects = 5;
 
 $(document).ready(function() {
-  // Load a random background image
-  var randomBackground = './img/Lyfe/'+ random_item(introArray);
-  if(randomBackground.endsWith('mp4')) {
-    console.log("Playing background video: " + randomBackground);
-    var video = document.getElementById('backgroundVideo');
-    var source = document.getElementById('backgroundVideoSource');
-    source.src = randomBackground;
-    video.load();
-    video.play();
+  var rand = random_Number(numberOfBackgroundEffects);
+  if(rand == 0) {
+    VANTA.TRUNK({
+      el: "#home",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      spacing: 1.50,
+      chaos: 5.50
+    })
+  }
+  else if(rand == 1) {
+    VANTA.GLOBE({
+      el: "#home",
+      mouseControls: true,
+      touchControls: false,
+      gyroControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x9e0404,
+      color2: 0xe4b861,
+      size: 1.20,
+      backgroundColor: 0x100f14
+    })
+  }
+  else if(rand == 2) {
+    VANTA.NET({
+      el: "#home",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0xe4b861,
+      backgroundColor: 0x222222,
+      points: 9.00,
+      maxDistance: 33.00,
+      spacing: 20.00
+    })
+  }
+  else if(rand == 3) {
+    VANTA.DOTS({
+      el: "#home",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      size: 4.70,
+      spacing: 37.00,
+      color2: 0x9e0404,
+      color: 0xe4b861,
+      backgroundColor: 0x222222,
+    })
   }
   else {
-    $('#backgroundVideo').css('display', 'none');
+    VANTA.TOPOLOGY({
+      el: "#home",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x89964e,
+      backgroundColor: 0x222222,
+    })
   }
 })
 
-function random_item(items) {
-  return items[Math.floor(Math.random()*items.length)];
+function random_Number(max) {
+  return Math.floor(Math.random()*max);
 }
