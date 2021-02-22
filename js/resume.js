@@ -14,8 +14,8 @@ $(document).ready(function() {
   if(rand == 0) {
     VANTA.TRUNK({
       el: "#home",
-      mouseControls: true,
-      touchControls: true,
+      mouseControls: false,
+      touchControls: false,
       gyroControls: false,
       minHeight: 200.00,
       minWidth: 200.00,
