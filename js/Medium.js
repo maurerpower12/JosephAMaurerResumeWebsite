@@ -48,10 +48,10 @@ $(function () {
 
                     console.log("description " + textDescription);
                     display += `
-                <div class="card mb-3 col-lg-6" id="mediumPost">
+                <div class="card col-lg-6 mb-3" id="mediumPost">
                     <div class="row justify-content-center h-100">
                         <div class="col-xs-4">
-                            <img src="${item.thumbnail}" width="100%" class="card-header-img rounded"
+                            <img src="${item.thumbnail}" class="card-header-img rounded"
                                 alt="${item.title} Cover image" />
                         </div>
                         <div class="col-xs-8">
