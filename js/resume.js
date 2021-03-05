@@ -1,33 +1,15 @@
 /* Copyright (C) 2020 Joseph Maurer - All Rights Reserved */
 
-import {type} from "./TerminalBoot/terminal.js";
+import { type } from "./TerminalBoot/terminal.js";
 
-var numberOfBackgroundEffects = 5;
+var numberOfBackgroundEffects = 4;
 var defaultBackgroundColor = 0x222222;
 var goldAccentColor = 0xe4b861;
 var redAccentColor = 9979487;
-var greenAccentColor = 0x89964e;
-var greyAccentColor = 0xafafaf;
 
-$(document).ready(function() {
+$(document).ready(function () {
   var rand = random_Number(numberOfBackgroundEffects);
-  if(rand == 0) {
-    VANTA.TRUNK({
-      el: "#home",
-      mouseControls: false,
-      touchControls: false,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      spacing: 1.50,
-      chaos: 5.50,
-      backgroundColor: defaultBackgroundColor,
-      color: redAccentColor
-    })
-  }
-  else if(rand == 1) {
+  if (rand == 0) {
     VANTA.GLOBE({
       el: "#home",
       mouseControls: true,
@@ -43,7 +25,7 @@ $(document).ready(function() {
       backgroundColor: defaultBackgroundColor
     })
   }
-  else if(rand == 2) {
+  else if (rand == 1) {
     VANTA.NET({
       el: "#home",
       mouseControls: true,
@@ -53,14 +35,14 @@ $(document).ready(function() {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: greyAccentColor,
+      color: redAccentColor,
       backgroundColor: defaultBackgroundColor,
-      points: 9.00,
-      maxDistance: 33.00,
-      spacing: 20.00
+      points: 20.00,
+      maxDistance: 14.00,
+      spacing: 10.00
     })
   }
-  else if(rand == 3) {
+  else if (rand == 2) {
     VANTA.DOTS({
       el: "#home",
       mouseControls: true,
@@ -87,7 +69,7 @@ $(document).ready(function() {
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: greenAccentColor,
+      color: redAccentColor,
       backgroundColor: defaultBackgroundColor,
     })
   }
@@ -96,5 +78,5 @@ $(document).ready(function() {
 })
 
 function random_Number(max) {
-  return Math.floor(Math.random()*max);
+  return Math.floor(Math.random() * max);
 }

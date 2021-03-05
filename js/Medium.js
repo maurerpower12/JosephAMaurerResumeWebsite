@@ -29,7 +29,6 @@ $(function () {
                     for(var i = 0; i < htmlDescriptionObject.length; i++) {
                         var descriptionElement = htmlDescriptionObject[i];
                         if(descriptionElement.nodeName == "P") {
-                            console.log("trim " + descriptionElement.innerText);
                             textDescription += descriptionElement.innerText;
                         }
                       }
@@ -46,7 +45,6 @@ $(function () {
                         display += `<div class="row card-deck container-fluid justify-content-center" id="mediumRow">`;
                     }
 
-                    console.log("description " + textDescription);
                     display += `
                 <div class="card col-lg-6 mb-3" id="mediumPost">
                     <div class="row justify-content-center h-100">
@@ -79,7 +77,6 @@ $(function () {
 
                     if(isLastItemInRow) {
                         display += `</div>`;
-                        console.log("clsoing div after " + index + " " + item.title);
                     }
                 };
 
