@@ -1,4 +1,4 @@
-.widget {
+    .widget {
     border-top: 4px solid #1a1a1a;
     margin-bottom: 3.5em;
     padding-top: 1.75em;
@@ -36,50 +36,11 @@
     text-decoration: underline;
   }
 
-  .modal img {
-    width: 100%;
-  }
-
-  .social-media-share-icons {
-    width: 100%;
-    text-align: left;
-    display: inline-block;
-    vertical-align: center !important;
-  }
-
-  .social-media-share-icons div {
-    display: inline-block !important;
-  }
-
-  .share-button {
-    height: 28px;
-    border: 0;
-    padding-left: 6px !important;
-    padding-right: 6px !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-    margin-bottom: 20px;
-  }
-
-  .share-button a {
-    text-decoration: none;
-    font-family: Helvetica, Arial, sans-serif;
-    color: white;
-  }
-
-  .fb-share-button {
-    background: #1877f2;
-  }
-
-  .linkedin-share-button {
-    background: rgb(0,92,182);
-  }
-
   .jumbotron {
     background-color: #282828 !important;
   }
 
-  .jumbotron h2 {
+  .jumbotron h3 {
     color: #868e96;
   }
 

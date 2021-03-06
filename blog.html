@@ -31,6 +31,7 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.css" rel="stylesheet">
   <link href="css/blog.css" rel="stylesheet">
+  <link href="css/blogPostModal.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -43,7 +44,7 @@
       <div class="w-100">
         <div class="jumbotron">
           <div class="container">
-            <h2>>_ Sudo Complicated</h2>
+            <h3>>_ Sudo Complicated</h3>
             <p>Thoughts about technologies role in building tomorrow by Joseph Maurer.</p>
           </div>
         </div>
@@ -147,59 +148,8 @@
     </button>
   </div>
 
-  <div class="modal fade bd-example-modal-lg" id="postModal" tabindex="-1" role="dialog"
-    aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5><a class="modal-title" id="modal-title-header" target="_blank"></a></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
-          </button>
-        </div>
-        <div class="modal-sub-header">
-          <div class="metadata pl-3">
-            <small class="text-muted">
-              <i class="fas fa-user-circle" id="author"></i>
-              <i class="fas fa-calendar-alt" id="pubDate"></i>
-            </small>
-          </div>
-        </div>
-        <div class="modal-body">
-          <!-- Modal content is dynamically filled -->
-        </div>
-        <div class="modal-footer">
-          <div class="social-media-share-icons">
-            <div id="twitter-share-section">
-              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text=""
-                data-url="" data-size="large" data-via="maurerpwer" data-dnt="true" data-show-count="false">Tweet</a>
-            </div>
-            <div id="facebook-share-section">
-              <button class="fb-share-button btn share-button">
-                <a class="fb-share-button-link" target="_blank" href=""><i class="fab fa-facebook"></i> Share</a>
-              </button>
-            </div>
-            <div id="linkedin-share-section">
-              <button class="linkedin-share-button btn share-button">
-                <a class="linkedin-share-button-link" target="_blank" href=""><i class="fab fa-linkedin"></i> Post</a>
-              </button>
-            </div>
-            <div id="email-share-section">
-              <button class="email-share-button btn btn-secondary share-button">
-                <a class="email-share-button-link" target="_blank" href=""><i class="fas fa-envelope"></i> Email</a>
-              </button>
-            </div>
-            <div id="link-share-section">
-              <button class="link-share-button btn btn-secondary share-button">
-                <a class="link-share-button-link" target="_blank" href=""><i class="fas fa-external-link-square-alt"></i> Link</a>
-              </button>
-            </div>
-          </div>
-
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
+  <div id="BlogPostModal">
+    <!-- At runtime, modal component loads here -->
   </div>
 
   <div id="FooterComponent">
@@ -223,6 +173,7 @@
       $('#blogNav').addClass("active");
     });
     $('#FooterComponent').load('components/footer.html');
+    $('#BlogPostModal').load('components/blogPostModal.html');
     $("#emailSubscribe").click(function () {
       $('.alert').alert();
       $('.alert').addClass("show");

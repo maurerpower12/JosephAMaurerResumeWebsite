@@ -30,6 +30,7 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.css" rel="stylesheet">
   <link href="css/loader.css" rel="stylesheet">
+  <link href="css/blogPostModal.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -917,32 +918,9 @@
       <!-- At runtime, footer component loads here -->
     </div>
 
-  <div class="modal fade bd-example-modal-lg" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5><a class="modal-title" id="modal-title-header" target="_blank"></a></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
-          </button>
-        </div>
-        <div class="modal-sub-header">
-          <div class="metadata pl-3">
-            <small class="text-muted">
-              <i class="fas fa-user-circle" id="author"></i>
-              <i class="fas fa-calendar-alt" id="pubDate"></i>
-            </small>
-          </div>
-        </div>
-        <div class="modal-body">
-          <!-- Modal content is dynamically filled -->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
+    <div id="BlogPostModal">
+      <!-- At runtime, modal component loads here -->
     </div>
-  </div>
   </div>
 
   <!-- Bootstrap core JavaScript -->
@@ -960,6 +938,9 @@
   <script src="js/Vanta/Dots.min.js"></script>
   <script src="js/Vanta/Topology.min.js"></script>
 
+  <!-- Needed for the share widgets in the posts -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   <!-- Custom scripts for this template -->
   <script src="js/resume.js" type="module"></script>
 
@@ -967,6 +948,7 @@
   <script>
     $('#NavBarComponent').load('components/navigation.html');
     $('#FooterComponent').load('components/footer.html');
+    $('#BlogPostModal').load('components/blogPostModal.html');
   </script>
 </body>
 

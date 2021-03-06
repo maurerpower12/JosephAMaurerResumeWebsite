@@ -1,0 +1,39 @@
+
+  .modal img {
+    width: 100%;
+  }
+
+  .social-media-share-icons {
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: center !important;
+  }
+
+  .social-media-share-icons div {
+    display: inline-block !important;
+  }
+
+  .share-button {
+    height: 28px;
+    border: 0;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-bottom: 20px;
+  }
+
+  .share-button a {
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+  }
+
+  .fb-share-button {
+    background: #1877f2;
+  }
+
+  .linkedin-share-button {
+    background: rgb(0,92,182);
+  }
