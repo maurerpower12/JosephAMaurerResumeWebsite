@@ -30,10 +30,10 @@
 
   <!-- Custom styles for this template -->
   <link href="css/resume.css" rel="stylesheet">
+  <link href="css/blog.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
-
   <div id="NavBarComponent">
     <!-- At runtime, nav bar component loads here -->
   </div>
@@ -41,7 +41,7 @@
   <div class="container-fluid p-0">
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="blog">
       <div class="w-100">
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron">
           <div class="container">
             <h2>>_ Sudo Complicated</h2>
             <p>Thoughts about technologies role in building tomorrow by Joseph Maurer.</p>
@@ -57,7 +57,7 @@
           <div class="col-lg-3">
             <section class="widget">
               <h5>Joseph Maurer</h5>
-              <img src="img/Profile.PNG" alt="Profile" class="img-fluid profile-img rounded">
+              <img src="img/Profile.PNG" alt="Profile" class="img-fluid profile-img rounded" id="profilePicture">
               <a href="about.html">About<i class="fas fa-angle-double-right"></i></a>
               <p>
                 ~ Game Development Software Engineer <br>
@@ -169,6 +169,33 @@
           <!-- Modal content is dynamically filled -->
         </div>
         <div class="modal-footer">
+          <div class="social-media-share-icons">
+            <div id="twitter-share-section">
+              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text=""
+                data-url="" data-size="large" data-via="maurerpwer" data-dnt="true" data-show-count="false">Tweet</a>
+            </div>
+            <div id="facebook-share-section">
+              <button class="fb-share-button btn share-button">
+                <a class="fb-share-button-link" target="_blank" href=""><i class="fab fa-facebook"></i> Share</a>
+              </button>
+            </div>
+            <div id="linkedin-share-section">
+              <button class="linkedin-share-button btn share-button">
+                <a class="linkedin-share-button-link" target="_blank" href=""><i class="fab fa-linkedin"></i> Post</a>
+              </button>
+            </div>
+            <div id="email-share-section">
+              <button class="email-share-button btn btn-secondary share-button">
+                <a class="email-share-button-link" target="_blank" href=""><i class="fas fa-envelope"></i> Email</a>
+              </button>
+            </div>
+            <div id="link-share-section">
+              <button class="link-share-button btn btn-secondary share-button">
+                <a class="link-share-button-link" target="_blank" href=""><i class="fas fa-external-link-square-alt"></i> Link</a>
+              </button>
+            </div>
+          </div>
+
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -186,6 +213,9 @@
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- Needed for the share widgets in the posts -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   <!-- Custom scripts for this template -->
   <script src="js/Medium.js"></script>
   <script>
@@ -198,49 +228,6 @@
       $('.alert').addClass("show");
     });
   </script>
-  <style>
-    .widget {
-      border-top: 4px solid #1a1a1a;
-      margin-bottom: 3.5em;
-      padding-top: 1.75em;
-    }
-
-    .side-social-icons a {
-      flex: 1 1 auto;
-      text-align: center;
-      text-transform: uppercase;
-      transition: 0.5s;
-      background-size: 110% auto;
-      background-color: rgba(18, 19, 20, 0.75) !important;
-      white-space: nowrap;
-
-      display: inline-block;
-      height: 3.5rem;
-      width: 3.5rem;
-      background-color: #495057;
-      color: #fff !important;
-      border-radius: 100%;
-      text-align: center;
-      font-size: 1.5rem;
-      line-height: 3.5rem;
-    }
-
-    .alert {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      z-index: 20;
-    }
-
-    .alert a {
-      color: black !important;
-      text-decoration: underline;
-    }
-
-    .modal img {
-      width: 100%;
-    }
-  </style>
 </body>
 
 </html>
