@@ -1,4 +1,10 @@
-    .widget {
+:root {
+    --gold-accent-color: #e4b861;
+    --red-accent-color: #9e0404ce;
+    --map-color: rgb(51,51,51);
+  }
+
+.widget {
     border-top: 4px solid #1a1a1a;
     margin-bottom: 3.5em;
     padding-top: 1.75em;
@@ -41,7 +47,7 @@
   }
 
   .jumbotron h3 {
-    color: #868e96;
+    color: var(--gold-accent-color);
   }
 
   #profilePicture {
