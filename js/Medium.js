@@ -129,7 +129,9 @@ function PopulateModal(item) {
         // Fill in the generated info from: https://publish.twitter.com/?buttonType=TweetButton&widget=Button
         $("#twitter-share-section").html(`<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="${item.title}"
         data-url="${item.link}" data-size="large" data-via="maurerpwer" data-dnt="true" data-show-count="false">Tweet</a>`);
-        twttr.widgets.load();
+        if (twttr != null) {
+            twttr.widgets.load();
+        }
        // -- END Twitter share logic
        
        $('.fb-share-button-link').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + item.link + ';src=sdkpreparse');
