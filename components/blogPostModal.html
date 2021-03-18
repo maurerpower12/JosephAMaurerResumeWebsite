@@ -10,9 +10,15 @@
             </div>
             <div class="modal-sub-header">
                 <div class="metadata pl-3">
-                    <small class="text-muted">
-                        <i class="fas fa-user-circle" id="author"></i>
-                        <i class="fas fa-calendar-alt" id="pubDate"></i>
+                    <small class="row">
+                        <div class="col-sm-2">
+                            <i class="fas fa-user-circle" ></i>
+                            <span id="author"></span>
+                        </div>
+                        <div class="col-sm-10">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span id="pubDate"></span>
+                        </div>
                     </small>
                 </div>
             </div>
@@ -22,32 +28,34 @@
             <div class="modal-footer">
                 <div class="social-media-share-icons">
                     <div id="twitter-share-section">
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
-                            data-text="" data-url="" data-size="large" data-via="maurerpwer" data-dnt="true"
-                            data-show-count="false">Tweet</a>
+                        <button class="twitter-share-button btn share-button">
+                            <a class="twitter-share-button-link" target="_blank" href=""><i class="fab fa-twitter"></i>
+                                </a>
+                        </button>
                     </div>
                     <div id="facebook-share-section">
                         <button class="fb-share-button btn share-button">
                             <a class="fb-share-button-link" target="_blank" href=""><i class="fab fa-facebook"></i>
-                                Share</a>
+                                </a>
                         </button>
                     </div>
                     <div id="linkedin-share-section">
                         <button class="linkedin-share-button btn share-button">
                             <a class="linkedin-share-button-link" target="_blank" href=""><i
-                                    class="fab fa-linkedin"></i> Post</a>
+                                    class="fab fa-linkedin"></i> </a>
+                        </button>
+                    </div>
+                    <div id="link-share-section">
+                        <button class="link-share-button btn btn-secondary share-button">
+                            <a class="link-share-button-link" target="_blank" href="">
+                                <i class="fab fa-medium-m"></i>
+                            </a>
                         </button>
                     </div>
                     <div id="email-share-section">
                         <button class="email-share-button btn btn-secondary share-button">
                             <a class="email-share-button-link" target="_blank" href=""><i class="fas fa-envelope"></i>
-                                Email</a>
-                        </button>
-                    </div>
-                    <div id="link-share-section">
-                        <button class="link-share-button btn btn-secondary share-button">
-                            <a class="link-share-button-link" target="_blank" href=""><i
-                                    class="fas fa-external-link-square-alt"></i> Link</a>
+                                </a>
                         </button>
                     </div>
                 </div>

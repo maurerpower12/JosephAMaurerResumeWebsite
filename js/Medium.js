@@ -123,21 +123,11 @@ function PopulateModal(item) {
         $(".modal-sub-header #author").html(item.author);
         $(".modal-sub-header #pubDate").html(FormatPublishDate(item));
 
-        // -- START Twitter share logic
-        // Clear out everything in the share section so we can dynamically load it.
-        $("#twitter-share-section").html('&nbsp;');
-        // Fill in the generated info from: https://publish.twitter.com/?buttonType=TweetButton&widget=Button
-        $("#twitter-share-section").html(`<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="${item.title}"
-        data-url="${item.link}" data-size="large" data-via="maurerpwer" data-dnt="true" data-show-count="false">Tweet</a>`);
-        if (twttr !== undefined) {
-            twttr.widgets.load();
-        }
-       // -- END Twitter share logic
-       
-       $('.fb-share-button-link').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + item.link + ';src=sdkpreparse');
-       $('.linkedin-share-button-link').attr('href', 'https://www.linkedin.com/shareArticle?url=' + item.link);
-       $('.email-share-button-link').attr('href', `mailto:user@example.com?subject=${item.title}%20by%20${item.author}&body=Check%20out%20this%20cool%20article%20on%20Medium:%20${item.link}%20`);
-       $('.link-share-button-link').attr('href', item.link);
+        $('.twitter-share-button-link').attr('href', `https://twitter.com/intent/tweet?text=${item.title}&url=${item.link}&via=maurerpwer`);
+        $('.fb-share-button-link').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + item.link + ';src=sdkpreparse');
+        $('.linkedin-share-button-link').attr('href', 'https://www.linkedin.com/shareArticle?url=' + item.link);
+        $('.email-share-button-link').attr('href', `mailto:user@example.com?subject=${item.title}%20by%20${item.author}&body=Check%20out%20this%20cool%20article%20on%20Medium:%20${item.link}%20`);
+        $('.link-share-button-link').attr('href', item.link);
 
         modal.modal();
     }

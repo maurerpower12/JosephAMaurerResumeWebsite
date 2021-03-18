@@ -34,6 +34,14 @@
     background: #1877f2;
   }
 
+  .twitter-share-button {
+    background: #1DA1F2;
+  }
+
   .linkedin-share-button {
     background: rgb(0,92,182);
+  }
+
+  .link-share-button {
+    background: #00080e;
   }
