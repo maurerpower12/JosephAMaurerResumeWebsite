@@ -124,8 +124,8 @@ function PopulateModal(item) {
         $(".modal-sub-header #pubDate").html(FormatPublishDate(item));
 
         $('.twitter-share-button-link').attr('href', `https://twitter.com/intent/tweet?text=${item.title}&url=${item.link}&via=maurerpwer`);
-        $('.fb-share-button-link').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + item.link + ';src=sdkpreparse');
-        $('.linkedin-share-button-link').attr('href', 'https://www.linkedin.com/shareArticle?url=' + item.link);
+        $('.fb-share-button-link').attr('href', `https://www.facebook.com/sharer/sharer.php?u=${item.link};src=sdkpreparse`);
+        $('.linkedin-share-button-link').attr('href', `https://www.linkedin.com/shareArticle?url=${item.link}`);
         $('.email-share-button-link').attr('href', `mailto:user@example.com?subject=${item.title}%20by%20${item.author}&body=Check%20out%20this%20cool%20article%20on%20Medium:%20${item.link}%20`);
         $('.link-share-button-link').attr('href', item.link);
 
