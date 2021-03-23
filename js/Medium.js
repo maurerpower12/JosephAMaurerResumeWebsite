@@ -91,7 +91,7 @@ $(function () {
     });
 
     mediumPromise.then(function () {
-        // for right now, we aren't messing wiht Pagination. Use different div types instead.
+        // for right now, we aren't messing with Pagination. Use different div types instead.
     });
 });
 
@@ -122,6 +122,7 @@ function PopulateModal(item) {
 
         $(".modal-sub-header #author").html(item.author);
         $(".modal-sub-header #pubDate").html(FormatPublishDate(item));
+        $(".modal-sub-header #tags").html(item.categories.join(", "));
 
         $('.twitter-share-button-link').attr('href', `https://twitter.com/intent/tweet?text=${item.title}&url=${item.link}&via=maurerpwer`);
         $('.fb-share-button-link').attr('href', `https://www.facebook.com/sharer/sharer.php?u=${item.link};src=sdkpreparse`);

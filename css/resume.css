@@ -605,10 +605,6 @@ li:hover li:active {
   height: 100vh;
 }
 
-.metadata small {
-  color: var(--gold-accent-color)!important;
-}
-
 .profile-card-1 {
   font-family: 'Open Sans', Arial, sans-serif;
   position: relative;
