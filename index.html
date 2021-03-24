@@ -23,8 +23,8 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" defer>
 
   <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" async>
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" async>
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700&display=swap" rel="stylesheet" async>
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i&display=swap" rel="stylesheet" async>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" defer>
 
   <!-- Custom styles for this template -->
@@ -604,22 +604,22 @@
         <div class="flex-nowrap">
           <!-- Social buttons -->
           <div class="social-icons text-center">
-            <a href="https://www.facebook.com/JoeMaurer12" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/JoeMaurer12" target="_blank" rel="noopener" title="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.linkedin.com/in/josephamaurer/" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/josephamaurer/" target="_blank" rel="noopener" title="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://twitter.com/maurerpwer" target="_blank" rel="noopener">
+            <a href="https://twitter.com/maurerpwer" target="_blank" rel="noopener" title="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://github.com/maurerpower12" target="_blank" rel="noopener">
+            <a href="https://github.com/maurerpower12" target="_blank" rel="noopener" title="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://medium.com/@josephamaurer" target="_blank" rel="noopener">
+            <a href="https://medium.com/@josephamaurer" target="_blank" rel="noopener" title="Medium">
               <i class="fab fa-medium-m"></i>
             </a>
-            <!-- <a href="https://dev.to/mwrpwr" target="_blank" rel="noopener">
+            <!-- <a href="https://dev.to/mwrpwr" target="_blank" rel="noopener" title="Dev.to">
                 <i class="fab fa-dev"></i>
             </a> -->
           </div>
@@ -843,7 +843,7 @@
                     </div>
                     <div class="card-footer">
                       <a href="https://github.com/maurerpower12/Swift-Calculator-iOS" class="d-flex justify-content-end"
-                        target="_blank">
+                        target="_blank" rel="noopener">
                         <p>See the code <i class="fab fa-github"></i></p>
                       </a>
                     </div>
@@ -873,7 +873,7 @@
                     </div>
                     <div class="card-footer">
                       <a href="https://github.com/maurerpower12/Study-Smart" class="d-flex justify-content-end"
-                        target="_blank">
+                        target="_blank" rel="noopener">
                         <p>See the code <i class="fab fa-github"></i></p>
                       </a>
                     </div>
@@ -900,7 +900,7 @@
                     </div>
                     <div class="card-footer">
                       <a href="https://youtu.be/oAtoXjuJGCM" class="d-flex justify-content-end"
-                        target="_blank">
+                        target="_blank" rel="noopener">
                         <p>See it in action <i class="fas fa-video"></i></p>
                       </a>
                     </div>
@@ -915,14 +915,21 @@
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="contact">
+    <section class="p-3 p-lg-5 d-flex align-items-center" id="contact" style="min-height: 35rem;">
       <div class="w-100">
         <h2 class="mb-5 lined">Let's Connect</h2>
-        <p>Fill out the form below <a href="mailto:contact@josephamaurer.com">or email me</a> and I'll respond as soon as possible.</p>
-        <div class="text-center">
-          <iframe title="Contact Me" loading="lazy"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSe0nG2WZNKNS4gSWHhzcQkDp3VsXj5YUCdTxcQxZusM1YeONw/viewform?embedded=true"
-            width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" id="googleForm">Loading…</iframe>
+    
+        <div class="d-flex flex-column justify-content-center p-3" style="text-align: center;">
+          <div classs="p-3">
+            <p>Whether you have an idea for a project or just want to say hello, feel free to shoot me an email!</p>
+          </div>
+          <div classs="p-3">
+            <a href="mailto:contact@josephamaurer.com" target="_blank" rel="noopener">
+              <button class="btn btn-dark">
+                Say Hello ✋
+              </button>
+            </a>
+          </div>
         </div>
     </section>
 
