@@ -49,7 +49,7 @@ $(function () {
                 <div class="card col-lg-6 mb-3" id="mediumPost">
                     <div class="row justify-content-center h-100">
                         <div class="col-xs-4">
-                            <img src="${item.thumbnail}" class="card-header-img rounded"
+                            <img src="${item.thumbnail}" class="card-header-img rounded" loading="lazy"
                                 alt="${item.title} Cover image" />
                         </div>
                         <div class="col-xs-8">
@@ -64,7 +64,7 @@ $(function () {
                                 <p class="card-text">${textDescription}...</p>
                                 <div class="project-tools">${tools}</div>
                                 <div class="card-footer">
-                                    <a class="d-flex justify-content-end goldLink" id="${item.guid}" id="readMoreButton" onClick="reply_click(this.id)">
+                                    <a class="d-flex justify-content-end goldLink" id="${item.guid}" id="readMoreButton" onClick="reply_click(this.id)" rel="noopener">
                                       <p>Read more <i class="fas fa-angle-double-right"></i></p>
                                     </a>
                                 </div>
