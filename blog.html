@@ -51,7 +51,8 @@
 
         <div class="row">
           <div class="col-lg-9">
-            <div id="jsonContent">
+            <div id="searchResults"></div>
+            <div id="jsonContent" class="card-deck">
               <!-- RSS data is dynamically populated here -->
             </div>
           </div>
@@ -103,11 +104,16 @@
 
             <section id="search" class="widget">
               <h5>Search</h5>
-              <div>
-                <form role="search" method="get" class="search-form" action="">
-                  <input type="text" placeholder="Search…" value="" name="s" style="width:100%;">
-                  <button type="submit" class="btn btn-dark btn-block"><i class="fas fa-search"></i>Search</button>
-                </form>
+              <div class="form-row align-items-center">
+                <div class="col-auto">
+                  <label class="sr-only" for="inlineFormInputGroup">Search</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-search"></i></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search…" value="" name="s">
+                  </div>
+                </div>
               </div>
             </section>
 
