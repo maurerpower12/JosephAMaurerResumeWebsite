@@ -10,17 +10,8 @@ const content = $('#jsonContent');
 const recentContent = $('#jsonContentRecent');
 
 $(function () {
-    var mediumPromise = new Promise(function (resolve) {
-        var data = {
-            rss: 'https://medium.com/feed/@josephamaurer'
-        };
-        $.get(' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40josephamaurer', data, function (response) {
-            ProcessResponse(response, "");
-        });
-    });
-
-    mediumPromise.then(function () {
-        // for right now, we aren't messing with Pagination. Use different div types instead.
+    $.getJSON("./API/MediumContent.json", function(json) {
+        ProcessResponse(json, "");
     });
 });
 
@@ -158,10 +149,10 @@ function ProcessResponse(response, searchQuery) {
         };
 
         if(searchQuery != "" && foundCount == 0) {
-            SetAlert(`Unable to find any Seach Results for query: '${searchQuery}'`, foundCount);
+            SetAlert(`Unable to find any Search Results for query: '${searchQuery}'`, foundCount);
         }
         else if(searchQuery != ""){
-            SetAlert(`Showing ${foundCount} Seach Results for query: '${searchQuery}'`, foundCount);
+            SetAlert(`Showing ${foundCount} Search Results for query: '${searchQuery}'`, foundCount);
         }
 
         SetContent(display);
