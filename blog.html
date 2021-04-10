@@ -54,6 +54,18 @@
             <div id="searchResults"></div>
             <div id="jsonContent" class="card-deck">
               <!-- RSS data is dynamically populated here -->
+              <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+                <span class="sr-only">Loading...</span>
+              </div>
+              <noscript>
+                <!-- anchor linking to external blog page -->
+                <p>No JavaScript enabled to load content 😣</p>
+                <button class="btn btn-dark">
+                  <a class="nav-link" href="https://medium.com/@josephamaurer" target="_blank" rel="noopener">
+                    Go To Medium <i class="fas fa-angle-double-right"></i>
+                  </a>
+                </button>
+              </noscript>
             </div>
           </div>
           <div class="col-lg-3">
@@ -71,16 +83,15 @@
             <section id="blog_subscription" class="widget">
               <h5>Subscribe</h5>
               <input type="text" name="email" style="width:100%;" placeholder="Email Address" value=""
-                id="subscribe-field-2">
+                id="subscribe-field">
               <button id="emailSubscribe" class="btn btn-dark btn-block" type="submit">Subscribe</button>
             </section>
 
             <section id="archive" class="widget">
               <h5>Archives</h5>
               <div>
-                <select id="archives-dropdown-3" name="archive-dropdown" style="width:100%;">
+                <select id="archives-dropdown" name="archive-dropdown" style="width:100%;">
                   <option value="">Select Month</option>
-                  <option value=""> January 2021 </option>
                 </select>
               </div>
             </section>
@@ -111,7 +122,7 @@
                     <div class="input-group-prepend">
                       <div class="input-group-text"><i class="fas fa-search"></i></div>
                     </div>
-                    <input type="text" class="form-control" placeholder="Search…" value="" name="s">
+                    <input id="searchBox" type="text" class="form-control" placeholder="Search…" value="" name="s">
                   </div>
                 </div>
               </div>
@@ -142,23 +153,14 @@
               </div>
               <!-- Social buttons -->
             </section>
-
           </div>
-
         </div>
       </div>
     </section>
   </div>
 
-  <div class="alert alert-danger alert-dismissible fade" role="alert">
-    <strong>Holy guacamole you still use email?!</strong>
-    <br />Failed to register email.
-    <a href="https://medium.com/@josephamaurer" target="_blank" rel="noopener">
-      Follow me on Medium <i class="fab fa-medium-m"></i> for alerts.
-    </a>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
-    </button>
+  <div class="alert alert-success alert-dismissible fade" role="alert">
+    <p id="alert-text">Registered email.</p>
   </div>
 
   <div id="BlogPostModal">
@@ -184,10 +186,31 @@
     });
     $('#FooterComponent').load('components/footer.html');
     $('#BlogPostModal').load('components/blogPostModal.html');
+    var emails = [];
     $("#emailSubscribe").click(function () {
-      $('.alert').alert();
-      $('.alert').addClass("show");
+      var textVal = encodeURI($('#subscribe-field').val());
+      var found = jQuery.inArray(textVal, emails) != -1;
+      if(isEmail(textVal) && !found) {
+        $('#alert-text').text("Registed Email")
+        $('.alert').alert();
+        $('.alert').removeClass("alert-danger");
+        $('.alert').addClass("alert-success");
+        $('.alert').addClass("show");
+        emails.push(textVal);
+      }
+      else{
+        var msg = found ? "Email Already Registered" : "Invalid Email";
+        $('#alert-text').text(msg)
+        $('.alert').alert();
+        $('.alert').removeClass("alert-success");
+        $('.alert').addClass("alert-danger");
+        $('.alert').addClass("show");
+      }
     });
+    function isEmail(email) {
+      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      return regex.test(email);
+    }
   </script>
 </body>
 

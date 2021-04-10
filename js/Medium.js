@@ -6,8 +6,14 @@ const maxNumberOfRowsVisible = 2;
 const maxNumberOfRecentPosts = 2;
 var cached_Response;
 const searchBar = $('#search');
+const searchBox = $('#searchBox');
 const content = $('#jsonContent');
 const recentContent = $('#jsonContentRecent');
+// Archive vars
+const archivesDropdown = $('#archives-dropdown');
+const defaultArchiveOption = "Select Month";
+var archiveArray = [defaultArchiveOption];
+const archiveDateFormat = { month: 'long', year: 'numeric'};
 
 $(function () {
     $.getJSON("./API/MediumContent.json", function(json) {
@@ -53,12 +59,20 @@ function PopulateModal(item) {
 }
 
 // Constuct the published date in a more readable format
-function FormatPublishDate(item) {
+function FormatPublishDate(item, format = { year: 'numeric', month: 'long', day: 'numeric' }) {
     // remove the time from the date and break into parts
     var parts = item.pubDate.split(' ')[0].split('-');
     // Please pay attention to the month (parts[1]); JavaScript counts months from 0: January - 0, February - 1, etc.
     pubDate = new Date(parts[0], parts[1] - 1, parts[2]);
-    return pubDate.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })
+    return pubDate.toLocaleDateString("en-US", format)
+}
+
+// Populates the archive array with the applicable data
+function PopulateArchives(item) {
+    var archiveEntry = FormatPublishDate(item, archiveDateFormat)
+    if(archiveArray.indexOf(archiveEntry) === -1) {
+        archiveArray.push(archiveEntry);
+    }
 }
 
 // Sets the passed html into the proper div
@@ -79,7 +93,6 @@ function SetAlert(alertText, numberOfResults) {
     $('#searchResults').html(
         `<div class="bd-callout bd-callout-${numberOfResults == 0 ? "danger" : "info"}">
             <h4 id="specific-markup-required-for-dismiss-on-next-click">Search Results</h4>
-        
             <p>${alertText}</p>
         </div>
         `
@@ -92,7 +105,7 @@ function ClearAlert() {
 }
 
 // Processes a response from an rss feed into readable html
-function ProcessResponse(response, searchQuery) {
+function ProcessResponse(response, searchQuery, archiveQuery = "") {
     if (response.status == 'ok') {
         SetContent(""); // Clear out any html that was sitting in the div
         ClearAlert();
@@ -115,6 +128,7 @@ function ProcessResponse(response, searchQuery) {
               }
             //trim the string to the maximum length (ie. 160 chars)
             textDescription = textDescription.substr(0, maxDescriptionLength);
+            PopulateArchives(item);
 
             // 3. Format all of the tags
             var tools = ``;
@@ -122,29 +136,31 @@ function ProcessResponse(response, searchQuery) {
                 tools += `<span class="concept skill">${item}</span>`;
             });
 
-            if (searchQuery != "" && item.title.includes(searchQuery) || item.description.includes(searchQuery)) {
-                display += `
-                <div class="card text-white bg-dark mb-3" id="mediumPost" style="min-width: 18rem;">
-                    <img src="${item.thumbnail}" class="card-img-top rounded" loading="lazy" alt="${item.title} Cover image" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title goldLink">${item.title}</h5>
-                        <p class="card-text metadata">
-                            <small class="text-muted">
-                                <i class="fas fa-user-circle"></i> &nbsp; ${item.author} &nbsp;
-                                <i class="fas fa-calendar-alt"></i> &nbsp; ${FormatPublishDate(item)}
-                            </small>
-                        </p>
-                        <p class="card-text">${textDescription}...</p>
-                        <div class="project-tools">${tools}</div>
-                        <div class="card-footer">
-                        <a class="d-flex justify-content-end goldLink" id="${item.guid}" id="readMoreButton" onClick="reply_click(this.id)" rel="noopener">
-                            <p>Read more <i class="fas fa-angle-double-right"></i></p>
-                        </a>
+            if (searchQuery == "" || item.title.includes(searchQuery) || item.description.includes(searchQuery)) {
+                    if (archiveQuery == "" || FormatPublishDate(item, archiveDateFormat) == archiveQuery) {
+                        display += `
+                        <div class="card text-white bg-dark mb-3" id="mediumPost" style="min-width: 18rem;">
+                            <img src="${item.thumbnail}" class="card-img-top rounded" loading="lazy" alt="${item.title} Cover image" />
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title goldLink">${item.title}</h5>
+                                <p class="card-text metadata">
+                                    <small class="text-muted">
+                                        <i class="fas fa-user-circle"></i> &nbsp; ${item.author} &nbsp;
+                                        <i class="fas fa-calendar-alt"></i> &nbsp; ${FormatPublishDate(item)}
+                                    </small>
+                                </p>
+                                <p class="card-text">${textDescription}...</p>
+                                <div class="project-tools">${tools}</div>
+                                <div class="card-footer">
+                                <a class="d-flex justify-content-end goldLink" id="${item.guid}" id="readMoreButton" onClick="reply_click(this.id)" rel="noopener">
+                                    <p>Read more <i class="fas fa-angle-double-right"></i></p>
+                                </a>
+                                </div>
+                                </div>
                         </div>
-                        </div>
-                </div>
-                `;
-            foundCount++;
+                        `;
+                    foundCount++;
+                    }
             }
         };
 
@@ -155,7 +171,18 @@ function ProcessResponse(response, searchQuery) {
             SetAlert(`Showing ${foundCount} Search Results for query: '${searchQuery}'`, foundCount);
         }
 
+        if(archiveQuery != "") {
+            SetAlert(`Showing ${foundCount} Archive Results for month: ${archiveQuery}`, foundCount);
+        }
+
         SetContent(display);
+
+        if(archivesDropdown.length) {
+            archivesDropdown.empty();
+            $.each(archiveArray, function(i, p) {
+                archivesDropdown.append($('<option></option>').val(p).html(p));
+            });
+        }
     }
 }
 
@@ -169,4 +196,10 @@ searchBar.on('keypress', function ( event ) {
      if(event.keyCode === 32) {
        event.preventDefault();
      }
+});
+
+// Processes the archive dropdown change
+archivesDropdown.on("change", event => {
+    searchBox.val('');
+    ProcessResponse(cached_Response, "", event.target.value);
 });

@@ -652,9 +652,25 @@
         <br>
         <br>
 
-        <div id="jsonContentRecent" class="card-deck">
+        <div class="container-fluid p-0 m-0 align-items-center 
+                    justify-content-center d-flex">
+          <div id="jsonContentRecent" class="card-deck">
             <!-- RSS data is dynamically populated here -->
+            <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <noscript>
+              <!-- anchor linking to external blog page -->
+              <p>No JavaScript enabled to load content 😣</p>
+              <button class="btn btn-dark">
+                <a class="nav-link" href="https://medium.com/@josephamaurer" target="_blank" rel="noopener">
+                  Go To Medium <i class="fas fa-angle-double-right"></i>
+                </a>
+              </button>
+            </noscript>
+          </div>
         </div>
+
 
         <div style="float:right;">
           <button class="btn btn-dark">
