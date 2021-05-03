@@ -120,7 +120,44 @@
           </div>
         </div>
           <div class="col-sm-4">
-            <img src="img/Profile.webp" alt="Profile" class="img-fluid profile-img rounded">
+            <section class="widget">
+              <h5>Joseph Maurer</h5>
+              <img src="img/Profile.webp" alt="Profile" class="img-fluid profile-img rounded" id="profilePicture" loading="lazy" width="250" height="300">
+              <p>
+                ~ Game Development Software Engineer <br>
+                ~ MBA Aspiring @ University of Nevada, Reno <br>
+                ~ Oregon Tech Alum
+              </p>
+            </section>
+
+            <section id="socialButtons" class="widget">
+              <h5>Follow Me</h5>
+              <!-- Social buttons -->
+              <div class="side-social-icons text-center">
+                <a href="https://www.facebook.com/JoeMaurer12" target="_blank" rel="noopener" title="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/josephamaurer/" target="_blank" rel="noopener" title="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/maurerpwer" target="_blank" rel="noopener" title="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/maurerpower12" target="_blank" rel="noopener" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://medium.com/@josephamaurer" target="_blank" rel="noopener" title="Medium">
+                  <i class="fab fa-medium-m"></i>
+                </a>
+                <a href="https://dev.to/mwrpwr" target="_blank" rel="noopener" title="Dev.to">
+                    <i class="fab fa-dev"></i>
+                </a>
+                <a href="mailto:contact@josephamaurer.com" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+              <!-- Social buttons -->
+            </section>
           </div>
         </div>
       </div>
@@ -349,6 +386,33 @@
     });
     $('#FooterComponent').load('components/footer.html');
   </script>
+  <style>
+  .widget {
+    border-top: 4px solid #1a1a1a;
+    margin-bottom: 3.5em;
+    padding-top: 1.75em;
+  }
+
+  .side-social-icons a {
+    flex: 1 1 auto;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 110% auto;
+    background-color: rgba(18, 19, 20, 0.75) !important;
+    white-space: nowrap;
+
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #495057;
+    color: #fff !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+  }
+  </style>
 </body>
 
 </html>
