@@ -475,7 +475,8 @@ li:hover li:active {
 
 .radiate-btn {
   animation: shadow-pulse 1s infinite;
-  color: var(--gold-accent-color);
+  background-color: var(--gold-accent-color);
+  color: #343a40!important;
 }
 
 .radiate-btn:hover {
@@ -510,8 +511,16 @@ li:hover li:active {
   right: 0;
 }
 
-.project-tools {
+.projectCard .project-tools {
   margin-bottom: 50px;
+}
+
+.blogPostCard {
+  cursor:pointer;
+}
+
+.projectCard .card-title {
+  color: var(--gold-accent-color);
 }
 
 .subheading a {
