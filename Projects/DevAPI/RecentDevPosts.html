@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta name="keywords" content="DEV.to, API, Javscript, JSON">
+  <meta name="description" content="A tool to extract data from DEV.to API for debugging and sharing!">
+  <meta name="author" content="Joseph A Maurer">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
+
+  <title>DEV.to API Tester: Recent Posts</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../../css/resume.css" rel="stylesheet">
+  <link href="./Style/json-viewer.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  <div id="NavBarComponent">
+    <!-- At runtime, nav bar component loads here -->
+  </div>
+
+  <div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="main">
+      <div class="w-100">
+        <h3>DEV.to API Tester: Recent Posts</h3>
+        <p>A tool to display the recent DEV.to Posts</p>
+        <a href="https://docs.forem.com/api/#operation/getLatestArticles" rel="noopener" target="_blank">Link to API documentation</p>
+        <div id="jsonContent" class="card-deck">
+            <!-- RSS data is dynamically populated here -->
+            <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <noscript>
+                <!-- anchor linking to external blog page -->
+                <p>No JavaScript enabled to load content 😣</p>
+            </noscript>
+        </div>
+      </div>
+    </section>
+
+    <div id="FooterComponent">
+      <!-- At runtime, footer component loads here -->
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../../vendor/jquery/jquery.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+  <!-- Using a Json visualizer. See https://github.com/afshinm/Json-to-HTML-Table-->
+  <script src="./Javascript/json-viewer.js"></script>
+  <script src="./Javascript/DevAPIRecentPosts.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script>
+    $('#NavBarComponent').load('../../components/navigation.html', function() {
+      $('#projectsNav').addClass("active");
+    });
+    $('#FooterComponent').load('../../components/footer.html');
+  </script>
+</body>
+
+</html>
