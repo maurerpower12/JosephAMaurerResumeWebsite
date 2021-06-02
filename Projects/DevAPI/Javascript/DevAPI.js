@@ -48,7 +48,21 @@ function ProcessURL() {
         }
 
         // Update the JSON view
+        var mediumProxy = {
+           "title":json.title,
+           "pubDate":json.published_timestamp,
+           "link":json.url,
+           "guid":json.url,
+           "author":json.user.name,
+           "thumbnail":json.cover_image,
+           "description":json.body_html.replace(/(\r\n|\n|\r)/gm, ''),
+           "content":json.body_html.replace(/(\r\n|\n|\r)/gm, ''),
+           "enclosure":{ },
+           "categories":json.tags
+        };
         $('#json-renderer').jsonViewer(json, {collapsed: true, withQuotes: false, withLinks: true});
+        $('#medium-renderer').jsonViewer(mediumProxy, {collapsed: true, withQuotes: true, withLinks: false});
+        $('#medium-hidden').val(JSON.stringify(mediumProxy));
       })
       .fail(function() { alert("ERROR: Unable to find this post 😭"); })
     }
@@ -60,3 +74,12 @@ function ProcessURL() {
     alert("No URL was entered 😖");
   }
 }
+
+$('#MediumJsonCopy').click(function () {
+  var copyText = document.querySelector("#medium-hidden");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Text copied");
+});
+
+
