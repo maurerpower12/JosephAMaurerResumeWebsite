@@ -32,14 +32,14 @@
   <link href="css/loader.css" rel="stylesheet" async>
   <link href="css/blogPostModal.css" rel="stylesheet" async>
 
-    <!-- Vanda Background includes -->
-    <script src="js/Vanta/three.min.js" defer></script>
-    <script src="js/Vanta/p5.min.js" defer></script>
-    <script src="js/Vanta/Globe.min.js" defer></script>
-    <script src="js/Vanta/Net.min.js" defer></script>
-    <script src="js/Vanta/Dots.min.js" defer></script>
-    <script src="js/Vanta/Topology.min.js" defer></script>
-    <script src="js/Vanta/Waves.min.js" defer></script>
+  <!-- Vanda Background includes -->
+  <script src="js/Vanta/three.min.js" defer></script>
+  <script src="js/Vanta/p5.min.js" defer></script>
+  <script src="js/Vanta/Globe.min.js" defer></script>
+  <script src="js/Vanta/Net.min.js" defer></script>
+  <script src="js/Vanta/Dots.min.js" defer></script>
+  <script src="js/Vanta/Topology.min.js" defer></script>
+  <script src="js/Vanta/Waves.min.js" defer></script>
 </head>
 
 <body id="page-top">
@@ -628,16 +628,25 @@
 
     <section class="darkMode p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
-        <h2 class="lined">About</h2>
         <div class="container d-flex justify-content-center">
           <div class="col-lg-3">
             <img src="./img/Bitmoji/wave.png" class="img-fluid float-left" alt="Bitmoji Hello" id="bitmoji"/>
           </div>
-          <div class="col-lg-9">
+          <div class="col-lg-9 m-2">
+            <h1 class="lined">About</h1>
             <p>Joseph Maurer is a software engineeer, aspiring MBA, and tech enthusiast based in Reno, Nevada.</p>
-            <a href="about.html" class="d-flex" target="_blank">
-              <p>Learn more about me &nbsp; <i class="fas fa-angle-double-right"></i></p>
-            </a>
+
+            <p>Whether you have an idea for a project or just want to say hello, feel free to shoot me an email!</p>
+
+            <div >
+              <a href="about.html" class="colorized-btn btn btn-dark" target="_blank" rel="noopener" role="button">
+                Learn more about me &nbsp; <i class="fas fa-angle-double-right"></i>
+              </a> 
+              <a href="mailto:joseph.maurer@nevada.unr.edu" class="colorized-btn btn btn-dark" target="_blank" rel="noopener" role="button">
+                Say Hello ✋
+              </a>
+            </div>
+          <div>
           </div>
         </div>
       </div>
@@ -648,15 +657,14 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="blog">
       <div class="w-100">
         <div class="lined">
-          <h2 class="d-sm-inline">Recent Posts</h2>
+          <h1 class="d-sm-inline">Recent Posts</h1>
           <p class="d-sm-inline">A collection of the most recent posts from my personal blog</p>
         </div>
         <br>
         <br>
 
-        <div class="container-fluid p-0 m-0 align-items-center 
-                    justify-content-center d-flex">
-          <div id="jsonContentRecent" class="card-deck">
+        <div class="card-deck container-fluid justify-content-center">
+          <div id="jsonContentRecent" class="row row-cols-1 row-cols-md-2 g-4">
             <!-- RSS data is dynamically populated here -->
             <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
               <span class="sr-only">Loading...</span>
@@ -664,20 +672,20 @@
             <noscript>
               <!-- anchor linking to external blog page -->
               <p>No JavaScript enabled to load content 😣</p>
-              <button class="btn btn-dark">
-                <a class="nav-link" href="https://medium.com/@josephamaurer" target="_blank" rel="noopener">
-                  Go To Medium <i class="fas fa-angle-double-right"></i>
-                </a>
-              </button>
+              <a class="colorize btn btn-dark" href="https://medium.com/@josephamaurer" target="_blank" rel="noopener" role="button">
+                Go To Medium
+                <i class="fas fa-angle-double-right"></i>
+              </a>
             </noscript>
           </div>
         </div>
 
 
-        <div style="float:right;">
-          <button class="btn btn-dark">
-            <a class="nav-link" href="blog.html" target="_blank">See all blog posts <i class="fas fa-angle-double-right"></i></a>
-          </button>
+        <div class="m-2" style="float: right;">
+            <a class="colorize btn btn-dark" href="blog.html" target="_blank" rel="noopener" role="button">
+              See all blog posts 
+              <i class="fas fa-angle-double-right"></i>
+            </a>
         </div>
       </div>
     </section>
@@ -688,239 +696,309 @@
       <div class="w-100">
         <div>
           <div class="lined">
-            <h2 class="d-sm-inline">Projects</h2>
+            <h1 class="d-sm-inline">Projects</h1>
             <p class="d-sm-inline">A collection of work & personal projects</p>
           </div>
           <br>
           <br>
 
-          <div class="card-deck container-fluid justify-content-center">
-            <!-- Row 1 -->
-            <div class="row flex-md-row justify-content-center">
-              <div class="card mb-3 col-lg-6 projectCard text-white bg-dark">
-                <div class="row justify-content-center h-100">
-                  <div class="col-xs-4">
-                    <img src="img/AdventureMockup.webp" width="100%" class="card-header-img rounded" loading="lazy"
-                      alt="Jason And Kova's Adventure game thumbnail">
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="card-body d-flex flex-column">
-                      <h5 class="card-title">2D Platform Adventure Game</h5>
-                      <p class="card-text">What homemade Christmas gift do you get someone who loves video games? You make
-                        them their own 2D game where the objective is to find their dog.</p>
-                      <div class="project-tools">
-                        <span class="coding skill">Unity <i class="fab fa-unity"></i></span>
-                        <span class="coding skill">c# <i class="fas fa-code"></i></span>
-                        <span class="concept skill">iOS <i class="fab fa-app-store-ios"></i></span>
-                        <span class="concept skill">Android <i class="fab fa-android"></i></span>
-                      </div>
+          <div class="card-deck">
+            <div class="row row-cols-1 row-cols-md-2 g-4 ">
+              <!-- Row 0 -->
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="Projects/DevAPI/img/PlaceHolder.png" width="100%" class="card-header-img rounded" loading="lazy"
+                        alt="The Voice MTUNI game thumbnail">
                     </div>
-                    <div class="card-footer">
-                      <a href="./Projects/JasonAndKovasAdventure/index.html" class="d-flex justify-content-end"
-                        target="_blank">
-                        <button class="radiate-btn btn btn-dark">
-                          Live Demo <i class="fas fa-angle-double-right"></i>
-                        </button>
-                      </a>
+                    <div>
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">3D Karting Game</h5>
+                        <p class="card-text">
+                          Race To Seattle is a 3D karting microgame built with multiple game modes.
+                        </p>
+                        <div class="project-tools">
+                          <span class="coding skill">Unity <i class="fab fa-unity"></i></span>
+                          <span class="coding skill">c# <i class="fas fa-code"></i></span>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <a href="./Projects/wof_stp_gsd.html" class="d-flex justify-content-end" target="_blank">
+                          <p>Project Breakdown <i class="fas fa-angle-double-right"></i></p>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card mb-3 col-lg-6 projectCard text-white bg-dark">
-                <div class="row justify-content-center h-100">
-                  <div class="col-xs-4">
-                    <img src="img/OITNB/BaseGame.jp2" width="100%" class="card-header-img rounded" loading="lazy"
-                      alt="Orange is the new black slot machine base game thumbnail">
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="card-body d-flex flex-column">
-                      <h5 class="card-title">Orange Is The New Black Slot</h5>
-                      <p class="card-text">Based on the hit show, this game ties in strong game mechanics with the hit
-                        Netflix
-                        show's theme.</p>
-                      <div class="project-tools">
-                        <span class="coding skill">Unity <i class="fab fa-unity"></i></span>
-                        <span class="coding skill">c# <i class="fas fa-code"></i></span>
+              <div clas="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/Voice/GAMECATALOGIMAGE_TheVoice.webp" width="100%" class="card-header-img rounded" loading="lazy"
+                        alt="The Voice MTUNI game thumbnail">
+                    </div>
+                    <div>
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">The Voice Slot</h5>
+                        <p class="card-text">
+                          Featuring sights and sounds from the hit singing competition show, The Voice, this pandemic project was a 3 reel 9 line game with awesome features and bonuses.
+                        </p>
+                        <div class="project-tools">
+                          <span class="coding skill">Unity <i class="fab fa-unity"></i></span>
+                          <span class="coding skill">c# <i class="fas fa-code"></i></span>
+                        </div>
                       </div>
-                    </div>
-                    <div class="card-footer">
-                      <a href="./Projects/oitnb.html" class="d-flex justify-content-end" target="_blank">
-                        <p>Project Breakdown <i class="fas fa-angle-double-right"></i></p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-100"></div>
-            <!-- Row 2 -->
-            <div class="row flex-md-row justify-content-center">
-              <div class="card mb-3 col-lg-6 projectCard text-white bg-dark">
-                <div class="row justify-content-center h-100">
-                  <div class="col-xs-4">
-                    <img src="img/WOF_STP_GSD/STPLogo.webp" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
-                      alt="WOF STP GSD base game thumbnail">
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Wheel Of Fortune Super Times Pay Gold Spin Deluxe Slot</h5>
-                      <p class="card-text">This 3 reels 5 lines mechanical stepper slot machine was my first solo
-                        engineering
-                        project.</p>
-                      <div class="project-tools">
-                        <span class="coding skill">Unity <i class="fab fa-unity"></i></span>
-                        <span class="coding skill">c# <i class="fas fa-code"></i></span>
+                      <div class="card-footer">
+                        <a href="./Projects/wof_stp_gsd.html" class="d-flex justify-content-end" target="_blank">
+                          <p>Project Breakdown <i class="fas fa-angle-double-right"></i></p>
+                        </a>
                       </div>
-                    </div>
-                    <div class="card-footer">
-                      <a href="./Projects/wof_stp_gsd.html" class="d-flex justify-content-end" target="_blank">
-                        <p>Project Breakdown <i class="fas fa-angle-double-right"></i></p>
-                      </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card mb-3 col-lg-6 projectCard text-white bg-dark">
-                <div class="row justify-content-center h-100">
-                  <div class="col-xs-4">
-                    <img src="img/HQ/HQComp2.webp" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
-                      alt="HQ Project thumbnail">
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="card-body">
-                      <h5 class="card-title">HQ Housing & Res Life App</h5>
-                      <p class="card-text">Management software built for Oregon
-                        Tech Housing and Residence Life as part of my Senior Capstone project.</p>
-                      <div class="project-tools">
-                        <span class="coding skill">c# <i class="fas fa-code"></i></span>
-                        <span class="coding skill">Javascript <i class="fab fa-js"></i></span>
-                        <span class="coding skill">SQL <i class="fas fa-database"></i></span>
-                        <span class="concept skill">Bootstrap <i class="fab fa-bootstrap"></i></span>
-                        <span class="concept skill">MVC</span>
+              <!-- Row 1 -->
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/AdventureMockup.webp" width="100%" class="card-header-img rounded" loading="lazy"
+                        alt="Jason And Kova's Adventure game thumbnail">
+                    </div>
+                    <div>
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">2D Platform Adventure Game</h5>
+                        <p class="card-text">What homemade Christmas gift do you get someone who loves video games? You make
+                          them their own 2D game where the objective is to find their dog.</p>
+                        <div class="project-tools">
+                          <span class="coding skill">Unity <i class="fab fa-unity"></i></span>
+                          <span class="coding skill">c# <i class="fas fa-code"></i></span>
+                          <span class="concept skill">iOS <i class="fab fa-app-store-ios"></i></span>
+                          <span class="concept skill">Android <i class="fab fa-android"></i></span>
+                        </div>
                       </div>
-                    </div>
-                    <div class="card-footer">
-                      <a href="./Projects/HQ/MVC465/Views/_Layout.html" class="d-flex justify-content-end" target="_blank">
-                        <button class="radiate-btn btn btn-dark">
-                          Live Demo <i class="fas fa-angle-double-right"></i>
-                        </button>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-100"></div>
-            <!-- Row 3 -->
-            <div class="row flex-md-row justify-content-center">
-              <div class="card mb-3 col-lg-6 projectCard text-white bg-dark">
-                <div class="row justify-content-center h-100">
-                  <div class="col-xs-4">
-                    <img src="img/Jot/JotComp.webp" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
-                      alt="Jot Project thumbnail">
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Jot Note Taking App</h5>
-                      <p class="card-text">Web-based note-taking app for my Junior Capstone project.</p>
-                      <div class="project-tools">
-                        <span class="coding skill">c# <i class="fas fa-code"></i></span>
-                        <span class="coding skill">Javascript <i class="fab fa-js"></i></span>
-                        <span class="coding skill">SQL <i class="fas fa-database"></i></span>
-                        <span class="concept skill">Bootstrap <i class="fab fa-bootstrap"></i></span>
+                      <div class="card-footer">
+                        <a href="./Projects/JasonAndKovasAdventure/index.html" class="d-flex justify-content-end"
+                          target="_blank">
+                          <button class="radiate-btn btn btn-dark">
+                            Live Demo <i class="fas fa-angle-double-right"></i>
+                          </button>
+                        </a>
                       </div>
-                    </div>
-                    <div class="card-footer">
-                      <a href="./Projects/Jot/DrawPage.html" class="d-flex justify-content-end" target="_blank">
-                        <button class="radiate-btn btn btn-dark">
-                          Live Demo <i class="fas fa-angle-double-right"></i>
-                        </button>
-                      </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card mb-3 col-lg-6 projectCard text-white bg-dark">
-                <div class="row justify-content-center h-100">
-                  <div class="col-xs-4">
-                    <img src="img/CalcComp3.webp" class="card-header-img" width="100%" height="100%" loading="lazy"
-                      alt="Swift Calculator thumbnail">
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="card-body">
-                      <h5 class="card-title">iOS Calculator App</h5>
-                      <p class="card-text">An iPhone/iPad app in Swift that mimics the functionality of a hand held
-                        calculator.</p>
-                      <div class="project-tools">
-                        <span class="coding skill">Swift <i class="fab fa-swift"></i></span>
-                        <span class="concept skill">iOS <i class="fab fa-app-store-ios"></i></span>
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/OITNB/BaseGame.jp2" width="100%" class="card-header-img rounded" loading="lazy"
+                        alt="Orange is the new black slot machine base game thumbnail">
+                    </div>
+                    <div>
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Orange Is The New Black Slot</h5>
+                        <p class="card-text">Based on the hit show, this game ties in strong game mechanics with the hit
+                          Netflix
+                          show's theme.</p>
+                        <div class="project-tools">
+                          <span class="coding skill">Unity <i class="fab fa-unity"></i></span>
+                          <span class="coding skill">c# <i class="fas fa-code"></i></span>
+                        </div>
                       </div>
-                    </div>
-                    <div class="card-footer">
-                      <a href="https://github.com/maurerpower12/Swift-Calculator-iOS" class="d-flex justify-content-end"
-                        target="_blank" rel="noopener">
-                        <p>See the code <i class="fab fa-github"></i></p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-100"></div>
-            <!-- Row 4 -->
-            <div class="row flex-md-row justify-content-center">
-              <div class="card mb-3 col-lg-6 projectCard text-white bg-dark">
-                <div class="row justify-content-center h-100">
-                  <div class="col-xs-4">
-                    <img src="img/StudySmartComp.webp" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
-                      alt="Study Smart App">
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Study Smart App</h5>
-                      <p class="card-text">Cross platform app designed to help students study with flash cards.</p>
-                      <div class="project-tools">
-                        <span class="coding skill">C++</span>
-                        <span class="coding skill">QML</span>
-                        <span class="coding skill">Qt</span>
-                        <span class="concept skill">Cross-Platform</span>
+                      <div class="card-footer">
+                        <a href="./Projects/oitnb.html" class="d-flex justify-content-end" target="_blank">
+                          <p>Project Breakdown <i class="fas fa-angle-double-right"></i></p>
+                        </a>
                       </div>
-                    </div>
-                    <div class="card-footer">
-                      <a href="https://github.com/maurerpower12/Study-Smart" class="d-flex justify-content-end"
-                        target="_blank" rel="noopener">
-                        <p>See the code <i class="fab fa-github"></i></p>
-                      </a>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="card mb-3 col-lg-6 projectCard text-white bg-dark">
-                <div class="row justify-content-center h-100">
-                  <div class="col-xs-4">
-                    <img src="img/OwlBoard.jp2" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
-                      alt="Owl Board">
-                  </div>
-                  <div class="col-xs-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Owl Board</h5>
-                      <p class="card-text">
-                        The Owl Board was a hand-soldered project during my Sophomore year of college where the goal was to learn the fundamentals of digital logic, configurable hardware, and programmable logic devices. 
-                      </p>
-                      <div class="project-tools">
-                        <span class="coding skill">HDL</span>
-                        <span class="concept skill">FPGA</span>
+
+              <!-- Row 2 -->
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/WOF_STP_GSD/STPLogo.webp" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
+                        alt="WOF STP GSD base game thumbnail">
+                    </div>
+                    <div>
+                      <div class="card-body">
+                        <h5 class="card-title">Wheel Of Fortune Super Times Pay Gold Spin Deluxe Slot</h5>
+                        <p class="card-text">This 3 reels 5 lines mechanical stepper slot machine was my first solo
+                          engineering
+                          project.</p>
+                        <div class="project-tools">
+                          <span class="coding skill">Unity <i class="fab fa-unity"></i></span>
+                          <span class="coding skill">c# <i class="fas fa-code"></i></span>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <a href="./Projects/wof_stp_gsd.html" class="d-flex justify-content-end" target="_blank">
+                          <p>Project Breakdown <i class="fas fa-angle-double-right"></i></p>
+                        </a>
                       </div>
                     </div>
-                    <div class="card-footer">
-                      <a href="https://youtu.be/oAtoXjuJGCM" class="d-flex justify-content-end"
-                        target="_blank" rel="noopener">
-                        <p>See it in action <i class="fab fa-youtube"></i></p>
-                      </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/HQ/HQComp2.webp" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
+                        alt="HQ Project thumbnail">
+                    </div>
+                    <div>
+                      <div class="card-body">
+                        <h5 class="card-title">HQ Housing & Res Life App</h5>
+                        <p class="card-text">Management software built for Oregon
+                          Tech Housing and Residence Life as part of my Senior Capstone project.</p>
+                        <div class="project-tools">
+                          <span class="coding skill">c# <i class="fas fa-code"></i></span>
+                          <span class="coding skill">Javascript <i class="fab fa-js"></i></span>
+                          <span class="coding skill">SQL <i class="fas fa-database"></i></span>
+                          <span class="concept skill">Bootstrap <i class="fab fa-bootstrap"></i></span>
+                          <span class="concept skill">MVC</span>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <a href="./Projects/HQ/MVC465/Views/_Layout.html" class="d-flex justify-content-end" target="_blank">
+                          <button class="radiate-btn btn btn-dark">
+                            Live Demo <i class="fas fa-angle-double-right"></i>
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Row 3 -->
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/Jot/JotComp.webp" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
+                        alt="Jot Project thumbnail">
+                    </div>
+                    <div>
+                      <div class="card-body">
+                        <h5 class="card-title">Jot Note Taking App</h5>
+                        <p class="card-text">Web-based note-taking app for my Junior Capstone project.</p>
+                        <div class="project-tools">
+                          <span class="coding skill">c# <i class="fas fa-code"></i></span>
+                          <span class="coding skill">Javascript <i class="fab fa-js"></i></span>
+                          <span class="coding skill">SQL <i class="fas fa-database"></i></span>
+                          <span class="concept skill">Bootstrap <i class="fab fa-bootstrap"></i></span>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <a href="./Projects/Jot/DrawPage.html" class="d-flex justify-content-end" target="_blank">
+                          <button class="radiate-btn btn btn-dark">
+                            Live Demo <i class="fas fa-angle-double-right"></i>
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/CalcComp3.webp" class="card-header-img" width="100%" height="100%" loading="lazy"
+                        alt="Swift Calculator thumbnail">
+                    </div>
+                    <div>
+                      <div class="card-body">
+                        <h5 class="card-title">iOS Calculator App</h5>
+                        <p class="card-text">An iPhone/iPad app in Swift that mimics the functionality of a hand held
+                          calculator.</p>
+                        <div class="project-tools">
+                          <span class="coding skill">Swift <i class="fab fa-swift"></i></span>
+                          <span class="concept skill">iOS <i class="fab fa-app-store-ios"></i></span>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <a href="https://github.com/maurerpower12/Swift-Calculator-iOS" class="d-flex justify-content-end"
+                          target="_blank" rel="noopener">
+                          <p>See the code <i class="fab fa-github"></i></p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Row 4 -->
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/StudySmartComp.webp" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
+                        alt="Study Smart App">
+                    </div>
+                    <div>
+                      <div class="card-body">
+                        <h5 class="card-title">Study Smart App</h5>
+                        <p class="card-text">Cross platform app designed to help students study with flash cards.</p>
+                        <div class="project-tools">
+                          <span class="coding skill">C++</span>
+                          <span class="coding skill">QML</span>
+                          <span class="coding skill">Qt</span>
+                          <span class="concept skill">Cross-Platform</span>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <a href="https://github.com/maurerpower12/Study-Smart" class="d-flex justify-content-end"
+                          target="_blank" rel="noopener">
+                          <p>See the code <i class="fab fa-github"></i></p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 projectCard text-white bg-dark mx-auto">
+                  <div>
+                    <div>
+                      <img src="img/OwlBoard.jp2" width="100%" height="100%" class="card-header-img rounded" loading="lazy"
+                        alt="Owl Board">
+                    </div>
+                    <div>
+                      <div class="card-body">
+                        <h5 class="card-title">Owl Board</h5>
+                        <p class="card-text">
+                          The Owl Board was a hand-soldered project during my Sophomore year of college where the goal was to learn the fundamentals of digital logic, configurable hardware, and programmable logic devices. 
+                        </p>
+                        <div class="project-tools">
+                          <span class="coding skill">HDL</span>
+                          <span class="concept skill">FPGA</span>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <a href="https://youtu.be/oAtoXjuJGCM" class="d-flex justify-content-end"
+                          target="_blank" rel="noopener">
+                          <p>See it in action <i class="fab fa-youtube"></i></p>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -929,26 +1007,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="p-3 p-lg-5 d-flex align-items-center" id="contact" style="min-height: 35rem;">
-      <div class="w-100">
-        <h2 class="mb-5 lined">Let's Connect</h2>
-    
-        <div class="d-flex flex-column justify-content-center p-3" style="text-align: center;">
-          <div classs="p-3">
-            <p>Whether you have an idea for a project or just want to say hello, feel free to shoot me an email!</p>
-          </div>
-          <div classs="p-3">
-            <a href="mailto:contact@josephamaurer.com" target="_blank" rel="noopener">
-              <button class="btn btn-dark">
-                Say Hello ✋
-              </button>
-            </a>
-          </div>
-        </div>
     </section>
 
     <div id="FooterComponent">

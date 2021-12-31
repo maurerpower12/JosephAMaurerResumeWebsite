@@ -53,16 +53,16 @@ h6 {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 5.5rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 p.lead {
@@ -192,7 +192,7 @@ img {
 section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
-  max-width: 75rem;
+  max-width: 85rem;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -267,12 +267,15 @@ section.resume-section .resume-item .resume-date {
 a {
   color: var(--gold-accent-color);
 }
+.colorize {
+  color: var(--gold-accent-color) !important;
+}
 .goldLink {
   color: var(--gold-accent-color) !important;
 }
 
 a:hover, a:focus, a:active {
-  color: var(--gold-accent-color);
+  color: var(--gold-accent-color) ;
 }
 
 li:hover li:active {
@@ -478,12 +481,21 @@ li:hover li:active {
   background-color: var(--gold-accent-color);
   color: #343a40!important;
 }
-
 .radiate-btn:hover {
   animation: gold-pulse 1s infinite;
   color: var(--gold-accent-color);
 }
 
+.colorized-btn {
+  background-color: var(--gold-accent-color);
+  color: #343a40!important;
+}
+
+.colorized-btn:hover {
+  background-color: var(--gold-accent-color);
+  color: #343a40!important;
+  animation: gold-pulse 1s infinite;
+}
 @keyframes shadow-pulse
 {
   0% {
@@ -509,6 +521,9 @@ li:hover li:active {
   bottom: 0;
   left: 0;
   right: 0;
+}
+.card-footer a {
+  text-decoration: none !important;
 }
 
 .projectCard .project-tools {

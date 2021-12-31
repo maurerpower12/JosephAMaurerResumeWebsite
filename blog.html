@@ -52,7 +52,7 @@
         <div class="row">
           <div class="col-lg-9">
             <div id="searchResults"></div>
-            <div id="jsonContent" class="card-deck">
+            <div id="jsonContent" class="row row-cols-1 row-cols-md-2 g-4">
               <!-- RSS data is dynamically populated here -->
               <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
                 <span class="sr-only">Loading...</span>
@@ -61,32 +61,15 @@
                 <!-- anchor linking to external blog page -->
                 <p>No JavaScript enabled to load content 😣</p>
                 <button class="btn btn-dark">
-                  <a class="nav-link" href="https://medium.com/@josephamaurer" target="_blank" rel="noopener">
-                    Go To Medium <i class="fas fa-angle-double-right"></i>
+                  <a class="colorize btn btn-dark" href="https://medium.com/@josephamaurer" target="_blank" rel="noopener" role="button">
+                    Go To Medium
+                    <i class="fas fa-angle-double-right"></i>
                   </a>
                 </button>
               </noscript>
             </div>
           </div>
           <div class="col-lg-3">
-            <section class="widget">
-              <h5>Joseph Maurer</h5>
-              <img src="img/Profile.webp" alt="Profile" class="img-fluid profile-img rounded" id="profilePicture" loading="lazy" width="250" height="300">
-              <a href="about.html">About<i class="fas fa-angle-double-right"></i></a>
-              <p>
-                ~ Game Development Software Engineer <br>
-                ~ MBA Aspiring @ University of Nevada, Reno <br>
-                ~ Oregon Tech Alum
-              </p>
-            </section>
-
-            <section id="blog_subscription" class="widget">
-              <h5>Subscribe</h5>
-              <input type="text" name="email" style="width:100%;" placeholder="Email Address" value=""
-                id="subscribe-field">
-              <button id="emailSubscribe" class="btn btn-dark btn-block" type="submit">Subscribe</button>
-            </section>
-
             <section id="archive" class="widget">
               <h5>Archives</h5>
               <div>
@@ -127,40 +110,10 @@
                 </div>
               </div>
             </section>
-
-            <section id="socialButtons" class="widget">
-              <h5>Follow Me</h5>
-              <!-- Social buttons -->
-              <div class="side-social-icons text-center">
-                <a href="https://www.facebook.com/JoeMaurer12" target="_blank" rel="noopener" title="Facebook">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/josephamaurer/" target="_blank" rel="noopener" title="LinkedIn">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://twitter.com/maurerpwer" target="_blank" rel="noopener" title="Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://github.com/maurerpower12" target="_blank" rel="noopener" title="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://medium.com/@josephamaurer" target="_blank" rel="noopener" title="Medium">
-                  <i class="fab fa-medium-m"></i>
-                </a>
-                <a href="mailto:contact@josephamaurer.com" title="Email">
-                  <i class="fas fa-envelope"></i>
-                </a>
-              </div>
-              <!-- Social buttons -->
-            </section>
           </div>
         </div>
       </div>
     </section>
-  </div>
-
-  <div class="alert alert-success alert-dismissible fade" role="alert">
-    <p id="alert-text">Registered email.</p>
   </div>
 
   <div id="BlogPostModal">
@@ -186,31 +139,6 @@
     });
     $('#FooterComponent').load('components/footer.html');
     $('#BlogPostModal').load('components/blogPostModal.html');
-    var emails = [];
-    $("#emailSubscribe").click(function () {
-      var textVal = encodeURI($('#subscribe-field').val());
-      var found = jQuery.inArray(textVal, emails) != -1;
-      if(isEmail(textVal) && !found) {
-        $('#alert-text').text("Registed Email")
-        $('.alert').alert();
-        $('.alert').removeClass("alert-danger");
-        $('.alert').addClass("alert-success");
-        $('.alert').addClass("show");
-        emails.push(textVal);
-      }
-      else{
-        var msg = found ? "Email Already Registered" : "Invalid Email";
-        $('#alert-text').text(msg)
-        $('.alert').alert();
-        $('.alert').removeClass("alert-success");
-        $('.alert').addClass("alert-danger");
-        $('.alert').addClass("show");
-      }
-    });
-    function isEmail(email) {
-      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-      return regex.test(email);
-    }
   </script>
 </body>
 

@@ -51,7 +51,7 @@ function PopulateModal(item) {
         $('.email-share-button-link').attr('href', `mailto:user@example.com?subject=${encodeURIComponent(item.title)}%20by%20${item.author}&body=Check%20out%20this%20cool%20article%20on%20Medium:%20${item.link}%20`);
         $('.link-share-button-link').attr('href', item.link);
 
-        modal.modal();
+        modal.modal('show');
     }
     else {
         window.open(item.link, "_blank");
@@ -138,8 +138,8 @@ function ProcessResponse(response, searchQuery, archiveQuery = "") {
 
             if (searchQuery == "" || item.title.includes(searchQuery) || item.description.includes(searchQuery)) {
                     if (archiveQuery == "" || FormatPublishDate(item, archiveDateFormat) == archiveQuery) {
-                        display += `
-                        <div class="blogPostCard card text-white bg-dark mb-3" style="min-width: 18rem;" id="${item.guid}" onClick="reply_click(this.id)" rel="noopener">
+                        display += `<div class="col">
+                        <div class="blogPostCard card h-100 text-white bg-dark mb-3 mx-auto" style="min-width: 18rem;" id="${item.guid}" onClick="reply_click(this.id)" rel="noopener">
                             <img src="${item.thumbnail}" class="card-img-top rounded" loading="lazy" alt="${item.title} Cover image" />
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title goldLink">${item.title}</h5>
@@ -152,7 +152,7 @@ function ProcessResponse(response, searchQuery, archiveQuery = "") {
                                 <p class="card-text">${textDescription}...</p>
                                 <div class="project-tools">${tools}</div>
                                 </div>
-                        </div>
+                        </div></div>
                         `;
                     foundCount++;
                     }
