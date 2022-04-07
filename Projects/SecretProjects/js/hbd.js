@@ -42,16 +42,13 @@ let x = setInterval(function () {
         document.getElementById('countdown').style.visibility = "visible";
         document.getElementById('birthday').style.visibility = "hidden";
     }
-
-    $('.carousel').carousel({
-        interval: 2000
-      })
 })();
 
 function showBirthdayScreen() {
     if (!bdaySurpriseShowing) {
         bdaySurpriseShowing = true;
-        //document.getElementById('age').innerText = 29;
+        var yearAge = calculateAge(new Date(1991, 8, 7));
+        $("#yearAge").text(yearAge);
 
         document.getElementById('countdown').style.visibility = "hidden";
         document.getElementById('birthday').style.visibility = "visible";
@@ -64,3 +61,9 @@ function showBirthdayScreen() {
 $("#msgBtn").click(function () { 
     $('#birthdayCard').modal('show');
 });
+
+function calculateAge(birthday) { // birthday is a date
+    var ageDifMs = Date.now() - birthday;
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
