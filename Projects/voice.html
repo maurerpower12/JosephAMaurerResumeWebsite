@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta name="keywords" content="Software Engineer, Portfolio, Developer, Coding, C#, C++, Swift, Personal Website">
+  <meta name="description" content="Portfolio for Joseph A Maurer, a Software Engineer in Reno, NV">
+  <meta name="author" content="Joseph A Maurer">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
+
+  <title>The Voice Slot</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/resume.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <div id="NavBarComponent">
+    <!-- At runtime, nav bar component loads here -->
+  </div>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="main">
+      <div class="w-100">
+        <div class="row flex-md-row">
+          <div class="col-sm-5">
+            <img src="../img/Voice/GAMECATALOGIMAGE_TheVoice.webp" alt="Logo" width="100%" height="100%">
+          </div>
+          <div class="col-sm-7">
+            <h2 class="heading mb-5">The Voice Slot Machine</h2>
+          </div>
+        </div>
+        <p class="text-primary">Project Date: August 2019 - September 2021</p>
+
+        <br>
+
+        <h3 class="mb-5 lined">Project Details</h3>
+        <div class="container-fluid">
+          <div class="row flex-column-reverse flex-md-row">
+            <div class="col-sm-7">
+                This 3 reel 9 line stepper game was honestly a project that I wasn't sure was ever going to be completed given the state of the world during it's development. At a time when every casino in the world was closed, who was clammering for another game based on the hit tv show? After being put on the shelf and picked back up when things were better, this game still really does a lot of cool stuff. The entire stage and judge's chairs are 3D and interact with the game when features are awarded. For example, when you land a full stack wild symbol on the reels, the chairs turn around revealing a multiplier. The lighting effects that we programmed to light up the stage and background respond in real time to features and triggers within the code logic. During the free games more stage scafolding appears to reveal a singing contestant and the lighting shifts to indicate that a bonus is being played. With so many 3D elements and videos performance optimizations were heavy in this game to make sure things still ran at a high framerate. 
+            </div>
+            <div class="col-sm-5">
+              <img src="../img/Voice/VoiceMTUNI.webp" alt="Machine" width="100%" height="100%">
+            </div>
+          </div>
+        </div>
+
+
+        <h3 class="mb-5 lined">Cabinet Port</h3>
+        <div class="container-fluid">
+          <div class="row flex-column-reverse flex-md-row">
+            <div class="col-sm-7">
+                After completeing initial development of this game, we ported the game over to work on another cabinet than what was originally planned for. The new cabinet is much smaller in physical size but is close enough that we were able to do the swap without too much reengineering of how things worked. 
+            </div>
+            <div class="col-sm-5">
+              <img src="../img/Voice/CDS.webp" alt="Machine" height="375">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="FooterComponent">
+      <!-- At runtime, footer component loads here -->
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script>
+    $('#NavBarComponent').load('../components/navigation.html', function() {
+      $('#projectsNav').addClass("active");
+    });
+    $('#FooterComponent').load('../components/footer.html');
+  </script>
+</body>
+
+</html>
