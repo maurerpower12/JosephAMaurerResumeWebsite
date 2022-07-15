@@ -26,7 +26,8 @@ function reply_click(clicked_id) {
     for(var index=0; index < cached_Response.items.length; index++) {
         var item = cached_Response.items[index];
         if (item.guid == clicked_id) {
-            PopulateModal(item);
+            //PopulateModal(item); For now, no modal; just open link. Will be implemented in React conversion.
+            window.open(item.link, "_blank", "noopener,noreferrer");
         }
     }
     // Return false to stop default propagation.
