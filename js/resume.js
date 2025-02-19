@@ -93,7 +93,7 @@ $(document).ready(function () {
     })
   }
 
-  type("Software Engineer — Reno, Nevada");
+  type("Software Engineer");
 })
 
 function random_Number(max) {
