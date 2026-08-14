@@ -1,0 +1,36 @@
+{
+  "name": "joseph-maurer-portfolio",
+  "version": "1.0.0",
+  "description": "Joseph A Maurer's Software Engineer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.html",
+    "format": "prettier --write .",
+    "optimize-images": "node scripts/optimize-images.js",
+    "analyze": "vite-bundle-analyzer"
+  },
+  "keywords": ["portfolio", "software-engineer", "developer", "unity", "csharp"],
+  "author": "Joseph A Maurer",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-pwa": "^0.17.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "sharp": "^0.32.6",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "jquery": "^3.7.0"
+  }
+} 
