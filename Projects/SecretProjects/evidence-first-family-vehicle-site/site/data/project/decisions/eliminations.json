@@ -1,0 +1,203 @@
+{
+  "run_id": "RUN-FVR-20260824-001",
+  "eliminations": [
+    {
+      "vehicle_id": "VEH-VOLKSWAGEN-ATLAS-2024-SEL-PREMIUM-RLINE-4MOTION",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "row3_complete_latch",
+      "claim_id": "CLM-0404",
+      "reason": "IIHS maps both third-row seats as tether-only, not complete lower-anchor-plus-tether positions.",
+      "source_ids": [
+        "SRC-0007"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-BUICK-ENCLAVE-2024-AVENIR-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "iihs_award",
+      "claim_id": "CLM-0415",
+      "reason": "No exact-year IIHS Top Safety Pick or Top Safety Pick+ award.",
+      "source_ids": [
+        "SRC-0011"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-ACURA-MDX-2024-ADVANCE-SHAWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "nhtsa_overall",
+      "claim_id": "CLM-0426",
+      "reason": "Exact SH-AWD variant is not rated; configured unrated policy is conditional-not-pass.",
+      "source_ids": [
+        "SRC-0012"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-LINCOLN-AVIATOR-2024-RESERVE-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "iihs_award",
+      "claim_id": "CLM-0427",
+      "reason": "No qualifying exact-year IIHS award.",
+      "source_ids": [
+        "SRC-0074"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-GMC-ACADIA-2024-DENALI-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "iihs_award",
+      "claim_id": "CLM-0428",
+      "reason": "No qualifying exact-year IIHS award.",
+      "source_ids": [
+        "SRC-0075"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-CHEVROLET-TRAVERSE-2024-Z71-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "iihs_award",
+      "claim_id": "CLM-0429",
+      "reason": "No qualifying exact-year IIHS award.",
+      "source_ids": [
+        "SRC-0076"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-TOYOTA-GRAND-HIGHLANDER-2024-HYBRID-LIMITED-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "iihs_award",
+      "claim_id": "CLM-0430",
+      "reason": "No qualifying exact-year IIHS award under the frozen gate.",
+      "source_ids": [
+        "SRC-0077"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-TOYOTA-HIGHLANDER-2024-HYBRID-PLATINUM-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "row3_complete_latch",
+      "claim_id": "CLM-0431",
+      "reason": "No complete lower-anchor-plus-tether position in row 3.",
+      "source_ids": [
+        "SRC-0078"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-MAZDA-CX90-2024-PHEV-PREMIUMPLUS-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "cargo_behind_row3",
+      "claim_id": "CLM-0432",
+      "reason": "Published volume is below 16 cubic feet.",
+      "source_ids": [
+        "SRC-0079",
+        "SRC-0087"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-VOLVO-XC90-2024-RECHARGE-PLUS-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "cargo_behind_row3",
+      "claim_id": "CLM-0433",
+      "reason": "Published volume is approximately 15.8 cubic feet, below threshold.",
+      "source_ids": [
+        "SRC-0080",
+        "SRC-0087"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-AUDI-Q7-2024-PRESTIGE-QUATTRO",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "cargo_behind_row3",
+      "claim_id": "CLM-0434",
+      "reason": "Published volume is below 16 cubic feet.",
+      "source_ids": [
+        "SRC-0081",
+        "SRC-0087"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-INFINITI-QX60-2024-AUTOGRAPH-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "cargo_behind_row3",
+      "claim_id": "CLM-0435",
+      "reason": "Published volume is below 16 cubic feet.",
+      "source_ids": [
+        "SRC-0082",
+        "SRC-0087"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-HYUNDAI-SANTAFE-2024-CALLIGRAPHY-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "cargo_behind_row3",
+      "claim_id": "CLM-0436",
+      "reason": "Published volume is below 16 cubic feet.",
+      "source_ids": [
+        "SRC-0083",
+        "SRC-0087"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-MITSUBISHI-OUTLANDER-2024-PHEV-SEL-PREMIUM-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "cargo_behind_row3",
+      "claim_id": "CLM-0437",
+      "reason": "Third-row cargo and usability do not meet the configured threshold.",
+      "source_ids": [
+        "SRC-0084",
+        "SRC-0087"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-JEEP-GRANDCHEROKEEL-2024-SUMMIT-4X4",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "iihs_award",
+      "claim_id": "CLM-0438",
+      "reason": "No qualifying exact-year IIHS award.",
+      "source_ids": [
+        "SRC-0085"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    },
+    {
+      "vehicle_id": "VEH-RIVIAN-R1S-2024-DUAL-AWD",
+      "elimination_step": "low_cost_eligibility_screen",
+      "failed_requirement": "nhtsa_overall",
+      "claim_id": "CLM-0439",
+      "reason": "Exact AWD NHTSA overall score is not available; unrated is not a pass.",
+      "source_ids": [
+        "SRC-0086"
+      ],
+      "research_stopped": true,
+      "date": "2026-08-24"
+    }
+  ]
+}

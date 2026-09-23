@@ -1,0 +1,63 @@
+{
+  "status": "pass",
+  "results": [
+    {
+      "label": "editable-inlined",
+      "title": "Family Vehicle Decision Report",
+      "hero_title": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "hero_score": "80.2",
+      "vehicle_cards": 6,
+      "claim_rows_initial": 200,
+      "source_rows_initial": 87,
+      "images": 7,
+      "broken_images": 0,
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "errors": [],
+      "warnings": [],
+      "risk_averse_first": "1\t2024 Kia Telluride SX Prestige X-Pro AWD\t75.4",
+      "filtered_claim_rows": 5,
+      "filtered_source_rows": 12,
+      "dark_mode_class": "dark",
+      "score_detail_open": true
+    },
+    {
+      "label": "standalone",
+      "title": "Family Vehicle Decision Report",
+      "hero_title": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "hero_score": "80.2",
+      "vehicle_cards": 6,
+      "claim_rows_initial": 200,
+      "source_rows_initial": 87,
+      "images": 7,
+      "broken_images": 0,
+      "horizontal_overflow": false,
+      "scroll_width": 1440,
+      "client_width": 1440,
+      "errors": [],
+      "warnings": [],
+      "risk_averse_first": "1\t2024 Kia Telluride SX Prestige X-Pro AWD\t75.4",
+      "filtered_claim_rows": 5,
+      "filtered_source_rows": 12,
+      "dark_mode_class": "dark",
+      "score_detail_open": true
+    },
+    {
+      "label": "mobile-editable-inlined",
+      "title": "Family Vehicle Decision Report",
+      "hero_title": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "hero_score": "80.2",
+      "vehicle_cards": 6,
+      "claim_rows_initial": 200,
+      "source_rows_initial": 87,
+      "images": 7,
+      "broken_images": 0,
+      "horizontal_overflow": false,
+      "scroll_width": 390,
+      "client_width": 390,
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

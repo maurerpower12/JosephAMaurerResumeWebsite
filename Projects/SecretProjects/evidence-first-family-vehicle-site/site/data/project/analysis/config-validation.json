@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "scoring_config_version": "1.0",
+  "scoring_config_sha256": "fc272125f893609c0ccfb0e96b2b24f93bedeae74ae90ae3748e85f07bca3c22",
+  "category_maximum_total": 100,
+  "component_maximum_checks": {
+    "safety": {
+      "calculated": 25,
+      "declared": 25,
+      "pass": true
+    },
+    "reliability": {
+      "calculated": 10,
+      "declared": 10,
+      "pass": true
+    },
+    "passenger_space": {
+      "calculated": 10,
+      "declared": 10,
+      "pass": true
+    },
+    "cargo_practicality": {
+      "calculated": 10,
+      "declared": 10,
+      "pass": true
+    },
+    "comfort": {
+      "calculated": 5.0,
+      "declared": 5,
+      "pass": true
+    },
+    "technology": {
+      "calculated": 5.0,
+      "declared": 5,
+      "pass": true
+    }
+  },
+  "anchor_checks": {
+    "purchase_price_prices_ascending": true,
+    "purchase_price_scores_nonincreasing": true,
+    "cargo_values_ascending": true,
+    "cargo_points_nondecreasing": true
+  },
+  "notes": [
+    "Cargo anchors increase in both cargo value and points, as intended.",
+    "TCO and purchase-price anchors increase in cost while score declines."
+  ]
+}

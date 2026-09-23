@@ -1,0 +1,568 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-08-25T00:45:35Z",
+  "root": "evidence-first-family-vehicle-research",
+  "file_count": 112,
+  "files": [
+    {
+      "path": "MANUAL_RESEARCH.md",
+      "bytes": 7859,
+      "sha256": "c9d373c042bc13def82d512e2dfa3d304e52f2b43c71c5bb20249b7631f47cef"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1977,
+      "sha256": "8db0862c8f9df20ba3c046824ede720f6e84e399ced2e87069ca948ab83e3967"
+    },
+    {
+      "path": "analysis/browser-qa.json",
+      "bytes": 1853,
+      "sha256": "cdd0271b4183f93466e29cc5639ce084e296da4b5017341ba97ce70f5e6224a7"
+    },
+    {
+      "path": "analysis/claim-map.json",
+      "bytes": 39908,
+      "sha256": "bcc25352b1c8433909dccce4b4cae4e235b6395ee22026df9bf01ee6f810f804"
+    },
+    {
+      "path": "analysis/config-validation.json",
+      "bytes": 1145,
+      "sha256": "a5b7265d905744452c2686854653acd243a6b254468ad8271aeb4b8dc747c860"
+    },
+    {
+      "path": "analysis/eligibility.json",
+      "bytes": 69196,
+      "sha256": "6288a526643e2adc5747a2c58a6edc67ce9f187ef12cff1084bef9aa22718210"
+    },
+    {
+      "path": "analysis/human-observations.json",
+      "bytes": 1411,
+      "sha256": "569701e39acd70277204af574cb73df793f55fc1c7ffce63eee6511aaeb12852"
+    },
+    {
+      "path": "analysis/human-vs-ai-comparison.json",
+      "bytes": 4969,
+      "sha256": "63c11fc697ef56b3db61a19964cd33a72517ac4934e48158e36ae9f4fab9ac23"
+    },
+    {
+      "path": "analysis/judgments.json",
+      "bytes": 3798,
+      "sha256": "09479f7c1c84f7310552b3c67740604dccdc0b7ee144f94f108e60522e4686b1"
+    },
+    {
+      "path": "analysis/price-summary.json",
+      "bytes": 32060,
+      "sha256": "8dbc4b63f1186c5dd67c68c6eea16db19cb4a2faae2b95055328488e658649a1"
+    },
+    {
+      "path": "analysis/qa-results.json",
+      "bytes": 5107,
+      "sha256": "2ad051ac3ff3be0d6ba7c02e5ecbd32006004ece52b9759d0368c0cde613e6ad"
+    },
+    {
+      "path": "analysis/scorecard.json",
+      "bytes": 171415,
+      "sha256": "5e618899c46b27cde0365ce4efc391fb9c3b3eacab5de1ee608f0c8d5d5e5d2a"
+    },
+    {
+      "path": "analysis/sensitivity.json",
+      "bytes": 10046,
+      "sha256": "b186e90690fe2c04a1272d21946281683fda8dc36c07c028daf0ac29cfc084a1"
+    },
+    {
+      "path": "analysis/tco-model.json",
+      "bytes": 84384,
+      "sha256": "9fd6d938579932d20ee970c9f5cb16e6039a51bc46c5bf8e44f30600a549e508"
+    },
+    {
+      "path": "analysis/uncertainty-simulation.json",
+      "bytes": 7178,
+      "sha256": "80560859fd795773a7d8f9b5b1aacf2ff8721feedb76e16ea2b91524bdf1b7d7"
+    },
+    {
+      "path": "checklists/client-test-drive-checklist.md",
+      "bytes": 2799,
+      "sha256": "872c69ce658350691bed4019cef19a8d7cf18dc3919f95e2f3806ae05d8e8835"
+    },
+    {
+      "path": "checklists/pre-purchase-checklist.md",
+      "bytes": 2195,
+      "sha256": "e46cc3b71e152b7e52826c10473249ef471456ac4f3bbc5ddc1b1ab079ab22e7"
+    },
+    {
+      "path": "config/normalized-requirements.json",
+      "bytes": 3488,
+      "sha256": "fe7d6e24e2afd26d0367fe9253c71c904adc266cc3aefe73a7fe15902d98c1d0"
+    },
+    {
+      "path": "config/project-assumptions.json",
+      "bytes": 2689,
+      "sha256": "3d96fd45e4053701f1f31d13c0e776d20cb5462dd45836f4a73eac7cf3b4b18e"
+    },
+    {
+      "path": "config/requirements.json",
+      "bytes": 3488,
+      "sha256": "fe7d6e24e2afd26d0367fe9253c71c904adc266cc3aefe73a7fe15902d98c1d0"
+    },
+    {
+      "path": "config/research-config.json",
+      "bytes": 592,
+      "sha256": "7651ed4e8e17f1316ec8bd973d8a233f81f360825d7ad0a8dd3e497b1c2d2c46"
+    },
+    {
+      "path": "config/research-configs.json",
+      "bytes": 592,
+      "sha256": "7651ed4e8e17f1316ec8bd973d8a233f81f360825d7ad0a8dd3e497b1c2d2c46"
+    },
+    {
+      "path": "config/scoring-config.json",
+      "bytes": 10460,
+      "sha256": "fc272125f893609c0ccfb0e96b2b24f93bedeae74ae90ae3748e85f07bca3c22"
+    },
+    {
+      "path": "decisions/decision-ledger.json",
+      "bytes": 7152,
+      "sha256": "bc6b64b53934095e9346bb42ec7d60c6a84defaece4ce70627f0caa49172dae0"
+    },
+    {
+      "path": "decisions/eliminations.json",
+      "bytes": 6448,
+      "sha256": "ed83cc6c922f5d91939b0467dc9e397170fa40e287e00f65b1af4c6ad8895b4f"
+    },
+    {
+      "path": "decisions/recommendation.json",
+      "bytes": 3935,
+      "sha256": "7c7e55c8821ee77751a76ab54390eb2edb64a7ead2f16e2a04bdc21c1d3429f8"
+    },
+    {
+      "path": "evidence/claims.json",
+      "bytes": 308996,
+      "sha256": "569e5cb9bfa9b6585030ce47ff4c50dce21fc0062df166d1b3f84b9bdf765eb9"
+    },
+    {
+      "path": "evidence/contradictions.json",
+      "bytes": 2803,
+      "sha256": "bab8a7c1aa083fb320775f40fb60c7c0d0bd8802f15b9a416a4886e0524fee08"
+    },
+    {
+      "path": "evidence/corrections.json",
+      "bytes": 2576,
+      "sha256": "9b5d9eb3b929e9636b75c69763ed8709e2bc120d21139f4911dcc1d2facc1ae1"
+    },
+    {
+      "path": "evidence/price-records.json",
+      "bytes": 24972,
+      "sha256": "36f192c57a453a4af85915a7ed9435068c6739bc25069e41bf2c505125f020a1"
+    },
+    {
+      "path": "evidence/sources.json",
+      "bytes": 79982,
+      "sha256": "60eb469f6e7dde0aae2bb0a7a1b87f400fae08359adab60a7788886f98d56189"
+    },
+    {
+      "path": "reports/client-report-self-contained.html",
+      "bytes": 1875661,
+      "sha256": "17d1957214c4dcc9180af6bbbcb6a74603c14cefaabebe491b9d61d11b82a07a"
+    },
+    {
+      "path": "reports/editable-inlined-desktop.png",
+      "bytes": 246889,
+      "sha256": "4bd3a6ad4ff3264c07787d2580fb1e56e0e1d48627de9ed27edbd5d8fa867062"
+    },
+    {
+      "path": "reports/human-vs-ai-comparison.md",
+      "bytes": 1746,
+      "sha256": "b28e14062753a84e3d6461d44568c96166f1135c1d2e2ab68ebd9a09d5298945"
+    },
+    {
+      "path": "reports/mobile.png",
+      "bytes": 70669,
+      "sha256": "a54418a7c3cb53cf13c86665cd884770d040a375ec3e14c87657b140ba0e2950"
+    },
+    {
+      "path": "reports/qa-report.md",
+      "bytes": 4045,
+      "sha256": "8b43897fa9650cff5cf23570d519d31214937376ce729b2d799e34104dea3252"
+    },
+    {
+      "path": "reports/research-report.md",
+      "bytes": 27631,
+      "sha256": "ae6815e71c45bb5536c9bc2165ffeb1700f773211b9cf7abe856bfbf74330b25"
+    },
+    {
+      "path": "reports/research-report.txt",
+      "bytes": 27146,
+      "sha256": "0319f1cb53ff3a4b41688ffec5270b3e6e223cf03d79b86760976233572cdb23"
+    },
+    {
+      "path": "reports/standalone-desktop.png",
+      "bytes": 246889,
+      "sha256": "4bd3a6ad4ff3264c07787d2580fb1e56e0e1d48627de9ed27edbd5d8fa867062"
+    },
+    {
+      "path": "research/candidate-universe.json",
+      "bytes": 12640,
+      "sha256": "a16a63a620210628dcfeddfe8eba7b6d9ab4373b0bb50b6f494add1ff7e3c542"
+    },
+    {
+      "path": "research/query-log.json",
+      "bytes": 30450,
+      "sha256": "39bd5354087c39a4048fcd723d5d8be275f4ad3e9bfb7a52a6ae30b5b57638a4"
+    },
+    {
+      "path": "research/vehicle-dossiers/2024-ford-explorer-platinum-4wd.md",
+      "bytes": 6416,
+      "sha256": "4323aa54f1acbfeee3b88cee1837454201e1f68f8eb0462df1285ccca95f8e3f"
+    },
+    {
+      "path": "research/vehicle-dossiers/2024-honda-pilot-elite-awd.md",
+      "bytes": 6380,
+      "sha256": "fdf786d4fc61a0af5d0406e572c5da2c992bd26f7ce62c606726133410a14c8f"
+    },
+    {
+      "path": "research/vehicle-dossiers/2024-kia-ev9-land-awd-post-jan-2024-build.md",
+      "bytes": 6800,
+      "sha256": "e746446f92cec6bc8edeb4655ca468077af99491c1fd1a1aeae408606b45924c"
+    },
+    {
+      "path": "research/vehicle-dossiers/2024-kia-telluride-sx-prestige-x-pro-awd.md",
+      "bytes": 6380,
+      "sha256": "74fb96df6399772606d1f255935f0f955dcb7b8e3a336cffcdff9fba2c80a9b3"
+    },
+    {
+      "path": "research/vehicle-dossiers/2024-nissan-pathfinder-platinum-4wd-post-nov-2023-build.md",
+      "bytes": 6445,
+      "sha256": "c1ed23c0e486594b83ef04d31f2b7caa32868f608538d06693f91bb51dc20a59"
+    },
+    {
+      "path": "research/vehicle-dossiers/2024-toyota-sienna-platinum-awd.md",
+      "bytes": 6376,
+      "sha256": "15d53c7c95fa97a57dda9978810573632e229dee18031559e5d1b47513bede50"
+    },
+    {
+      "path": "run-manifest.json",
+      "bytes": 2243,
+      "sha256": "adb4ef21724f804a159733142948332c5bf264f172f53df431374cf2739f076d"
+    },
+    {
+      "path": "scripts/browser_qa.py",
+      "bytes": 4884,
+      "sha256": "0ad231ee13b76da3ad6b2694218d413f87b7b6e345705a55abc7c51f051f559c"
+    },
+    {
+      "path": "scripts/build_evidence.py",
+      "bytes": 40288,
+      "sha256": "ad973da5142ba2ba39c0da2f7b2561328e2d2665f69dbea67871f7f4925ddde1"
+    },
+    {
+      "path": "scripts/build_reports_site.py",
+      "bytes": 74903,
+      "sha256": "70a890c5e5cb02e4ec8611362187ebef7109b39416e739f893b7e61965f289b1"
+    },
+    {
+      "path": "scripts/compare_manual.py",
+      "bytes": 7885,
+      "sha256": "aee483f01d5d20a8854c08c5186ebbba3eef6b7ac648b0214d135e409d828f97"
+    },
+    {
+      "path": "scripts/compute_analysis.py",
+      "bytes": 48028,
+      "sha256": "b9a7339ca8f9cfe3903b125faea702452b9c37014eb3007aa3b54a4f08ef20ca"
+    },
+    {
+      "path": "scripts/initialize_run.py",
+      "bytes": 9507,
+      "sha256": "c97f2d41e8ad19f89317dc1d6cca008f540579157366c4cd6525856dc856e134"
+    },
+    {
+      "path": "scripts/package_project.py",
+      "bytes": 5328,
+      "sha256": "a1acbd6080841f8c6daa6fc2f70db2a2393806e36f3b044504fc592fc2da2c9e"
+    },
+    {
+      "path": "scripts/project_data.py",
+      "bytes": 80510,
+      "sha256": "2f111f2dc33e6f36c40f5a4a463689a6724cbb77591942cea94ae64e66768f2f"
+    },
+    {
+      "path": "scripts/qa_package.py",
+      "bytes": 27522,
+      "sha256": "dfa5faa3eb90b2ff5bb783bacc54beebac96ebbfa56d929399f0c5df825d3e62"
+    },
+    {
+      "path": "site/assets/css/app.css",
+      "bytes": 8170,
+      "sha256": "8f7232f855c46ff161ca820fad8292ad85589a0b5d417bc2141fecb11499057b"
+    },
+    {
+      "path": "site/assets/images/2024-ford-explorer-platinum-4wd.svg",
+      "bytes": 1959,
+      "sha256": "b574ce02bdd8ea04231b231b229eecfaa4b37518eecc85270eeb1f18eb403a0a"
+    },
+    {
+      "path": "site/assets/images/2024-honda-pilot-elite-awd.svg",
+      "bytes": 1949,
+      "sha256": "65fa17dfd075d7b6b6d3476c2cfac43ac0cf3e121b3b80e507db7e0d29297a2a"
+    },
+    {
+      "path": "site/assets/images/2024-kia-ev9-land-awd-post-jan-2024-build.svg",
+      "bytes": 1982,
+      "sha256": "78d2fe79e331877a6be6cf51bd6c23b6b7b722867bb3a299b48ebe7235cd8987"
+    },
+    {
+      "path": "site/assets/images/2024-kia-telluride-sx-prestige-x-pro-awd.svg",
+      "bytes": 1977,
+      "sha256": "21d2ce5395afb3fb750989896c1198b56e0b96ced5d54ff0b14eb44d69647ee7"
+    },
+    {
+      "path": "site/assets/images/2024-nissan-pathfinder-platinum-4wd-post-nov-2023-build.svg",
+      "bytes": 2013,
+      "sha256": "507f5872c22e2b456621dd2092b91cf53506e7019e7e3095b13f99a010338136"
+    },
+    {
+      "path": "site/assets/images/2024-toyota-sienna-platinum-awd.svg",
+      "bytes": 1956,
+      "sha256": "660b9701bb93a4ae771f12777fc3e506633c7c2a2a4df3cfd5179533ef11b6d9"
+    },
+    {
+      "path": "site/assets/images/evidence-chain.svg",
+      "bytes": 1910,
+      "sha256": "c00c3dd6abdd45a2efabf3ed14a8f9196fbf9e2872c523534f16431a7af5a59e"
+    },
+    {
+      "path": "site/assets/js/app.js",
+      "bytes": 16868,
+      "sha256": "6de9d0aafb7e8958809ab77ed6381babb58020ec8275c267a47e9b82b01456e4"
+    },
+    {
+      "path": "site/data/project/MANUAL_RESEARCH.md",
+      "bytes": 7859,
+      "sha256": "c9d373c042bc13def82d512e2dfa3d304e52f2b43c71c5bb20249b7631f47cef"
+    },
+    {
+      "path": "site/data/project/README.md",
+      "bytes": 1977,
+      "sha256": "8db0862c8f9df20ba3c046824ede720f6e84e399ced2e87069ca948ab83e3967"
+    },
+    {
+      "path": "site/data/project/analysis/browser-qa.json",
+      "bytes": 1853,
+      "sha256": "cdd0271b4183f93466e29cc5639ce084e296da4b5017341ba97ce70f5e6224a7"
+    },
+    {
+      "path": "site/data/project/analysis/claim-map.json",
+      "bytes": 39908,
+      "sha256": "bcc25352b1c8433909dccce4b4cae4e235b6395ee22026df9bf01ee6f810f804"
+    },
+    {
+      "path": "site/data/project/analysis/config-validation.json",
+      "bytes": 1145,
+      "sha256": "a5b7265d905744452c2686854653acd243a6b254468ad8271aeb4b8dc747c860"
+    },
+    {
+      "path": "site/data/project/analysis/eligibility.json",
+      "bytes": 69196,
+      "sha256": "6288a526643e2adc5747a2c58a6edc67ce9f187ef12cff1084bef9aa22718210"
+    },
+    {
+      "path": "site/data/project/analysis/human-observations.json",
+      "bytes": 1411,
+      "sha256": "569701e39acd70277204af574cb73df793f55fc1c7ffce63eee6511aaeb12852"
+    },
+    {
+      "path": "site/data/project/analysis/human-vs-ai-comparison.json",
+      "bytes": 4969,
+      "sha256": "63c11fc697ef56b3db61a19964cd33a72517ac4934e48158e36ae9f4fab9ac23"
+    },
+    {
+      "path": "site/data/project/analysis/judgments.json",
+      "bytes": 3798,
+      "sha256": "09479f7c1c84f7310552b3c67740604dccdc0b7ee144f94f108e60522e4686b1"
+    },
+    {
+      "path": "site/data/project/analysis/price-summary.json",
+      "bytes": 32060,
+      "sha256": "8dbc4b63f1186c5dd67c68c6eea16db19cb4a2faae2b95055328488e658649a1"
+    },
+    {
+      "path": "site/data/project/analysis/qa-results.json",
+      "bytes": 5107,
+      "sha256": "2ad051ac3ff3be0d6ba7c02e5ecbd32006004ece52b9759d0368c0cde613e6ad"
+    },
+    {
+      "path": "site/data/project/analysis/scorecard.json",
+      "bytes": 171415,
+      "sha256": "5e618899c46b27cde0365ce4efc391fb9c3b3eacab5de1ee608f0c8d5d5e5d2a"
+    },
+    {
+      "path": "site/data/project/analysis/sensitivity.json",
+      "bytes": 10046,
+      "sha256": "b186e90690fe2c04a1272d21946281683fda8dc36c07c028daf0ac29cfc084a1"
+    },
+    {
+      "path": "site/data/project/analysis/tco-model.json",
+      "bytes": 84384,
+      "sha256": "9fd6d938579932d20ee970c9f5cb16e6039a51bc46c5bf8e44f30600a549e508"
+    },
+    {
+      "path": "site/data/project/analysis/uncertainty-simulation.json",
+      "bytes": 7178,
+      "sha256": "80560859fd795773a7d8f9b5b1aacf2ff8721feedb76e16ea2b91524bdf1b7d7"
+    },
+    {
+      "path": "site/data/project/checklists/client-test-drive-checklist.md",
+      "bytes": 2799,
+      "sha256": "872c69ce658350691bed4019cef19a8d7cf18dc3919f95e2f3806ae05d8e8835"
+    },
+    {
+      "path": "site/data/project/checklists/pre-purchase-checklist.md",
+      "bytes": 2195,
+      "sha256": "e46cc3b71e152b7e52826c10473249ef471456ac4f3bbc5ddc1b1ab079ab22e7"
+    },
+    {
+      "path": "site/data/project/config/normalized-requirements.json",
+      "bytes": 3488,
+      "sha256": "fe7d6e24e2afd26d0367fe9253c71c904adc266cc3aefe73a7fe15902d98c1d0"
+    },
+    {
+      "path": "site/data/project/config/project-assumptions.json",
+      "bytes": 2689,
+      "sha256": "3d96fd45e4053701f1f31d13c0e776d20cb5462dd45836f4a73eac7cf3b4b18e"
+    },
+    {
+      "path": "site/data/project/config/requirements.json",
+      "bytes": 3488,
+      "sha256": "fe7d6e24e2afd26d0367fe9253c71c904adc266cc3aefe73a7fe15902d98c1d0"
+    },
+    {
+      "path": "site/data/project/config/research-config.json",
+      "bytes": 592,
+      "sha256": "7651ed4e8e17f1316ec8bd973d8a233f81f360825d7ad0a8dd3e497b1c2d2c46"
+    },
+    {
+      "path": "site/data/project/config/research-configs.json",
+      "bytes": 592,
+      "sha256": "7651ed4e8e17f1316ec8bd973d8a233f81f360825d7ad0a8dd3e497b1c2d2c46"
+    },
+    {
+      "path": "site/data/project/config/scoring-config.json",
+      "bytes": 10460,
+      "sha256": "fc272125f893609c0ccfb0e96b2b24f93bedeae74ae90ae3748e85f07bca3c22"
+    },
+    {
+      "path": "site/data/project/decisions/decision-ledger.json",
+      "bytes": 7152,
+      "sha256": "bc6b64b53934095e9346bb42ec7d60c6a84defaece4ce70627f0caa49172dae0"
+    },
+    {
+      "path": "site/data/project/decisions/eliminations.json",
+      "bytes": 6448,
+      "sha256": "ed83cc6c922f5d91939b0467dc9e397170fa40e287e00f65b1af4c6ad8895b4f"
+    },
+    {
+      "path": "site/data/project/decisions/recommendation.json",
+      "bytes": 3935,
+      "sha256": "7c7e55c8821ee77751a76ab54390eb2edb64a7ead2f16e2a04bdc21c1d3429f8"
+    },
+    {
+      "path": "site/data/project/evidence/claims.json",
+      "bytes": 308996,
+      "sha256": "569e5cb9bfa9b6585030ce47ff4c50dce21fc0062df166d1b3f84b9bdf765eb9"
+    },
+    {
+      "path": "site/data/project/evidence/contradictions.json",
+      "bytes": 2803,
+      "sha256": "bab8a7c1aa083fb320775f40fb60c7c0d0bd8802f15b9a416a4886e0524fee08"
+    },
+    {
+      "path": "site/data/project/evidence/corrections.json",
+      "bytes": 2576,
+      "sha256": "9b5d9eb3b929e9636b75c69763ed8709e2bc120d21139f4911dcc1d2facc1ae1"
+    },
+    {
+      "path": "site/data/project/evidence/price-records.json",
+      "bytes": 24972,
+      "sha256": "36f192c57a453a4af85915a7ed9435068c6739bc25069e41bf2c505125f020a1"
+    },
+    {
+      "path": "site/data/project/evidence/sources.json",
+      "bytes": 79982,
+      "sha256": "60eb469f6e7dde0aae2bb0a7a1b87f400fae08359adab60a7788886f98d56189"
+    },
+    {
+      "path": "site/data/project/reports/human-vs-ai-comparison.md",
+      "bytes": 1746,
+      "sha256": "b28e14062753a84e3d6461d44568c96166f1135c1d2e2ab68ebd9a09d5298945"
+    },
+    {
+      "path": "site/data/project/reports/qa-report.md",
+      "bytes": 4045,
+      "sha256": "8b43897fa9650cff5cf23570d519d31214937376ce729b2d799e34104dea3252"
+    },
+    {
+      "path": "site/data/project/reports/research-report.md",
+      "bytes": 27631,
+      "sha256": "ae6815e71c45bb5536c9bc2165ffeb1700f773211b9cf7abe856bfbf74330b25"
+    },
+    {
+      "path": "site/data/project/reports/research-report.txt",
+      "bytes": 27146,
+      "sha256": "0319f1cb53ff3a4b41688ffec5270b3e6e223cf03d79b86760976233572cdb23"
+    },
+    {
+      "path": "site/data/project/research/candidate-universe.json",
+      "bytes": 12640,
+      "sha256": "a16a63a620210628dcfeddfe8eba7b6d9ab4373b0bb50b6f494add1ff7e3c542"
+    },
+    {
+      "path": "site/data/project/research/query-log.json",
+      "bytes": 30450,
+      "sha256": "39bd5354087c39a4048fcd723d5d8be275f4ad3e9bfb7a52a6ae30b5b57638a4"
+    },
+    {
+      "path": "site/data/project/research/vehicle-dossiers/2024-ford-explorer-platinum-4wd.md",
+      "bytes": 6416,
+      "sha256": "4323aa54f1acbfeee3b88cee1837454201e1f68f8eb0462df1285ccca95f8e3f"
+    },
+    {
+      "path": "site/data/project/research/vehicle-dossiers/2024-honda-pilot-elite-awd.md",
+      "bytes": 6380,
+      "sha256": "fdf786d4fc61a0af5d0406e572c5da2c992bd26f7ce62c606726133410a14c8f"
+    },
+    {
+      "path": "site/data/project/research/vehicle-dossiers/2024-kia-ev9-land-awd-post-jan-2024-build.md",
+      "bytes": 6800,
+      "sha256": "e746446f92cec6bc8edeb4655ca468077af99491c1fd1a1aeae408606b45924c"
+    },
+    {
+      "path": "site/data/project/research/vehicle-dossiers/2024-kia-telluride-sx-prestige-x-pro-awd.md",
+      "bytes": 6380,
+      "sha256": "74fb96df6399772606d1f255935f0f955dcb7b8e3a336cffcdff9fba2c80a9b3"
+    },
+    {
+      "path": "site/data/project/research/vehicle-dossiers/2024-nissan-pathfinder-platinum-4wd-post-nov-2023-build.md",
+      "bytes": 6445,
+      "sha256": "c1ed23c0e486594b83ef04d31f2b7caa32868f608538d06693f91bb51dc20a59"
+    },
+    {
+      "path": "site/data/project/research/vehicle-dossiers/2024-toyota-sienna-platinum-awd.md",
+      "bytes": 6376,
+      "sha256": "15d53c7c95fa97a57dda9978810573632e229dee18031559e5d1b47513bede50"
+    },
+    {
+      "path": "site/data/project/run-manifest.json",
+      "bytes": 2243,
+      "sha256": "adb4ef21724f804a159733142948332c5bf264f172f53df431374cf2739f076d"
+    },
+    {
+      "path": "site/data/report-data.json",
+      "bytes": 1823016,
+      "sha256": "fb49d3eb15f452cebb55693a041d63346442911ec0b46786a36fc932367971a2"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 1832530,
+      "sha256": "8c8fa3a49df55d35457cf104e34c96949ae24204ef88be903a58646801c3bb14"
+    }
+  ]
+}

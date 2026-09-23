@@ -1,0 +1,2372 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-25T00:25:53.173878+00:00",
+  "sources": [
+    {
+      "source_id": "SRC-0001",
+      "title": "2024 Toyota Sienna ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/toyota/sienna-minivan/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0003",
+        "CLM-0004",
+        "CLM-0005",
+        "CLM-0011",
+        "CLM-0012",
+        "CLM-0013",
+        "CLM-0021"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0002",
+      "title": "2024 Kia Telluride ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/kia/telluride-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0067",
+        "CLM-0068",
+        "CLM-0069",
+        "CLM-0075",
+        "CLM-0076",
+        "CLM-0077",
+        "CLM-0085"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0003",
+      "title": "2024 Honda Pilot ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/honda/pilot-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0131",
+        "CLM-0132",
+        "CLM-0133",
+        "CLM-0139",
+        "CLM-0140",
+        "CLM-0141",
+        "CLM-0149"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0004",
+      "title": "2024 Ford Explorer ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/ford/explorer-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0195",
+        "CLM-0196",
+        "CLM-0197",
+        "CLM-0203",
+        "CLM-0204",
+        "CLM-0205",
+        "CLM-0213"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0005",
+      "title": "2024 Nissan Pathfinder ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/nissan/pathfinder-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0259",
+        "CLM-0260",
+        "CLM-0261",
+        "CLM-0267",
+        "CLM-0268",
+        "CLM-0269",
+        "CLM-0277"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0006",
+      "title": "2024 Kia EV9 ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/kia/ev9/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0323",
+        "CLM-0324",
+        "CLM-0325",
+        "CLM-0331",
+        "CLM-0332",
+        "CLM-0333",
+        "CLM-0341"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0007",
+      "title": "2024 Volkswagen Atlas ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/volkswagen/atlas-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Volkswagen Atlas"
+      ],
+      "claims_supported": [
+        "CLM-0404"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0008",
+      "title": "2024 Hyundai Palisade ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/hyundai/palisade-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Hyundai Palisade"
+      ],
+      "claims_supported": [
+        "CLM-0394",
+        "CLM-0395",
+        "CLM-0396",
+        "CLM-0397",
+        "CLM-0398",
+        "CLM-0399",
+        "CLM-0400",
+        "CLM-0401",
+        "CLM-0402",
+        "CLM-0403"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0009",
+      "title": "2024 Subaru Ascent ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/subaru/ascent-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Subaru Ascent"
+      ],
+      "claims_supported": [
+        "CLM-0405",
+        "CLM-0406",
+        "CLM-0407",
+        "CLM-0408",
+        "CLM-0409",
+        "CLM-0410",
+        "CLM-0411",
+        "CLM-0412",
+        "CLM-0413",
+        "CLM-0414"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0010",
+      "title": "2024 Chrysler Pacifica ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/chrysler/pacifica-minivan/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Chrysler Pacifica"
+      ],
+      "claims_supported": [
+        "CLM-0416",
+        "CLM-0417",
+        "CLM-0418",
+        "CLM-0419",
+        "CLM-0420",
+        "CLM-0421",
+        "CLM-0422",
+        "CLM-0423",
+        "CLM-0424",
+        "CLM-0425"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0011",
+      "title": "2024 Buick Enclave ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/buick/enclave-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Buick Enclave"
+      ],
+      "claims_supported": [
+        "CLM-0415"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0012",
+      "title": "2024 Acura MDX SH-AWD NHTSA record",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/ACURA/MDX/SUV/AWD",
+      "source_type": "government_safety",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 SH-AWD",
+      "vehicle_or_topic_applicability": [
+        "Acura MDX"
+      ],
+      "claims_supported": [
+        "CLM-0426"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0013",
+      "title": "2024 Toyota Sienna AWD NHTSA record",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/Toyota/Sienna%20Le%20Awd",
+      "source_type": "government_safety",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0002"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0014",
+      "title": "2024 Kia Telluride AWD NHTSA record",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/KIA/TELLURIDE/SUV/AWD",
+      "source_type": "government_safety",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0066"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0015",
+      "title": "2024 Honda Pilot AWD NHTSA record",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/HONDA/PILOT/SUV/AWD",
+      "source_type": "government_safety",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0130"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0016",
+      "title": "2024 Ford Explorer 4WD NHTSA record",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/FORD/EXPLORER/SUV/4WD",
+      "source_type": "government_safety",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 4WD",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0194"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0017",
+      "title": "2024 Nissan Pathfinder AWD NHTSA record",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/NISSAN/PATHFINDER/SUV/AWD",
+      "source_type": "government_safety",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0258"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0018",
+      "title": "2024 Kia EV9 AWD NHTSA record",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/KIA/EV9/SUV/AWD",
+      "source_type": "government_safety",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0322"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0019",
+      "title": "NHTSA ratings-data API documentation",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://api.nhtsa.gov/SafetyRatings",
+      "source_type": "government_api",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": null,
+      "vehicle_or_topic_applicability": [
+        "All"
+      ],
+      "claims_supported": [],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0020",
+      "title": "2024 Sienna AWD NHTSA data mirror",
+      "publisher_or_organization": "DriveData",
+      "url": "https://www.drivedata.org/car-safety-ratings/l/1491/toyota-sienna-hybrid-2024",
+      "source_type": "secondary_data_mirror",
+      "authority_tier": 2,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0002"
+      ],
+      "notes_on_limitations": "Public mirror used to corroborate an exact NHTSA result when the dynamic NHTSA page did not render consistently."
+    },
+    {
+      "source_id": "SRC-0021",
+      "title": "2024 Telluride AWD NHTSA data mirror",
+      "publisher_or_organization": "DriveData",
+      "url": "https://www.drivedata.org/car-safety-ratings/l/1157/kia-telluride-2024",
+      "source_type": "secondary_data_mirror",
+      "authority_tier": 2,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0066"
+      ],
+      "notes_on_limitations": "Public mirror used to corroborate an exact NHTSA result when the dynamic NHTSA page did not render consistently."
+    },
+    {
+      "source_id": "SRC-0022",
+      "title": "2024 Pathfinder AWD NHTSA data mirror",
+      "publisher_or_organization": "DriveData",
+      "url": "https://www.drivedata.org/car-safety-ratings/l/1331/nissan-pathfinder-2024",
+      "source_type": "secondary_data_mirror",
+      "authority_tier": 2,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0258"
+      ],
+      "notes_on_limitations": "Public mirror used to corroborate an exact NHTSA result when the dynamic NHTSA page did not render consistently."
+    },
+    {
+      "source_id": "SRC-0023",
+      "title": "2024 EV9 AWD NHTSA data mirror",
+      "publisher_or_organization": "DriveData",
+      "url": "https://www.drivedata.org/car-safety-ratings/l/1135/kia-ev9-2024",
+      "source_type": "secondary_data_mirror",
+      "authority_tier": 2,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0322"
+      ],
+      "notes_on_limitations": "Public mirror used to corroborate an exact NHTSA result when the dynamic NHTSA page did not render consistently."
+    },
+    {
+      "source_id": "SRC-0024",
+      "title": "2024 Toyota Sienna product overview",
+      "publisher_or_organization": "Toyota Motor North America",
+      "url": "https://pressroom.toyota.com/seize-the-day-in-style-with-the-2024-toyota-sienna/",
+      "source_type": "manufacturer_specification",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0001",
+        "CLM-0006",
+        "CLM-0007",
+        "CLM-0009",
+        "CLM-0014",
+        "CLM-0015",
+        "CLM-0016",
+        "CLM-0017",
+        "CLM-0018",
+        "CLM-0019",
+        "CLM-0020",
+        "CLM-0026",
+        "CLM-0027",
+        "CLM-0028",
+        "CLM-0029",
+        "CLM-0030",
+        "CLM-0031",
+        "CLM-0032",
+        "CLM-0033",
+        "CLM-0034",
+        "CLM-0035",
+        "CLM-0038",
+        "CLM-0039",
+        "CLM-0040",
+        "CLM-0041",
+        "CLM-0042",
+        "CLM-0043",
+        "CLM-0044",
+        "CLM-0045",
+        "CLM-0046",
+        "CLM-0047",
+        "CLM-0048",
+        "CLM-0049",
+        "CLM-0050"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0025",
+      "title": "2024 Honda Pilot build and price",
+      "publisher_or_organization": "American Honda Motor Co.",
+      "url": "https://automobiles.honda.com/tools/build-and-price-trimwalk?modelseries=pilot&modelyear=2024",
+      "source_type": "manufacturer_configurator",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0129",
+        "CLM-0134",
+        "CLM-0135",
+        "CLM-0137",
+        "CLM-0142",
+        "CLM-0143",
+        "CLM-0144",
+        "CLM-0145",
+        "CLM-0146",
+        "CLM-0147",
+        "CLM-0148",
+        "CLM-0154",
+        "CLM-0155",
+        "CLM-0156",
+        "CLM-0157",
+        "CLM-0158",
+        "CLM-0159",
+        "CLM-0160",
+        "CLM-0161",
+        "CLM-0162",
+        "CLM-0163",
+        "CLM-0166",
+        "CLM-0167",
+        "CLM-0168",
+        "CLM-0169",
+        "CLM-0170",
+        "CLM-0171",
+        "CLM-0172",
+        "CLM-0173",
+        "CLM-0174",
+        "CLM-0175",
+        "CLM-0176",
+        "CLM-0177",
+        "CLM-0178"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0026",
+      "title": "2024 Kia Telluride specifications",
+      "publisher_or_organization": "Kia America",
+      "url": "https://www.kia.com/us/en/telluride/2024/specs",
+      "source_type": "manufacturer_specification",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0065",
+        "CLM-0070",
+        "CLM-0071",
+        "CLM-0073",
+        "CLM-0078",
+        "CLM-0079",
+        "CLM-0080",
+        "CLM-0081",
+        "CLM-0082",
+        "CLM-0083",
+        "CLM-0084",
+        "CLM-0090",
+        "CLM-0091",
+        "CLM-0092",
+        "CLM-0093",
+        "CLM-0094",
+        "CLM-0095",
+        "CLM-0096",
+        "CLM-0097",
+        "CLM-0098",
+        "CLM-0099",
+        "CLM-0102",
+        "CLM-0103",
+        "CLM-0104",
+        "CLM-0105",
+        "CLM-0106",
+        "CLM-0107",
+        "CLM-0108",
+        "CLM-0109",
+        "CLM-0110",
+        "CLM-0111",
+        "CLM-0112",
+        "CLM-0113",
+        "CLM-0114"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0027",
+      "title": "2024 Ford Explorer specifications",
+      "publisher_or_organization": "Ford Motor Company",
+      "url": "https://media.ford.com/content/dam/fordmedia/North%20America/US/product/2024/explorer/2024-Ford-Explorer-Tech-Specs.pdf",
+      "source_type": "manufacturer_specification",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0193",
+        "CLM-0198",
+        "CLM-0199",
+        "CLM-0201",
+        "CLM-0206",
+        "CLM-0207",
+        "CLM-0208",
+        "CLM-0209",
+        "CLM-0210",
+        "CLM-0211",
+        "CLM-0212",
+        "CLM-0218",
+        "CLM-0219",
+        "CLM-0220",
+        "CLM-0221",
+        "CLM-0222",
+        "CLM-0223",
+        "CLM-0224",
+        "CLM-0225",
+        "CLM-0226",
+        "CLM-0227",
+        "CLM-0230",
+        "CLM-0231",
+        "CLM-0232",
+        "CLM-0233",
+        "CLM-0234",
+        "CLM-0235",
+        "CLM-0236",
+        "CLM-0237",
+        "CLM-0238",
+        "CLM-0239",
+        "CLM-0240",
+        "CLM-0241",
+        "CLM-0242"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0028",
+      "title": "2024 Nissan Pathfinder brochure",
+      "publisher_or_organization": "Nissan North America",
+      "url": "https://www.nissanusa.com/content/dam/Nissan/us/vehicle-brochures/2024/2024-nissan-pathfinder-brochure-en.pdf",
+      "source_type": "manufacturer_specification",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0257",
+        "CLM-0262",
+        "CLM-0263",
+        "CLM-0265",
+        "CLM-0270",
+        "CLM-0271",
+        "CLM-0272",
+        "CLM-0273",
+        "CLM-0274",
+        "CLM-0275",
+        "CLM-0276",
+        "CLM-0282",
+        "CLM-0283",
+        "CLM-0284",
+        "CLM-0285",
+        "CLM-0286",
+        "CLM-0287",
+        "CLM-0288",
+        "CLM-0289",
+        "CLM-0290",
+        "CLM-0291",
+        "CLM-0294",
+        "CLM-0295",
+        "CLM-0296",
+        "CLM-0297",
+        "CLM-0298",
+        "CLM-0299",
+        "CLM-0300",
+        "CLM-0301",
+        "CLM-0302",
+        "CLM-0303",
+        "CLM-0304",
+        "CLM-0305",
+        "CLM-0306"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0029",
+      "title": "2024 Kia EV9 consumer handout",
+      "publisher_or_organization": "Kia America",
+      "url": "https://www.rosevillekia.com/static/dealer-18027/ev9/2024_EV9_Consumer_Handout_Draft_Sep_20_2023.pdf",
+      "source_type": "manufacturer_specification",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0321",
+        "CLM-0326",
+        "CLM-0327",
+        "CLM-0329",
+        "CLM-0334",
+        "CLM-0335",
+        "CLM-0336",
+        "CLM-0337",
+        "CLM-0338",
+        "CLM-0339",
+        "CLM-0340",
+        "CLM-0346",
+        "CLM-0347",
+        "CLM-0348",
+        "CLM-0349",
+        "CLM-0350",
+        "CLM-0351",
+        "CLM-0352",
+        "CLM-0353",
+        "CLM-0354",
+        "CLM-0355",
+        "CLM-0357",
+        "CLM-0358",
+        "CLM-0359",
+        "CLM-0360",
+        "CLM-0361",
+        "CLM-0362",
+        "CLM-0363",
+        "CLM-0364",
+        "CLM-0365",
+        "CLM-0366",
+        "CLM-0367",
+        "CLM-0368",
+        "CLM-0369"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0030",
+      "title": "Fuel economy of 2024 Kia EV9",
+      "publisher_or_organization": "U.S. Department of Energy / EPA",
+      "url": "https://www.fueleconomy.gov/feg/PowerSearch.do?action=noform&baseModel=EV9&make=Kia&year1=2024&year2=2024",
+      "source_type": "government_energy",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0356",
+        "CLM-0393"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0031",
+      "title": "Fuel economy of 2024 Toyota Sienna",
+      "publisher_or_organization": "U.S. Department of Energy / EPA",
+      "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=46926",
+      "source_type": "government_energy",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0036",
+        "CLM-0037"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0032",
+      "title": "Fuel economy of 2024 Kia Telluride",
+      "publisher_or_organization": "U.S. Department of Energy / EPA",
+      "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=46941",
+      "source_type": "government_energy",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0100",
+        "CLM-0101"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0033",
+      "title": "Fuel economy of 2024 Honda Pilot",
+      "publisher_or_organization": "U.S. Department of Energy / EPA",
+      "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=46898",
+      "source_type": "government_energy",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0164",
+        "CLM-0165"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0034",
+      "title": "Fuel economy of 2024 Ford Explorer",
+      "publisher_or_organization": "U.S. Department of Energy / EPA",
+      "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=47133",
+      "source_type": "government_energy",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 4WD",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0228",
+        "CLM-0229"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0035",
+      "title": "Fuel economy of 2024 Nissan Pathfinder",
+      "publisher_or_organization": "U.S. Department of Energy / EPA",
+      "url": "https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=47103",
+      "source_type": "government_energy",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 4WD",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0292",
+        "CLM-0293"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0036",
+      "title": "2024 Honda Pilot interior dimensions",
+      "publisher_or_organization": "Honda of Turnersville",
+      "url": "https://www.hondaofturnersville.com/2024-honda-pilot-interior/",
+      "source_type": "authorized_dealer_specification",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0129",
+        "CLM-0134",
+        "CLM-0135",
+        "CLM-0137",
+        "CLM-0142",
+        "CLM-0143",
+        "CLM-0144",
+        "CLM-0145",
+        "CLM-0146",
+        "CLM-0147",
+        "CLM-0148",
+        "CLM-0154",
+        "CLM-0155",
+        "CLM-0156",
+        "CLM-0157",
+        "CLM-0158",
+        "CLM-0159",
+        "CLM-0160",
+        "CLM-0161",
+        "CLM-0162",
+        "CLM-0163",
+        "CLM-0166",
+        "CLM-0167",
+        "CLM-0168",
+        "CLM-0169",
+        "CLM-0170",
+        "CLM-0171",
+        "CLM-0172",
+        "CLM-0173",
+        "CLM-0174",
+        "CLM-0175",
+        "CLM-0176",
+        "CLM-0177",
+        "CLM-0178"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement."
+    },
+    {
+      "source_id": "SRC-0037",
+      "title": "2024 Ford Explorer interior dimensions",
+      "publisher_or_organization": "Anderson Ford Kingman",
+      "url": "https://www.andersonfordkingman.com/2024-ford-explorer-interior/",
+      "source_type": "authorized_dealer_specification",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0193",
+        "CLM-0198",
+        "CLM-0199",
+        "CLM-0201",
+        "CLM-0206",
+        "CLM-0207",
+        "CLM-0208",
+        "CLM-0209",
+        "CLM-0210",
+        "CLM-0211",
+        "CLM-0212",
+        "CLM-0218",
+        "CLM-0219",
+        "CLM-0220",
+        "CLM-0221",
+        "CLM-0222",
+        "CLM-0223",
+        "CLM-0224",
+        "CLM-0225",
+        "CLM-0226",
+        "CLM-0227",
+        "CLM-0230",
+        "CLM-0231",
+        "CLM-0232",
+        "CLM-0233",
+        "CLM-0234",
+        "CLM-0235",
+        "CLM-0236",
+        "CLM-0237",
+        "CLM-0238",
+        "CLM-0239",
+        "CLM-0240",
+        "CLM-0241",
+        "CLM-0242"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement."
+    },
+    {
+      "source_id": "SRC-0038",
+      "title": "Kia EV9 interior dimensions",
+      "publisher_or_organization": "Kia of Riverdale",
+      "url": "https://www.kiaofriverdale.com/kia-research/kia-ev9-interior/",
+      "source_type": "authorized_dealer_specification",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0321",
+        "CLM-0326",
+        "CLM-0327",
+        "CLM-0329",
+        "CLM-0334",
+        "CLM-0335",
+        "CLM-0336",
+        "CLM-0337",
+        "CLM-0338",
+        "CLM-0339",
+        "CLM-0340",
+        "CLM-0346",
+        "CLM-0347",
+        "CLM-0348",
+        "CLM-0349",
+        "CLM-0350",
+        "CLM-0351",
+        "CLM-0352",
+        "CLM-0353",
+        "CLM-0354",
+        "CLM-0355",
+        "CLM-0357",
+        "CLM-0358",
+        "CLM-0359",
+        "CLM-0360",
+        "CLM-0361",
+        "CLM-0362",
+        "CLM-0363",
+        "CLM-0364",
+        "CLM-0365",
+        "CLM-0366",
+        "CLM-0367",
+        "CLM-0368",
+        "CLM-0369"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement."
+    },
+    {
+      "source_id": "SRC-0039",
+      "title": "2024 Toyota Sienna reliability synthesis",
+      "publisher_or_organization": "Auto Reliability Index",
+      "url": "https://autoreliabilityindex.com/toyota/sienna/2024",
+      "source_type": "derived_nhtsa_owner_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0010",
+        "CLM-0022",
+        "CLM-0023",
+        "CLM-0024",
+        "CLM-0025",
+        "CLM-0054",
+        "CLM-0055",
+        "CLM-0056",
+        "CLM-0057",
+        "CLM-0058",
+        "CLM-0059",
+        "CLM-0060",
+        "CLM-0061",
+        "CLM-0062",
+        "CLM-0063",
+        "CLM-0064"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0040",
+      "title": "2024 Kia Telluride reliability synthesis",
+      "publisher_or_organization": "Auto Reliability Index",
+      "url": "https://autoreliabilityindex.com/kia/telluride/2024",
+      "source_type": "derived_nhtsa_owner_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0074",
+        "CLM-0086",
+        "CLM-0087",
+        "CLM-0088",
+        "CLM-0089",
+        "CLM-0118",
+        "CLM-0119",
+        "CLM-0120",
+        "CLM-0121",
+        "CLM-0122",
+        "CLM-0123",
+        "CLM-0124",
+        "CLM-0125",
+        "CLM-0126",
+        "CLM-0127",
+        "CLM-0128"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0041",
+      "title": "2024 Honda Pilot reliability synthesis",
+      "publisher_or_organization": "Auto Reliability Index",
+      "url": "https://autoreliabilityindex.com/honda/pilot/2024",
+      "source_type": "derived_nhtsa_owner_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0138",
+        "CLM-0150",
+        "CLM-0151",
+        "CLM-0152",
+        "CLM-0153",
+        "CLM-0182",
+        "CLM-0183",
+        "CLM-0184",
+        "CLM-0185",
+        "CLM-0186",
+        "CLM-0187",
+        "CLM-0188",
+        "CLM-0189",
+        "CLM-0190",
+        "CLM-0191",
+        "CLM-0192"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0042",
+      "title": "2024 Ford Explorer reliability synthesis",
+      "publisher_or_organization": "Auto Reliability Index",
+      "url": "https://autoreliabilityindex.com/ford/explorer/2024",
+      "source_type": "derived_nhtsa_owner_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0202",
+        "CLM-0214",
+        "CLM-0215",
+        "CLM-0216",
+        "CLM-0217",
+        "CLM-0246",
+        "CLM-0247",
+        "CLM-0248",
+        "CLM-0249",
+        "CLM-0250",
+        "CLM-0251",
+        "CLM-0252",
+        "CLM-0253",
+        "CLM-0254",
+        "CLM-0255",
+        "CLM-0256"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0043",
+      "title": "2024 Nissan Pathfinder reliability synthesis",
+      "publisher_or_organization": "Auto Reliability Index",
+      "url": "https://autoreliabilityindex.com/nissan/pathfinder/2024",
+      "source_type": "derived_nhtsa_owner_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0266",
+        "CLM-0278",
+        "CLM-0279",
+        "CLM-0280",
+        "CLM-0281",
+        "CLM-0310",
+        "CLM-0311",
+        "CLM-0312",
+        "CLM-0313",
+        "CLM-0314",
+        "CLM-0315",
+        "CLM-0316",
+        "CLM-0317",
+        "CLM-0318",
+        "CLM-0319",
+        "CLM-0320"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0044",
+      "title": "2024 Kia EV9 reliability synthesis",
+      "publisher_or_organization": "Auto Reliability Index",
+      "url": "https://autoreliabilityindex.com/kia/ev9/2024",
+      "source_type": "derived_nhtsa_owner_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0330",
+        "CLM-0342",
+        "CLM-0343",
+        "CLM-0344",
+        "CLM-0345",
+        "CLM-0373",
+        "CLM-0374",
+        "CLM-0375",
+        "CLM-0376",
+        "CLM-0377",
+        "CLM-0378",
+        "CLM-0379",
+        "CLM-0380",
+        "CLM-0381",
+        "CLM-0382",
+        "CLM-0383"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0045",
+      "title": "2024 Telluride recalls and owner complaints",
+      "publisher_or_organization": "Vehicle Safety Hub",
+      "url": "https://www.vehiclesafetyhub.com/kia/telluride/2024",
+      "source_type": "derived_nhtsa_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0074",
+        "CLM-0086",
+        "CLM-0087",
+        "CLM-0088",
+        "CLM-0089",
+        "CLM-0118",
+        "CLM-0119",
+        "CLM-0120",
+        "CLM-0121",
+        "CLM-0122",
+        "CLM-0123",
+        "CLM-0124",
+        "CLM-0125",
+        "CLM-0126",
+        "CLM-0127",
+        "CLM-0128"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0046",
+      "title": "2024 Pathfinder recalls and owner complaints",
+      "publisher_or_organization": "Vehicle Safety Hub",
+      "url": "https://www.vehiclesafetyhub.com/nissan/pathfinder/2024",
+      "source_type": "derived_nhtsa_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0266",
+        "CLM-0278",
+        "CLM-0279",
+        "CLM-0280",
+        "CLM-0281",
+        "CLM-0310",
+        "CLM-0311",
+        "CLM-0312",
+        "CLM-0313",
+        "CLM-0314",
+        "CLM-0315",
+        "CLM-0316",
+        "CLM-0317",
+        "CLM-0318",
+        "CLM-0319",
+        "CLM-0320"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0047",
+      "title": "2024 Kia EV9 NHTSA-derived issue review",
+      "publisher_or_organization": "ProblemsByVin",
+      "url": "https://problemsbyvin.com/2024-kia-ev9/",
+      "source_type": "derived_nhtsa_dataset",
+      "authority_tier": 3,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0330",
+        "CLM-0342",
+        "CLM-0343",
+        "CLM-0344",
+        "CLM-0345",
+        "CLM-0373",
+        "CLM-0374",
+        "CLM-0375",
+        "CLM-0376",
+        "CLM-0377",
+        "CLM-0378",
+        "CLM-0379",
+        "CLM-0380",
+        "CLM-0381",
+        "CLM-0382",
+        "CLM-0383"
+      ],
+      "notes_on_limitations": "Derived from public complaint/recall data; complaint counts are not failure rates and are interpreted only as pattern signals."
+    },
+    {
+      "source_id": "SRC-0048",
+      "title": "EV9 ICCU logic improvement service action SA568",
+      "publisher_or_organization": "Kia America via NHTSA TSB repository",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10253541-0001.pdf",
+      "source_type": "manufacturer_service_bulletin",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 EV9 built 2023-09-25 through 2024-03-21",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0330",
+        "CLM-0342",
+        "CLM-0343",
+        "CLM-0344",
+        "CLM-0345",
+        "CLM-0373",
+        "CLM-0374",
+        "CLM-0375",
+        "CLM-0376",
+        "CLM-0377",
+        "CLM-0378",
+        "CLM-0379",
+        "CLM-0380",
+        "CLM-0381",
+        "CLM-0382",
+        "CLM-0383"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0049",
+      "title": "2024 Honda Pilot recalls and complaints",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/HONDA/PILOT/SUV/AWD#recalls",
+      "source_type": "government_recall_database",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0138",
+        "CLM-0150",
+        "CLM-0151",
+        "CLM-0152",
+        "CLM-0153",
+        "CLM-0182",
+        "CLM-0183",
+        "CLM-0184",
+        "CLM-0185",
+        "CLM-0186",
+        "CLM-0187",
+        "CLM-0188",
+        "CLM-0189",
+        "CLM-0190",
+        "CLM-0191",
+        "CLM-0192"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0050",
+      "title": "2024 Ford Explorer recalls and complaints",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/FORD/EXPLORER/SUV/4WD#recalls",
+      "source_type": "government_recall_database",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 4WD",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0202",
+        "CLM-0214",
+        "CLM-0215",
+        "CLM-0216",
+        "CLM-0217",
+        "CLM-0246",
+        "CLM-0247",
+        "CLM-0248",
+        "CLM-0249",
+        "CLM-0250",
+        "CLM-0251",
+        "CLM-0252",
+        "CLM-0253",
+        "CLM-0254",
+        "CLM-0255",
+        "CLM-0256"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0051",
+      "title": "2024 Toyota Sienna Platinum AWD listing",
+      "publisher_or_organization": "CarMax",
+      "url": "https://www.carmax.com/car/70145488",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum AWD",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0008",
+        "CLM-0051",
+        "CLM-0052",
+        "CLM-0053",
+        "CLM-0054",
+        "CLM-0055",
+        "CLM-0056",
+        "CLM-0057",
+        "CLM-0058",
+        "CLM-0059",
+        "CLM-0060",
+        "CLM-0061",
+        "CLM-0062",
+        "CLM-0063",
+        "CLM-0064"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0052",
+      "title": "2024 Toyota Sienna Platinum listing",
+      "publisher_or_organization": "Carvana",
+      "url": "https://www.carvana.com/vehicle/4618929",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum AWD",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0008",
+        "CLM-0051",
+        "CLM-0052",
+        "CLM-0053",
+        "CLM-0054",
+        "CLM-0055",
+        "CLM-0056",
+        "CLM-0057",
+        "CLM-0058",
+        "CLM-0059",
+        "CLM-0060",
+        "CLM-0061",
+        "CLM-0062",
+        "CLM-0063",
+        "CLM-0064"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0053",
+      "title": "2024 Toyota Sienna Platinum CPO listing",
+      "publisher_or_organization": "Toyota of Erie",
+      "url": "https://www.toyotaoferie.com/viewdetails/cpo/5tdeskfc3rs130913/2024-toyota-sienna-mini-van,-passenger",
+      "source_type": "certified_pre_owned_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum AWD",
+      "vehicle_or_topic_applicability": [
+        "Toyota Sienna"
+      ],
+      "claims_supported": [
+        "CLM-0008",
+        "CLM-0051",
+        "CLM-0052",
+        "CLM-0053",
+        "CLM-0054",
+        "CLM-0055",
+        "CLM-0056",
+        "CLM-0057",
+        "CLM-0058",
+        "CLM-0059",
+        "CLM-0060",
+        "CLM-0061",
+        "CLM-0062",
+        "CLM-0063",
+        "CLM-0064"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0054",
+      "title": "2024 Kia Telluride SX Prestige X-Pro listing",
+      "publisher_or_organization": "CarMax",
+      "url": "https://www.carmax.com/car/70135597",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 SX Prestige X-Pro AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0072",
+        "CLM-0115",
+        "CLM-0116",
+        "CLM-0117",
+        "CLM-0118",
+        "CLM-0119",
+        "CLM-0120",
+        "CLM-0121",
+        "CLM-0122",
+        "CLM-0123",
+        "CLM-0124",
+        "CLM-0125",
+        "CLM-0126",
+        "CLM-0127",
+        "CLM-0128"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0055",
+      "title": "2024 Kia Telluride SX Prestige X-Pro listing",
+      "publisher_or_organization": "Carvana",
+      "url": "https://www.carvana.com/vehicle/4553664",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 SX Prestige X-Pro AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0072",
+        "CLM-0115",
+        "CLM-0116",
+        "CLM-0117",
+        "CLM-0118",
+        "CLM-0119",
+        "CLM-0120",
+        "CLM-0121",
+        "CLM-0122",
+        "CLM-0123",
+        "CLM-0124",
+        "CLM-0125",
+        "CLM-0126",
+        "CLM-0127",
+        "CLM-0128"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0056",
+      "title": "2024 Kia Telluride SX Prestige X-Pro listing",
+      "publisher_or_organization": "Transitowne Kia",
+      "url": "https://www.transitownewilliamsville.com/inventory/used-2024-kia-telluride-sx-prestige-x-pro-awd-sport-utility-5xyp5dgc0rg414720/",
+      "source_type": "authorized_dealer_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 SX Prestige X-Pro AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia Telluride"
+      ],
+      "claims_supported": [
+        "CLM-0072",
+        "CLM-0115",
+        "CLM-0116",
+        "CLM-0117",
+        "CLM-0118",
+        "CLM-0119",
+        "CLM-0120",
+        "CLM-0121",
+        "CLM-0122",
+        "CLM-0123",
+        "CLM-0124",
+        "CLM-0125",
+        "CLM-0126",
+        "CLM-0127",
+        "CLM-0128"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0057",
+      "title": "2024 Honda Pilot Elite AWD listing",
+      "publisher_or_organization": "CarMax",
+      "url": "https://www.carmax.com/car/28666081",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Elite AWD",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0136",
+        "CLM-0179",
+        "CLM-0180",
+        "CLM-0181",
+        "CLM-0182",
+        "CLM-0183",
+        "CLM-0184",
+        "CLM-0185",
+        "CLM-0186",
+        "CLM-0187",
+        "CLM-0188",
+        "CLM-0189",
+        "CLM-0190",
+        "CLM-0191",
+        "CLM-0192"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0058",
+      "title": "2024 Honda Pilot Elite AWD listing",
+      "publisher_or_organization": "Carvana",
+      "url": "https://www.carvana.com/vehicle/4558078",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Elite AWD",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0136",
+        "CLM-0179",
+        "CLM-0180",
+        "CLM-0181",
+        "CLM-0182",
+        "CLM-0183",
+        "CLM-0184",
+        "CLM-0185",
+        "CLM-0186",
+        "CLM-0187",
+        "CLM-0188",
+        "CLM-0189",
+        "CLM-0190",
+        "CLM-0191",
+        "CLM-0192"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0059",
+      "title": "Certified pre-owned 2024 Honda Pilot Elite AWD listing",
+      "publisher_or_organization": "Germain Honda of College Hills",
+      "url": "https://www.germainhondaofcollegehills.com/inventory/certified-used-2024-honda-pilot-elite-awd-4d-sport-utility-5fnyg1h83rb033507/",
+      "source_type": "certified_pre_owned_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Elite AWD",
+      "vehicle_or_topic_applicability": [
+        "Honda Pilot"
+      ],
+      "claims_supported": [
+        "CLM-0136",
+        "CLM-0179",
+        "CLM-0180",
+        "CLM-0181",
+        "CLM-0182",
+        "CLM-0183",
+        "CLM-0184",
+        "CLM-0185",
+        "CLM-0186",
+        "CLM-0187",
+        "CLM-0188",
+        "CLM-0189",
+        "CLM-0190",
+        "CLM-0191",
+        "CLM-0192"
+      ],
+      "notes_on_limitations": "Direct authorized Honda-dealer CPO listing. Price and availability are time-sensitive; recheck within 14 days of a purchase decision. Dealer documentation and electronic-title fees are excluded from the official vehicle-price score."
+    },
+    {
+      "source_id": "SRC-0060",
+      "title": "2024 Ford Explorer Platinum 4WD listing",
+      "publisher_or_organization": "CarMax",
+      "url": "https://www.carmax.com/car/29064605",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum 4WD",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0200",
+        "CLM-0243",
+        "CLM-0244",
+        "CLM-0245",
+        "CLM-0246",
+        "CLM-0247",
+        "CLM-0248",
+        "CLM-0249",
+        "CLM-0250",
+        "CLM-0251",
+        "CLM-0252",
+        "CLM-0253",
+        "CLM-0254",
+        "CLM-0255",
+        "CLM-0256"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0061",
+      "title": "2024 Ford Explorer Platinum 4WD listing",
+      "publisher_or_organization": "Carvana",
+      "url": "https://www.carvana.com/vehicle/4493520",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum 4WD",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0200",
+        "CLM-0243",
+        "CLM-0244",
+        "CLM-0245",
+        "CLM-0246",
+        "CLM-0247",
+        "CLM-0248",
+        "CLM-0249",
+        "CLM-0250",
+        "CLM-0251",
+        "CLM-0252",
+        "CLM-0253",
+        "CLM-0254",
+        "CLM-0255",
+        "CLM-0256"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0062",
+      "title": "2024 Ford Explorer Platinum CPO listing",
+      "publisher_or_organization": "Spitzer Ford Hartville",
+      "url": "https://www.spitzerfordhartville.com/inventory/certified-used-2024-ford-explorer-platinum-4wd-4d-sport-utility-1fm5k8hc3rga84909/",
+      "source_type": "certified_pre_owned_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum 4WD",
+      "vehicle_or_topic_applicability": [
+        "Ford Explorer"
+      ],
+      "claims_supported": [
+        "CLM-0200",
+        "CLM-0243",
+        "CLM-0244",
+        "CLM-0245",
+        "CLM-0246",
+        "CLM-0247",
+        "CLM-0248",
+        "CLM-0249",
+        "CLM-0250",
+        "CLM-0251",
+        "CLM-0252",
+        "CLM-0253",
+        "CLM-0254",
+        "CLM-0255",
+        "CLM-0256"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0063",
+      "title": "2024 Nissan Pathfinder Platinum 4WD listing",
+      "publisher_or_organization": "CarMax",
+      "url": "https://www.carmax.com/car/70112041",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum 4WD",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0264",
+        "CLM-0307",
+        "CLM-0308",
+        "CLM-0309",
+        "CLM-0310",
+        "CLM-0311",
+        "CLM-0312",
+        "CLM-0313",
+        "CLM-0314",
+        "CLM-0315",
+        "CLM-0316",
+        "CLM-0317",
+        "CLM-0318",
+        "CLM-0319",
+        "CLM-0320"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0064",
+      "title": "2024 Nissan Pathfinder Platinum 4WD listing",
+      "publisher_or_organization": "CarMax",
+      "url": "https://www.carmax.com/car/28886620",
+      "source_type": "live_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum 4WD",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0264",
+        "CLM-0307",
+        "CLM-0308",
+        "CLM-0309",
+        "CLM-0310",
+        "CLM-0311",
+        "CLM-0312",
+        "CLM-0313",
+        "CLM-0314",
+        "CLM-0315",
+        "CLM-0316",
+        "CLM-0317",
+        "CLM-0318",
+        "CLM-0319",
+        "CLM-0320"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0065",
+      "title": "2024 Nissan Pathfinder Platinum CPO listing",
+      "publisher_or_organization": "Nissan Certified Pre-Owned",
+      "url": "https://www.nissanusa.com/shopping-tools/search-inventory/certified-pre-owned/vehicle-details/5N1DR3DK4RC234041",
+      "source_type": "certified_pre_owned_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Platinum 4WD",
+      "vehicle_or_topic_applicability": [
+        "Nissan Pathfinder"
+      ],
+      "claims_supported": [
+        "CLM-0264",
+        "CLM-0307",
+        "CLM-0308",
+        "CLM-0309",
+        "CLM-0310",
+        "CLM-0311",
+        "CLM-0312",
+        "CLM-0313",
+        "CLM-0314",
+        "CLM-0315",
+        "CLM-0316",
+        "CLM-0317",
+        "CLM-0318",
+        "CLM-0319",
+        "CLM-0320"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0066",
+      "title": "2024 Kia EV9 Land AWD CPO listing",
+      "publisher_or_organization": "Kia of Cerritos",
+      "url": "https://www.kiacerritos.com/inventory/certified-used-2024-kia-ev9-land-awd-4d-sport-utility-kndadfs54r6029435/",
+      "source_type": "certified_pre_owned_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Land AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0328",
+        "CLM-0370",
+        "CLM-0371",
+        "CLM-0372",
+        "CLM-0373",
+        "CLM-0374",
+        "CLM-0375",
+        "CLM-0376",
+        "CLM-0377",
+        "CLM-0378",
+        "CLM-0379",
+        "CLM-0380",
+        "CLM-0381",
+        "CLM-0382",
+        "CLM-0383"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0067",
+      "title": "2024 Kia EV9 Land AWD listing",
+      "publisher_or_organization": "Kia Santa Monica",
+      "url": "https://www.kiasantamonica.com/auto/preowned-2024-kia-ev9-land-near-los-angeles-ca/121571693/",
+      "source_type": "authorized_dealer_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Land AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0328",
+        "CLM-0370",
+        "CLM-0371",
+        "CLM-0372",
+        "CLM-0373",
+        "CLM-0374",
+        "CLM-0375",
+        "CLM-0376",
+        "CLM-0377",
+        "CLM-0378",
+        "CLM-0379",
+        "CLM-0380",
+        "CLM-0381",
+        "CLM-0382",
+        "CLM-0383"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0068",
+      "title": "2024 Kia EV9 Land AWD CPO listing",
+      "publisher_or_organization": "Towbin Kia",
+      "url": "https://www.towbinkia.com/inventory/certified-used-2024-kia-ev9-land-awd-4d-sport-utility-kndadfs53r6028891/",
+      "source_type": "certified_pre_owned_listing",
+      "authority_tier": 4,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 Land AWD",
+      "vehicle_or_topic_applicability": [
+        "Kia EV9"
+      ],
+      "claims_supported": [
+        "CLM-0328",
+        "CLM-0370",
+        "CLM-0371",
+        "CLM-0372",
+        "CLM-0373",
+        "CLM-0374",
+        "CLM-0375",
+        "CLM-0376",
+        "CLM-0377",
+        "CLM-0378",
+        "CLM-0379",
+        "CLM-0380",
+        "CLM-0381",
+        "CLM-0382",
+        "CLM-0383"
+      ],
+      "notes_on_limitations": "Used only for direct listing evidence, authorized-dealer specifications, or market observations; not used alone to establish a hard safety requirement. Listing status and price are time-sensitive; recheck within 14 days of a purchase decision."
+    },
+    {
+      "source_id": "SRC-0069",
+      "title": "Maple Valley Q3 2026 local sales and use tax rate",
+      "publisher_or_organization": "Washington State Department of Revenue",
+      "url": "https://dor.wa.gov/sites/default/files/2026-06/Q326_LSU.pdf",
+      "source_type": "government_tax",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "Q3 2026",
+      "vehicle_or_topic_applicability": [
+        "TCO"
+      ],
+      "claims_supported": [
+        "CLM-0384"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0070",
+      "title": "Weekly Washington gasoline price",
+      "publisher_or_organization": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/petroleum/gasdiesel/",
+      "source_type": "government_energy_price",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2026-08-17",
+      "vehicle_or_topic_applicability": [
+        "TCO"
+      ],
+      "claims_supported": [
+        "CLM-0385"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0071",
+      "title": "Regional Transit Authority motor vehicle excise tax",
+      "publisher_or_organization": "Washington State Department of Licensing",
+      "url": "https://dol.wa.gov/vehicles-and-boats/taxes-fuel-tax-and-other-fees/regional-transit-authority-rta-tax",
+      "source_type": "government_registration",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2026",
+      "vehicle_or_topic_applicability": [
+        "TCO"
+      ],
+      "claims_supported": [],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0072",
+      "title": "PSE Schedule 7 residential electricity tariff",
+      "publisher_or_organization": "Puget Sound Energy",
+      "url": "https://www.pse.com/-/media/Project/PSE/Portal/Rate-documents/Electric/elec_sch_007.pdf?sc_lang=en",
+      "source_type": "regulated_utility_tariff",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "effective 2026-01-29",
+      "vehicle_or_topic_applicability": [
+        "TCO"
+      ],
+      "claims_supported": [
+        "CLM-0386",
+        "CLM-0393"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0073",
+      "title": "Washington public DC fast-charging planning price",
+      "publisher_or_organization": "Washington State Department of Transportation",
+      "url": "https://wsdot.wa.gov/construction-planning/statewide-plans/national-electric-vehicle-infrastructure-plan",
+      "source_type": "government_charging",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2026 planning",
+      "vehicle_or_topic_applicability": [
+        "TCO"
+      ],
+      "claims_supported": [
+        "CLM-0387"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0074",
+      "title": "2024 Lincoln Aviator ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/lincoln/aviator-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Lincoln Aviator"
+      ],
+      "claims_supported": [
+        "CLM-0427"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0075",
+      "title": "2024 GMC Acadia ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/gmc/acadia-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "GMC Acadia"
+      ],
+      "claims_supported": [
+        "CLM-0428"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0076",
+      "title": "2024 Chevrolet Traverse ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/chevrolet/traverse-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Chevrolet Traverse"
+      ],
+      "claims_supported": [
+        "CLM-0429"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0077",
+      "title": "2024 Toyota Grand Highlander ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/toyota/grand-highlander-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Toyota Grand Highlander"
+      ],
+      "claims_supported": [
+        "CLM-0430"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0078",
+      "title": "2024 Toyota Highlander ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/toyota/highlander-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Toyota Highlander"
+      ],
+      "claims_supported": [
+        "CLM-0431"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0079",
+      "title": "2024 Mazda CX-90 ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/mazda/cx-90-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Mazda CX-90"
+      ],
+      "claims_supported": [
+        "CLM-0432"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0080",
+      "title": "2024 Volvo XC90 ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/volvo/xc90-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Volvo XC90"
+      ],
+      "claims_supported": [
+        "CLM-0433"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0081",
+      "title": "2024 Audi Q7 ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/audi/q7-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Audi Q7"
+      ],
+      "claims_supported": [
+        "CLM-0434"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0082",
+      "title": "2024 Infiniti QX60 ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/infiniti/qx60-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Infiniti QX60"
+      ],
+      "claims_supported": [
+        "CLM-0435"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0083",
+      "title": "2024 Hyundai Santa Fe ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/hyundai/santa-fe-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Hyundai Santa Fe"
+      ],
+      "claims_supported": [
+        "CLM-0436"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0084",
+      "title": "2024 Mitsubishi Outlander ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/mitsubishi/outlander-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Mitsubishi Outlander"
+      ],
+      "claims_supported": [
+        "CLM-0437"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0085",
+      "title": "2024 Jeep Grand Cherokee L ratings",
+      "publisher_or_organization": "Insurance Institute for Highway Safety",
+      "url": "https://www.iihs.org/ratings/vehicle/jeep/grand-cherokee-l-4-door-suv/2024",
+      "source_type": "safety_rating",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Jeep Grand Cherokee L"
+      ],
+      "claims_supported": [
+        "CLM-0438"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0086",
+      "title": "2024 Rivian R1S NHTSA record",
+      "publisher_or_organization": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/vehicle/2024/RIVIAN/R1S/SUV/AWD",
+      "source_type": "government_safety",
+      "authority_tier": 1,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024 AWD",
+      "vehicle_or_topic_applicability": [
+        "Rivian R1S"
+      ],
+      "claims_supported": [
+        "CLM-0439"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    },
+    {
+      "source_id": "SRC-0087",
+      "title": "2024 model specifications summary",
+      "publisher_or_organization": "Edmunds",
+      "url": "https://www.edmunds.com/car-comparisons/",
+      "source_type": "independent_specification",
+      "authority_tier": 2,
+      "publication_or_update_date": null,
+      "access_date": "2026-08-24",
+      "model_year_and_trim_applicability": "2024",
+      "vehicle_or_topic_applicability": [
+        "Candidate screening"
+      ],
+      "claims_supported": [
+        "CLM-0432",
+        "CLM-0433",
+        "CLM-0434",
+        "CLM-0435",
+        "CLM-0436",
+        "CLM-0437"
+      ],
+      "notes_on_limitations": "No material limitation beyond exact applicability and access-date staleness."
+    }
+  ]
+}

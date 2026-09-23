@@ -1,0 +1,84 @@
+{
+  "judgments": [
+    {
+      "judgment_id": "JDG-0001",
+      "topic": "model_year_conflict",
+      "decision": "Use 2023-2025 conservative intersection",
+      "reason": "Scoring eligibility excludes 2022 while project and research config include it",
+      "impact": "2022 vehicles cannot enter candidate universe",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0002",
+      "topic": "used_price_scoring_basis",
+      "decision": "Use normalized current used acquisition price",
+      "reason": "Project-specific used-vehicle rules explicitly override new-MSRP basis for used runs",
+      "impact": "purchase-price scores reference price_record_ids",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0003",
+      "topic": "primary_model_year",
+      "decision": "Use 2024 exact configurations for the deep set",
+      "reason": "Best intersection of mature used supply and complete exact-year safety evidence",
+      "impact": "Avoids cross-year transfer",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0004",
+      "topic": "nhtsa_page_errors",
+      "decision": "Corroborate exact records with a public NHTSA-data mirror and reduce confidence",
+      "reason": "Official dynamic pages intermittently failed to render",
+      "impact": "No unrated assumption from a website error",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0005",
+      "topic": "qualitative_scoring",
+      "decision": "Use standardized classifications only where scoring-config explicitly permits qualitative classes",
+      "reason": "Preserves deterministic arithmetic while allowing review synthesis",
+      "impact": "Ride, seat, noise, usability and reliability classes remain auditable",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0006",
+      "topic": "insurance",
+      "decision": "Omit insurance from numeric TCO",
+      "reason": "No comparable household quotes supplied",
+      "impact": "Insurance appears as a reversal condition rather than fabricated dollars",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0007",
+      "topic": "rta_tax",
+      "decision": "Model registration/RTA as planning allowances, not an exact address calculation",
+      "reason": "ZIP 98038 does not prove exact RTA boundary/address and DOL depreciated-value calculation",
+      "impact": "Registration uncertainty is carried in TCO scenario ranges",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0008",
+      "topic": "ev9_reliability_gate",
+      "decision": "Do not exclude categorically; impose strict VIN, campaign, charging and battery-health conditions and score reliability at 1/10",
+      "reason": "Strong recurring pattern is material, but documented remedies, warranty and incomplete failure-rate denominators do not prove long-term ownership unreasonable for every corrected VIN",
+      "impact": "EV9 remains conditional and is red-teamed more heavily than alternatives",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0009",
+      "topic": "build_date_scoping",
+      "decision": "Define Pathfinder and EV9 vehicle IDs as post-restriction exact configurations",
+      "reason": "IIHS awards have build-date restrictions that are binary conditions",
+      "impact": "Scoring is valid only after certification-label verification",
+      "date": "2026-08-24"
+    },
+    {
+      "judgment_id": "JDG-0010",
+      "topic": "market_price_normalization",
+      "decision": "Use low/base/high exact-trim sets with explicit mileage/CPO adjustments; no opaque regression",
+      "reason": "Small direct-listing samples are more auditable than an unsourced average",
+      "impact": "Price confidence is medium or medium-low",
+      "date": "2026-08-24"
+    }
+  ]
+}

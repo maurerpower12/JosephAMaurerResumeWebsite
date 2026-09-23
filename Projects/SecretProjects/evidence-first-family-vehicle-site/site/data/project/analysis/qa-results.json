@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-FVR-20260824-001",
+  "generated_at_utc": "2026-08-25T00:45:40Z",
+  "status": "pass_with_declared_limitations",
+  "summary": {
+    "checks": 17,
+    "passed": 16,
+    "warnings": 1,
+    "failures": 0
+  },
+  "checks": [
+    {
+      "check": "All JSON parses",
+      "status": "pass",
+      "detail": "Parsed 62 JSON files successfully.",
+      "metrics": {
+        "json_files": 62,
+        "errors": 0
+      }
+    },
+    {
+      "check": "Required project structure",
+      "status": "pass",
+      "detail": "All required non-package paths are present."
+    },
+    {
+      "check": "Stable IDs are unique",
+      "status": "pass",
+      "detail": "No duplicate stable IDs found across canonical registries.",
+      "metrics": {
+        "sources": 87,
+        "claims": 439,
+        "prices": 18,
+        "queries": 60,
+        "contradictions": 4,
+        "corrections": 4,
+        "judgments": 10,
+        "decisions": 11,
+        "observations": 6,
+        "scores": 246
+      }
+    },
+    {
+      "check": "Claims have valid provenance",
+      "status": "pass",
+      "detail": "All 439 claims reference valid sources or human observations; reverse source links are valid."
+    },
+    {
+      "check": "Deterministic scoring reproduces",
+      "status": "pass",
+      "detail": "Validated 6 vehicles and 246 scored components; every awarded input has a claim or observation ID."
+    },
+    {
+      "check": "Eligibility gate applied consistently",
+      "status": "pass",
+      "detail": "All 6 scored configurations pass or conditionally pass; no failed candidate is scored."
+    },
+    {
+      "check": "Eliminations are traceable",
+      "status": "pass",
+      "detail": "All 16 eliminations reference valid claims and sources."
+    },
+    {
+      "check": "TCO formulas reproduce",
+      "status": "pass",
+      "detail": "Reproduced all 36 low/base/high TCO scenarios; insurance is explicitly null and separate."
+    },
+    {
+      "check": "Price evidence and direct links",
+      "status": "warn",
+      "detail": "Validated 18 direct price records; every deep vehicle has at least three exact comparable records. Declared limitation: VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24 has no CarMax/Carvana observation; uses three authorized-dealer/CPO records",
+      "metrics": {
+        "price_records": 18,
+        "deep_vehicles": 6,
+        "warnings": 1
+      }
+    },
+    {
+      "check": "Source registry URL syntax",
+      "status": "pass",
+      "detail": "All 87 source URLs are absolute HTTP(S) links with access dates. URLs were opened during live web research; the code container has no outbound DNS for an independent recheck."
+    },
+    {
+      "check": "Configuration versions and hashes",
+      "status": "pass",
+      "detail": "Scoring model validates to 100 points; input and scorecard hashes match frozen files."
+    },
+    {
+      "check": "Ranking and recommendation lock",
+      "status": "pass",
+      "detail": "Official ranking, locked recommendation hash, deterministic seed and risk-averse reversal all reproduce."
+    },
+    {
+      "check": "Prior human research embargo",
+      "status": "pass",
+      "detail": "MANUAL_RESEARCH.md was compared only after the independent recommendation was hashed and locked; the locked result remained unchanged."
+    },
+    {
+      "check": "Website static/accessibility basics",
+      "status": "pass",
+      "detail": "Local CSS/JS/images resolve, standalone assets are embedded, images have alt text, semantic navigation is present and JavaScript syntax passes."
+    },
+    {
+      "check": "Browser interaction and responsive layout",
+      "status": "pass",
+      "detail": "Editable and standalone DOMs render the recommendation, six cards, registries, sliders, dark mode and score details without console errors, broken images or mobile overflow. Managed Chromium blocked file/localhost navigation, so editable local assets were inlined in memory for an equivalent final-DOM exercise."
+    },
+    {
+      "check": "Narrative matches canonical data",
+      "status": "pass",
+      "detail": "Executive narrative and embedded site data match the locked recommendation, eligibility and score."
+    },
+    {
+      "check": "ZIP package integrity",
+      "status": "pass",
+      "detail": "All site and analysis ZIP packages pass CRC integrity checks."
+    }
+  ],
+  "declared_limitations": [
+    "Insurance is excluded from numeric TCO because comparable household VIN-specific quotes were not supplied.",
+    "Q4 2026 prices and listing availability must be refreshed within 14 days of a transaction decision.",
+    "Exact-address Sound Transit RTA applicability and registration require confirmation.",
+    "VIN build date, campaign closure, service history, battery/charging tests, child-seat fit, dog/cargo fit and pre-purchase inspection remain physical purchase conditions.",
+    "The code container has no outbound DNS; source URLs were accessed through the live web-research tool during evidence collection and were syntax-checked in QA."
+  ]
+}

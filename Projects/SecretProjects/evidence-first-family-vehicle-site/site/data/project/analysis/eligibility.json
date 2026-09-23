@@ -1,0 +1,2006 @@
+{
+  "run_id": "RUN-FVR-20260824-001",
+  "requirements_version": "1.0-frozen-2026-08-24",
+  "vehicles": [
+    {
+      "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "vehicle": "2024 Honda Pilot Elite AWD",
+      "funnel_status": "deep_research",
+      "overall_status": "pass",
+      "eligible_to_score": true,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0129",
+          "note": "Normal three-row configuration."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0130",
+          "note": "Exact AWD rating."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "pass",
+          "value": "Top Safety Pick",
+          "claim_id": "CLM-0131",
+          "note": "Exact 2024 award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": 2,
+          "claim_id": "CLM-0132",
+          "note": "Two complete second-row positions."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": 1,
+          "claim_id": "CLM-0133",
+          "note": "One complete third-row position."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": 18.6,
+          "claim_id": "CLM-0134",
+          "note": "Specification with row 3 raised."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "AWD",
+          "claim_id": "CLM-0135",
+          "note": "Elite is AWD."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "pass",
+          "value": 43800,
+          "claim_id": "CLM-0136",
+          "note": "Normalized used-market price."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0137",
+          "note": "Inside scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "pass",
+          "value": "no_exclusion_with_conditions",
+          "claim_id": "CLM-0138",
+          "note": "First-generation-year issues and recalls lower confidence but do not establish unreasonable ownership."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "funnel_status": "deep_research",
+      "overall_status": "pass",
+      "eligible_to_score": true,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0065",
+          "note": "Normal three-row configuration."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0066",
+          "note": "Exact AWD record corroborated."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "pass",
+          "value": "Top Safety Pick+",
+          "claim_id": "CLM-0067",
+          "note": "Exact 2024 award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": 2,
+          "claim_id": "CLM-0068",
+          "note": "Complete LATCH in both second-row captain chairs."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": 1,
+          "claim_id": "CLM-0069",
+          "note": "At least one complete position in row 3."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": 21.0,
+          "claim_id": "CLM-0070",
+          "note": "Manufacturer/independent specification."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "AWD",
+          "claim_id": "CLM-0071",
+          "note": "Exact X-Pro configuration is AWD."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "pass",
+          "value": 41990,
+          "claim_id": "CLM-0072",
+          "note": "Normalized used-market price."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0073",
+          "note": "Inside scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "pass",
+          "value": "no_exclusion_with_conditions",
+          "claim_id": "CLM-0074",
+          "note": "Multiple recalls and recurring electrical/trim reports require VIN verification but do not establish an unreasonable-ownership pattern."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-HYUNDAI-PALISADE-2024-CALLIGRAPHY-AWD",
+      "vehicle": "2024 Hyundai Palisade Calligraphy AWD",
+      "funnel_status": "reserve",
+      "overall_status": "conditional_pass",
+      "eligible_to_score": false,
+      "conditions": "Preliminary hard filters pass, but Poor updated moderate-overlap result and sibling overlap reduced deep-research priority.",
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0394",
+          "note": "Three-row configuration verified in preliminary screen."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0395",
+          "note": "Preliminary exact-year NHTSA screen passed."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "pass",
+          "value": "qualifying",
+          "claim_id": "CLM-0396",
+          "note": "Exact-year qualifying award verified."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": ">=1",
+          "claim_id": "CLM-0397",
+          "note": "Preliminary child-anchor screen passed."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": ">=1",
+          "claim_id": "CLM-0398",
+          "note": "Preliminary child-anchor screen passed."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": ">=16",
+          "claim_id": "CLM-0399",
+          "note": "Preliminary cargo screen passed."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "AWD",
+          "claim_id": "CLM-0400",
+          "note": "Exact AWD/4WD configuration exists."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "conditional_pass",
+          "value": null,
+          "claim_id": "CLM-0401",
+          "note": "Expected below ceiling; direct exact-trim market set not completed because candidate remained reserve."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0402",
+          "note": "Inside scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "unresolved",
+          "value": null,
+          "claim_id": "CLM-0403",
+          "note": "Full multi-channel reliability review not completed for reserve candidate."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-VOLKSWAGEN-ATLAS-2024-SEL-PREMIUM-RLINE-4MOTION",
+      "vehicle": "2024 Volkswagen Atlas SEL Premium R-Line 4MOTION AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0404",
+          "note": "IIHS maps both third-row seats as tether-only, not complete lower-anchor-plus-tether positions."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "vehicle": "2024 Nissan Pathfinder Platinum 4WD",
+      "funnel_status": "deep_research",
+      "overall_status": "conditional_pass",
+      "eligible_to_score": true,
+      "conditions": "Certification-label build date must be after November 2023; verify recalls and rear-brake condition.",
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0257",
+          "note": "Normal three-row configuration."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0258",
+          "note": "Exact AWD record corroborated."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "conditional_pass",
+          "value": "Top Safety Pick+",
+          "claim_id": "CLM-0259",
+          "note": "Award applies only to vehicles built after November 2023."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": 2,
+          "claim_id": "CLM-0260",
+          "note": "Complete positions in row 2."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": 1,
+          "claim_id": "CLM-0261",
+          "note": "At least one complete row-3 position."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": 16.6,
+          "claim_id": "CLM-0262",
+          "note": "Just above configured threshold."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "4WD",
+          "claim_id": "CLM-0263",
+          "note": "Exact configuration."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "pass",
+          "value": 36998,
+          "claim_id": "CLM-0264",
+          "note": "Normalized used-market price."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0265",
+          "note": "Inside scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "pass",
+          "value": "no_exclusion_with_conditions",
+          "claim_id": "CLM-0266",
+          "note": "Premature rear-brake pattern requires inspection but is not an exclusion-level systemic defect."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-SUBARU-ASCENT-2024-TOURING-AWD",
+      "vehicle": "2024 Subaru Ascent Touring AWD",
+      "funnel_status": "reserve",
+      "overall_status": "pass",
+      "eligible_to_score": false,
+      "conditions": "Preliminary hard filters pass; retained as a live reserve.",
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0405",
+          "note": "Three-row configuration verified in preliminary screen."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0406",
+          "note": "Preliminary exact-year NHTSA screen passed."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "pass",
+          "value": "qualifying",
+          "claim_id": "CLM-0407",
+          "note": "Exact-year qualifying award verified."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": ">=1",
+          "claim_id": "CLM-0408",
+          "note": "Preliminary child-anchor screen passed."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": ">=1",
+          "claim_id": "CLM-0409",
+          "note": "Preliminary child-anchor screen passed."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": ">=16",
+          "claim_id": "CLM-0410",
+          "note": "Preliminary cargo screen passed."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "AWD",
+          "claim_id": "CLM-0411",
+          "note": "Exact AWD/4WD configuration exists."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "conditional_pass",
+          "value": null,
+          "claim_id": "CLM-0412",
+          "note": "Expected below ceiling; direct exact-trim market set not completed because candidate remained reserve."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0413",
+          "note": "Inside scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "unresolved",
+          "value": null,
+          "claim_id": "CLM-0414",
+          "note": "Full multi-channel reliability review not completed for reserve candidate."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "vehicle": "2024 Ford Explorer Platinum 4WD",
+      "funnel_status": "deep_research",
+      "overall_status": "pass",
+      "eligible_to_score": true,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0193",
+          "note": "Normal three-row configuration."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0194",
+          "note": "Exact 4WD rating."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "pass",
+          "value": "Top Safety Pick+",
+          "claim_id": "CLM-0195",
+          "note": "Exact 2024 award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": 2,
+          "claim_id": "CLM-0196",
+          "note": "Complete positions in row 2."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": 2,
+          "claim_id": "CLM-0197",
+          "note": "Complete positions in row 3."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": 18.2,
+          "claim_id": "CLM-0198",
+          "note": "Specification with row 3 raised."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "4WD",
+          "claim_id": "CLM-0199",
+          "note": "Exact configuration."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "pass",
+          "value": 42500,
+          "claim_id": "CLM-0200",
+          "note": "Normalized used-market price."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0201",
+          "note": "Inside scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "pass",
+          "value": "no_exclusion_with_conditions",
+          "claim_id": "CLM-0202",
+          "note": "Recall history and higher repair exposure lower score without proving unreasonable ownership."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-BUICK-ENCLAVE-2024-AVENIR-AWD",
+      "vehicle": "2024 Buick Enclave Avenir AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0415",
+          "note": "No exact-year IIHS Top Safety Pick or Top Safety Pick+ award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle": "2024 Toyota Sienna Platinum AWD",
+      "funnel_status": "deep_research",
+      "overall_status": "pass",
+      "eligible_to_score": true,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0001",
+          "note": "Normal three-row minivan configuration."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0002",
+          "note": "Exact 2024 AWD record corroborated by NHTSA record and public data mirror."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "pass",
+          "value": "Top Safety Pick",
+          "claim_id": "CLM-0003",
+          "note": "Exact 2024 award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": 3,
+          "claim_id": "CLM-0004",
+          "note": "At least three complete positions in row 2."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": 2,
+          "claim_id": "CLM-0005",
+          "note": "Two complete positions in row 3."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": 33.5,
+          "claim_id": "CLM-0006",
+          "note": "Manufacturer cargo volume with row 3 raised."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "AWD",
+          "claim_id": "CLM-0007",
+          "note": "Electronic on-demand AWD."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "pass",
+          "value": 52995,
+          "claim_id": "CLM-0008",
+          "note": "Normalized used-market acquisition price."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0009",
+          "note": "Inside frozen 2023-2025 scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "pass",
+          "value": "no_exclusion",
+          "claim_id": "CLM-0010",
+          "note": "No sufficiently supported systemic pattern making ownership unreasonable."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-CHRYSLER-PACIFICA-2024-LIMITED-AWD",
+      "vehicle": "2024 Chrysler Pacifica Limited AWD",
+      "funnel_status": "reserve",
+      "overall_status": "conditional_pass",
+      "eligible_to_score": false,
+      "conditions": "Preliminary hard filters pass; exact AWD price and row-3 LATCH/VIN verification required before promotion.",
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0416",
+          "note": "Three-row configuration verified in preliminary screen."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0417",
+          "note": "Preliminary exact-year NHTSA screen passed."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "pass",
+          "value": "qualifying",
+          "claim_id": "CLM-0418",
+          "note": "Exact-year qualifying award verified."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": ">=1",
+          "claim_id": "CLM-0419",
+          "note": "Preliminary child-anchor screen passed."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": ">=1",
+          "claim_id": "CLM-0420",
+          "note": "Preliminary child-anchor screen passed."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": ">=16",
+          "claim_id": "CLM-0421",
+          "note": "Preliminary cargo screen passed."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "AWD",
+          "claim_id": "CLM-0422",
+          "note": "Exact AWD/4WD configuration exists."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "conditional_pass",
+          "value": null,
+          "claim_id": "CLM-0423",
+          "note": "Expected below ceiling; direct exact-trim market set not completed because candidate remained reserve."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0424",
+          "note": "Inside scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "unresolved",
+          "value": null,
+          "claim_id": "CLM-0425",
+          "note": "Full multi-channel reliability review not completed for reserve candidate."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "vehicle": "2024 Kia EV9 Land AWD",
+      "funnel_status": "deep_research",
+      "overall_status": "conditional_pass",
+      "eligible_to_score": true,
+      "conditions": "Build after January 2024; all recall/ICCU/cluster/seat-bolt campaigns closed; battery health and charging verified.",
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "pass",
+          "value": true,
+          "claim_id": "CLM-0321",
+          "note": "Normal three-row configuration."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "pass",
+          "value": 5,
+          "claim_id": "CLM-0322",
+          "note": "Exact AWD record corroborated."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "conditional_pass",
+          "value": "Top Safety Pick",
+          "claim_id": "CLM-0323",
+          "note": "Award applies to vehicles built after January 2024."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "pass",
+          "value": 2,
+          "claim_id": "CLM-0324",
+          "note": "Complete positions in second-row captain chairs."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "pass",
+          "value": 2,
+          "claim_id": "CLM-0325",
+          "note": "Two complete positions in row 3."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "pass",
+          "value": 20.2,
+          "claim_id": "CLM-0326",
+          "note": "Manufacturer handout."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "pass",
+          "value": "AWD",
+          "claim_id": "CLM-0327",
+          "note": "Land is dual-motor AWD."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "pass",
+          "value": 46112,
+          "claim_id": "CLM-0328",
+          "note": "Normalized used-market acquisition price."
+        },
+        {
+          "requirement": "model_year",
+          "status": "pass",
+          "value": 2024,
+          "claim_id": "CLM-0329",
+          "note": "Inside scope."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "pass",
+          "value": "no_exclusion_but_high_risk",
+          "claim_id": "CLM-0330",
+          "note": "Strong electrical/ICCU pattern and seven recalls materially reduce score, but campaigns, warranty and available remedies prevent a categorical exclusion at this evidence threshold."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-ACURA-MDX-2024-ADVANCE-SHAWD",
+      "vehicle": "2024 Acura MDX Advance SH-AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0426",
+          "note": "Exact SH-AWD variant is not rated; configured unrated policy is conditional-not-pass."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-LINCOLN-AVIATOR-2024-RESERVE-AWD",
+      "vehicle": "2024 Lincoln Aviator Reserve AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0427",
+          "note": "No qualifying exact-year IIHS award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-GMC-ACADIA-2024-DENALI-AWD",
+      "vehicle": "2024 GMC Acadia Denali AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0428",
+          "note": "No qualifying exact-year IIHS award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-CHEVROLET-TRAVERSE-2024-Z71-AWD",
+      "vehicle": "2024 Chevrolet Traverse Z71 AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0429",
+          "note": "No qualifying exact-year IIHS award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-TOYOTA-GRAND-HIGHLANDER-2024-HYBRID-LIMITED-AWD",
+      "vehicle": "2024 Toyota Grand Highlander Hybrid Limited AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0430",
+          "note": "No qualifying exact-year IIHS award under the frozen gate."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-TOYOTA-HIGHLANDER-2024-HYBRID-PLATINUM-AWD",
+      "vehicle": "2024 Toyota Highlander Hybrid Platinum AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0431",
+          "note": "No complete lower-anchor-plus-tether position in row 3."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-MAZDA-CX90-2024-PHEV-PREMIUMPLUS-AWD",
+      "vehicle": "2024 Mazda CX-90 PHEV Premium Plus AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0432",
+          "note": "Published volume is below 16 cubic feet."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-VOLVO-XC90-2024-RECHARGE-PLUS-AWD",
+      "vehicle": "2024 Volvo XC90 Recharge Plus AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0433",
+          "note": "Published volume is approximately 15.8 cubic feet, below threshold."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-AUDI-Q7-2024-PRESTIGE-QUATTRO",
+      "vehicle": "2024 Audi Q7 Prestige quattro AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0434",
+          "note": "Published volume is below 16 cubic feet."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-INFINITI-QX60-2024-AUTOGRAPH-AWD",
+      "vehicle": "2024 Infiniti QX60 Autograph AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0435",
+          "note": "Published volume is below 16 cubic feet."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-HYUNDAI-SANTAFE-2024-CALLIGRAPHY-AWD",
+      "vehicle": "2024 Hyundai Santa Fe Calligraphy AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0436",
+          "note": "Published volume is below 16 cubic feet."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-MITSUBISHI-OUTLANDER-2024-PHEV-SEL-PREMIUM-AWD",
+      "vehicle": "2024 Mitsubishi Outlander PHEV SEL Premium S-AWC",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0437",
+          "note": "Third-row cargo and usability do not meet the configured threshold."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-JEEP-GRANDCHEROKEEL-2024-SUMMIT-4X4",
+      "vehicle": "2024 Jeep Grand Cherokee L Summit 4x4",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0438",
+          "note": "No qualifying exact-year IIHS award."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    },
+    {
+      "vehicle_id": "VEH-RIVIAN-R1S-2024-DUAL-AWD",
+      "vehicle": "2024 Rivian R1S Dual-Motor AWD",
+      "funnel_status": "eliminated",
+      "overall_status": "fail",
+      "eligible_to_score": false,
+      "conditions": null,
+      "requirements": [
+        {
+          "requirement": "third_row",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "nhtsa_overall",
+          "status": "fail",
+          "value": null,
+          "claim_id": "CLM-0439",
+          "note": "Exact AWD NHTSA overall score is not available; unrated is not a pass."
+        },
+        {
+          "requirement": "iihs_award",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row2_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "row3_complete_latch",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "cargo_behind_row3",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "awd_or_4wd",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "price_ceiling",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "model_year",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        },
+        {
+          "requirement": "reliability_exclusion",
+          "status": "not_researched_after_failure",
+          "value": null,
+          "claim_id": null,
+          "note": "Expensive research stopped after definitive failure, per operating rule 13."
+        }
+      ]
+    }
+  ]
+}

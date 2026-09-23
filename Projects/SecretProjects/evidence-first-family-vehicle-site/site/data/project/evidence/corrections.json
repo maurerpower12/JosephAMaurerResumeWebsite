@@ -1,0 +1,51 @@
+{
+  "run_id": "RUN-FVR-20260824-001",
+  "status": "corrections_recorded",
+  "corrections": [
+    {
+      "correction_id": "COR-0001",
+      "original_claim": "Manual research: 2024 Atlas has two complete row-3 LATCH positions.",
+      "corrected_claim": "IIHS shows tether anchors but no row-3 lower anchors; zero complete row-3 LATCH positions under the project definition.",
+      "phase_or_step_discovered": "post-lock human-versus-AI comparison",
+      "reason": "The manual dataset conflated tether availability with a complete LATCH position.",
+      "evidence": [
+        "CLM-0404",
+        "SRC-0007"
+      ],
+      "scoring_or_eligibility_impact": "Atlas fails eligibility and receives no score."
+    },
+    {
+      "correction_id": "COR-0002",
+      "original_claim": "Manual research: 2024 Acura MDX Advance SH-AWD has a five-star NHTSA overall rating.",
+      "corrected_claim": "The exact SH-AWD NHTSA page is unrated under the frozen exact-configuration rule.",
+      "phase_or_step_discovered": "post-lock human-versus-AI comparison",
+      "reason": "A rating from another drivetrain or configuration cannot be transferred.",
+      "evidence": [
+        "CLM-0426",
+        "SRC-0012"
+      ],
+      "scoring_or_eligibility_impact": "MDX fails eligibility and receives no score."
+    },
+    {
+      "correction_id": "COR-0003",
+      "original_claim": "Manual research included a 2026 Hyundai Ioniq 9 in a used 2022-2025 project.",
+      "corrected_claim": "The Ioniq 9 is outside the frozen 2023-2025 model-year intersection for this run.",
+      "phase_or_step_discovered": "post-lock human-versus-AI comparison",
+      "reason": "Model-year scope mismatch.",
+      "evidence": [],
+      "scoring_or_eligibility_impact": "Not admitted to the candidate universe."
+    },
+    {
+      "correction_id": "COR-0004",
+      "original_claim": "PRC-0009 used an authorized-dealer inventory results URL rather than a direct vehicle-detail page.",
+      "corrected_claim": "PRC-0009 now uses a direct authorized Honda-dealer CPO URL for VIN 5FNYG1H83RB033507, with the exact listed vehicle price, mileage, stock number and fee treatment.",
+      "phase_or_step_discovered": "Final price-link QA",
+      "reason": "The project contract prohibits a search-results page when a direct exact listing is available.",
+      "evidence": [
+        "SRC-0059",
+        "PRC-0009"
+      ],
+      "scoring_or_eligibility_impact": "No score or eligibility change. The replacement comparable remains consistent with the frozen planning range and improves auditability."
+    }
+  ]
+}

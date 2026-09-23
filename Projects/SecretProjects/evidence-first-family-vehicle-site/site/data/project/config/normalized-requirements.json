@@ -1,0 +1,137 @@
+{
+  "version": "1.0-frozen-2026-08-24",
+  "analysis_mode": "portfolio",
+  "market": "United States",
+  "home_zip": "98038",
+  "purchase_window": "Q4 2026",
+  "condition": "used",
+  "model_years": [
+    2023,
+    2024,
+    2025
+  ],
+  "model_year_resolution": {
+    "status": "resolved_by_conservative_intersection",
+    "project_context": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "research_config": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "scoring_eligibility": [
+      2023,
+      2024,
+      2025,
+      2026,
+      2027
+    ],
+    "frozen_intersection": [
+      2023,
+      2024,
+      2025
+    ],
+    "reason": "Avoid granting eligibility to 2022 vehicles that the authoritative scoring gate excludes."
+  },
+  "budget": {
+    "soft_anchor": 65000,
+    "realistic_range": [
+      70000,
+      75000
+    ],
+    "hard_vehicle_price_ceiling": 80000,
+    "excludes": [
+      "sales_tax",
+      "title",
+      "registration",
+      "dealer_fees"
+    ]
+  },
+  "household": {
+    "adults": 2,
+    "children_ages_at_freeze": [
+      3,
+      1
+    ],
+    "car_seats": 2,
+    "dog": "medium Sheltie-sized",
+    "retained_vehicle": "2025 Ford Mustang Mach-E",
+    "trade_vehicle": "2015 Nissan Sentra"
+  },
+  "driving": {
+    "annual_miles_point": 8000,
+    "annual_miles_range": [
+      6000,
+      9000
+    ],
+    "city_percent": 70,
+    "highway_percent": 30,
+    "climate": "Pacific Northwest marine",
+    "winter_travel": "occasional Snoqualmie Pass",
+    "home_level_2_charging": true,
+    "ev_home_charging_percent": 90,
+    "ev_public_dcfc_percent": 10
+  },
+  "ownership_horizon_years": 10,
+  "secondary_tco_horizon_years": 5,
+  "candidate_target": 25,
+  "deep_research_target": 6,
+  "finalist_target": 3,
+  "binary_requirements": {
+    "third_row": {
+      "required": true,
+      "rule": "Vehicle must have a third row usable while raised in the normal family configuration."
+    },
+    "safety": {
+      "nhtsa_overall_stars_min": 5,
+      "iihs_allowed_awards": [
+        "Top Safety Pick",
+        "Top Safety Pick+"
+      ],
+      "unrated_policy": "conditional_not_pass"
+    },
+    "latch": {
+      "row_2_complete_latch_positions_min": 1,
+      "row_3_complete_latch_positions_min": 1,
+      "complete_latch_definition": "Lower anchors plus top tether at the same seating position."
+    },
+    "cargo_behind_third_row_cuft_min": 16,
+    "drivetrain": {
+      "allowed": [
+        "AWD",
+        "4WD"
+      ]
+    },
+    "vehicle_price_before_tax_fees_max": 80000,
+    "model_year": {
+      "min": 2023,
+      "max": 2027
+    },
+    "reliability_exclusion": {
+      "enabled": true,
+      "rule": "Exclude only when credible evidence demonstrates a systemic mechanical, electrical, battery, or software defect with material ownership consequences.",
+      "single_owner_reports_are_insufficient": true,
+      "brand_reputation_alone_is_insufficient": true
+    }
+  },
+  "brand_preferences": [
+    "Volkswagen",
+    "Acura",
+    "Honda",
+    "Volvo",
+    "Mazda",
+    "Toyota",
+    "Hyundai",
+    "Ford",
+    "Nissan",
+    "General Motors"
+  ],
+  "brand_preferences_usage": "tie-break context only; no points",
+  "used_price_basis": "normalized current-market acquisition price for exact year/trim/drivetrain/mileage/condition, overriding the new-MSRP language in purchase_price.price_definition for this used-only run",
+  "manual_research_embargo": "Do not consult MANUAL_RESEARCH.md until independent recommendation is written and hashed."
+}

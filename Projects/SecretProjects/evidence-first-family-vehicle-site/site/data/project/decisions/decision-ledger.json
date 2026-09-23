@@ -1,0 +1,173 @@
+{
+  "run_id": "RUN-FVR-20260824-001",
+  "decisions": [
+    {
+      "decision_id": "DEC-0001",
+      "step": "input_freeze",
+      "decision": "Freeze model years to 2023-2025",
+      "input_claim_ids_or_score_ids": [],
+      "concise_rationale": "Conservative intersection resolves the 2022 conflict without weakening the scoring gate.",
+      "reversible": true,
+      "reversal_conditions": "Supply a revised authoritative scoring configuration that explicitly admits 2022.",
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0002",
+      "step": "analysis_mode",
+      "decision": "Use portfolio mode",
+      "input_claim_ids_or_score_ids": [],
+      "concise_rationale": "No authoritative candidate list was supplied; the payload defines a broad discovery target.",
+      "reversible": false,
+      "reversal_conditions": null,
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0003",
+      "step": "candidate_discovery",
+      "decision": "Create a 25-vehicle universe spanning gas, hybrid, PHEV, EV, mainstream and near-luxury options",
+      "input_claim_ids_or_score_ids": [],
+      "concise_rationale": "Preserves breadth before hard-filter elimination.",
+      "reversible": true,
+      "reversal_conditions": "Change candidate target or body-style scope.",
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0004",
+      "step": "deep_research_selection",
+      "decision": "Deep-research Sienna, Telluride, Pilot, Explorer, Pathfinder and EV9",
+      "input_claim_ids_or_score_ids": [],
+      "concise_rationale": "All are plausible under the gate and collectively test minivan, gas-SUV, value, safety and EV hypotheses.",
+      "reversible": true,
+      "reversal_conditions": "A deep candidate fails or a reserve produces stronger verified eligibility evidence.",
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0005",
+      "step": "atlas_elimination",
+      "decision": "Eliminate 2024 Volkswagen Atlas",
+      "input_claim_ids_or_score_ids": [
+        "CLM-0404"
+      ],
+      "concise_rationale": "No complete row-3 LATCH position under the configured definition.",
+      "reversible": true,
+      "reversal_conditions": "Authoritative exact-year anchor map shows lower anchors and tether at one row-3 seating position.",
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0006",
+      "step": "pricing_method",
+      "decision": "Use current normalized used acquisition price for official price scoring",
+      "input_claim_ids_or_score_ids": [],
+      "concise_rationale": "Used-only override is more specific than the base new-MSRP language.",
+      "reversible": true,
+      "reversal_conditions": "Scoring configuration is revised to explicitly mandate original MSRP for used vehicles.",
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0007",
+      "step": "human_research_embargo",
+      "decision": "Keep MANUAL_RESEARCH.md unopened until recommendation lock",
+      "input_claim_ids_or_score_ids": [],
+      "concise_rationale": "Prevents anchoring and preserves an independent comparison artifact.",
+      "reversible": false,
+      "reversal_conditions": null,
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0008",
+      "step": "deterministic_scoring",
+      "decision": "Rank eligible planning configurations by the frozen 100-point model",
+      "input_claim_ids_or_score_ids": [
+        "SCR-0206",
+        "SCR-0042",
+        "SCR-0001",
+        "SCR-0165",
+        "SCR-0124",
+        "SCR-0083"
+      ],
+      "concise_rationale": "Code-calculated component scores were validated against category maximums and the 100-point total.",
+      "reversible": true,
+      "reversal_conditions": "Verified input claim, price record or scoring configuration changes.",
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0009",
+      "step": "finalist_selection",
+      "decision": "Advance the top three deterministic configurations while retaining the fourth-ranked live alternate",
+      "input_claim_ids_or_score_ids": [
+        "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+        "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+        "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+        "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23"
+      ],
+      "concise_rationale": "Top official scores define the slate; the alternate is retained because conditional VIN/build gates can disqualify a finalist.",
+      "reversible": true,
+      "reversal_conditions": "A finalist fails a purchase gate or updated evidence changes the score ordering.",
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0010",
+      "step": "independent_recommendation_lock",
+      "decision": "Lock 2024 Kia EV9 Land AWD (post-Jan. 2024 build) as the provisional evidence-based recommendation",
+      "input_claim_ids_or_score_ids": [
+        "SCR-0206",
+        "SCR-0207",
+        "SCR-0208",
+        "SCR-0209",
+        "SCR-0210",
+        "SCR-0211",
+        "SCR-0212",
+        "SCR-0213",
+        "SCR-0214",
+        "SCR-0215",
+        "SCR-0216",
+        "SCR-0217",
+        "SCR-0218",
+        "SCR-0219",
+        "SCR-0220",
+        "SCR-0221",
+        "SCR-0222",
+        "SCR-0223",
+        "SCR-0224",
+        "SCR-0225",
+        "SCR-0226",
+        "SCR-0227",
+        "SCR-0228",
+        "SCR-0229",
+        "SCR-0230",
+        "SCR-0231",
+        "SCR-0232",
+        "SCR-0233",
+        "SCR-0234",
+        "SCR-0235",
+        "SCR-0236",
+        "SCR-0237",
+        "SCR-0238",
+        "SCR-0239",
+        "SCR-0240",
+        "SCR-0241",
+        "SCR-0242",
+        "SCR-0243",
+        "SCR-0244",
+        "SCR-0245",
+        "SCR-0246"
+      ],
+      "concise_rationale": "It has the highest deterministic score, subject to explicit high-risk reliability and VIN/build conditions.",
+      "reversible": true,
+      "reversal_conditions": "The recommended EV9 fails any build-date, campaign, service-history, battery-health, charging, insurance or physical-fit gate.; A Telluride with all recalls closed and clean electrical history is available within the verified market range while the EV9 cannot clear its risk gates.; The family prioritizes mature-platform dependability over efficiency strongly enough to adopt the risk-averse exploratory preset.; The Sienna's physical packaging advantage proves decisive and its updated moderate-overlap result is acceptable to the family.; A Q4 2026 transaction-price change materially alters purchase-price and TCO scores beyond the modeled ranges.",
+      "date": "2026-08-24"
+    },
+    {
+      "decision_id": "DEC-0011",
+      "step": "post_lock_human_comparison",
+      "decision": "Open and compare MANUAL_RESEARCH.md only after independent recommendation lock",
+      "input_claim_ids_or_score_ids": [
+        "7c7e55c8821ee77751a76ab54390eb2edb64a7ead2f16e2a04bdc21c1d3429f8"
+      ],
+      "concise_rationale": "The comparison identified useful human observations and three material input errors without contaminating the locked result.",
+      "reversible": false,
+      "reversal_conditions": null,
+      "date": "2026-08-24"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "version": "1.0",
+  "name": "Family Vehicle Scoring Model",
+  "total_points": 100,
+  "scoring_principles": {
+    "requirements_are_binary": true,
+    "requirements_do_not_award_points": true,
+    "score_only_verified_facts": true,
+    "do_not_guess_missing_values": true,
+    "unknown_values": "null",
+    "preferences_only_break_ties": true,
+    "practical_tie_threshold_points": 2.0,
+    "score_rounding_decimals": 1
+  },
+  "eligibility": {
+    "rule": "Vehicle must pass every requirement before scoring.",
+    "requirements": {
+      "third_row": {"required": true, "rule": "Vehicle must have a third row usable while raised in the normal family configuration."},
+      "safety": {"nhtsa_overall_stars_min": 5, "iihs_allowed_awards": ["Top Safety Pick", "Top Safety Pick+"], "unrated_policy": "conditional_not_pass"},
+      "latch": {"row_2_complete_latch_positions_min": 1, "row_3_complete_latch_positions_min": 1, "complete_latch_definition": "Lower anchors plus top tether at the same seating position."},
+      "cargo_behind_third_row_cuft_min": 16,
+      "drivetrain": {"allowed": ["AWD", "4WD"]},
+      "vehicle_price_before_tax_fees_max": 80000,
+      "model_year": {"min": 2023, "max": 2027},
+      "reliability_exclusion": {"enabled": true, "rule": "Exclude only when credible evidence demonstrates a systemic mechanical, electrical, battery, or software defect with material ownership consequences.", "single_owner_reports_are_insufficient": true, "brand_reputation_alone_is_insufficient": true}
+    }
+  },
+  "scoring": {
+    "safety": {
+      "max_points": 25,
+      "components": {
+        "iihs_award": {"max_points": 7, "rules": {"Top Safety Pick+": 7, "Top Safety Pick": 5}},
+        "iihs_test_quality": {"max_points": 6, "rule": "Evaluate applicable current-generation IIHS crashworthiness tests.", "rules": {"all_applicable_good": 6, "one_acceptable_remainder_good": 4, "multiple_acceptable_remainder_good": 2, "any_marginal_or_poor": 0}},
+        "crash_avoidance": {"max_points": 5, "components": {"pedestrian_aeb_strong_result": 2, "vehicle_to_vehicle_aeb": 1, "blind_spot_monitoring_standard": 1, "rear_cross_traffic_alert_standard": 1}},
+        "family_safety_features": {"max_points": 4, "components": {"rear_occupant_alert": 1, "safe_exit_warning_or_equivalent": 1, "driver_attention_monitoring": 1, "surround_view_camera_available_on_scored_trim": 1}},
+        "latch_quality": {"max_points": 3, "rules": {"excellent_access_and_4_or_more_complete_positions": 3, "good_access_and_3_complete_positions": 2, "passes_requirement_but_access_is_difficult": 1}}
+      }
+    },
+    "total_cost_of_ownership": {
+      "max_points": 15,
+      "inputs": {"ownership_years_primary": 10, "ownership_years_secondary": 5, "primary_weight": 0.60, "secondary_weight": 0.40},
+      "five_year_tco_score": {"type": "linear_interpolation", "anchors": [{"tco": 40000, "score": 10},{"tco": 50000, "score": 7},{"tco": 60000, "score": 4},{"tco": 70000, "score": 1},{"tco": 75000, "score": 0}]},
+      "ten_year_tco_score": {"type": "linear_interpolation", "anchors": [{"tco": 70000, "score": 10},{"tco": 85000, "score": 7},{"tco": 100000, "score": 4},{"tco": 115000, "score": 1},{"tco": 120000, "score": 0}]},
+      "calculation": "category_points = max_points * ((0.40 * five_year_score + 0.60 * ten_year_score) / 10)"
+    },
+    "reliability": {
+      "max_points": 10,
+      "components": {
+        "predicted_or_measured_reliability": {"max_points": 4, "rules": {"strong_above_average_evidence": 4, "above_average": 3, "average_or_mixed": 2, "below_average": 1, "poor_or_systemic_problems": 0}},
+        "powertrain_and_platform_maturity": {"max_points": 2, "rules": {"established_platform_and_powertrain_3plus_years": 2, "partially_new_or_significantly_revised": 1, "first_year_platform_or_powertrain": 0}},
+        "recall_and_campaign_history": {"max_points": 2, "rules": {"no_material_pattern": 2, "minor_or_resolved_pattern": 1, "multiple_material_or_unresolved_issues": 0}},
+        "owner_problem_pattern": {"max_points": 2, "rules": {"no_meaningful_recurring_pattern": 2, "moderate_recurring_issue": 1, "strong_recurring_material_issue": 0}}
+      },
+      "evidence_rules": {"brand_reputation_cannot_award_points": true, "single_anecdote_cannot_deduct_points": true, "new_vehicle_without_history_must_not_receive_high_reliability_score": true}
+    },
+    "purchase_price": {
+      "max_points": 10,
+      "price_definition": "Configured vehicle MSRP plus mandatory destination charge before taxes, registration, dealer fees, incentives, or trade.",
+      "type": "linear_interpolation",
+      "anchors": [{"price": 45000, "score": 10},{"price": 50000, "score": 9},{"price": 55000, "score": 8},{"price": 60000, "score": 7},{"price": 65000, "score": 6},{"price": 70000, "score": 5},{"price": 75000, "score": 4},{"price": 80000, "score": 0}],
+      "calculation": "category_points = max_points * score / 10"
+    },
+    "passenger_space": {
+      "max_points": 10,
+      "components": {
+        "third_row_legroom": {"max_points": 4, "unit": "inches", "rules": [{"min": 34, "points": 4},{"min": 32, "points": 3},{"min": 30, "points": 2},{"min": 28, "points": 1},{"below": 28, "points": 0}]},
+        "third_row_real_world_usability": {"max_points": 3, "rules": {"adult_usable_for_extended_trip": 3, "adult_usable_for_short_trip": 2, "primarily_child_sized": 1, "severely_restricted": 0}},
+        "second_row_flexibility": {"max_points": 2, "components": {"sliding_second_row": 1, "multiple_family_usable_seating_configurations": 1}},
+        "entry_and_exit": {"max_points": 1, "rules": {"easy": 1, "average": 0.5, "difficult": 0}}
+      }
+    },
+    "cargo_practicality": {
+      "max_points": 10,
+      "components": {
+        "cargo_behind_third_row": {"max_points": 8, "unit": "cu_ft", "type": "linear_interpolation", "anchors": [{"cargo": 16, "points": 2},{"cargo": 18, "points": 4},{"cargo": 20, "points": 6},{"cargo": 22, "points": 8}]},
+        "cargo_usability": {"max_points": 2, "components": {"flat_or_low_load_floor": 0.5, "useful_underfloor_storage": 0.5, "power_third_row_available": 0.5, "independent_testing_confirms_good_real_world_shape": 0.5}}
+      }
+    },
+    "fuel_economy": {
+      "max_points": 10,
+      "metric": "estimated_annual_energy_cost",
+      "assumptions": {"annual_miles": 8000, "city_percent": 70, "highway_percent": 30, "ev_home_charging_percent": 90, "ev_public_charging_percent": 10},
+      "type": "linear_interpolation",
+      "anchors": [{"annual_energy_cost": 700, "score": 10},{"annual_energy_cost": 900, "score": 9},{"annual_energy_cost": 1100, "score": 8},{"annual_energy_cost": 1400, "score": 7},{"annual_energy_cost": 1600, "score": 6},{"annual_energy_cost": 1800, "score": 5},{"annual_energy_cost": 2000, "score": 4},{"annual_energy_cost": 2400, "score": 2},{"annual_energy_cost": 2800, "score": 0}],
+      "calculation": "category_points = max_points * score / 10"
+    },
+    "comfort": {
+      "max_points": 5,
+      "components": {
+        "rear_climate": {"max_points": 1.5, "components": {"row_2_dedicated_vents": 0.5, "row_3_dedicated_vents": 0.5, "ceiling_mounted_or_equivalently_effective_rear_vents": 0.5}},
+        "ride_quality": {"max_points": 1.5, "rules": {"consistently_praised": 1.5, "generally_good": 1, "mixed": 0.5, "consistently_criticized": 0}},
+        "cabin_noise": {"max_points": 1, "rules": {"quiet_for_class": 1, "average": 0.5, "noisy_for_class": 0}},
+        "seat_comfort": {"max_points": 1, "rules": {"consistently_praised": 1, "average_or_mixed": 0.5, "consistently_criticized": 0}}
+      }
+    },
+    "technology": {
+      "max_points": 5,
+      "components": {
+        "surround_view_camera": {"points": 1},
+        "wireless_carplay_android_auto": {"points": 1},
+        "adaptive_cruise_with_lane_centering": {"points": 1},
+        "rear_or_family_camera_feature": {"points": 0.5},
+        "ota_updates": {"points": 0.5},
+        "digital_key_or_phone_key": {"points": 0.5},
+        "usable_physical_controls_for_core_functions": {"points": 0.5}
+      }
+    }
+  },
+  "preferences": {
+    "rule": "Preferences do not add points. Apply only when weighted totals are within 2.0 points.",
+    "ordered_tie_breakers": [
+      {"priority": 1, "preference": "Second-row seat can provide third-row access without removing compatible installed child seat."},
+      {"priority": 2, "preference": "Ceiling-mounted or highly effective vents serving rows 2 and 3."},
+      {"priority": 3, "preference": "Removable or modular second-row center seat."},
+      {"priority": 4, "preference": "360-degree camera."},
+      {"priority": 5, "preference": "Hybrid, PHEV, or EV powertrain."},
+      {"priority": 6, "preference": "SUV/crossover body style over minivan."}
+    ]
+  },
+  "missing_data": {
+    "rule": "Never invent or infer a value merely to complete the score.",
+    "scoring_behavior": {"verified": "Award calculated points.", "unknown": "Set component score to null.", "conflicting": "Set component score to null until contradiction is resolved.", "qualitative_only": "Award points only when the rubric explicitly permits qualitative evidence."},
+    "report": ["confirmed_points", "maximum_possible_points", "missing_scoring_inputs"],
+    "ranking_rule": "Do not claim one vehicle definitively outranks another when their possible score ranges materially overlap because of unresolved evidence."
+  },
+  "evidence": {
+    "preferred_sources": ["IIHS","NHTSA","EPA / FuelEconomy.gov","manufacturer owners manual","manufacturer specifications","manufacturer warranty documentation","official recall database","Consumer Reports","Edmunds","Car and Driver","MotorTrend","instrumented independent testing","owner communities"],
+    "claim_rules": {"official_specification": "Prefer primary source.", "safety_rating": "Use IIHS or NHTSA directly.", "fuel_economy": "Use EPA as baseline.", "reliability": "Require multiple credible signals where possible.", "owner_sentiment": "Require recurring pattern, not isolated anecdote."}
+  },
+  "final_calculation": {
+    "formula": "total_score = safety + total_cost_of_ownership + reliability + purchase_price + passenger_space + cargo_practicality + fuel_economy + comfort + technology",
+    "maximum": 100,
+    "interpretation": {"90_to_100": "Exceptional fit", "80_to_89_9": "Excellent fit", "70_to_79_9": "Strong fit", "60_to_69_9": "Viable with meaningful compromises", "below_60": "Weak fit for this family"}
+  }
+}

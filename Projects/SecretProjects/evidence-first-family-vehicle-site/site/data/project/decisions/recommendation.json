@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-FVR-20260824-001",
+  "status": "independent_recommendation_locked",
+  "lock_timestamp_utc": "2026-08-25T00:30:09Z",
+  "recommendation_type": "provisional_test_drive_slate_not_purchase_authorization",
+  "current_recommendation": {
+    "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+    "vehicle": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+    "eligibility_status": "conditional_pass",
+    "confirmed_score": 80.2,
+    "maximum_possible_score": 80.2,
+    "concise_rationale": "Highest frozen deterministic score, driven by safety, space, energy cost and used-market value; the conclusion remains conditional because first-year electrical/ICCU risk is materially worse than the alternatives.",
+    "main_compromise": "First-year reliability and electrical/ICCU campaign burden are materially worse than the alternatives.",
+    "purchase_stop_conditions": [
+      "Certification label does not satisfy the IIHS build-date condition.",
+      "Any recall, ICCU, cluster or seat-bolt campaign remains open.",
+      "Service history shows repeated 12-volt, ICCU, charging or display failures without durable resolution.",
+      "Battery state-of-health, Level 2 charging or DC fast-charging test is unsatisfactory.",
+      "Household insurance quote erases the modeled cost advantage.",
+      "Physical car-seat, dog and cargo test fails."
+    ]
+  },
+  "runner_up": {
+    "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+    "vehicle": "2024 Kia Telluride SX Prestige X-Pro AWD",
+    "confirmed_score": 75.7,
+    "eligibility_status": "pass",
+    "why_it_advances": "Strongest verified safety package and excellent family equipment at a moderate used price.",
+    "main_compromise": "Recall load and recurring electrical/trim complaints create used-VIN risk."
+  },
+  "conditional_alternative": {
+    "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+    "vehicle": "2024 Toyota Sienna Platinum AWD",
+    "confirmed_score": 72.8,
+    "eligibility_status": "pass",
+    "why_it_advances": "Best physical family utility and hybrid efficiency in the funnel.",
+    "main_compromise": "High used price and a Marginal updated moderate-overlap result reduce its safety score."
+  },
+  "live_alternate": {
+    "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+    "vehicle": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+    "confirmed_score": 70.7,
+    "reason": "Retained because its value case can become compelling if finalist VINs fail their stop conditions."
+  },
+  "finalists": [
+    "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+    "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+    "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD"
+  ],
+  "test_drive_slate": [
+    "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+    "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+    "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+    "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23"
+  ],
+  "recommendation_reversal_conditions": [
+    "The recommended EV9 fails any build-date, campaign, service-history, battery-health, charging, insurance or physical-fit gate.",
+    "A Telluride with all recalls closed and clean electrical history is available within the verified market range while the EV9 cannot clear its risk gates.",
+    "The family prioritizes mature-platform dependability over efficiency strongly enough to adopt the risk-averse exploratory preset.",
+    "The Sienna's physical packaging advantage proves decisive and its updated moderate-overlap result is acceptable to the family.",
+    "A Q4 2026 transaction-price change materially alters purchase-price and TCO scores beyond the modeled ranges."
+  ],
+  "decision_authority": "The client chooses the actual test-drive slate and purchase. Internet research is subordinate to VIN, build date, child-seat, cargo, comfort, insurance, charging and inspection results.",
+  "prior_human_research_consulted_before_lock": false
+}

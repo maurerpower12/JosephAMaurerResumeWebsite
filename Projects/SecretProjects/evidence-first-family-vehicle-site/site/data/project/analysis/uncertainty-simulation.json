@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-FVR-20260824-001",
+  "seed": 20260824,
+  "iterations": 5000,
+  "method": "Triangular uncertainty for transaction price, miles, energy prices, maintenance, repairs, tires and residual fraction; bounded Gaussian perturbation for reliability category. Official weights and verified non-cost component scores remain fixed.",
+  "limitations": [
+    "Simulation expresses planning uncertainty, not statistical failure probabilities.",
+    "Input ranges are scenario assumptions rather than actuarial distributions.",
+    "Insurance is omitted because household-specific comparable quotes were not supplied."
+  ],
+  "vehicle_results": [
+    {
+      "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "vehicle": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "mean_score": 80.08,
+      "p05": 78.15,
+      "p50": 80.02,
+      "p95": 82.16,
+      "probability_rank_1": 0.927,
+      "probability_top_3": 1.0,
+      "rank_distribution": {
+        "1": 0.927,
+        "2": 0.0728,
+        "3": 0.0002,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0
+      }
+    },
+    {
+      "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "mean_score": 76.48,
+      "p05": 72.73,
+      "p50": 76.54,
+      "p95": 80.2,
+      "probability_rank_1": 0.073,
+      "probability_top_3": 1.0,
+      "rank_distribution": {
+        "1": 0.073,
+        "2": 0.8936,
+        "3": 0.0334,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0
+      }
+    },
+    {
+      "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle": "2024 Toyota Sienna Platinum AWD",
+      "mean_score": 72.8,
+      "p05": 69.87,
+      "p50": 72.86,
+      "p95": 75.61,
+      "probability_rank_1": 0.0,
+      "probability_top_3": 0.789,
+      "rank_distribution": {
+        "1": 0.0,
+        "2": 0.0336,
+        "3": 0.7554,
+        "4": 0.2108,
+        "5": 0.0002,
+        "6": 0.0
+      }
+    },
+    {
+      "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "vehicle": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "mean_score": 71.25,
+      "p05": 67.82,
+      "p50": 71.24,
+      "p95": 74.59,
+      "probability_rank_1": 0.0,
+      "probability_top_3": 0.211,
+      "rank_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.211,
+        "4": 0.789,
+        "5": 0.0,
+        "6": 0.0
+      }
+    },
+    {
+      "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "vehicle": "2024 Ford Explorer Platinum 4WD",
+      "mean_score": 65.76,
+      "p05": 61.92,
+      "p50": 65.79,
+      "p95": 69.42,
+      "probability_rank_1": 0.0,
+      "probability_top_3": 0.0,
+      "rank_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0002,
+        "5": 0.6908,
+        "6": 0.309
+      }
+    },
+    {
+      "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "vehicle": "2024 Honda Pilot Elite AWD",
+      "mean_score": 64.98,
+      "p05": 61.34,
+      "p50": 65.01,
+      "p95": 68.5,
+      "probability_rank_1": 0.0,
+      "probability_top_3": 0.0,
+      "rank_distribution": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.309,
+        "6": 0.691
+      }
+    }
+  ],
+  "pairwise_comparisons": [
+    {
+      "vehicle_a": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle_b": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "probability_a_scores_higher": 0.0334,
+      "probability_b_scores_higher": 0.9666,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle_b": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "probability_a_scores_higher": 1.0,
+      "probability_b_scores_higher": 0.0,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle_b": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "probability_a_scores_higher": 0.9998,
+      "probability_b_scores_higher": 0.0002,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle_b": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "probability_a_scores_higher": 0.789,
+      "probability_b_scores_higher": 0.211,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle_b": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "probability_a_scores_higher": 0.0002,
+      "probability_b_scores_higher": 0.9998,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle_b": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "probability_a_scores_higher": 1.0,
+      "probability_b_scores_higher": 0.0,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle_b": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "probability_a_scores_higher": 1.0,
+      "probability_b_scores_higher": 0.0,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle_b": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "probability_a_scores_higher": 1.0,
+      "probability_b_scores_higher": 0.0,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle_b": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "probability_a_scores_higher": 0.073,
+      "probability_b_scores_higher": 0.927,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "vehicle_b": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "probability_a_scores_higher": 0.309,
+      "probability_b_scores_higher": 0.691,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "vehicle_b": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "probability_a_scores_higher": 0.0,
+      "probability_b_scores_higher": 1.0,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "vehicle_b": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "probability_a_scores_higher": 0.0,
+      "probability_b_scores_higher": 1.0,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "vehicle_b": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "probability_a_scores_higher": 0.0,
+      "probability_b_scores_higher": 1.0,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "vehicle_b": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "probability_a_scores_higher": 0.0,
+      "probability_b_scores_higher": 1.0,
+      "probability_exact_tie": 0.0
+    },
+    {
+      "vehicle_a": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "vehicle_b": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "probability_a_scores_higher": 0.0,
+      "probability_b_scores_higher": 1.0,
+      "probability_exact_tie": 0.0
+    }
+  ]
+}

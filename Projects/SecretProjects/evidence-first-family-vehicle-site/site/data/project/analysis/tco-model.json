@@ -1,0 +1,2383 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-FVR-20260824-001",
+  "model_version": "1.0-used-vehicle-planning",
+  "formula": "TCO = acquisition price + sales tax + initial fees + energy + maintenance + repairs + tires/consumables + registration/RTA allowance - residual value. Insurance excluded without actual comparable quotes.",
+  "global_assumptions": {
+    "sales_tax_rate": 0.091,
+    "gas_price_per_gallon": 5.121,
+    "home_electricity_per_kwh": 0.141598,
+    "public_dcfc_per_kwh": 0.572,
+    "ev_wall_to_wheels_efficiency": 0.9,
+    "annual_miles": 8000,
+    "annual_miles_low": 6000,
+    "annual_miles_high": 9000,
+    "city_share": 0.7,
+    "highway_share": 0.3,
+    "ev_home_share": 0.9,
+    "ev_public_share": 0.1,
+    "simulation_seed": 20260824,
+    "simulation_iterations": 5000,
+    "claim_ids": [
+      "CLM-0384",
+      "CLM-0385",
+      "CLM-0386",
+      "CLM-0387",
+      "CLM-0388",
+      "CLM-0389",
+      "CLM-0390",
+      "CLM-0391",
+      "CLM-0392",
+      "CLM-0393"
+    ],
+    "insurance_included": false,
+    "exact_address_RTA_status": "unresolved"
+  },
+  "scenario_definition": {
+    "low": "Low observed purchase price; 6,000 miles/year; energy prices -15%; maintenance, repairs and tires -20%; residual fraction +20%.",
+    "base": "Normalized acquisition price; 8,000 miles/year; base energy, maintenance, repair and depreciation assumptions.",
+    "high": "High observed purchase price; 9,000 miles/year; energy prices +25%; maintenance +15%; repairs +50%; tires +15%; residual fraction -20%."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle": "2024 Toyota Sienna Platinum AWD",
+      "price_record_ids": [
+        "PRC-0001",
+        "PRC-0002",
+        "PRC-0003"
+      ],
+      "annual_energy_cost_base": 1160.76,
+      "annual_energy_details": {
+        "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+        "annual_miles": 8000.0,
+        "city_share": 0.7,
+        "highway_share": 0.3,
+        "city_mpg": 35.0,
+        "highway_mpg": 36.0,
+        "annual_gallons": 226.66666666666669,
+        "gas_price_per_gallon": 5.121
+      },
+      "annual_energy_claim_ids": [
+        "CLM-0036",
+        "CLM-0037",
+        "CLM-0388",
+        "CLM-0389",
+        "CLM-0390",
+        "CLM-0385"
+      ],
+      "scenarios": {
+        "5_year": {
+          "low": {
+            "scenario": "low",
+            "years": 5,
+            "total_tco": 37474.01,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 48990.0,
+              "sales_tax": 4458.09,
+              "initial_fees": 700.0,
+              "energy": 3699.92,
+              "maintenance": 2400.0,
+              "repairs": 1200.0,
+              "tires_and_consumables": 1920.0,
+              "registration_and_RTA_planning_allowance": 3500.0,
+              "residual_value_credit": 29394.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 35.0,
+              "highway_mpg": 36.0,
+              "annual_gallons": 170.0,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0036",
+              "CLM-0037",
+              "CLM-0051",
+              "CLM-0054",
+              "CLM-0056",
+              "CLM-0058",
+              "CLM-0060",
+              "CLM-0062",
+              "CLM-0063",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0001",
+              "PRC-0002",
+              "PRC-0003"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 5,
+            "total_tco": 48223.85,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 52995.0,
+              "sales_tax": 4822.55,
+              "initial_fees": 700.0,
+              "energy": 5803.8,
+              "maintenance": 3000.0,
+              "repairs": 1500.0,
+              "tires_and_consumables": 2400.0,
+              "registration_and_RTA_planning_allowance": 3500.0,
+              "residual_value_credit": 26497.5,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 35.0,
+              "highway_mpg": 36.0,
+              "annual_gallons": 226.66666666666669,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0036",
+              "CLM-0037",
+              "CLM-0052",
+              "CLM-0054",
+              "CLM-0056",
+              "CLM-0058",
+              "CLM-0060",
+              "CLM-0062",
+              "CLM-0063",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0001",
+              "PRC-0002",
+              "PRC-0003"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 5,
+            "total_tco": 61583.68,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 58990.0,
+              "sales_tax": 5368.09,
+              "initial_fees": 700.0,
+              "energy": 8161.59,
+              "maintenance": 3450.0,
+              "repairs": 2250.0,
+              "tires_and_consumables": 2760.0,
+              "registration_and_RTA_planning_allowance": 3500.0,
+              "residual_value_credit": 23596.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 35.0,
+              "highway_mpg": 36.0,
+              "annual_gallons": 255.0,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0036",
+              "CLM-0037",
+              "CLM-0053",
+              "CLM-0054",
+              "CLM-0056",
+              "CLM-0058",
+              "CLM-0060",
+              "CLM-0062",
+              "CLM-0063",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0001",
+              "PRC-0002",
+              "PRC-0003"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        },
+        "10_year": {
+          "low": {
+            "scenario": "low",
+            "years": 10,
+            "total_tco": 69050.93,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 48990.0,
+              "sales_tax": 4458.09,
+              "initial_fees": 700.0,
+              "energy": 7399.85,
+              "maintenance": 6800.0,
+              "repairs": 6400.0,
+              "tires_and_consumables": 4000.0,
+              "registration_and_RTA_planning_allowance": 5000.0,
+              "residual_value_credit": 14697.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 35.0,
+              "highway_mpg": 36.0,
+              "annual_gallons": 170.0,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0036",
+              "CLM-0037",
+              "CLM-0051",
+              "CLM-0055",
+              "CLM-0057",
+              "CLM-0059",
+              "CLM-0061",
+              "CLM-0062",
+              "CLM-0064",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0001",
+              "PRC-0002",
+              "PRC-0003"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 10,
+            "total_tco": 83376.4,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 52995.0,
+              "sales_tax": 4822.55,
+              "initial_fees": 700.0,
+              "energy": 11607.6,
+              "maintenance": 8500.0,
+              "repairs": 8000.0,
+              "tires_and_consumables": 5000.0,
+              "registration_and_RTA_planning_allowance": 5000.0,
+              "residual_value_credit": 13248.75,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 35.0,
+              "highway_mpg": 36.0,
+              "annual_gallons": 226.66666666666669,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0036",
+              "CLM-0037",
+              "CLM-0052",
+              "CLM-0055",
+              "CLM-0057",
+              "CLM-0059",
+              "CLM-0061",
+              "CLM-0062",
+              "CLM-0064",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0001",
+              "PRC-0002",
+              "PRC-0003"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 10,
+            "total_tco": 102108.28,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 58990.0,
+              "sales_tax": 5368.09,
+              "initial_fees": 700.0,
+              "energy": 16323.19,
+              "maintenance": 9775.0,
+              "repairs": 12000.0,
+              "tires_and_consumables": 5750.0,
+              "registration_and_RTA_planning_allowance": 5000.0,
+              "residual_value_credit": 11798.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 35.0,
+              "highway_mpg": 36.0,
+              "annual_gallons": 255.0,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0036",
+              "CLM-0037",
+              "CLM-0053",
+              "CLM-0055",
+              "CLM-0057",
+              "CLM-0059",
+              "CLM-0061",
+              "CLM-0062",
+              "CLM-0064",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0001",
+              "PRC-0002",
+              "PRC-0003"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        }
+      },
+      "qualitative_insurance_risk": "Obtain VIN-specific quotes before purchase; insurance is excluded from numeric comparisons.",
+      "remaining_warranty_note": "Verify original in-service date, transferable coverage, CPO terms and campaign completion on the exact VIN."
+    },
+    {
+      "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "price_record_ids": [
+        "PRC-0004",
+        "PRC-0005",
+        "PRC-0006"
+      ],
+      "annual_energy_cost_base": 2105.3,
+      "annual_energy_details": {
+        "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+        "annual_miles": 8000.0,
+        "city_share": 0.7,
+        "highway_share": 0.3,
+        "city_mpg": 18.0,
+        "highway_mpg": 24.0,
+        "annual_gallons": 411.1111111111111,
+        "gas_price_per_gallon": 5.121
+      },
+      "annual_energy_claim_ids": [
+        "CLM-0100",
+        "CLM-0101",
+        "CLM-0388",
+        "CLM-0389",
+        "CLM-0390",
+        "CLM-0385"
+      ],
+      "scenarios": {
+        "5_year": {
+          "low": {
+            "scenario": "low",
+            "years": 5,
+            "total_tco": 40202.47,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 38998.0,
+              "sales_tax": 3548.82,
+              "initial_fees": 700.0,
+              "energy": 6710.64,
+              "maintenance": 2800.0,
+              "repairs": 2000.0,
+              "tires_and_consumables": 2400.0,
+              "registration_and_RTA_planning_allowance": 2700.0,
+              "residual_value_credit": 19654.99,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 308.33333333333337,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0100",
+              "CLM-0101",
+              "CLM-0115",
+              "CLM-0118",
+              "CLM-0120",
+              "CLM-0122",
+              "CLM-0124",
+              "CLM-0126",
+              "CLM-0127",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0004",
+              "PRC-0005",
+              "PRC-0006"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 5,
+            "total_tco": 51101.79,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 41990.0,
+              "sales_tax": 3821.09,
+              "initial_fees": 700.0,
+              "energy": 10526.5,
+              "maintenance": 3500.0,
+              "repairs": 2500.0,
+              "tires_and_consumables": 3000.0,
+              "registration_and_RTA_planning_allowance": 2700.0,
+              "residual_value_credit": 17635.8,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 411.1111111111111,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0100",
+              "CLM-0101",
+              "CLM-0116",
+              "CLM-0118",
+              "CLM-0120",
+              "CLM-0122",
+              "CLM-0124",
+              "CLM-0126",
+              "CLM-0127",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0004",
+              "PRC-0005",
+              "PRC-0006"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 5,
+            "total_tco": 61561.45,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 42561.0,
+              "sales_tax": 3873.05,
+              "initial_fees": 700.0,
+              "energy": 14802.89,
+              "maintenance": 4025.0,
+              "repairs": 3750.0,
+              "tires_and_consumables": 3450.0,
+              "registration_and_RTA_planning_allowance": 2700.0,
+              "residual_value_credit": 14300.5,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 462.5,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0100",
+              "CLM-0101",
+              "CLM-0117",
+              "CLM-0118",
+              "CLM-0120",
+              "CLM-0122",
+              "CLM-0124",
+              "CLM-0126",
+              "CLM-0127",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0004",
+              "PRC-0005",
+              "PRC-0006"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        },
+        "10_year": {
+          "low": {
+            "scenario": "low",
+            "years": 10,
+            "total_tco": 71308.59,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 38998.0,
+              "sales_tax": 3548.82,
+              "initial_fees": 700.0,
+              "energy": 13421.29,
+              "maintenance": 7200.0,
+              "repairs": 8000.0,
+              "tires_and_consumables": 4800.0,
+              "registration_and_RTA_planning_allowance": 4000.0,
+              "residual_value_credit": 9359.52,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 308.33333333333337,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0100",
+              "CLM-0101",
+              "CLM-0115",
+              "CLM-0119",
+              "CLM-0121",
+              "CLM-0123",
+              "CLM-0125",
+              "CLM-0126",
+              "CLM-0128",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0004",
+              "PRC-0005",
+              "PRC-0006"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 10,
+            "total_tco": 88166.09,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 41990.0,
+              "sales_tax": 3821.09,
+              "initial_fees": 700.0,
+              "energy": 21053.0,
+              "maintenance": 9000.0,
+              "repairs": 10000.0,
+              "tires_and_consumables": 6000.0,
+              "registration_and_RTA_planning_allowance": 4000.0,
+              "residual_value_credit": 8398.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 411.1111111111111,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0100",
+              "CLM-0101",
+              "CLM-0116",
+              "CLM-0119",
+              "CLM-0121",
+              "CLM-0123",
+              "CLM-0125",
+              "CLM-0126",
+              "CLM-0128",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0004",
+              "PRC-0005",
+              "PRC-0006"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 10,
+            "total_tco": 106180.07,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 42561.0,
+              "sales_tax": 3873.05,
+              "initial_fees": 700.0,
+              "energy": 29605.78,
+              "maintenance": 10350.0,
+              "repairs": 15000.0,
+              "tires_and_consumables": 6900.0,
+              "registration_and_RTA_planning_allowance": 4000.0,
+              "residual_value_credit": 6809.76,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 462.5,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0100",
+              "CLM-0101",
+              "CLM-0117",
+              "CLM-0119",
+              "CLM-0121",
+              "CLM-0123",
+              "CLM-0125",
+              "CLM-0126",
+              "CLM-0128",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0004",
+              "PRC-0005",
+              "PRC-0006"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        }
+      },
+      "qualitative_insurance_risk": "Obtain VIN-specific quotes before purchase; insurance is excluded from numeric comparisons.",
+      "remaining_warranty_note": "Verify original in-service date, transferable coverage, CPO terms and campaign completion on the exact VIN."
+    },
+    {
+      "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "vehicle": "2024 Honda Pilot Elite AWD",
+      "price_record_ids": [
+        "PRC-0007",
+        "PRC-0008",
+        "PRC-0009"
+      ],
+      "annual_energy_cost_base": 2000.96,
+      "annual_energy_details": {
+        "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+        "annual_miles": 8000.0,
+        "city_share": 0.7,
+        "highway_share": 0.3,
+        "city_mpg": 19.0,
+        "highway_mpg": 25.0,
+        "annual_gallons": 390.7368421052632,
+        "gas_price_per_gallon": 5.121
+      },
+      "annual_energy_claim_ids": [
+        "CLM-0164",
+        "CLM-0165",
+        "CLM-0388",
+        "CLM-0389",
+        "CLM-0390",
+        "CLM-0385"
+      ],
+      "scenarios": {
+        "5_year": {
+          "low": {
+            "scenario": "low",
+            "years": 5,
+            "total_tco": 39818.97,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 41998.0,
+              "sales_tax": 3821.82,
+              "initial_fees": 700.0,
+              "energy": 6378.07,
+              "maintenance": 2800.0,
+              "repairs": 2000.0,
+              "tires_and_consumables": 2000.0,
+              "registration_and_RTA_planning_allowance": 2800.0,
+              "residual_value_credit": 22678.92,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 19.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 293.0526315789474,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0164",
+              "CLM-0165",
+              "CLM-0179",
+              "CLM-0182",
+              "CLM-0184",
+              "CLM-0186",
+              "CLM-0188",
+              "CLM-0190",
+              "CLM-0191",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0007",
+              "PRC-0008",
+              "PRC-0009"
+            ],
+            "confidence": "medium-low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 5,
+            "total_tco": 50080.62,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 43800.0,
+              "sales_tax": 3985.8,
+              "initial_fees": 700.0,
+              "energy": 10004.82,
+              "maintenance": 3500.0,
+              "repairs": 2500.0,
+              "tires_and_consumables": 2500.0,
+              "registration_and_RTA_planning_allowance": 2800.0,
+              "residual_value_credit": 19710.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 19.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 390.7368421052632,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0164",
+              "CLM-0165",
+              "CLM-0180",
+              "CLM-0182",
+              "CLM-0184",
+              "CLM-0186",
+              "CLM-0188",
+              "CLM-0190",
+              "CLM-0191",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0007",
+              "PRC-0008",
+              "PRC-0009"
+            ],
+            "confidence": "medium-low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 5,
+            "total_tco": 63007.56,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 47590.0,
+              "sales_tax": 4330.69,
+              "initial_fees": 700.0,
+              "energy": 14069.27,
+              "maintenance": 4025.0,
+              "repairs": 3750.0,
+              "tires_and_consumables": 2875.0,
+              "registration_and_RTA_planning_allowance": 2800.0,
+              "residual_value_credit": 17132.4,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 19.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 439.57894736842104,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0164",
+              "CLM-0165",
+              "CLM-0181",
+              "CLM-0182",
+              "CLM-0184",
+              "CLM-0186",
+              "CLM-0188",
+              "CLM-0190",
+              "CLM-0191",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0007",
+              "PRC-0008",
+              "PRC-0009"
+            ],
+            "confidence": "medium-low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        },
+        "10_year": {
+          "low": {
+            "scenario": "low",
+            "years": 10,
+            "total_tco": 71588.49,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 41998.0,
+              "sales_tax": 3821.82,
+              "initial_fees": 700.0,
+              "energy": 12756.14,
+              "maintenance": 7200.0,
+              "repairs": 7600.0,
+              "tires_and_consumables": 4400.0,
+              "registration_and_RTA_planning_allowance": 4200.0,
+              "residual_value_credit": 11087.47,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 19.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 293.0526315789474,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0164",
+              "CLM-0165",
+              "CLM-0179",
+              "CLM-0183",
+              "CLM-0185",
+              "CLM-0187",
+              "CLM-0189",
+              "CLM-0190",
+              "CLM-0192",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0007",
+              "PRC-0008",
+              "PRC-0009"
+            ],
+            "confidence": "medium-low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 10,
+            "total_tco": 87059.43,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 43800.0,
+              "sales_tax": 3985.8,
+              "initial_fees": 700.0,
+              "energy": 20009.63,
+              "maintenance": 9000.0,
+              "repairs": 9500.0,
+              "tires_and_consumables": 5500.0,
+              "registration_and_RTA_planning_allowance": 4200.0,
+              "residual_value_credit": 9636.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 19.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 390.7368421052632,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0164",
+              "CLM-0165",
+              "CLM-0180",
+              "CLM-0183",
+              "CLM-0185",
+              "CLM-0187",
+              "CLM-0189",
+              "CLM-0190",
+              "CLM-0192",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0007",
+              "PRC-0008",
+              "PRC-0009"
+            ],
+            "confidence": "medium-low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 10,
+            "total_tco": 107508.4,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 47590.0,
+              "sales_tax": 4330.69,
+              "initial_fees": 700.0,
+              "energy": 28138.55,
+              "maintenance": 10350.0,
+              "repairs": 14250.0,
+              "tires_and_consumables": 6325.0,
+              "registration_and_RTA_planning_allowance": 4200.0,
+              "residual_value_credit": 8375.84,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 19.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 439.57894736842104,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0164",
+              "CLM-0165",
+              "CLM-0181",
+              "CLM-0183",
+              "CLM-0185",
+              "CLM-0187",
+              "CLM-0189",
+              "CLM-0190",
+              "CLM-0192",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0007",
+              "PRC-0008",
+              "PRC-0009"
+            ],
+            "confidence": "medium-low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        }
+      },
+      "qualitative_insurance_risk": "Obtain VIN-specific quotes before purchase; insurance is excluded from numeric comparisons.",
+      "remaining_warranty_note": "Verify original in-service date, transferable coverage, CPO terms and campaign completion on the exact VIN."
+    },
+    {
+      "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "vehicle": "2024 Ford Explorer Platinum 4WD",
+      "price_record_ids": [
+        "PRC-0010",
+        "PRC-0011",
+        "PRC-0012"
+      ],
+      "annual_energy_cost_base": 2105.3,
+      "annual_energy_details": {
+        "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+        "annual_miles": 8000.0,
+        "city_share": 0.7,
+        "highway_share": 0.3,
+        "city_mpg": 18.0,
+        "highway_mpg": 24.0,
+        "annual_gallons": 411.1111111111111,
+        "gas_price_per_gallon": 5.121
+      },
+      "annual_energy_claim_ids": [
+        "CLM-0228",
+        "CLM-0229",
+        "CLM-0388",
+        "CLM-0389",
+        "CLM-0390",
+        "CLM-0385"
+      ],
+      "scenarios": {
+        "5_year": {
+          "low": {
+            "scenario": "low",
+            "years": 5,
+            "total_tco": 46046.53,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 40590.0,
+              "sales_tax": 3693.69,
+              "initial_fees": 700.0,
+              "energy": 6710.64,
+              "maintenance": 3200.0,
+              "repairs": 2800.0,
+              "tires_and_consumables": 2800.0,
+              "registration_and_RTA_planning_allowance": 2600.0,
+              "residual_value_credit": 17047.8,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 308.33333333333337,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0228",
+              "CLM-0229",
+              "CLM-0243",
+              "CLM-0246",
+              "CLM-0248",
+              "CLM-0250",
+              "CLM-0252",
+              "CLM-0254",
+              "CLM-0255",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0010",
+              "PRC-0011",
+              "PRC-0012"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 5,
+            "total_tco": 56319.0,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 42500.0,
+              "sales_tax": 3867.5,
+              "initial_fees": 700.0,
+              "energy": 10526.5,
+              "maintenance": 4000.0,
+              "repairs": 3500.0,
+              "tires_and_consumables": 3500.0,
+              "registration_and_RTA_planning_allowance": 2600.0,
+              "residual_value_credit": 14875.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 411.1111111111111,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0228",
+              "CLM-0229",
+              "CLM-0244",
+              "CLM-0246",
+              "CLM-0248",
+              "CLM-0250",
+              "CLM-0252",
+              "CLM-0254",
+              "CLM-0255",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0010",
+              "PRC-0011",
+              "PRC-0012"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 5,
+            "total_tco": 68471.27,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 44998.0,
+              "sales_tax": 4094.82,
+              "initial_fees": 700.0,
+              "energy": 14802.89,
+              "maintenance": 4600.0,
+              "repairs": 5250.0,
+              "tires_and_consumables": 4025.0,
+              "registration_and_RTA_planning_allowance": 2600.0,
+              "residual_value_credit": 12599.44,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 462.5,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0228",
+              "CLM-0229",
+              "CLM-0245",
+              "CLM-0246",
+              "CLM-0248",
+              "CLM-0250",
+              "CLM-0252",
+              "CLM-0254",
+              "CLM-0255",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0010",
+              "PRC-0011",
+              "PRC-0012"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        },
+        "10_year": {
+          "low": {
+            "scenario": "low",
+            "years": 10,
+            "total_tco": 80198.78,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 40590.0,
+              "sales_tax": 3693.69,
+              "initial_fees": 700.0,
+              "energy": 13421.29,
+              "maintenance": 8400.0,
+              "repairs": 11200.0,
+              "tires_and_consumables": 5600.0,
+              "registration_and_RTA_planning_allowance": 3900.0,
+              "residual_value_credit": 7306.2,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 308.33333333333337,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0228",
+              "CLM-0229",
+              "CLM-0243",
+              "CLM-0247",
+              "CLM-0249",
+              "CLM-0251",
+              "CLM-0253",
+              "CLM-0254",
+              "CLM-0256",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0010",
+              "PRC-0011",
+              "PRC-0012"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 10,
+            "total_tco": 97145.5,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 42500.0,
+              "sales_tax": 3867.5,
+              "initial_fees": 700.0,
+              "energy": 21053.0,
+              "maintenance": 10500.0,
+              "repairs": 14000.0,
+              "tires_and_consumables": 7000.0,
+              "registration_and_RTA_planning_allowance": 3900.0,
+              "residual_value_credit": 6375.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 411.1111111111111,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0228",
+              "CLM-0229",
+              "CLM-0244",
+              "CLM-0247",
+              "CLM-0249",
+              "CLM-0251",
+              "CLM-0253",
+              "CLM-0254",
+              "CLM-0256",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0010",
+              "PRC-0011",
+              "PRC-0012"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 10,
+            "total_tco": 119023.84,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 44998.0,
+              "sales_tax": 4094.82,
+              "initial_fees": 700.0,
+              "energy": 29605.78,
+              "maintenance": 12075.0,
+              "repairs": 21000.0,
+              "tires_and_consumables": 8050.0,
+              "registration_and_RTA_planning_allowance": 3900.0,
+              "residual_value_credit": 5399.76,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 18.0,
+              "highway_mpg": 24.0,
+              "annual_gallons": 462.5,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0228",
+              "CLM-0229",
+              "CLM-0245",
+              "CLM-0247",
+              "CLM-0249",
+              "CLM-0251",
+              "CLM-0253",
+              "CLM-0254",
+              "CLM-0256",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0010",
+              "PRC-0011",
+              "PRC-0012"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        }
+      },
+      "qualitative_insurance_risk": "Obtain VIN-specific quotes before purchase; insurance is excluded from numeric comparisons.",
+      "remaining_warranty_note": "Verify original in-service date, transferable coverage, CPO terms and campaign completion on the exact VIN."
+    },
+    {
+      "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "vehicle": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "price_record_ids": [
+        "PRC-0013",
+        "PRC-0014",
+        "PRC-0015"
+      ],
+      "annual_energy_cost_base": 1925.5,
+      "annual_energy_details": {
+        "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+        "annual_miles": 8000.0,
+        "city_share": 0.7,
+        "highway_share": 0.3,
+        "city_mpg": 20.0,
+        "highway_mpg": 25.0,
+        "annual_gallons": 376.0,
+        "gas_price_per_gallon": 5.121
+      },
+      "annual_energy_claim_ids": [
+        "CLM-0292",
+        "CLM-0293",
+        "CLM-0388",
+        "CLM-0389",
+        "CLM-0390",
+        "CLM-0385"
+      ],
+      "scenarios": {
+        "5_year": {
+          "low": {
+            "scenario": "low",
+            "years": 5,
+            "total_tco": 38896.25,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 35998.0,
+              "sales_tax": 3275.82,
+              "initial_fees": 700.0,
+              "energy": 6137.52,
+              "maintenance": 2800.0,
+              "repairs": 2000.0,
+              "tires_and_consumables": 2000.0,
+              "registration_and_RTA_planning_allowance": 2400.0,
+              "residual_value_credit": 16415.09,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 20.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 282.0,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0292",
+              "CLM-0293",
+              "CLM-0307",
+              "CLM-0310",
+              "CLM-0312",
+              "CLM-0314",
+              "CLM-0316",
+              "CLM-0318",
+              "CLM-0319",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0013",
+              "PRC-0014",
+              "PRC-0015"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 5,
+            "total_tco": 47533.06,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 36998.0,
+              "sales_tax": 3366.82,
+              "initial_fees": 700.0,
+              "energy": 9627.48,
+              "maintenance": 3500.0,
+              "repairs": 2500.0,
+              "tires_and_consumables": 2500.0,
+              "registration_and_RTA_planning_allowance": 2400.0,
+              "residual_value_credit": 14059.24,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 20.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 376.0,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0292",
+              "CLM-0293",
+              "CLM-0308",
+              "CLM-0310",
+              "CLM-0312",
+              "CLM-0314",
+              "CLM-0316",
+              "CLM-0318",
+              "CLM-0319",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0013",
+              "PRC-0014",
+              "PRC-0015"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 5,
+            "total_tco": 56801.14,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 37500.0,
+              "sales_tax": 3412.5,
+              "initial_fees": 700.0,
+              "energy": 13538.64,
+              "maintenance": 4025.0,
+              "repairs": 3750.0,
+              "tires_and_consumables": 2875.0,
+              "registration_and_RTA_planning_allowance": 2400.0,
+              "residual_value_credit": 11400.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 20.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 423.0,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0292",
+              "CLM-0293",
+              "CLM-0309",
+              "CLM-0310",
+              "CLM-0312",
+              "CLM-0314",
+              "CLM-0316",
+              "CLM-0318",
+              "CLM-0319",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0013",
+              "PRC-0014",
+              "PRC-0015"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        },
+        "10_year": {
+          "low": {
+            "scenario": "low",
+            "years": 10,
+            "total_tco": 66773.29,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 35998.0,
+              "sales_tax": 3275.82,
+              "initial_fees": 700.0,
+              "energy": 12275.04,
+              "maintenance": 7200.0,
+              "repairs": 7200.0,
+              "tires_and_consumables": 4400.0,
+              "registration_and_RTA_planning_allowance": 3500.0,
+              "residual_value_credit": 7775.57,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 6000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 20.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 282.0,
+              "gas_price_per_gallon": 4.35285
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0292",
+              "CLM-0293",
+              "CLM-0307",
+              "CLM-0311",
+              "CLM-0313",
+              "CLM-0315",
+              "CLM-0317",
+              "CLM-0318",
+              "CLM-0320",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0013",
+              "PRC-0014",
+              "PRC-0015"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 10,
+            "total_tco": 80660.14,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 36998.0,
+              "sales_tax": 3366.82,
+              "initial_fees": 700.0,
+              "energy": 19254.96,
+              "maintenance": 9000.0,
+              "repairs": 9000.0,
+              "tires_and_consumables": 5500.0,
+              "registration_and_RTA_planning_allowance": 3500.0,
+              "residual_value_credit": 6659.64,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 8000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 20.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 376.0,
+              "gas_price_per_gallon": 5.121
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0292",
+              "CLM-0293",
+              "CLM-0308",
+              "CLM-0311",
+              "CLM-0313",
+              "CLM-0315",
+              "CLM-0317",
+              "CLM-0318",
+              "CLM-0320",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0013",
+              "PRC-0014",
+              "PRC-0015"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 10,
+            "total_tco": 96964.79,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 37500.0,
+              "sales_tax": 3412.5,
+              "initial_fees": 700.0,
+              "energy": 27077.29,
+              "maintenance": 10350.0,
+              "repairs": 13500.0,
+              "tires_and_consumables": 6325.0,
+              "registration_and_RTA_planning_allowance": 3500.0,
+              "residual_value_credit": 5400.0,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+              "annual_miles": 9000.0,
+              "city_share": 0.7,
+              "highway_share": 0.3,
+              "city_mpg": 20.0,
+              "highway_mpg": 25.0,
+              "annual_gallons": 423.0,
+              "gas_price_per_gallon": 6.401250000000001
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0292",
+              "CLM-0293",
+              "CLM-0309",
+              "CLM-0311",
+              "CLM-0313",
+              "CLM-0315",
+              "CLM-0317",
+              "CLM-0318",
+              "CLM-0320",
+              "CLM-0384",
+              "CLM-0385",
+              "CLM-0388",
+              "CLM-0389",
+              "CLM-0390"
+            ],
+            "price_record_ids": [
+              "PRC-0013",
+              "PRC-0014",
+              "PRC-0015"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        }
+      },
+      "qualitative_insurance_risk": "Obtain VIN-specific quotes before purchase; insurance is excluded from numeric comparisons.",
+      "remaining_warranty_note": "Verify original in-service date, transferable coverage, CPO terms and campaign completion on the exact VIN."
+    },
+    {
+      "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "vehicle": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "price_record_ids": [
+        "PRC-0016",
+        "PRC-0017",
+        "PRC-0018"
+      ],
+      "annual_energy_cost_base": 672.9,
+      "annual_energy_details": {
+        "formula": "annual_miles * kWh_per_100mi / 100 / charging_efficiency * blended_electric_rate",
+        "annual_miles": 8000.0,
+        "kwh_per_100mi": 41.0,
+        "wall_kwh": 3644.4444444444443,
+        "home_share": 0.9,
+        "public_share": 0.1,
+        "blended_rate_per_kwh": 0.1846382
+      },
+      "annual_energy_claim_ids": [
+        "CLM-0356",
+        "CLM-0388",
+        "CLM-0391",
+        "CLM-0392",
+        "CLM-0386",
+        "CLM-0387",
+        "CLM-0393"
+      ],
+      "scenarios": {
+        "5_year": {
+          "low": {
+            "scenario": "low",
+            "years": 5,
+            "total_tco": 45184.32,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 44240.0,
+              "sales_tax": 4025.84,
+              "initial_fees": 900.0,
+              "energy": 2144.88,
+              "maintenance": 1600.0,
+              "repairs": 2000.0,
+              "tires_and_consumables": 3200.0,
+              "registration_and_RTA_planning_allowance": 3000.0,
+              "residual_value_credit": 15926.4,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * kWh_per_100mi / 100 / charging_efficiency * blended_electric_rate",
+              "annual_miles": 6000.0,
+              "kwh_per_100mi": 41.0,
+              "wall_kwh": 2733.3333333333335,
+              "home_share": 0.9,
+              "public_share": 0.1,
+              "blended_rate_per_kwh": 0.15694247
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0356",
+              "CLM-0370",
+              "CLM-0373",
+              "CLM-0375",
+              "CLM-0377",
+              "CLM-0379",
+              "CLM-0381",
+              "CLM-0382",
+              "CLM-0384",
+              "CLM-0386",
+              "CLM-0387",
+              "CLM-0388",
+              "CLM-0391",
+              "CLM-0392",
+              "CLM-0393"
+            ],
+            "price_record_ids": [
+              "PRC-0016",
+              "PRC-0017",
+              "PRC-0018"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 5,
+            "total_tco": 52239.11,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 46112.0,
+              "sales_tax": 4196.19,
+              "initial_fees": 900.0,
+              "energy": 3364.52,
+              "maintenance": 2000.0,
+              "repairs": 2500.0,
+              "tires_and_consumables": 4000.0,
+              "registration_and_RTA_planning_allowance": 3000.0,
+              "residual_value_credit": 13833.6,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * kWh_per_100mi / 100 / charging_efficiency * blended_electric_rate",
+              "annual_miles": 8000.0,
+              "kwh_per_100mi": 41.0,
+              "wall_kwh": 3644.4444444444443,
+              "home_share": 0.9,
+              "public_share": 0.1,
+              "blended_rate_per_kwh": 0.1846382
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0356",
+              "CLM-0371",
+              "CLM-0373",
+              "CLM-0375",
+              "CLM-0377",
+              "CLM-0379",
+              "CLM-0381",
+              "CLM-0382",
+              "CLM-0384",
+              "CLM-0386",
+              "CLM-0387",
+              "CLM-0388",
+              "CLM-0391",
+              "CLM-0392",
+              "CLM-0393"
+            ],
+            "price_record_ids": [
+              "PRC-0016",
+              "PRC-0017",
+              "PRC-0018"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 5,
+            "total_tco": 60376.99,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 48291.0,
+              "sales_tax": 4394.48,
+              "initial_fees": 900.0,
+              "energy": 4731.35,
+              "maintenance": 2300.0,
+              "repairs": 3750.0,
+              "tires_and_consumables": 4600.0,
+              "registration_and_RTA_planning_allowance": 3000.0,
+              "residual_value_credit": 11589.84,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * kWh_per_100mi / 100 / charging_efficiency * blended_electric_rate",
+              "annual_miles": 9000.0,
+              "kwh_per_100mi": 41.0,
+              "wall_kwh": 4100.0,
+              "home_share": 0.9,
+              "public_share": 0.1,
+              "blended_rate_per_kwh": 0.23079775
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0356",
+              "CLM-0372",
+              "CLM-0373",
+              "CLM-0375",
+              "CLM-0377",
+              "CLM-0379",
+              "CLM-0381",
+              "CLM-0382",
+              "CLM-0384",
+              "CLM-0386",
+              "CLM-0387",
+              "CLM-0388",
+              "CLM-0391",
+              "CLM-0392",
+              "CLM-0393"
+            ],
+            "price_record_ids": [
+              "PRC-0016",
+              "PRC-0017",
+              "PRC-0018"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        },
+        "10_year": {
+          "low": {
+            "scenario": "low",
+            "years": 10,
+            "total_tco": 71446.8,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 44240.0,
+              "sales_tax": 4025.84,
+              "initial_fees": 900.0,
+              "energy": 4289.76,
+              "maintenance": 4000.0,
+              "repairs": 8000.0,
+              "tires_and_consumables": 6800.0,
+              "registration_and_RTA_planning_allowance": 4500.0,
+              "residual_value_credit": 5308.8,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * kWh_per_100mi / 100 / charging_efficiency * blended_electric_rate",
+              "annual_miles": 6000.0,
+              "kwh_per_100mi": 41.0,
+              "wall_kwh": 2733.3333333333335,
+              "home_share": 0.9,
+              "public_share": 0.1,
+              "blended_rate_per_kwh": 0.15694247
+            },
+            "scenario_multipliers": {
+              "annual_miles": 6000,
+              "energy_price": 0.85,
+              "maintenance": 0.8,
+              "repairs": 0.8,
+              "tires": 0.8,
+              "residual_fraction": 1.2
+            },
+            "input_claim_ids": [
+              "CLM-0356",
+              "CLM-0370",
+              "CLM-0374",
+              "CLM-0376",
+              "CLM-0378",
+              "CLM-0380",
+              "CLM-0381",
+              "CLM-0383",
+              "CLM-0384",
+              "CLM-0386",
+              "CLM-0387",
+              "CLM-0388",
+              "CLM-0391",
+              "CLM-0392",
+              "CLM-0393"
+            ],
+            "price_record_ids": [
+              "PRC-0016",
+              "PRC-0017",
+              "PRC-0018"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "base": {
+            "scenario": "base",
+            "years": 10,
+            "total_tco": 81326.03,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 46112.0,
+              "sales_tax": 4196.19,
+              "initial_fees": 900.0,
+              "energy": 6729.04,
+              "maintenance": 5000.0,
+              "repairs": 10000.0,
+              "tires_and_consumables": 8500.0,
+              "registration_and_RTA_planning_allowance": 4500.0,
+              "residual_value_credit": 4611.2,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * kWh_per_100mi / 100 / charging_efficiency * blended_electric_rate",
+              "annual_miles": 8000.0,
+              "kwh_per_100mi": 41.0,
+              "wall_kwh": 3644.4444444444443,
+              "home_share": 0.9,
+              "public_share": 0.1,
+              "blended_rate_per_kwh": 0.1846382
+            },
+            "scenario_multipliers": {
+              "annual_miles": 8000,
+              "energy_price": 1.0,
+              "maintenance": 1.0,
+              "repairs": 1.0,
+              "tires": 1.0,
+              "residual_fraction": 1.0
+            },
+            "input_claim_ids": [
+              "CLM-0356",
+              "CLM-0371",
+              "CLM-0374",
+              "CLM-0376",
+              "CLM-0378",
+              "CLM-0380",
+              "CLM-0381",
+              "CLM-0383",
+              "CLM-0384",
+              "CLM-0386",
+              "CLM-0387",
+              "CLM-0388",
+              "CLM-0391",
+              "CLM-0392",
+              "CLM-0393"
+            ],
+            "price_record_ids": [
+              "PRC-0016",
+              "PRC-0017",
+              "PRC-0018"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          },
+          "high": {
+            "scenario": "high",
+            "years": 10,
+            "total_tco": 94209.91,
+            "formula": "purchase_price + sales_tax + initial_fees + energy + maintenance + repairs + tires + registration - residual_value",
+            "components": {
+              "purchase_price": 48291.0,
+              "sales_tax": 4394.48,
+              "initial_fees": 900.0,
+              "energy": 9462.71,
+              "maintenance": 5750.0,
+              "repairs": 15000.0,
+              "tires_and_consumables": 9775.0,
+              "registration_and_RTA_planning_allowance": 4500.0,
+              "residual_value_credit": 3863.28,
+              "insurance": null
+            },
+            "energy_details": {
+              "formula": "annual_miles * kWh_per_100mi / 100 / charging_efficiency * blended_electric_rate",
+              "annual_miles": 9000.0,
+              "kwh_per_100mi": 41.0,
+              "wall_kwh": 4100.0,
+              "home_share": 0.9,
+              "public_share": 0.1,
+              "blended_rate_per_kwh": 0.23079775
+            },
+            "scenario_multipliers": {
+              "annual_miles": 9000,
+              "energy_price": 1.25,
+              "maintenance": 1.15,
+              "repairs": 1.5,
+              "tires": 1.15,
+              "residual_fraction": 0.8
+            },
+            "input_claim_ids": [
+              "CLM-0356",
+              "CLM-0372",
+              "CLM-0374",
+              "CLM-0376",
+              "CLM-0378",
+              "CLM-0380",
+              "CLM-0381",
+              "CLM-0383",
+              "CLM-0384",
+              "CLM-0386",
+              "CLM-0387",
+              "CLM-0388",
+              "CLM-0391",
+              "CLM-0392",
+              "CLM-0393"
+            ],
+            "price_record_ids": [
+              "PRC-0016",
+              "PRC-0017",
+              "PRC-0018"
+            ],
+            "confidence": "low",
+            "insurance_note": "Excluded from numeric TCO because comparable household quotes were not supplied."
+          }
+        }
+      },
+      "qualitative_insurance_risk": "Obtain VIN-specific quotes before purchase; insurance is excluded from numeric comparisons.",
+      "remaining_warranty_note": "Verify original in-service date, transferable coverage, CPO terms and campaign completion on the exact VIN."
+    }
+  ]
+}

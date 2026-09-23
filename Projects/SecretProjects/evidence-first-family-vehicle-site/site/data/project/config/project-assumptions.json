@@ -1,0 +1,82 @@
+{
+  "version": "1.0",
+  "assumptions": [
+    {
+      "id": "ASM-0001",
+      "topic": "model_years",
+      "value": [
+        2023,
+        2024,
+        2025
+      ],
+      "basis": "conservative intersection of conflicting authoritative inputs",
+      "impact": "2022 candidates excluded"
+    },
+    {
+      "id": "ASM-0002",
+      "topic": "used_purchase_timing",
+      "value": "Current August 2026 market snapshot used as planning evidence for Q4 2026; all live listings require recheck within 14 days of purchase decision.",
+      "impact": "price and availability may change"
+    },
+    {
+      "id": "ASM-0003",
+      "topic": "listing_mileage_band",
+      "value": "Prefer approximately 10,000-45,000 miles; widen only when exact trim evidence is sparse.",
+      "impact": "normalization adjustments required outside band"
+    },
+    {
+      "id": "ASM-0004",
+      "topic": "cash_purchase",
+      "value": true,
+      "impact": "financing cost excluded"
+    },
+    {
+      "id": "ASM-0005",
+      "topic": "insurance",
+      "value": "No exact insurance quotes supplied; insurance omitted from numeric TCO and reported qualitatively.",
+      "impact": "TCO is incomplete by design but comparable"
+    },
+    {
+      "id": "ASM-0006",
+      "topic": "fuel_and_electricity_prices",
+      "value": "Use current regional planning rates researched for ZIP 98038 and scenario bounds; do not reuse MANUAL_RESEARCH assumptions.",
+      "impact": "energy-cost sensitivity"
+    },
+    {
+      "id": "ASM-0007",
+      "topic": "trade_in",
+      "value": "2015 Nissan Sentra trade value excluded from official vehicle score and comparative TCO because it is common to all candidates.",
+      "impact": "out-of-pocket cash differs by actual trade quote only"
+    },
+    {
+      "id": "ASM-0008",
+      "topic": "tax_and_registration",
+      "value": "Washington/King County location-based estimates included in TCO but excluded from eligibility and purchase-price score.",
+      "impact": "requires local rate assumptions"
+    },
+    {
+      "id": "ASM-0009",
+      "topic": "qualitative_scoring",
+      "value": "Qualitative points awarded only where the rubric explicitly permits them and evidence is recorded.",
+      "impact": "some components remain null when evidence is insufficient"
+    }
+  ],
+  "missing_inputs": [
+    {
+      "field": "actual insurance quotes",
+      "critical": false
+    },
+    {
+      "field": "specific VINs and pre-purchase inspection results",
+      "critical": false
+    },
+    {
+      "field": "actual Q4 2026 negotiated prices",
+      "critical": false
+    },
+    {
+      "field": "client human test-drive observations",
+      "critical": false
+    }
+  ]
+}

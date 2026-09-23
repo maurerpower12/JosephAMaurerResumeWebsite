@@ -1,0 +1,53 @@
+{
+  "run_id": "RUN-FVR-20260824-001",
+  "contradictions": [
+    {
+      "contradiction_id": "CON-0001",
+      "vehicle_and_topic": "Project model-year scope",
+      "source_a_and_value": "Project context and research-config: 2022-2025",
+      "source_b_and_value": "Scoring eligibility: 2023-2027",
+      "likely_reason": "The scoring configuration was created for a broader later-year program.",
+      "resolution_rule": "Use conservative intersection of authoritative inputs.",
+      "selected_value": [
+        2023,
+        2024,
+        2025
+      ],
+      "confidence": "high",
+      "impact": "2022 vehicles excluded before discovery."
+    },
+    {
+      "contradiction_id": "CON-0002",
+      "vehicle_and_topic": "Purchase-price score basis",
+      "source_a_and_value": "Component text defines new MSRP plus destination.",
+      "source_b_and_value": "Used-vehicle behavior explicitly requires normalized current used acquisition price.",
+      "likely_reason": "Base scoring model includes new vehicles while this run is used-only.",
+      "resolution_rule": "Apply the more specific used-only project rule and record the judgment.",
+      "selected_value": "Normalized current used acquisition price",
+      "confidence": "high",
+      "impact": "All official price scores reference PRC records rather than original MSRP."
+    },
+    {
+      "contradiction_id": "CON-0003",
+      "vehicle_and_topic": "NHTSA dynamic page rendering",
+      "source_a_and_value": "Official exact-variant URLs intermittently return a front-end error.",
+      "source_b_and_value": "Public mirror of the NHTSA ratings dataset returns exact AWD 5-star records.",
+      "likely_reason": "Website rendering/API presentation issue rather than a substantive rating conflict.",
+      "resolution_rule": "Retain official URL, corroborate with mirror, and lower confidence one level where needed.",
+      "selected_value": "Exact AWD 5-star result where both identifiers align",
+      "confidence": "medium",
+      "impact": "Sienna, Telluride, Pathfinder and EV9 NHTSA claims remain usable with documented limitation."
+    },
+    {
+      "contradiction_id": "CON-0004",
+      "vehicle_and_topic": "Live-listing status",
+      "source_a_and_value": "Search index or prior retrieval showed available listing.",
+      "source_b_and_value": "Direct page later redirected, sold or became reserved.",
+      "likely_reason": "Normal used-inventory turnover.",
+      "resolution_rule": "Preserve observed price, mark status at recheck, reduce confidence, never imply current availability.",
+      "selected_value": "Price retained as time-stamped comparable; availability not assumed",
+      "confidence": "high",
+      "impact": "All prices are planning estimates and must be refreshed within 14 days of purchase."
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-FVR-20260824-001",
+  "official_model_unchanged": true,
+  "exploratory_warning": "Alternative weights are client exploration only. They do not change the frozen official score or recommendation record.",
+  "weight_presets": {
+    "official": {
+      "safety": 25,
+      "total_cost_of_ownership": 15,
+      "reliability": 10,
+      "purchase_price": 10,
+      "passenger_space": 10,
+      "cargo_practicality": 10,
+      "fuel_economy": 10,
+      "comfort": 5,
+      "technology": 5
+    },
+    "value_first": {
+      "safety": 20,
+      "total_cost_of_ownership": 22,
+      "reliability": 15,
+      "purchase_price": 15,
+      "passenger_space": 8,
+      "cargo_practicality": 7,
+      "fuel_economy": 8,
+      "comfort": 2.5,
+      "technology": 2.5
+    },
+    "space_first": {
+      "safety": 20,
+      "total_cost_of_ownership": 10,
+      "reliability": 10,
+      "purchase_price": 7.5,
+      "passenger_space": 17.5,
+      "cargo_practicality": 17.5,
+      "fuel_economy": 5,
+      "comfort": 7.5,
+      "technology": 5
+    },
+    "risk_averse": {
+      "safety": 30,
+      "total_cost_of_ownership": 12.5,
+      "reliability": 22.5,
+      "purchase_price": 7.5,
+      "passenger_space": 7.5,
+      "cargo_practicality": 7.5,
+      "fuel_economy": 5,
+      "comfort": 5,
+      "technology": 2.5
+    },
+    "efficiency_first": {
+      "safety": 20,
+      "total_cost_of_ownership": 20,
+      "reliability": 10,
+      "purchase_price": 10,
+      "passenger_space": 7.5,
+      "cargo_practicality": 7.5,
+      "fuel_economy": 20,
+      "comfort": 2.5,
+      "technology": 2.5
+    }
+  },
+  "preset_rankings": {
+    "official": [
+      {
+        "rank": 1,
+        "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+        "score": 80.2
+      },
+      {
+        "rank": 2,
+        "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+        "score": 75.7
+      },
+      {
+        "rank": 3,
+        "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+        "score": 72.8
+      },
+      {
+        "rank": 4,
+        "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+        "score": 70.7
+      },
+      {
+        "rank": 5,
+        "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+        "score": 65.3
+      },
+      {
+        "rank": 6,
+        "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+        "score": 64.7
+      }
+    ],
+    "value_first": [
+      {
+        "rank": 1,
+        "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+        "score": 75.2
+      },
+      {
+        "rank": 2,
+        "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+        "score": 74.3
+      },
+      {
+        "rank": 3,
+        "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+        "score": 74.1
+      },
+      {
+        "rank": 4,
+        "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+        "score": 73.9
+      },
+      {
+        "rank": 5,
+        "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+        "score": 65.8
+      },
+      {
+        "rank": 6,
+        "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+        "score": 64.8
+      }
+    ],
+    "space_first": [
+      {
+        "rank": 1,
+        "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+        "score": 79.3
+      },
+      {
+        "rank": 2,
+        "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+        "score": 77.2
+      },
+      {
+        "rank": 3,
+        "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+        "score": 76.0
+      },
+      {
+        "rank": 4,
+        "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+        "score": 65.7
+      },
+      {
+        "rank": 5,
+        "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+        "score": 65.7
+      },
+      {
+        "rank": 6,
+        "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+        "score": 65.1
+      }
+    ],
+    "risk_averse": [
+      {
+        "rank": 1,
+        "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+        "score": 75.4
+      },
+      {
+        "rank": 2,
+        "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+        "score": 73.6
+      },
+      {
+        "rank": 3,
+        "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+        "score": 71.8
+      },
+      {
+        "rank": 4,
+        "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+        "score": 70.5
+      },
+      {
+        "rank": 5,
+        "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+        "score": 65.0
+      },
+      {
+        "rank": 6,
+        "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+        "score": 61.5
+      }
+    ],
+    "efficiency_first": [
+      {
+        "rank": 1,
+        "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+        "score": 80.4
+      },
+      {
+        "rank": 2,
+        "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+        "score": 74.0
+      },
+      {
+        "rank": 3,
+        "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+        "score": 69.6
+      },
+      {
+        "rank": 4,
+        "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+        "score": 69.1
+      },
+      {
+        "rank": 5,
+        "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+        "score": 62.1
+      },
+      {
+        "rank": 6,
+        "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+        "score": 60.5
+      }
+    ]
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle": "2024 Toyota Sienna Platinum AWD",
+      "one_variable_scenarios": {
+        "official_score": 72.8,
+        "purchase_price_low": 73.6,
+        "purchase_price_high": 71.6,
+        "annual_miles_6000": 74.2,
+        "annual_miles_9000": 72.3,
+        "energy_prices_minus_25_percent": 74.2,
+        "energy_prices_plus_25_percent": 71.8,
+        "low_tco": 76.7,
+        "high_tco": 67.0,
+        "reliability_minus_1": 71.8,
+        "reliability_plus_1": 73.8
+      },
+      "exploratory_weight_presets": {
+        "official": 72.8,
+        "value_first": 74.3,
+        "space_first": 76.0,
+        "risk_averse": 71.8,
+        "efficiency_first": 74.0
+      }
+    },
+    {
+      "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "one_variable_scenarios": {
+        "official_score": 75.7,
+        "purchase_price_low": 75.7,
+        "purchase_price_high": 75.7,
+        "annual_miles_6000": 78.3,
+        "annual_miles_9000": 74.4,
+        "energy_prices_minus_25_percent": 78.3,
+        "energy_prices_plus_25_percent": 73.1,
+        "low_tco": 80.7,
+        "high_tco": 70.6,
+        "reliability_minus_1": 74.7,
+        "reliability_plus_1": 76.7
+      },
+      "exploratory_weight_presets": {
+        "official": 75.7,
+        "value_first": 74.1,
+        "space_first": 77.2,
+        "risk_averse": 75.4,
+        "efficiency_first": 69.6
+      }
+    },
+    {
+      "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "vehicle": "2024 Honda Pilot Elite AWD",
+      "one_variable_scenarios": {
+        "official_score": 64.7,
+        "purchase_price_low": 64.7,
+        "purchase_price_high": 64.2,
+        "annual_miles_6000": 67.2,
+        "annual_miles_9000": 63.5,
+        "energy_prices_minus_25_percent": 67.2,
+        "energy_prices_plus_25_percent": 62.2,
+        "low_tco": 69.3,
+        "high_tco": 58.7,
+        "reliability_minus_1": 63.7,
+        "reliability_plus_1": 65.7
+      },
+      "exploratory_weight_presets": {
+        "official": 64.7,
+        "value_first": 65.8,
+        "space_first": 65.7,
+        "risk_averse": 61.5,
+        "efficiency_first": 62.1
+      }
+    },
+    {
+      "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "vehicle": "2024 Ford Explorer Platinum 4WD",
+      "one_variable_scenarios": {
+        "official_score": 65.3,
+        "purchase_price_low": 65.3,
+        "purchase_price_high": 65.3,
+        "annual_miles_6000": 68.0,
+        "annual_miles_9000": 64.0,
+        "energy_prices_minus_25_percent": 68.0,
+        "energy_prices_plus_25_percent": 62.7,
+        "low_tco": 70.2,
+        "high_tco": 59.2,
+        "reliability_minus_1": 64.3,
+        "reliability_plus_1": 66.3
+      },
+      "exploratory_weight_presets": {
+        "official": 65.3,
+        "value_first": 64.8,
+        "space_first": 65.7,
+        "risk_averse": 65.0,
+        "efficiency_first": 60.5
+      }
+    },
+    {
+      "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "vehicle": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "one_variable_scenarios": {
+        "official_score": 70.7,
+        "purchase_price_low": 70.7,
+        "purchase_price_high": 70.7,
+        "annual_miles_6000": 73.1,
+        "annual_miles_9000": 69.5,
+        "energy_prices_minus_25_percent": 73.1,
+        "energy_prices_plus_25_percent": 68.3,
+        "low_tco": 74.0,
+        "high_tco": 66.1,
+        "reliability_minus_1": 69.7,
+        "reliability_plus_1": 71.7
+      },
+      "exploratory_weight_presets": {
+        "official": 70.7,
+        "value_first": 73.9,
+        "space_first": 65.1,
+        "risk_averse": 73.6,
+        "efficiency_first": 69.1
+      }
+    },
+    {
+      "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "vehicle": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "one_variable_scenarios": {
+        "official_score": 80.2,
+        "purchase_price_low": 80.5,
+        "purchase_price_high": 79.8,
+        "annual_miles_6000": 80.2,
+        "annual_miles_9000": 80.0,
+        "energy_prices_minus_25_percent": 80.2,
+        "energy_prices_plus_25_percent": 79.5,
+        "low_tco": 83.3,
+        "high_tco": 76.5,
+        "reliability_minus_1": 79.2,
+        "reliability_plus_1": 81.2
+      },
+      "exploratory_weight_presets": {
+        "official": 80.2,
+        "value_first": 75.2,
+        "space_first": 79.3,
+        "risk_averse": 70.5,
+        "efficiency_first": 80.4
+      }
+    }
+  ]
+}

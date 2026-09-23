@@ -1,0 +1,68 @@
+{
+  "run_id": "RUN-FVR-20260824-001",
+  "project_name": "Evidence-First Family Vehicle Research and Client Decision Site",
+  "project_slug": "evidence-first-family-vehicle-research",
+  "start_timestamp_utc": "2026-08-24T23:53:23Z",
+  "completion_timestamp_utc": "2026-08-25T00:44:40Z",
+  "current_date": "2026-08-24",
+  "model_environment": "GPT-5.6 Pro with web.run and container tools",
+  "market": "US",
+  "location": {
+    "zip": "98038",
+    "state": "WA"
+  },
+  "analysis_mode": "portfolio",
+  "candidate_count_target": 25,
+  "input_files": [
+    "config/scoring-config.json",
+    "config/research-config.json",
+    "MANUAL_RESEARCH.md"
+  ],
+  "input_versions": {
+    "scoring_config": "1.0",
+    "research_config": "unspecified",
+    "manual_research_schema": "1.0"
+  },
+  "input_hashes": {
+    "scoring_config_sha256": "fc272125f893609c0ccfb0e96b2b24f93bedeae74ae90ae3748e85f07bca3c22",
+    "research_config_sha256": "7651ed4e8e17f1316ec8bd973d8a233f81f360825d7ad0a8dd3e497b1c2d2c46",
+    "manual_research_sha256": "c9d373c042bc13def82d512e2dfa3d304e52f2b43c71c5bb20249b7631f47cef"
+  },
+  "assumptions": [
+    "ASM-0001",
+    "ASM-0002",
+    "ASM-0003",
+    "ASM-0004",
+    "ASM-0005",
+    "ASM-0006",
+    "ASM-0007",
+    "ASM-0008",
+    "ASM-0009"
+  ],
+  "missing_inputs": [
+    "actual insurance quotes",
+    "specific VINs and pre-purchase inspection results",
+    "actual Q4 2026 negotiated prices",
+    "client human test-drive observations"
+  ],
+  "output_status": "complete",
+  "independent_recommendation_locked": true,
+  "prior_human_research_consulted": true,
+  "independent_recommendation_sha256": "7c7e55c8821ee77751a76ab54390eb2edb64a7ead2f16e2a04bdc21c1d3429f8",
+  "independent_recommendation_lock_timestamp_utc": "2026-08-25T00:30:09Z",
+  "deep_research_count": 6,
+  "finalist_count": 3,
+  "current_recommendation_vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+  "human_comparison_artifact": "analysis/human-vs-ai-comparison.json",
+  "qa_status": "pass_with_declared_limitations",
+  "qa_report": "reports/qa-report.md",
+  "artifact_counts": {
+    "candidate_universe": 25,
+    "deep_research": 6,
+    "sources": 87,
+    "claims": 439,
+    "queries": 60,
+    "price_records": 18,
+    "scoring_components": 246
+  }
+}

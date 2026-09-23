@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-FVR-20260824-001",
+  "independent_recommendation_sha256": "7c7e55c8821ee77751a76ab54390eb2edb64a7ead2f16e2a04bdc21c1d3429f8",
+  "manual_research_sha256": "c9d373c042bc13def82d512e2dfa3d304e52f2b43c71c5bb20249b7631f47cef",
+  "comparison_timestamp_utc": "2026-08-25T00:31:26Z",
+  "independent_result_unchanged": true,
+  "agreements": [
+    {
+      "topic": "Honda Pilot eligibility",
+      "manual_position": "Pilot is a plausible candidate with complete row-3 LATCH and adequate cargo.",
+      "ai_result": "Pilot passes all hard filters and was deep-researched, but scores sixth because current IIHS test quality, reliability evidence and TCO are weaker than leading options.",
+      "claim_ids": [
+        "CLM-0129",
+        "CLM-0133",
+        "CLM-0159"
+      ]
+    },
+    {
+      "topic": "CX-90 cargo",
+      "manual_position": "Cargo is 14.9-15.9 cu ft and is a major concern.",
+      "ai_result": "Eliminated at low cost because published cargo is below the 16-cu-ft threshold.",
+      "claim_ids": [
+        "CLM-0432"
+      ]
+    },
+    {
+      "topic": "XC90 cargo and row-3 child-seat limits",
+      "manual_position": "Cargo is 15.8 cu ft and row-3 child-seat placement is limited.",
+      "ai_result": "Eliminated on cargo before expensive research.",
+      "claim_ids": [
+        "CLM-0433"
+      ]
+    },
+    {
+      "topic": "EV first-model-year risk",
+      "manual_position": "Ioniq 9 could make the family guinea pigs.",
+      "ai_result": "The independent EV finalist, EV9, receives only 1/10 reliability because first-year electrical/ICCU risk is material.",
+      "claim_ids": [
+        "CLM-0342",
+        "CLM-0343",
+        "CLM-0344",
+        "CLM-0345"
+      ]
+    }
+  ],
+  "disagreements": [
+    {
+      "topic": "Volkswagen Atlas row-3 LATCH",
+      "manual_position": "Two row-3 anchor and tether positions.",
+      "ai_result": "IIHS maps both third-row positions as tether-only, so the Atlas fails the configured complete-LATCH definition.",
+      "impact": "Definitive elimination; the manual shortlist would have admitted an ineligible vehicle.",
+      "claim_ids": [
+        "CLM-0404"
+      ],
+      "source_ids": [
+        "SRC-0007"
+      ]
+    },
+    {
+      "topic": "Acura MDX NHTSA applicability",
+      "manual_position": "Five-star NHTSA rating.",
+      "ai_result": "The exact 2024 SH-AWD configuration is shown as unrated; the configured unrated policy is not a pass.",
+      "impact": "Definitive elimination for the exact drivetrain.",
+      "claim_ids": [
+        "CLM-0426"
+      ],
+      "source_ids": [
+        "SRC-0012"
+      ]
+    },
+    {
+      "topic": "Ioniq 9 model-year scope",
+      "manual_position": "Included despite first model year being 2026.",
+      "ai_result": "Outside the frozen 2023-2025 intersection and unavailable as a 2022-2025 used vehicle.",
+      "impact": "Not eligible for this run."
+    },
+    {
+      "topic": "Grand Highlander safety",
+      "manual_position": "Retained as a functional hybrid despite lower safety rating.",
+      "ai_result": "Fails the exact-year IIHS award gate and therefore is not scoreable.",
+      "impact": "Definitive elimination.",
+      "claim_ids": [
+        "CLM-0430"
+      ]
+    }
+  ],
+  "human_insights_the_ai_preserved": [
+    "The removable Pilot second-row center seat is decision-relevant and should be verified on the exact used vehicle.",
+    "Ceiling-mounted rear vents materially affect family comfort but remain a tie-break preference rather than a hard requirement.",
+    "Rapid depreciation can be either a concern or a used-buyer opportunity; it must flow through acquisition price and residual uncertainty rather than an undocumented penalty."
+  ],
+  "ai_insights_missing_from_manual": [
+    "Exact build-date restrictions materially condition the EV9 and Pathfinder safety awards.",
+    "The EV9, Telluride, Sienna and Pathfinder form a stronger diversified test-drive slate than the supplied set after exact hard-filter enforcement.",
+    "Used price requires direct listing evidence and normalization rather than a single remembered or generic value.",
+    "Insurance, VIN campaign closure, battery health and physical child-seat/cargo tests can reverse the recommendation."
+  ],
+  "ai_errors_or_limitations_identified_during_comparison": [
+    "The independent portfolio standardized deep research on model year 2024 rather than exhaustively testing every 2023 and 2025 variant; this improves consistency but may miss a superior adjacent model year.",
+    "Several qualitative comfort, owner-pattern and long-horizon repair inputs remain medium or low confidence and are carried into sensitivity rather than treated as precise facts.",
+    "Current listings are snapshots and must be refreshed for Q4 2026; the report is a test-drive slate, not a transaction authorization."
+  ],
+  "effect_on_independent_recommendation": "None. The locked recommendation file and hash are unchanged."
+}

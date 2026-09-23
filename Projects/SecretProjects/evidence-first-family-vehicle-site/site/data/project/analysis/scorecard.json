@@ -1,0 +1,4976 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-FVR-20260824-001",
+  "scoring_config_version": "1.0",
+  "scoring_config_sha256": "fc272125f893609c0ccfb0e96b2b24f93bedeae74ae90ae3748e85f07bca3c22",
+  "score_rounding_decimals": 1,
+  "practical_tie_threshold_points": 2.0,
+  "used_price_override": "Normalized current-market acquisition price for exact year, trim, drivetrain, mileage and condition.",
+  "ranking_note": "Official scores are deterministic. Conditional build/VIN requirements and overlapping uncertainty ranges prevent the score alone from authorizing a purchase.",
+  "vehicles": [
+    {
+      "vehicle_id": "VEH-KIA-EV9-2024-LAND-AWD-POSTJAN24",
+      "vehicle": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "eligibility_gate": "conditional_pass",
+      "score_scope": "Provisional score for the exact qualifying configuration described in the vehicle ID; build-date and VIN conditions remain purchase gates where stated.",
+      "category_scores": [
+        {
+          "category": "safety",
+          "maximum_points": 25.0,
+          "confirmed_points_raw": 23.0,
+          "confirmed_points": 23.0,
+          "maximum_possible_points": 23.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "total_cost_of_ownership",
+          "maximum_points": 15.0,
+          "confirmed_points_raw": 10.758275,
+          "confirmed_points": 10.8,
+          "maximum_possible_points": 10.8,
+          "missing_components": [],
+          "evidence_confidence": "low"
+        },
+        {
+          "category": "reliability",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 1.0,
+          "confirmed_points": 1.0,
+          "maximum_possible_points": 1.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "purchase_price",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 9.7776,
+          "confirmed_points": 9.8,
+          "maximum_possible_points": 9.8,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "passenger_space",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 8.0,
+          "confirmed_points": 8.0,
+          "maximum_possible_points": 8.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "cargo_practicality",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 8.2,
+          "confirmed_points": 8.2,
+          "maximum_possible_points": 8.2,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "fuel_economy",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 10.0,
+          "confirmed_points": 10.0,
+          "maximum_possible_points": 10.0,
+          "missing_components": [],
+          "evidence_confidence": "high"
+        },
+        {
+          "category": "comfort",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 5.0,
+          "confirmed_points": 5.0,
+          "maximum_possible_points": 5.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "technology",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 4.5,
+          "confirmed_points": 4.5,
+          "maximum_possible_points": 4.5,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        }
+      ],
+      "component_scores": [
+        {
+          "score_id": "SCR-0206",
+          "category": "safety",
+          "component": "iihs_award",
+          "maximum_points": 7,
+          "input_value": "Top Safety Pick",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0331"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Top Safety Pick+=7; Top Safety Pick=5",
+          "calculation": "lookup(Top Safety Pick) = 5.0",
+          "points_awarded": 5.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0207",
+          "category": "safety",
+          "component": "iihs_test_quality",
+          "maximum_points": 6,
+          "input_value": "all_applicable_good",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0332"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Current-generation IIHS test-quality lookup",
+          "calculation": "lookup(all_applicable_good) = 6.0",
+          "points_awarded": 6.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0208",
+          "category": "safety",
+          "component": "pedestrian_aeb_strong_result",
+          "maximum_points": 2,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0333"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "2 points when verified true; 0 when verified false",
+          "calculation": "2 * 1 = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0209",
+          "category": "safety",
+          "component": "vehicle_to_vehicle_aeb",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0334"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0210",
+          "category": "safety",
+          "component": "blind_spot_monitoring_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0335"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0211",
+          "category": "safety",
+          "component": "rear_cross_traffic_alert_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0336"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0212",
+          "category": "safety",
+          "component": "rear_occupant_alert",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0337"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0213",
+          "category": "safety",
+          "component": "safe_exit_warning_or_equivalent",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0338"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0214",
+          "category": "safety",
+          "component": "driver_attention_monitoring",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0339"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0215",
+          "category": "safety",
+          "component": "surround_view_camera_available_on_scored_trim",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0340"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0216",
+          "category": "safety",
+          "component": "latch_quality",
+          "maximum_points": 3,
+          "input_value": "excellent_access_and_4_or_more_complete_positions",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0341"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "LATCH access-and-position lookup",
+          "calculation": "lookup(excellent_access_and_4_or_more_complete_positions) = 3.0",
+          "points_awarded": 3.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0217",
+          "category": "total_cost_of_ownership",
+          "component": "weighted_5_and_10_year_tco",
+          "maximum_points": 15,
+          "input_value": {
+            "five_year_tco": 52239.11,
+            "ten_year_tco": 81326.03,
+            "five_year_raw_score": 6.3283,
+            "ten_year_raw_score": 7.7348
+          },
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0356",
+            "CLM-0371",
+            "CLM-0373",
+            "CLM-0374",
+            "CLM-0375",
+            "CLM-0376",
+            "CLM-0377",
+            "CLM-0378",
+            "CLM-0379",
+            "CLM-0380",
+            "CLM-0381",
+            "CLM-0382",
+            "CLM-0383",
+            "CLM-0384",
+            "CLM-0386",
+            "CLM-0387",
+            "CLM-0388",
+            "CLM-0391",
+            "CLM-0392",
+            "CLM-0393"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "15 * ((0.40 * interpolated 5-year score + 0.60 * interpolated 10-year score) / 10)",
+          "calculation": "15 * ((0.40*6.3283 + 0.60*7.7348)/10) = 10.7583",
+          "points_awarded": 10.7583,
+          "evidence_confidence": "low",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0218",
+          "category": "reliability",
+          "component": "predicted_or_measured_reliability",
+          "maximum_points": 4,
+          "input_value": "below_average",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0342"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(below_average) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0219",
+          "category": "reliability",
+          "component": "powertrain_and_platform_maturity",
+          "maximum_points": 2,
+          "input_value": "first_year_platform_or_powertrain",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0343"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(first_year_platform_or_powertrain) = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0220",
+          "category": "reliability",
+          "component": "recall_and_campaign_history",
+          "maximum_points": 2,
+          "input_value": "multiple_material_or_unresolved_issues",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0344"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(multiple_material_or_unresolved_issues) = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0221",
+          "category": "reliability",
+          "component": "owner_problem_pattern",
+          "maximum_points": 2,
+          "input_value": "strong_recurring_material_issue",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0345"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(strong_recurring_material_issue) = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0222",
+          "category": "purchase_price",
+          "component": "normalized_used_acquisition_price",
+          "maximum_points": 10,
+          "input_value": 46112.0,
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0371"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Used-vehicle override: interpolate normalized current-market acquisition price on configured purchase-price anchors",
+          "calculation": "10 * interpolated_score(46112.00)/10 = 9.7776",
+          "points_awarded": 9.7776,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0223",
+          "category": "passenger_space",
+          "component": "third_row_legroom",
+          "maximum_points": 4,
+          "input_value": 30.8,
+          "unit": "inches",
+          "claim_ids": [
+            "CLM-0346"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Threshold lookup: >=34=4; >=32=3; >=30=2; >=28=1; below28=0",
+          "calculation": "30.8 -> >= 30 inches = 2 points",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0224",
+          "category": "passenger_space",
+          "component": "third_row_real_world_usability",
+          "maximum_points": 3,
+          "input_value": "adult_usable_for_extended_trip",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0347"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative usability lookup permitted by configuration",
+          "calculation": "lookup(adult_usable_for_extended_trip) = 3.0",
+          "points_awarded": 3.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0225",
+          "category": "passenger_space",
+          "component": "sliding_second_row",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0348"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0226",
+          "category": "passenger_space",
+          "component": "multiple_family_usable_seating_configurations",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0349"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0227",
+          "category": "passenger_space",
+          "component": "entry_and_exit",
+          "maximum_points": 1,
+          "input_value": "easy",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0350"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Entry/exit qualitative lookup",
+          "calculation": "lookup(easy)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0228",
+          "category": "cargo_practicality",
+          "component": "cargo_behind_third_row",
+          "maximum_points": 8,
+          "input_value": 20.2,
+          "unit": "cu_ft",
+          "claim_ids": [
+            "CLM-0351"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation across 16/2, 18/4, 20/6, 22/8 with endpoint clamping",
+          "calculation": "interpolate(20.2) = 6.2000",
+          "points_awarded": 6.2,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0229",
+          "category": "cargo_practicality",
+          "component": "flat_or_low_load_floor",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0352"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0230",
+          "category": "cargo_practicality",
+          "component": "useful_underfloor_storage",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0353"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0231",
+          "category": "cargo_practicality",
+          "component": "power_third_row_available",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0354"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0232",
+          "category": "cargo_practicality",
+          "component": "independent_testing_confirms_good_real_world_shape",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0355"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0233",
+          "category": "fuel_economy",
+          "component": "estimated_annual_energy_cost",
+          "maximum_points": 10,
+          "input_value": 672.9,
+          "unit": "USD/year",
+          "claim_ids": [
+            "CLM-0356",
+            "CLM-0388",
+            "CLM-0391",
+            "CLM-0392",
+            "CLM-0386",
+            "CLM-0387",
+            "CLM-0393"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation on configured annual-energy-cost anchors",
+          "calculation": "10 * interpolated_score(672.90)/10 = 10.0000; annual_miles * kWh_per_100mi / 100 / charging_efficiency * blended_electric_rate",
+          "points_awarded": 10.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0234",
+          "category": "comfort",
+          "component": "row_2_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0357"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0235",
+          "category": "comfort",
+          "component": "row_3_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0358"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0236",
+          "category": "comfort",
+          "component": "ceiling_mounted_or_equivalently_effective_rear_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0359"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0237",
+          "category": "comfort",
+          "component": "ride_quality",
+          "maximum_points": 1.5,
+          "input_value": "consistently_praised",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0360"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(consistently_praised)=1.5",
+          "points_awarded": 1.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0238",
+          "category": "comfort",
+          "component": "cabin_noise",
+          "maximum_points": 1.0,
+          "input_value": "quiet_for_class",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0361"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(quiet_for_class)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0239",
+          "category": "comfort",
+          "component": "seat_comfort",
+          "maximum_points": 1.0,
+          "input_value": "consistently_praised",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0362"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(consistently_praised)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0240",
+          "category": "technology",
+          "component": "surround_view_camera",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0363"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0241",
+          "category": "technology",
+          "component": "wireless_carplay_android_auto",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0364"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0242",
+          "category": "technology",
+          "component": "adaptive_cruise_with_lane_centering",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0365"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0243",
+          "category": "technology",
+          "component": "rear_or_family_camera_feature",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0366"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0244",
+          "category": "technology",
+          "component": "ota_updates",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0367"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0245",
+          "category": "technology",
+          "component": "digital_key_or_phone_key",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0368"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0246",
+          "category": "technology",
+          "component": "usable_physical_controls_for_core_functions",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0369"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        }
+      ],
+      "confirmed_points_raw": 80.235875,
+      "confirmed_points": 80.2,
+      "maximum_possible_points": 80.2,
+      "missing_scoring_inputs": [],
+      "interpretation": "Excellent fit",
+      "overall_evidence_confidence": "low",
+      "price_record_ids": [
+        "PRC-0016",
+        "PRC-0017",
+        "PRC-0018"
+      ]
+    },
+    {
+      "vehicle_id": "VEH-KIA-TELLURIDE-2024-SX-PRESTIGE-XPRO-AWD",
+      "vehicle": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "eligibility_gate": "pass",
+      "score_scope": "Provisional score for the exact qualifying configuration described in the vehicle ID; build-date and VIN conditions remain purchase gates where stated.",
+      "category_scores": [
+        {
+          "category": "safety",
+          "maximum_points": 25.0,
+          "confirmed_points_raw": 24.0,
+          "confirmed_points": 24.0,
+          "maximum_possible_points": 24.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "total_cost_of_ownership",
+          "maximum_points": 15.0,
+          "confirmed_points_raw": 9.731782,
+          "confirmed_points": 9.7,
+          "maximum_possible_points": 9.7,
+          "missing_components": [],
+          "evidence_confidence": "low"
+        },
+        {
+          "category": "reliability",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 5.0,
+          "confirmed_points": 5.0,
+          "maximum_possible_points": 5.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "purchase_price",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 10.0,
+          "confirmed_points": 10.0,
+          "maximum_possible_points": 10.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "passenger_space",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 6.0,
+          "confirmed_points": 6.0,
+          "maximum_possible_points": 6.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "cargo_practicality",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 9.0,
+          "confirmed_points": 9.0,
+          "maximum_possible_points": 9.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "fuel_economy",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 3.4735,
+          "confirmed_points": 3.5,
+          "maximum_possible_points": 3.5,
+          "missing_components": [],
+          "evidence_confidence": "high"
+        },
+        {
+          "category": "comfort",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 5.0,
+          "confirmed_points": 5.0,
+          "maximum_possible_points": 5.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "technology",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 3.5,
+          "confirmed_points": 3.5,
+          "maximum_possible_points": 3.5,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        }
+      ],
+      "component_scores": [
+        {
+          "score_id": "SCR-0042",
+          "category": "safety",
+          "component": "iihs_award",
+          "maximum_points": 7,
+          "input_value": "Top Safety Pick+",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0075"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Top Safety Pick+=7; Top Safety Pick=5",
+          "calculation": "lookup(Top Safety Pick+) = 7.0",
+          "points_awarded": 7.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0043",
+          "category": "safety",
+          "component": "iihs_test_quality",
+          "maximum_points": 6,
+          "input_value": "all_applicable_good",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0076"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Current-generation IIHS test-quality lookup",
+          "calculation": "lookup(all_applicable_good) = 6.0",
+          "points_awarded": 6.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0044",
+          "category": "safety",
+          "component": "pedestrian_aeb_strong_result",
+          "maximum_points": 2,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0077"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "2 points when verified true; 0 when verified false",
+          "calculation": "2 * 1 = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0045",
+          "category": "safety",
+          "component": "vehicle_to_vehicle_aeb",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0078"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0046",
+          "category": "safety",
+          "component": "blind_spot_monitoring_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0079"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0047",
+          "category": "safety",
+          "component": "rear_cross_traffic_alert_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0080"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0048",
+          "category": "safety",
+          "component": "rear_occupant_alert",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0081"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0049",
+          "category": "safety",
+          "component": "safe_exit_warning_or_equivalent",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0082"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0050",
+          "category": "safety",
+          "component": "driver_attention_monitoring",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0083"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0051",
+          "category": "safety",
+          "component": "surround_view_camera_available_on_scored_trim",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0084"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0052",
+          "category": "safety",
+          "component": "latch_quality",
+          "maximum_points": 3,
+          "input_value": "good_access_and_3_complete_positions",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0085"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "LATCH access-and-position lookup",
+          "calculation": "lookup(good_access_and_3_complete_positions) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0053",
+          "category": "total_cost_of_ownership",
+          "component": "weighted_5_and_10_year_tco",
+          "maximum_points": 15,
+          "input_value": {
+            "five_year_tco": 51101.79,
+            "ten_year_tco": 88166.09,
+            "five_year_raw_score": 6.6695,
+            "ten_year_raw_score": 6.3668
+          },
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0100",
+            "CLM-0101",
+            "CLM-0116",
+            "CLM-0118",
+            "CLM-0119",
+            "CLM-0120",
+            "CLM-0121",
+            "CLM-0122",
+            "CLM-0123",
+            "CLM-0124",
+            "CLM-0125",
+            "CLM-0126",
+            "CLM-0127",
+            "CLM-0128",
+            "CLM-0384",
+            "CLM-0385",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "15 * ((0.40 * interpolated 5-year score + 0.60 * interpolated 10-year score) / 10)",
+          "calculation": "15 * ((0.40*6.6695 + 0.60*6.3668)/10) = 9.7318",
+          "points_awarded": 9.7318,
+          "evidence_confidence": "low",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0054",
+          "category": "reliability",
+          "component": "predicted_or_measured_reliability",
+          "maximum_points": 4,
+          "input_value": "average_or_mixed",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0086"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(average_or_mixed) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0055",
+          "category": "reliability",
+          "component": "powertrain_and_platform_maturity",
+          "maximum_points": 2,
+          "input_value": "established_platform_and_powertrain_3plus_years",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0087"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(established_platform_and_powertrain_3plus_years) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0056",
+          "category": "reliability",
+          "component": "recall_and_campaign_history",
+          "maximum_points": 2,
+          "input_value": "multiple_material_or_unresolved_issues",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0088"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(multiple_material_or_unresolved_issues) = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0057",
+          "category": "reliability",
+          "component": "owner_problem_pattern",
+          "maximum_points": 2,
+          "input_value": "moderate_recurring_issue",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0089"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(moderate_recurring_issue) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0058",
+          "category": "purchase_price",
+          "component": "normalized_used_acquisition_price",
+          "maximum_points": 10,
+          "input_value": 41990.0,
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0116"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Used-vehicle override: interpolate normalized current-market acquisition price on configured purchase-price anchors",
+          "calculation": "10 * interpolated_score(41990.00)/10 = 10.0000",
+          "points_awarded": 10.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0059",
+          "category": "passenger_space",
+          "component": "third_row_legroom",
+          "maximum_points": 4,
+          "input_value": 31.4,
+          "unit": "inches",
+          "claim_ids": [
+            "CLM-0090"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Threshold lookup: >=34=4; >=32=3; >=30=2; >=28=1; below28=0",
+          "calculation": "31.4 -> >= 30 inches = 2 points",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0060",
+          "category": "passenger_space",
+          "component": "third_row_real_world_usability",
+          "maximum_points": 3,
+          "input_value": "adult_usable_for_short_trip",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0091"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative usability lookup permitted by configuration",
+          "calculation": "lookup(adult_usable_for_short_trip) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0061",
+          "category": "passenger_space",
+          "component": "sliding_second_row",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0092"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0062",
+          "category": "passenger_space",
+          "component": "multiple_family_usable_seating_configurations",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0093"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0063",
+          "category": "passenger_space",
+          "component": "entry_and_exit",
+          "maximum_points": 1,
+          "input_value": "easy",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0094"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Entry/exit qualitative lookup",
+          "calculation": "lookup(easy)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0064",
+          "category": "cargo_practicality",
+          "component": "cargo_behind_third_row",
+          "maximum_points": 8,
+          "input_value": 21.0,
+          "unit": "cu_ft",
+          "claim_ids": [
+            "CLM-0095"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation across 16/2, 18/4, 20/6, 22/8 with endpoint clamping",
+          "calculation": "interpolate(21.0) = 7.0000",
+          "points_awarded": 7.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0065",
+          "category": "cargo_practicality",
+          "component": "flat_or_low_load_floor",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0096"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0066",
+          "category": "cargo_practicality",
+          "component": "useful_underfloor_storage",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0097"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0067",
+          "category": "cargo_practicality",
+          "component": "power_third_row_available",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0098"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0068",
+          "category": "cargo_practicality",
+          "component": "independent_testing_confirms_good_real_world_shape",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0099"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0069",
+          "category": "fuel_economy",
+          "component": "estimated_annual_energy_cost",
+          "maximum_points": 10,
+          "input_value": 2105.3,
+          "unit": "USD/year",
+          "claim_ids": [
+            "CLM-0100",
+            "CLM-0101",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390",
+            "CLM-0385"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation on configured annual-energy-cost anchors",
+          "calculation": "10 * interpolated_score(2105.30)/10 = 3.4735; annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+          "points_awarded": 3.4735,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0070",
+          "category": "comfort",
+          "component": "row_2_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0102"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0071",
+          "category": "comfort",
+          "component": "row_3_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0103"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0072",
+          "category": "comfort",
+          "component": "ceiling_mounted_or_equivalently_effective_rear_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0104"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0073",
+          "category": "comfort",
+          "component": "ride_quality",
+          "maximum_points": 1.5,
+          "input_value": "consistently_praised",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0105"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(consistently_praised)=1.5",
+          "points_awarded": 1.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0074",
+          "category": "comfort",
+          "component": "cabin_noise",
+          "maximum_points": 1.0,
+          "input_value": "quiet_for_class",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0106"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(quiet_for_class)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0075",
+          "category": "comfort",
+          "component": "seat_comfort",
+          "maximum_points": 1.0,
+          "input_value": "consistently_praised",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0107"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(consistently_praised)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0076",
+          "category": "technology",
+          "component": "surround_view_camera",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0108"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0077",
+          "category": "technology",
+          "component": "wireless_carplay_android_auto",
+          "maximum_points": 1.0,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0109"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0078",
+          "category": "technology",
+          "component": "adaptive_cruise_with_lane_centering",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0110"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0079",
+          "category": "technology",
+          "component": "rear_or_family_camera_feature",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0111"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0080",
+          "category": "technology",
+          "component": "ota_updates",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0112"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0081",
+          "category": "technology",
+          "component": "digital_key_or_phone_key",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0113"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0082",
+          "category": "technology",
+          "component": "usable_physical_controls_for_core_functions",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0114"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        }
+      ],
+      "confirmed_points_raw": 75.705282,
+      "confirmed_points": 75.7,
+      "maximum_possible_points": 75.7,
+      "missing_scoring_inputs": [],
+      "interpretation": "Strong fit",
+      "overall_evidence_confidence": "low",
+      "price_record_ids": [
+        "PRC-0004",
+        "PRC-0005",
+        "PRC-0006"
+      ]
+    },
+    {
+      "vehicle_id": "VEH-TOYOTA-SIENNA-2024-PLATINUM-AWD",
+      "vehicle": "2024 Toyota Sienna Platinum AWD",
+      "eligibility_gate": "pass",
+      "score_scope": "Provisional score for the exact qualifying configuration described in the vehicle ID; build-date and VIN conditions remain purchase gates where stated.",
+      "category_scores": [
+        {
+          "category": "safety",
+          "maximum_points": 25.0,
+          "confirmed_points_raw": 13.0,
+          "confirmed_points": 13.0,
+          "maximum_possible_points": 13.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "total_cost_of_ownership",
+          "maximum_points": 15.0,
+          "confirmed_points_raw": 11.111955,
+          "confirmed_points": 11.1,
+          "maximum_possible_points": 11.1,
+          "missing_components": [],
+          "evidence_confidence": "low"
+        },
+        {
+          "category": "reliability",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 8.0,
+          "confirmed_points": 8.0,
+          "maximum_possible_points": 8.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "purchase_price",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 8.401,
+          "confirmed_points": 8.4,
+          "maximum_possible_points": 8.4,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "passenger_space",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 9.0,
+          "confirmed_points": 9.0,
+          "maximum_possible_points": 9.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "cargo_practicality",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 9.0,
+          "confirmed_points": 9.0,
+          "maximum_possible_points": 9.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "fuel_economy",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 7.797467,
+          "confirmed_points": 7.8,
+          "maximum_possible_points": 7.8,
+          "missing_components": [],
+          "evidence_confidence": "high"
+        },
+        {
+          "category": "comfort",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 4.0,
+          "confirmed_points": 4.0,
+          "maximum_possible_points": 4.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "technology",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 2.5,
+          "confirmed_points": 2.5,
+          "maximum_possible_points": 2.5,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        }
+      ],
+      "component_scores": [
+        {
+          "score_id": "SCR-0001",
+          "category": "safety",
+          "component": "iihs_award",
+          "maximum_points": 7,
+          "input_value": "Top Safety Pick",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0011"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Top Safety Pick+=7; Top Safety Pick=5",
+          "calculation": "lookup(Top Safety Pick) = 5.0",
+          "points_awarded": 5.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0002",
+          "category": "safety",
+          "component": "iihs_test_quality",
+          "maximum_points": 6,
+          "input_value": "any_marginal_or_poor",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0012"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Current-generation IIHS test-quality lookup",
+          "calculation": "lookup(any_marginal_or_poor) = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0003",
+          "category": "safety",
+          "component": "pedestrian_aeb_strong_result",
+          "maximum_points": 2,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0013"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "2 points when verified true; 0 when verified false",
+          "calculation": "2 * 0 = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0004",
+          "category": "safety",
+          "component": "vehicle_to_vehicle_aeb",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0014"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0005",
+          "category": "safety",
+          "component": "blind_spot_monitoring_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0015"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0006",
+          "category": "safety",
+          "component": "rear_cross_traffic_alert_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0016"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0007",
+          "category": "safety",
+          "component": "rear_occupant_alert",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0017"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0008",
+          "category": "safety",
+          "component": "safe_exit_warning_or_equivalent",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0018"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 0 = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0009",
+          "category": "safety",
+          "component": "driver_attention_monitoring",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0019"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 0 = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0010",
+          "category": "safety",
+          "component": "surround_view_camera_available_on_scored_trim",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0020"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0011",
+          "category": "safety",
+          "component": "latch_quality",
+          "maximum_points": 3,
+          "input_value": "excellent_access_and_4_or_more_complete_positions",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0021"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "LATCH access-and-position lookup",
+          "calculation": "lookup(excellent_access_and_4_or_more_complete_positions) = 3.0",
+          "points_awarded": 3.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0012",
+          "category": "total_cost_of_ownership",
+          "component": "weighted_5_and_10_year_tco",
+          "maximum_points": 15,
+          "input_value": {
+            "five_year_tco": 48223.85,
+            "ten_year_tco": 83376.4,
+            "five_year_raw_score": 7.5328,
+            "ten_year_raw_score": 7.3247
+          },
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0036",
+            "CLM-0037",
+            "CLM-0052",
+            "CLM-0054",
+            "CLM-0055",
+            "CLM-0056",
+            "CLM-0057",
+            "CLM-0058",
+            "CLM-0059",
+            "CLM-0060",
+            "CLM-0061",
+            "CLM-0062",
+            "CLM-0063",
+            "CLM-0064",
+            "CLM-0384",
+            "CLM-0385",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "15 * ((0.40 * interpolated 5-year score + 0.60 * interpolated 10-year score) / 10)",
+          "calculation": "15 * ((0.40*7.5328 + 0.60*7.3247)/10) = 11.1120",
+          "points_awarded": 11.112,
+          "evidence_confidence": "low",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0013",
+          "category": "reliability",
+          "component": "predicted_or_measured_reliability",
+          "maximum_points": 4,
+          "input_value": "above_average",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0022"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(above_average) = 3.0",
+          "points_awarded": 3.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0014",
+          "category": "reliability",
+          "component": "powertrain_and_platform_maturity",
+          "maximum_points": 2,
+          "input_value": "established_platform_and_powertrain_3plus_years",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0023"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(established_platform_and_powertrain_3plus_years) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0015",
+          "category": "reliability",
+          "component": "recall_and_campaign_history",
+          "maximum_points": 2,
+          "input_value": "minor_or_resolved_pattern",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0024"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(minor_or_resolved_pattern) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0016",
+          "category": "reliability",
+          "component": "owner_problem_pattern",
+          "maximum_points": 2,
+          "input_value": "no_meaningful_recurring_pattern",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0025"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(no_meaningful_recurring_pattern) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0017",
+          "category": "purchase_price",
+          "component": "normalized_used_acquisition_price",
+          "maximum_points": 10,
+          "input_value": 52995.0,
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0052"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Used-vehicle override: interpolate normalized current-market acquisition price on configured purchase-price anchors",
+          "calculation": "10 * interpolated_score(52995.00)/10 = 8.4010",
+          "points_awarded": 8.401,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0018",
+          "category": "passenger_space",
+          "component": "third_row_legroom",
+          "maximum_points": 4,
+          "input_value": 38.7,
+          "unit": "inches",
+          "claim_ids": [
+            "CLM-0026"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Threshold lookup: >=34=4; >=32=3; >=30=2; >=28=1; below28=0",
+          "calculation": "38.7 -> >= 34 inches = 4 points",
+          "points_awarded": 4.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0019",
+          "category": "passenger_space",
+          "component": "third_row_real_world_usability",
+          "maximum_points": 3,
+          "input_value": "adult_usable_for_extended_trip",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0027"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative usability lookup permitted by configuration",
+          "calculation": "lookup(adult_usable_for_extended_trip) = 3.0",
+          "points_awarded": 3.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0020",
+          "category": "passenger_space",
+          "component": "sliding_second_row",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0028"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0021",
+          "category": "passenger_space",
+          "component": "multiple_family_usable_seating_configurations",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0029"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0022",
+          "category": "passenger_space",
+          "component": "entry_and_exit",
+          "maximum_points": 1,
+          "input_value": "easy",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0030"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Entry/exit qualitative lookup",
+          "calculation": "lookup(easy)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0023",
+          "category": "cargo_practicality",
+          "component": "cargo_behind_third_row",
+          "maximum_points": 8,
+          "input_value": 33.5,
+          "unit": "cu_ft",
+          "claim_ids": [
+            "CLM-0031"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation across 16/2, 18/4, 20/6, 22/8 with endpoint clamping",
+          "calculation": "interpolate(33.5) = 8.0000",
+          "points_awarded": 8.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0024",
+          "category": "cargo_practicality",
+          "component": "flat_or_low_load_floor",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0032"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0025",
+          "category": "cargo_practicality",
+          "component": "useful_underfloor_storage",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0033"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0026",
+          "category": "cargo_practicality",
+          "component": "power_third_row_available",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0034"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0027",
+          "category": "cargo_practicality",
+          "component": "independent_testing_confirms_good_real_world_shape",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0035"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0028",
+          "category": "fuel_economy",
+          "component": "estimated_annual_energy_cost",
+          "maximum_points": 10,
+          "input_value": 1160.76,
+          "unit": "USD/year",
+          "claim_ids": [
+            "CLM-0036",
+            "CLM-0037",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390",
+            "CLM-0385"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation on configured annual-energy-cost anchors",
+          "calculation": "10 * interpolated_score(1160.76)/10 = 7.7975; annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+          "points_awarded": 7.7975,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0029",
+          "category": "comfort",
+          "component": "row_2_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0038"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0030",
+          "category": "comfort",
+          "component": "row_3_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0039"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0031",
+          "category": "comfort",
+          "component": "ceiling_mounted_or_equivalently_effective_rear_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0040"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0032",
+          "category": "comfort",
+          "component": "ride_quality",
+          "maximum_points": 1.5,
+          "input_value": "generally_good",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0041"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(generally_good)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0033",
+          "category": "comfort",
+          "component": "cabin_noise",
+          "maximum_points": 1.0,
+          "input_value": "average",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0042"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(average)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0034",
+          "category": "comfort",
+          "component": "seat_comfort",
+          "maximum_points": 1.0,
+          "input_value": "consistently_praised",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0043"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(consistently_praised)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0035",
+          "category": "technology",
+          "component": "surround_view_camera",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0044"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0036",
+          "category": "technology",
+          "component": "wireless_carplay_android_auto",
+          "maximum_points": 1.0,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0045"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0037",
+          "category": "technology",
+          "component": "adaptive_cruise_with_lane_centering",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0046"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0038",
+          "category": "technology",
+          "component": "rear_or_family_camera_feature",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0047"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0039",
+          "category": "technology",
+          "component": "ota_updates",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0048"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0040",
+          "category": "technology",
+          "component": "digital_key_or_phone_key",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0049"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0041",
+          "category": "technology",
+          "component": "usable_physical_controls_for_core_functions",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0050"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        }
+      ],
+      "confirmed_points_raw": 72.810422,
+      "confirmed_points": 72.8,
+      "maximum_possible_points": 72.8,
+      "missing_scoring_inputs": [],
+      "interpretation": "Strong fit",
+      "overall_evidence_confidence": "low",
+      "price_record_ids": [
+        "PRC-0001",
+        "PRC-0002",
+        "PRC-0003"
+      ]
+    },
+    {
+      "vehicle_id": "VEH-NISSAN-PATHFINDER-2024-PLATINUM-4WD-POSTNOV23",
+      "vehicle": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "eligibility_gate": "conditional_pass",
+      "score_scope": "Provisional score for the exact qualifying configuration described in the vehicle ID; build-date and VIN conditions remain purchase gates where stated.",
+      "category_scores": [
+        {
+          "category": "safety",
+          "maximum_points": 25.0,
+          "confirmed_points_raw": 23.0,
+          "confirmed_points": 23.0,
+          "maximum_possible_points": 23.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "total_cost_of_ownership",
+          "maximum_points": 15.0,
+          "confirmed_points_raw": 11.725224,
+          "confirmed_points": 11.7,
+          "maximum_possible_points": 11.7,
+          "missing_components": [],
+          "evidence_confidence": "low"
+        },
+        {
+          "category": "reliability",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 7.0,
+          "confirmed_points": 7.0,
+          "maximum_possible_points": 7.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "purchase_price",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 10.0,
+          "confirmed_points": 10.0,
+          "maximum_possible_points": 10.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "passenger_space",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 4.0,
+          "confirmed_points": 4.0,
+          "maximum_possible_points": 4.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "cargo_practicality",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 4.1,
+          "confirmed_points": 4.1,
+          "maximum_possible_points": 4.1,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "fuel_economy",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 4.37252,
+          "confirmed_points": 4.4,
+          "maximum_possible_points": 4.4,
+          "missing_components": [],
+          "evidence_confidence": "high"
+        },
+        {
+          "category": "comfort",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 3.0,
+          "confirmed_points": 3.0,
+          "maximum_possible_points": 3.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "technology",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 3.5,
+          "confirmed_points": 3.5,
+          "maximum_possible_points": 3.5,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        }
+      ],
+      "component_scores": [
+        {
+          "score_id": "SCR-0165",
+          "category": "safety",
+          "component": "iihs_award",
+          "maximum_points": 7,
+          "input_value": "Top Safety Pick+",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0267"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Top Safety Pick+=7; Top Safety Pick=5",
+          "calculation": "lookup(Top Safety Pick+) = 7.0",
+          "points_awarded": 7.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0166",
+          "category": "safety",
+          "component": "iihs_test_quality",
+          "maximum_points": 6,
+          "input_value": "all_applicable_good",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0268"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Current-generation IIHS test-quality lookup",
+          "calculation": "lookup(all_applicable_good) = 6.0",
+          "points_awarded": 6.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0167",
+          "category": "safety",
+          "component": "pedestrian_aeb_strong_result",
+          "maximum_points": 2,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0269"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "2 points when verified true; 0 when verified false",
+          "calculation": "2 * 1 = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0168",
+          "category": "safety",
+          "component": "vehicle_to_vehicle_aeb",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0270"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0169",
+          "category": "safety",
+          "component": "blind_spot_monitoring_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0271"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0170",
+          "category": "safety",
+          "component": "rear_cross_traffic_alert_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0272"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0171",
+          "category": "safety",
+          "component": "rear_occupant_alert",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0273"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0172",
+          "category": "safety",
+          "component": "safe_exit_warning_or_equivalent",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0274"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 0 = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0173",
+          "category": "safety",
+          "component": "driver_attention_monitoring",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0275"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0174",
+          "category": "safety",
+          "component": "surround_view_camera_available_on_scored_trim",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0276"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0175",
+          "category": "safety",
+          "component": "latch_quality",
+          "maximum_points": 3,
+          "input_value": "good_access_and_3_complete_positions",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0277"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "LATCH access-and-position lookup",
+          "calculation": "lookup(good_access_and_3_complete_positions) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0176",
+          "category": "total_cost_of_ownership",
+          "component": "weighted_5_and_10_year_tco",
+          "maximum_points": 15,
+          "input_value": {
+            "five_year_tco": 47533.06,
+            "ten_year_tco": 80660.14,
+            "five_year_raw_score": 7.7401,
+            "ten_year_raw_score": 7.868
+          },
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0292",
+            "CLM-0293",
+            "CLM-0308",
+            "CLM-0310",
+            "CLM-0311",
+            "CLM-0312",
+            "CLM-0313",
+            "CLM-0314",
+            "CLM-0315",
+            "CLM-0316",
+            "CLM-0317",
+            "CLM-0318",
+            "CLM-0319",
+            "CLM-0320",
+            "CLM-0384",
+            "CLM-0385",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "15 * ((0.40 * interpolated 5-year score + 0.60 * interpolated 10-year score) / 10)",
+          "calculation": "15 * ((0.40*7.7401 + 0.60*7.8680)/10) = 11.7252",
+          "points_awarded": 11.7252,
+          "evidence_confidence": "low",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0177",
+          "category": "reliability",
+          "component": "predicted_or_measured_reliability",
+          "maximum_points": 4,
+          "input_value": "above_average",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0278"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(above_average) = 3.0",
+          "points_awarded": 3.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0178",
+          "category": "reliability",
+          "component": "powertrain_and_platform_maturity",
+          "maximum_points": 2,
+          "input_value": "established_platform_and_powertrain_3plus_years",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0279"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(established_platform_and_powertrain_3plus_years) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0179",
+          "category": "reliability",
+          "component": "recall_and_campaign_history",
+          "maximum_points": 2,
+          "input_value": "minor_or_resolved_pattern",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0280"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(minor_or_resolved_pattern) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0180",
+          "category": "reliability",
+          "component": "owner_problem_pattern",
+          "maximum_points": 2,
+          "input_value": "moderate_recurring_issue",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0281"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(moderate_recurring_issue) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0181",
+          "category": "purchase_price",
+          "component": "normalized_used_acquisition_price",
+          "maximum_points": 10,
+          "input_value": 36998.0,
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0308"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Used-vehicle override: interpolate normalized current-market acquisition price on configured purchase-price anchors",
+          "calculation": "10 * interpolated_score(36998.00)/10 = 10.0000",
+          "points_awarded": 10.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0182",
+          "category": "passenger_space",
+          "component": "third_row_legroom",
+          "maximum_points": 4,
+          "input_value": 28.0,
+          "unit": "inches",
+          "claim_ids": [
+            "CLM-0282"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Threshold lookup: >=34=4; >=32=3; >=30=2; >=28=1; below28=0",
+          "calculation": "28.0 -> >= 28 inches = 1 points",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0183",
+          "category": "passenger_space",
+          "component": "third_row_real_world_usability",
+          "maximum_points": 3,
+          "input_value": "primarily_child_sized",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0283"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative usability lookup permitted by configuration",
+          "calculation": "lookup(primarily_child_sized) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0184",
+          "category": "passenger_space",
+          "component": "sliding_second_row",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0284"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0185",
+          "category": "passenger_space",
+          "component": "multiple_family_usable_seating_configurations",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0285"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0186",
+          "category": "passenger_space",
+          "component": "entry_and_exit",
+          "maximum_points": 1,
+          "input_value": "easy",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0286"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Entry/exit qualitative lookup",
+          "calculation": "lookup(easy)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0187",
+          "category": "cargo_practicality",
+          "component": "cargo_behind_third_row",
+          "maximum_points": 8,
+          "input_value": 16.6,
+          "unit": "cu_ft",
+          "claim_ids": [
+            "CLM-0287"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation across 16/2, 18/4, 20/6, 22/8 with endpoint clamping",
+          "calculation": "interpolate(16.6) = 2.6000",
+          "points_awarded": 2.6,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0188",
+          "category": "cargo_practicality",
+          "component": "flat_or_low_load_floor",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0288"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0189",
+          "category": "cargo_practicality",
+          "component": "useful_underfloor_storage",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0289"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0190",
+          "category": "cargo_practicality",
+          "component": "power_third_row_available",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0290"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0191",
+          "category": "cargo_practicality",
+          "component": "independent_testing_confirms_good_real_world_shape",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0291"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0192",
+          "category": "fuel_economy",
+          "component": "estimated_annual_energy_cost",
+          "maximum_points": 10,
+          "input_value": 1925.5,
+          "unit": "USD/year",
+          "claim_ids": [
+            "CLM-0292",
+            "CLM-0293",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390",
+            "CLM-0385"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation on configured annual-energy-cost anchors",
+          "calculation": "10 * interpolated_score(1925.50)/10 = 4.3725; annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+          "points_awarded": 4.3725,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0193",
+          "category": "comfort",
+          "component": "row_2_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0294"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0194",
+          "category": "comfort",
+          "component": "row_3_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0295"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0195",
+          "category": "comfort",
+          "component": "ceiling_mounted_or_equivalently_effective_rear_vents",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0296"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0196",
+          "category": "comfort",
+          "component": "ride_quality",
+          "maximum_points": 1.5,
+          "input_value": "generally_good",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0297"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(generally_good)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0197",
+          "category": "comfort",
+          "component": "cabin_noise",
+          "maximum_points": 1.0,
+          "input_value": "average",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0298"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(average)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0198",
+          "category": "comfort",
+          "component": "seat_comfort",
+          "maximum_points": 1.0,
+          "input_value": "average_or_mixed",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0299"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(average_or_mixed)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0199",
+          "category": "technology",
+          "component": "surround_view_camera",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0300"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0200",
+          "category": "technology",
+          "component": "wireless_carplay_android_auto",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0301"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0201",
+          "category": "technology",
+          "component": "adaptive_cruise_with_lane_centering",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0302"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0202",
+          "category": "technology",
+          "component": "rear_or_family_camera_feature",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0303"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0203",
+          "category": "technology",
+          "component": "ota_updates",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0304"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0204",
+          "category": "technology",
+          "component": "digital_key_or_phone_key",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0305"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0205",
+          "category": "technology",
+          "component": "usable_physical_controls_for_core_functions",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0306"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        }
+      ],
+      "confirmed_points_raw": 70.697744,
+      "confirmed_points": 70.7,
+      "maximum_possible_points": 70.7,
+      "missing_scoring_inputs": [],
+      "interpretation": "Strong fit",
+      "overall_evidence_confidence": "low",
+      "price_record_ids": [
+        "PRC-0013",
+        "PRC-0014",
+        "PRC-0015"
+      ]
+    },
+    {
+      "vehicle_id": "VEH-FORD-EXPLORER-2024-PLATINUM-4WD",
+      "vehicle": "2024 Ford Explorer Platinum 4WD",
+      "eligibility_gate": "pass",
+      "score_scope": "Provisional score for the exact qualifying configuration described in the vehicle ID; build-date and VIN conditions remain purchase gates where stated.",
+      "category_scores": [
+        {
+          "category": "safety",
+          "maximum_points": 25.0,
+          "confirmed_points_raw": 20.0,
+          "confirmed_points": 20.0,
+          "maximum_possible_points": 20.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "total_cost_of_ownership",
+          "maximum_points": 15.0,
+          "confirmed_points_raw": 7.17639,
+          "confirmed_points": 7.2,
+          "maximum_possible_points": 7.2,
+          "missing_components": [],
+          "evidence_confidence": "low"
+        },
+        {
+          "category": "reliability",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 5.0,
+          "confirmed_points": 5.0,
+          "maximum_possible_points": 5.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "purchase_price",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 10.0,
+          "confirmed_points": 10.0,
+          "maximum_possible_points": 10.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "passenger_space",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 6.5,
+          "confirmed_points": 6.5,
+          "maximum_possible_points": 6.5,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "cargo_practicality",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 6.2,
+          "confirmed_points": 6.2,
+          "maximum_possible_points": 6.2,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "fuel_economy",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 3.4735,
+          "confirmed_points": 3.5,
+          "maximum_possible_points": 3.5,
+          "missing_components": [],
+          "evidence_confidence": "high"
+        },
+        {
+          "category": "comfort",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 3.0,
+          "confirmed_points": 3.0,
+          "maximum_possible_points": 3.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "technology",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 4.0,
+          "confirmed_points": 4.0,
+          "maximum_possible_points": 4.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        }
+      ],
+      "component_scores": [
+        {
+          "score_id": "SCR-0124",
+          "category": "safety",
+          "component": "iihs_award",
+          "maximum_points": 7,
+          "input_value": "Top Safety Pick+",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0203"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Top Safety Pick+=7; Top Safety Pick=5",
+          "calculation": "lookup(Top Safety Pick+) = 7.0",
+          "points_awarded": 7.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0125",
+          "category": "safety",
+          "component": "iihs_test_quality",
+          "maximum_points": 6,
+          "input_value": "all_applicable_good",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0204"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Current-generation IIHS test-quality lookup",
+          "calculation": "lookup(all_applicable_good) = 6.0",
+          "points_awarded": 6.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0126",
+          "category": "safety",
+          "component": "pedestrian_aeb_strong_result",
+          "maximum_points": 2,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0205"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "2 points when verified true; 0 when verified false",
+          "calculation": "2 * 0 = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0127",
+          "category": "safety",
+          "component": "vehicle_to_vehicle_aeb",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0206"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0128",
+          "category": "safety",
+          "component": "blind_spot_monitoring_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0207"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0129",
+          "category": "safety",
+          "component": "rear_cross_traffic_alert_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0208"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0130",
+          "category": "safety",
+          "component": "rear_occupant_alert",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0209"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0131",
+          "category": "safety",
+          "component": "safe_exit_warning_or_equivalent",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0210"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 0 = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0132",
+          "category": "safety",
+          "component": "driver_attention_monitoring",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0211"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0133",
+          "category": "safety",
+          "component": "surround_view_camera_available_on_scored_trim",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0212"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0134",
+          "category": "safety",
+          "component": "latch_quality",
+          "maximum_points": 3,
+          "input_value": "passes_requirement_but_access_is_difficult",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0213"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "LATCH access-and-position lookup",
+          "calculation": "lookup(passes_requirement_but_access_is_difficult) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0135",
+          "category": "total_cost_of_ownership",
+          "component": "weighted_5_and_10_year_tco",
+          "maximum_points": 15,
+          "input_value": {
+            "five_year_tco": 56319.0,
+            "ten_year_tco": 97145.5,
+            "five_year_raw_score": 5.1043,
+            "ten_year_raw_score": 4.5709
+          },
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0228",
+            "CLM-0229",
+            "CLM-0244",
+            "CLM-0246",
+            "CLM-0247",
+            "CLM-0248",
+            "CLM-0249",
+            "CLM-0250",
+            "CLM-0251",
+            "CLM-0252",
+            "CLM-0253",
+            "CLM-0254",
+            "CLM-0255",
+            "CLM-0256",
+            "CLM-0384",
+            "CLM-0385",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "15 * ((0.40 * interpolated 5-year score + 0.60 * interpolated 10-year score) / 10)",
+          "calculation": "15 * ((0.40*5.1043 + 0.60*4.5709)/10) = 7.1764",
+          "points_awarded": 7.1764,
+          "evidence_confidence": "low",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0136",
+          "category": "reliability",
+          "component": "predicted_or_measured_reliability",
+          "maximum_points": 4,
+          "input_value": "average_or_mixed",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0214"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(average_or_mixed) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0137",
+          "category": "reliability",
+          "component": "powertrain_and_platform_maturity",
+          "maximum_points": 2,
+          "input_value": "established_platform_and_powertrain_3plus_years",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0215"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(established_platform_and_powertrain_3plus_years) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0138",
+          "category": "reliability",
+          "component": "recall_and_campaign_history",
+          "maximum_points": 2,
+          "input_value": "multiple_material_or_unresolved_issues",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0216"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(multiple_material_or_unresolved_issues) = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0139",
+          "category": "reliability",
+          "component": "owner_problem_pattern",
+          "maximum_points": 2,
+          "input_value": "moderate_recurring_issue",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0217"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(moderate_recurring_issue) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0140",
+          "category": "purchase_price",
+          "component": "normalized_used_acquisition_price",
+          "maximum_points": 10,
+          "input_value": 42500.0,
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0244"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Used-vehicle override: interpolate normalized current-market acquisition price on configured purchase-price anchors",
+          "calculation": "10 * interpolated_score(42500.00)/10 = 10.0000",
+          "points_awarded": 10.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0141",
+          "category": "passenger_space",
+          "component": "third_row_legroom",
+          "maximum_points": 4,
+          "input_value": 32.2,
+          "unit": "inches",
+          "claim_ids": [
+            "CLM-0218"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Threshold lookup: >=34=4; >=32=3; >=30=2; >=28=1; below28=0",
+          "calculation": "32.2 -> >= 32 inches = 3 points",
+          "points_awarded": 3.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0142",
+          "category": "passenger_space",
+          "component": "third_row_real_world_usability",
+          "maximum_points": 3,
+          "input_value": "adult_usable_for_short_trip",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0219"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative usability lookup permitted by configuration",
+          "calculation": "lookup(adult_usable_for_short_trip) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0143",
+          "category": "passenger_space",
+          "component": "sliding_second_row",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0220"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0144",
+          "category": "passenger_space",
+          "component": "multiple_family_usable_seating_configurations",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0221"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0145",
+          "category": "passenger_space",
+          "component": "entry_and_exit",
+          "maximum_points": 1,
+          "input_value": "average",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0222"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Entry/exit qualitative lookup",
+          "calculation": "lookup(average)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0146",
+          "category": "cargo_practicality",
+          "component": "cargo_behind_third_row",
+          "maximum_points": 8,
+          "input_value": 18.2,
+          "unit": "cu_ft",
+          "claim_ids": [
+            "CLM-0223"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation across 16/2, 18/4, 20/6, 22/8 with endpoint clamping",
+          "calculation": "interpolate(18.2) = 4.2000",
+          "points_awarded": 4.2,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0147",
+          "category": "cargo_practicality",
+          "component": "flat_or_low_load_floor",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0224"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0148",
+          "category": "cargo_practicality",
+          "component": "useful_underfloor_storage",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0225"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0149",
+          "category": "cargo_practicality",
+          "component": "power_third_row_available",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0226"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0150",
+          "category": "cargo_practicality",
+          "component": "independent_testing_confirms_good_real_world_shape",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0227"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0151",
+          "category": "fuel_economy",
+          "component": "estimated_annual_energy_cost",
+          "maximum_points": 10,
+          "input_value": 2105.3,
+          "unit": "USD/year",
+          "claim_ids": [
+            "CLM-0228",
+            "CLM-0229",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390",
+            "CLM-0385"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation on configured annual-energy-cost anchors",
+          "calculation": "10 * interpolated_score(2105.30)/10 = 3.4735; annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+          "points_awarded": 3.4735,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0152",
+          "category": "comfort",
+          "component": "row_2_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0230"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0153",
+          "category": "comfort",
+          "component": "row_3_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0231"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0154",
+          "category": "comfort",
+          "component": "ceiling_mounted_or_equivalently_effective_rear_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0232"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0155",
+          "category": "comfort",
+          "component": "ride_quality",
+          "maximum_points": 1.5,
+          "input_value": "mixed",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0233"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(mixed)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0156",
+          "category": "comfort",
+          "component": "cabin_noise",
+          "maximum_points": 1.0,
+          "input_value": "average",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0234"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(average)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0157",
+          "category": "comfort",
+          "component": "seat_comfort",
+          "maximum_points": 1.0,
+          "input_value": "average_or_mixed",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0235"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(average_or_mixed)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0158",
+          "category": "technology",
+          "component": "surround_view_camera",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0236"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0159",
+          "category": "technology",
+          "component": "wireless_carplay_android_auto",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0237"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0160",
+          "category": "technology",
+          "component": "adaptive_cruise_with_lane_centering",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0238"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0161",
+          "category": "technology",
+          "component": "rear_or_family_camera_feature",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0239"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0162",
+          "category": "technology",
+          "component": "ota_updates",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0240"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0163",
+          "category": "technology",
+          "component": "digital_key_or_phone_key",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0241"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0164",
+          "category": "technology",
+          "component": "usable_physical_controls_for_core_functions",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0242"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        }
+      ],
+      "confirmed_points_raw": 65.34989,
+      "confirmed_points": 65.3,
+      "maximum_possible_points": 65.3,
+      "missing_scoring_inputs": [],
+      "interpretation": "Viable with meaningful compromises",
+      "overall_evidence_confidence": "low",
+      "price_record_ids": [
+        "PRC-0010",
+        "PRC-0011",
+        "PRC-0012"
+      ]
+    },
+    {
+      "vehicle_id": "VEH-HONDA-PILOT-2024-ELITE-AWD",
+      "vehicle": "2024 Honda Pilot Elite AWD",
+      "eligibility_gate": "pass",
+      "score_scope": "Provisional score for the exact qualifying configuration described in the vehicle ID; build-date and VIN conditions remain purchase gates where stated.",
+      "category_scores": [
+        {
+          "category": "safety",
+          "maximum_points": 25.0,
+          "confirmed_points_raw": 16.0,
+          "confirmed_points": 16.0,
+          "maximum_possible_points": 16.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "total_cost_of_ownership",
+          "maximum_points": 15.0,
+          "confirmed_points_raw": 10.114791,
+          "confirmed_points": 10.1,
+          "maximum_possible_points": 10.1,
+          "missing_components": [],
+          "evidence_confidence": "medium-low"
+        },
+        {
+          "category": "reliability",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 4.0,
+          "confirmed_points": 4.0,
+          "maximum_possible_points": 4.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "purchase_price",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 10.0,
+          "confirmed_points": 10.0,
+          "maximum_possible_points": 10.0,
+          "missing_components": [],
+          "evidence_confidence": "medium-low"
+        },
+        {
+          "category": "passenger_space",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 8.0,
+          "confirmed_points": 8.0,
+          "maximum_possible_points": 8.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "cargo_practicality",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 6.1,
+          "confirmed_points": 6.1,
+          "maximum_possible_points": 6.1,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "fuel_economy",
+          "maximum_points": 10.0,
+          "confirmed_points_raw": 3.995183,
+          "confirmed_points": 4.0,
+          "maximum_possible_points": 4.0,
+          "missing_components": [],
+          "evidence_confidence": "high"
+        },
+        {
+          "category": "comfort",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 3.0,
+          "confirmed_points": 3.0,
+          "maximum_possible_points": 3.0,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        },
+        {
+          "category": "technology",
+          "maximum_points": 5.0,
+          "confirmed_points_raw": 3.5,
+          "confirmed_points": 3.5,
+          "maximum_possible_points": 3.5,
+          "missing_components": [],
+          "evidence_confidence": "medium"
+        }
+      ],
+      "component_scores": [
+        {
+          "score_id": "SCR-0083",
+          "category": "safety",
+          "component": "iihs_award",
+          "maximum_points": 7,
+          "input_value": "Top Safety Pick",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0139"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Top Safety Pick+=7; Top Safety Pick=5",
+          "calculation": "lookup(Top Safety Pick) = 5.0",
+          "points_awarded": 5.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0084",
+          "category": "safety",
+          "component": "iihs_test_quality",
+          "maximum_points": 6,
+          "input_value": "any_marginal_or_poor",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0140"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Current-generation IIHS test-quality lookup",
+          "calculation": "lookup(any_marginal_or_poor) = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0085",
+          "category": "safety",
+          "component": "pedestrian_aeb_strong_result",
+          "maximum_points": 2,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0141"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "2 points when verified true; 0 when verified false",
+          "calculation": "2 * 1 = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0086",
+          "category": "safety",
+          "component": "vehicle_to_vehicle_aeb",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0142"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0087",
+          "category": "safety",
+          "component": "blind_spot_monitoring_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0143"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0088",
+          "category": "safety",
+          "component": "rear_cross_traffic_alert_standard",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0144"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 points when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0089",
+          "category": "safety",
+          "component": "rear_occupant_alert",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0145"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0090",
+          "category": "safety",
+          "component": "safe_exit_warning_or_equivalent",
+          "maximum_points": 1,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0146"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 0 = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0091",
+          "category": "safety",
+          "component": "driver_attention_monitoring",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0147"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0092",
+          "category": "safety",
+          "component": "surround_view_camera_available_on_scored_trim",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0148"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point when verified true; 0 when verified false",
+          "calculation": "1 * 1 = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0093",
+          "category": "safety",
+          "component": "latch_quality",
+          "maximum_points": 3,
+          "input_value": "excellent_access_and_4_or_more_complete_positions",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0149"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "LATCH access-and-position lookup",
+          "calculation": "lookup(excellent_access_and_4_or_more_complete_positions) = 3.0",
+          "points_awarded": 3.0,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0094",
+          "category": "total_cost_of_ownership",
+          "component": "weighted_5_and_10_year_tco",
+          "maximum_points": 15,
+          "input_value": {
+            "five_year_tco": 50080.62,
+            "ten_year_tco": 87059.43,
+            "five_year_raw_score": 6.9758,
+            "ten_year_raw_score": 6.5881
+          },
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0164",
+            "CLM-0165",
+            "CLM-0180",
+            "CLM-0182",
+            "CLM-0183",
+            "CLM-0184",
+            "CLM-0185",
+            "CLM-0186",
+            "CLM-0187",
+            "CLM-0188",
+            "CLM-0189",
+            "CLM-0190",
+            "CLM-0191",
+            "CLM-0192",
+            "CLM-0384",
+            "CLM-0385",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "15 * ((0.40 * interpolated 5-year score + 0.60 * interpolated 10-year score) / 10)",
+          "calculation": "15 * ((0.40*6.9758 + 0.60*6.5881)/10) = 10.1148",
+          "points_awarded": 10.1148,
+          "evidence_confidence": "medium-low",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0095",
+          "category": "reliability",
+          "component": "predicted_or_measured_reliability",
+          "maximum_points": 4,
+          "input_value": "average_or_mixed",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0150"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(average_or_mixed) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0096",
+          "category": "reliability",
+          "component": "powertrain_and_platform_maturity",
+          "maximum_points": 2,
+          "input_value": "partially_new_or_significantly_revised",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0151"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(partially_new_or_significantly_revised) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0097",
+          "category": "reliability",
+          "component": "recall_and_campaign_history",
+          "maximum_points": 2,
+          "input_value": "multiple_material_or_unresolved_issues",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0152"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(multiple_material_or_unresolved_issues) = 0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0098",
+          "category": "reliability",
+          "component": "owner_problem_pattern",
+          "maximum_points": 2,
+          "input_value": "moderate_recurring_issue",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0153"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Configuration-defined reliability classification lookup",
+          "calculation": "lookup(moderate_recurring_issue) = 1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0099",
+          "category": "purchase_price",
+          "component": "normalized_used_acquisition_price",
+          "maximum_points": 10,
+          "input_value": 43800.0,
+          "unit": "USD",
+          "claim_ids": [
+            "CLM-0180"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Used-vehicle override: interpolate normalized current-market acquisition price on configured purchase-price anchors",
+          "calculation": "10 * interpolated_score(43800.00)/10 = 10.0000",
+          "points_awarded": 10.0,
+          "evidence_confidence": "medium-low",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0100",
+          "category": "passenger_space",
+          "component": "third_row_legroom",
+          "maximum_points": 4,
+          "input_value": 32.5,
+          "unit": "inches",
+          "claim_ids": [
+            "CLM-0154"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Threshold lookup: >=34=4; >=32=3; >=30=2; >=28=1; below28=0",
+          "calculation": "32.5 -> >= 32 inches = 3 points",
+          "points_awarded": 3.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0101",
+          "category": "passenger_space",
+          "component": "third_row_real_world_usability",
+          "maximum_points": 3,
+          "input_value": "adult_usable_for_short_trip",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0155"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative usability lookup permitted by configuration",
+          "calculation": "lookup(adult_usable_for_short_trip) = 2.0",
+          "points_awarded": 2.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0102",
+          "category": "passenger_space",
+          "component": "sliding_second_row",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0156"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0103",
+          "category": "passenger_space",
+          "component": "multiple_family_usable_seating_configurations",
+          "maximum_points": 1,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0157"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1 point if verified true",
+          "calculation": "1*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0104",
+          "category": "passenger_space",
+          "component": "entry_and_exit",
+          "maximum_points": 1,
+          "input_value": "easy",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0158"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Entry/exit qualitative lookup",
+          "calculation": "lookup(easy)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0105",
+          "category": "cargo_practicality",
+          "component": "cargo_behind_third_row",
+          "maximum_points": 8,
+          "input_value": 18.6,
+          "unit": "cu_ft",
+          "claim_ids": [
+            "CLM-0159"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation across 16/2, 18/4, 20/6, 22/8 with endpoint clamping",
+          "calculation": "interpolate(18.6) = 4.6000",
+          "points_awarded": 4.6,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0106",
+          "category": "cargo_practicality",
+          "component": "flat_or_low_load_floor",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0160"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0107",
+          "category": "cargo_practicality",
+          "component": "useful_underfloor_storage",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0161"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0108",
+          "category": "cargo_practicality",
+          "component": "power_third_row_available",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0162"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0109",
+          "category": "cargo_practicality",
+          "component": "independent_testing_confirms_good_real_world_shape",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0163"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0110",
+          "category": "fuel_economy",
+          "component": "estimated_annual_energy_cost",
+          "maximum_points": 10,
+          "input_value": 2000.96,
+          "unit": "USD/year",
+          "claim_ids": [
+            "CLM-0164",
+            "CLM-0165",
+            "CLM-0388",
+            "CLM-0389",
+            "CLM-0390",
+            "CLM-0385"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Linear interpolation on configured annual-energy-cost anchors",
+          "calculation": "10 * interpolated_score(2000.96)/10 = 3.9952; annual_miles * city_share / city_mpg + annual_miles * highway_share / highway_mpg, multiplied by gas price",
+          "points_awarded": 3.9952,
+          "evidence_confidence": "high",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0111",
+          "category": "comfort",
+          "component": "row_2_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0166"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0112",
+          "category": "comfort",
+          "component": "row_3_dedicated_vents",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0167"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0113",
+          "category": "comfort",
+          "component": "ceiling_mounted_or_equivalently_effective_rear_vents",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0168"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0114",
+          "category": "comfort",
+          "component": "ride_quality",
+          "maximum_points": 1.5,
+          "input_value": "generally_good",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0169"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(generally_good)=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0115",
+          "category": "comfort",
+          "component": "cabin_noise",
+          "maximum_points": 1.0,
+          "input_value": "average",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0170"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(average)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0116",
+          "category": "comfort",
+          "component": "seat_comfort",
+          "maximum_points": 1.0,
+          "input_value": "average_or_mixed",
+          "unit": null,
+          "claim_ids": [
+            "CLM-0171"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "Qualitative comfort lookup permitted by configuration",
+          "calculation": "lookup(average_or_mixed)=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0117",
+          "category": "technology",
+          "component": "surround_view_camera",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0172"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0118",
+          "category": "technology",
+          "component": "wireless_carplay_android_auto",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0173"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0119",
+          "category": "technology",
+          "component": "adaptive_cruise_with_lane_centering",
+          "maximum_points": 1.0,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0174"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "1.0 points if verified true",
+          "calculation": "1.0*1=1.0",
+          "points_awarded": 1.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0120",
+          "category": "technology",
+          "component": "rear_or_family_camera_feature",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0175"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0121",
+          "category": "technology",
+          "component": "ota_updates",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0176"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0122",
+          "category": "technology",
+          "component": "digital_key_or_phone_key",
+          "maximum_points": 0.5,
+          "input_value": false,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0177"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*0=0.0",
+          "points_awarded": 0.0,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        },
+        {
+          "score_id": "SCR-0123",
+          "category": "technology",
+          "component": "usable_physical_controls_for_core_functions",
+          "maximum_points": 0.5,
+          "input_value": true,
+          "unit": "boolean",
+          "claim_ids": [
+            "CLM-0178"
+          ],
+          "human_observation_ids": [],
+          "exact_scoring_rule": "0.5 points if verified true",
+          "calculation": "0.5*1=0.5",
+          "points_awarded": 0.5,
+          "evidence_confidence": "medium",
+          "missing_or_conflicting_inputs": []
+        }
+      ],
+      "confirmed_points_raw": 64.709974,
+      "confirmed_points": 64.7,
+      "maximum_possible_points": 64.7,
+      "missing_scoring_inputs": [],
+      "interpretation": "Viable with meaningful compromises",
+      "overall_evidence_confidence": "medium-low",
+      "price_record_ids": [
+        "PRC-0007",
+        "PRC-0008",
+        "PRC-0009"
+      ]
+    }
+  ]
+}

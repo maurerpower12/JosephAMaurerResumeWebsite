@@ -1,0 +1,756 @@
+{
+  "run_id": "RUN-FVR-20260824-001",
+  "queries": [
+    {
+      "query_id": "QRY-0001",
+      "exact_query": "site:iihs.org/ratings/vehicle 2024 Toyota Sienna IIHS",
+      "purpose": "Verify exact-year award, crash tests and LATCH map",
+      "vehicle_or_topic": "2024 Toyota Sienna Platinum AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0001"
+      ],
+      "useful_result": "Exact IIHS award/restrictions and child-anchor ratings captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0002",
+      "exact_query": "site:nhtsa.gov/vehicle/2024 Toyota Sienna AWD overall safety rating",
+      "purpose": "Verify exact drivetrain NHTSA overall score",
+      "vehicle_or_topic": "2024 Toyota Sienna Platinum AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0013",
+        "SRC-0020"
+      ],
+      "useful_result": "Exact variant result captured or corroborated with public ratings-data mirror.",
+      "no_result_or_ambiguity_note": "Some NHTSA dynamic pages rendered an error; mirror retained as corroboration, not a replacement for the official URL."
+    },
+    {
+      "query_id": "QRY-0003",
+      "exact_query": "2024 Toyota Sienna Platinum cargo third row legroom official specifications",
+      "purpose": "Verify passenger/cargo/equipment inputs",
+      "vehicle_or_topic": "2024 Toyota Sienna Platinum AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0024"
+      ],
+      "useful_result": "Exact-year dimensions and scored-trim equipment collected.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0004",
+      "exact_query": "site:fueleconomy.gov 2024 Toyota Sienna AWD",
+      "purpose": "Verify EPA energy baseline",
+      "vehicle_or_topic": "2024 Toyota Sienna Platinum AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0031"
+      ],
+      "useful_result": "EPA mileage or energy-consumption baseline captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0005",
+      "exact_query": "2024 Toyota Sienna recalls complaints reliability recurring problems",
+      "purpose": "Classify reliability and owner patterns without brand stereotypes",
+      "vehicle_or_topic": "2024 Toyota Sienna Platinum AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0039"
+      ],
+      "useful_result": "Recall/complaint channels and recurring-pattern synthesis reviewed.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0006",
+      "exact_query": "used 2024 Toyota Sienna Platinum AWD site:carmax.com OR site:carvana.com OR certified",
+      "purpose": "Build exact-trim used-market comparable set",
+      "vehicle_or_topic": "2024 Toyota Sienna Platinum AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0051",
+        "SRC-0052",
+        "SRC-0053"
+      ],
+      "useful_result": "Direct listing URLs and low/base/high market range captured.",
+      "no_result_or_ambiguity_note": "Several exact listings sold or redirected during the run; status is explicit and confidence reduced."
+    },
+    {
+      "query_id": "QRY-0007",
+      "exact_query": "site:iihs.org/ratings/vehicle 2024 Kia Telluride IIHS",
+      "purpose": "Verify exact-year award, crash tests and LATCH map",
+      "vehicle_or_topic": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0002"
+      ],
+      "useful_result": "Exact IIHS award/restrictions and child-anchor ratings captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0008",
+      "exact_query": "site:nhtsa.gov/vehicle/2024 Kia Telluride AWD overall safety rating",
+      "purpose": "Verify exact drivetrain NHTSA overall score",
+      "vehicle_or_topic": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0014",
+        "SRC-0021"
+      ],
+      "useful_result": "Exact variant result captured or corroborated with public ratings-data mirror.",
+      "no_result_or_ambiguity_note": "Some NHTSA dynamic pages rendered an error; mirror retained as corroboration, not a replacement for the official URL."
+    },
+    {
+      "query_id": "QRY-0009",
+      "exact_query": "2024 Kia Telluride SX Prestige X-Pro cargo third row legroom official specifications",
+      "purpose": "Verify passenger/cargo/equipment inputs",
+      "vehicle_or_topic": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0026"
+      ],
+      "useful_result": "Exact-year dimensions and scored-trim equipment collected.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0010",
+      "exact_query": "site:fueleconomy.gov 2024 Kia Telluride AWD",
+      "purpose": "Verify EPA energy baseline",
+      "vehicle_or_topic": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0032"
+      ],
+      "useful_result": "EPA mileage or energy-consumption baseline captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0011",
+      "exact_query": "2024 Kia Telluride recalls complaints reliability recurring problems",
+      "purpose": "Classify reliability and owner patterns without brand stereotypes",
+      "vehicle_or_topic": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0040",
+        "SRC-0045"
+      ],
+      "useful_result": "Recall/complaint channels and recurring-pattern synthesis reviewed.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0012",
+      "exact_query": "used 2024 Kia Telluride SX Prestige X-Pro AWD site:carmax.com OR site:carvana.com OR certified",
+      "purpose": "Build exact-trim used-market comparable set",
+      "vehicle_or_topic": "2024 Kia Telluride SX Prestige X-Pro AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0054",
+        "SRC-0055",
+        "SRC-0056"
+      ],
+      "useful_result": "Direct listing URLs and low/base/high market range captured.",
+      "no_result_or_ambiguity_note": "Several exact listings sold or redirected during the run; status is explicit and confidence reduced."
+    },
+    {
+      "query_id": "QRY-0013",
+      "exact_query": "site:iihs.org/ratings/vehicle 2024 Honda Pilot IIHS",
+      "purpose": "Verify exact-year award, crash tests and LATCH map",
+      "vehicle_or_topic": "2024 Honda Pilot Elite AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0003"
+      ],
+      "useful_result": "Exact IIHS award/restrictions and child-anchor ratings captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0014",
+      "exact_query": "site:nhtsa.gov/vehicle/2024 Honda Pilot AWD overall safety rating",
+      "purpose": "Verify exact drivetrain NHTSA overall score",
+      "vehicle_or_topic": "2024 Honda Pilot Elite AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0015"
+      ],
+      "useful_result": "Exact variant result captured or corroborated with public ratings-data mirror.",
+      "no_result_or_ambiguity_note": "Some NHTSA dynamic pages rendered an error; mirror retained as corroboration, not a replacement for the official URL."
+    },
+    {
+      "query_id": "QRY-0015",
+      "exact_query": "2024 Honda Pilot Elite cargo third row legroom official specifications",
+      "purpose": "Verify passenger/cargo/equipment inputs",
+      "vehicle_or_topic": "2024 Honda Pilot Elite AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0025",
+        "SRC-0036"
+      ],
+      "useful_result": "Exact-year dimensions and scored-trim equipment collected.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0016",
+      "exact_query": "site:fueleconomy.gov 2024 Honda Pilot AWD",
+      "purpose": "Verify EPA energy baseline",
+      "vehicle_or_topic": "2024 Honda Pilot Elite AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0033"
+      ],
+      "useful_result": "EPA mileage or energy-consumption baseline captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0017",
+      "exact_query": "2024 Honda Pilot recalls complaints reliability recurring problems",
+      "purpose": "Classify reliability and owner patterns without brand stereotypes",
+      "vehicle_or_topic": "2024 Honda Pilot Elite AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0041",
+        "SRC-0049"
+      ],
+      "useful_result": "Recall/complaint channels and recurring-pattern synthesis reviewed.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0018",
+      "exact_query": "used 2024 Honda Pilot Elite AWD site:carmax.com OR site:carvana.com OR certified",
+      "purpose": "Build exact-trim used-market comparable set",
+      "vehicle_or_topic": "2024 Honda Pilot Elite AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0057",
+        "SRC-0058",
+        "SRC-0059"
+      ],
+      "useful_result": "Direct listing URLs and low/base/high market range captured.",
+      "no_result_or_ambiguity_note": "Several exact listings sold or redirected during the run; status is explicit and confidence reduced."
+    },
+    {
+      "query_id": "QRY-0019",
+      "exact_query": "site:iihs.org/ratings/vehicle 2024 Ford Explorer IIHS",
+      "purpose": "Verify exact-year award, crash tests and LATCH map",
+      "vehicle_or_topic": "2024 Ford Explorer Platinum 4WD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0004"
+      ],
+      "useful_result": "Exact IIHS award/restrictions and child-anchor ratings captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0020",
+      "exact_query": "site:nhtsa.gov/vehicle/2024 Ford Explorer 4WD overall safety rating",
+      "purpose": "Verify exact drivetrain NHTSA overall score",
+      "vehicle_or_topic": "2024 Ford Explorer Platinum 4WD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0016"
+      ],
+      "useful_result": "Exact variant result captured or corroborated with public ratings-data mirror.",
+      "no_result_or_ambiguity_note": "Some NHTSA dynamic pages rendered an error; mirror retained as corroboration, not a replacement for the official URL."
+    },
+    {
+      "query_id": "QRY-0021",
+      "exact_query": "2024 Ford Explorer Platinum cargo third row legroom official specifications",
+      "purpose": "Verify passenger/cargo/equipment inputs",
+      "vehicle_or_topic": "2024 Ford Explorer Platinum 4WD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0027",
+        "SRC-0037"
+      ],
+      "useful_result": "Exact-year dimensions and scored-trim equipment collected.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0022",
+      "exact_query": "site:fueleconomy.gov 2024 Ford Explorer 4WD",
+      "purpose": "Verify EPA energy baseline",
+      "vehicle_or_topic": "2024 Ford Explorer Platinum 4WD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0034"
+      ],
+      "useful_result": "EPA mileage or energy-consumption baseline captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0023",
+      "exact_query": "2024 Ford Explorer recalls complaints reliability recurring problems",
+      "purpose": "Classify reliability and owner patterns without brand stereotypes",
+      "vehicle_or_topic": "2024 Ford Explorer Platinum 4WD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0042",
+        "SRC-0050"
+      ],
+      "useful_result": "Recall/complaint channels and recurring-pattern synthesis reviewed.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0024",
+      "exact_query": "used 2024 Ford Explorer Platinum 4WD site:carmax.com OR site:carvana.com OR certified",
+      "purpose": "Build exact-trim used-market comparable set",
+      "vehicle_or_topic": "2024 Ford Explorer Platinum 4WD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0060",
+        "SRC-0061",
+        "SRC-0062"
+      ],
+      "useful_result": "Direct listing URLs and low/base/high market range captured.",
+      "no_result_or_ambiguity_note": "Several exact listings sold or redirected during the run; status is explicit and confidence reduced."
+    },
+    {
+      "query_id": "QRY-0025",
+      "exact_query": "site:iihs.org/ratings/vehicle 2024 Nissan Pathfinder IIHS",
+      "purpose": "Verify exact-year award, crash tests and LATCH map",
+      "vehicle_or_topic": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0005"
+      ],
+      "useful_result": "Exact IIHS award/restrictions and child-anchor ratings captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0026",
+      "exact_query": "site:nhtsa.gov/vehicle/2024 Nissan Pathfinder 4WD overall safety rating",
+      "purpose": "Verify exact drivetrain NHTSA overall score",
+      "vehicle_or_topic": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0017",
+        "SRC-0022"
+      ],
+      "useful_result": "Exact variant result captured or corroborated with public ratings-data mirror.",
+      "no_result_or_ambiguity_note": "Some NHTSA dynamic pages rendered an error; mirror retained as corroboration, not a replacement for the official URL."
+    },
+    {
+      "query_id": "QRY-0027",
+      "exact_query": "2024 Nissan Pathfinder Platinum cargo third row legroom official specifications",
+      "purpose": "Verify passenger/cargo/equipment inputs",
+      "vehicle_or_topic": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0028"
+      ],
+      "useful_result": "Exact-year dimensions and scored-trim equipment collected.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0028",
+      "exact_query": "site:fueleconomy.gov 2024 Nissan Pathfinder 4WD",
+      "purpose": "Verify EPA energy baseline",
+      "vehicle_or_topic": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0035"
+      ],
+      "useful_result": "EPA mileage or energy-consumption baseline captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0029",
+      "exact_query": "2024 Nissan Pathfinder recalls complaints reliability recurring problems",
+      "purpose": "Classify reliability and owner patterns without brand stereotypes",
+      "vehicle_or_topic": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0043",
+        "SRC-0046"
+      ],
+      "useful_result": "Recall/complaint channels and recurring-pattern synthesis reviewed.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0030",
+      "exact_query": "used 2024 Nissan Pathfinder Platinum 4WD site:carmax.com OR site:carvana.com OR certified",
+      "purpose": "Build exact-trim used-market comparable set",
+      "vehicle_or_topic": "2024 Nissan Pathfinder Platinum 4WD (post-Nov. 2023 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0063",
+        "SRC-0064",
+        "SRC-0065"
+      ],
+      "useful_result": "Direct listing URLs and low/base/high market range captured.",
+      "no_result_or_ambiguity_note": "Several exact listings sold or redirected during the run; status is explicit and confidence reduced."
+    },
+    {
+      "query_id": "QRY-0031",
+      "exact_query": "site:iihs.org/ratings/vehicle 2024 Kia EV9 IIHS",
+      "purpose": "Verify exact-year award, crash tests and LATCH map",
+      "vehicle_or_topic": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0006"
+      ],
+      "useful_result": "Exact IIHS award/restrictions and child-anchor ratings captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0032",
+      "exact_query": "site:nhtsa.gov/vehicle/2024 Kia EV9 AWD overall safety rating",
+      "purpose": "Verify exact drivetrain NHTSA overall score",
+      "vehicle_or_topic": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0018",
+        "SRC-0023"
+      ],
+      "useful_result": "Exact variant result captured or corroborated with public ratings-data mirror.",
+      "no_result_or_ambiguity_note": "Some NHTSA dynamic pages rendered an error; mirror retained as corroboration, not a replacement for the official URL."
+    },
+    {
+      "query_id": "QRY-0033",
+      "exact_query": "2024 Kia EV9 Land cargo third row legroom official specifications",
+      "purpose": "Verify passenger/cargo/equipment inputs",
+      "vehicle_or_topic": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0029",
+        "SRC-0038"
+      ],
+      "useful_result": "Exact-year dimensions and scored-trim equipment collected.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0034",
+      "exact_query": "site:fueleconomy.gov 2024 Kia EV9 AWD",
+      "purpose": "Verify EPA energy baseline",
+      "vehicle_or_topic": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0030"
+      ],
+      "useful_result": "EPA mileage or energy-consumption baseline captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0035",
+      "exact_query": "2024 Kia EV9 recalls complaints reliability recurring problems",
+      "purpose": "Classify reliability and owner patterns without brand stereotypes",
+      "vehicle_or_topic": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0044",
+        "SRC-0047",
+        "SRC-0048"
+      ],
+      "useful_result": "Recall/complaint channels and recurring-pattern synthesis reviewed.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0036",
+      "exact_query": "used 2024 Kia EV9 Land AWD site:carmax.com OR site:carvana.com OR certified",
+      "purpose": "Build exact-trim used-market comparable set",
+      "vehicle_or_topic": "2024 Kia EV9 Land AWD (post-Jan. 2024 build)",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0066",
+        "SRC-0067",
+        "SRC-0068"
+      ],
+      "useful_result": "Direct listing URLs and low/base/high market range captured.",
+      "no_result_or_ambiguity_note": "Several exact listings sold or redirected during the run; status is explicit and confidence reduced."
+    },
+    {
+      "query_id": "QRY-0037",
+      "exact_query": "2024 Hyundai Palisade Calligraphy IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-HYUNDAI-PALISADE-2024-CALLIGRAPHY-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0008"
+      ],
+      "useful_result": "Qualifying award but Poor updated moderate-overlap result made it a weaker safety benchmark than Telluride.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0038",
+      "exact_query": "2024 Volkswagen Atlas SEL Premium R-Line IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-VOLKSWAGEN-ATLAS-2024-SEL-PREMIUM-RLINE-4MOTION",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0007"
+      ],
+      "useful_result": "Third-row seats are tether-only in IIHS map; no complete row-3 LATCH position.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0039",
+      "exact_query": "2024 Subaru Ascent Touring IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-SUBARU-ASCENT-2024-TOURING-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0009"
+      ],
+      "useful_result": "Passed preliminary screen but did not displace more differentiated deep candidates.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0040",
+      "exact_query": "2024 Buick Enclave Avenir IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-BUICK-ENCLAVE-2024-AVENIR-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0011"
+      ],
+      "useful_result": "No 2024 IIHS Top Safety Pick or Top Safety Pick+ award.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0041",
+      "exact_query": "2024 Chrysler Pacifica Limited IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-CHRYSLER-PACIFICA-2024-LIMITED-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0010"
+      ],
+      "useful_result": "Preliminary eligibility pass; Sienna offered stronger efficiency and maturity for the same body-style hypothesis.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0042",
+      "exact_query": "2024 Acura MDX Advance IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-ACURA-MDX-2024-ADVANCE-SHAWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0012"
+      ],
+      "useful_result": "Exact AWD NHTSA overall rating is not available; unrated policy is conditional-not-pass.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0043",
+      "exact_query": "2024 Lincoln Aviator Reserve IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-LINCOLN-AVIATOR-2024-RESERVE-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0074"
+      ],
+      "useful_result": "No qualifying 2024 IIHS award.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0044",
+      "exact_query": "2024 GMC Acadia Denali IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-GMC-ACADIA-2024-DENALI-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0075"
+      ],
+      "useful_result": "No qualifying 2024 IIHS award for the exact redesigned model.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0045",
+      "exact_query": "2024 Chevrolet Traverse Z71 IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-CHEVROLET-TRAVERSE-2024-Z71-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0076"
+      ],
+      "useful_result": "No qualifying 2024 IIHS award for the exact model year.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0046",
+      "exact_query": "2024 Toyota Grand Highlander Hybrid Limited IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-TOYOTA-GRAND-HIGHLANDER-2024-HYBRID-LIMITED-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0077"
+      ],
+      "useful_result": "No qualifying exact-year IIHS award under the frozen gate.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0047",
+      "exact_query": "2024 Toyota Highlander Hybrid Platinum IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-TOYOTA-HIGHLANDER-2024-HYBRID-PLATINUM-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0078"
+      ],
+      "useful_result": "Third row does not provide a complete LATCH position in the researched configuration.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0048",
+      "exact_query": "2024 Mazda CX-90 PHEV Premium Plus IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-MAZDA-CX90-2024-PHEV-PREMIUMPLUS-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0079",
+        "SRC-0087"
+      ],
+      "useful_result": "Official cargo behind row 3 is below 16 cubic feet.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0049",
+      "exact_query": "2024 Volvo XC90 Recharge Plus IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-VOLVO-XC90-2024-RECHARGE-PLUS-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0080",
+        "SRC-0087"
+      ],
+      "useful_result": "Cargo behind row 3 is below 16 cubic feet and row-3 complete LATCH applicability is configuration-limited.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0050",
+      "exact_query": "2024 Audi Q7 Prestige IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-AUDI-Q7-2024-PRESTIGE-QUATTRO",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0081",
+        "SRC-0087"
+      ],
+      "useful_result": "Cargo behind row 3 is below 16 cubic feet.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0051",
+      "exact_query": "2024 Infiniti QX60 Autograph IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-INFINITI-QX60-2024-AUTOGRAPH-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0082",
+        "SRC-0087"
+      ],
+      "useful_result": "Cargo behind row 3 is below 16 cubic feet.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0052",
+      "exact_query": "2024 Hyundai Santa Fe Calligraphy IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-HYUNDAI-SANTAFE-2024-CALLIGRAPHY-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0083",
+        "SRC-0087"
+      ],
+      "useful_result": "Cargo behind row 3 is below 16 cubic feet.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0053",
+      "exact_query": "2024 Mitsubishi Outlander PHEV SEL Premium IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-MITSUBISHI-OUTLANDER-2024-PHEV-SEL-PREMIUM-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0084",
+        "SRC-0087"
+      ],
+      "useful_result": "Third row/cargo package does not meet the usable-space and 16-cubic-foot threshold.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0054",
+      "exact_query": "2024 Jeep Grand Cherokee L Summit IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-JEEP-GRANDCHEROKEEL-2024-SUMMIT-4X4",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0085"
+      ],
+      "useful_result": "No qualifying exact-year IIHS award.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0055",
+      "exact_query": "2024 Rivian R1S Dual-Motor IIHS NHTSA LATCH cargo AWD",
+      "purpose": "Low-cost hard-filter screen",
+      "vehicle_or_topic": "VEH-RIVIAN-R1S-2024-DUAL-AWD",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0086"
+      ],
+      "useful_result": "Exact NHTSA overall rating is not available; unrated policy is conditional-not-pass.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0056",
+      "exact_query": "Maple Valley WA 98038 sales tax rate Q3 2026",
+      "purpose": "Location-specific TCO tax input",
+      "vehicle_or_topic": "TCO",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0069"
+      ],
+      "useful_result": "9.1% planning rate captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0057",
+      "exact_query": "Washington regular gasoline price August 17 2026 EIA",
+      "purpose": "Regional energy-cost baseline",
+      "vehicle_or_topic": "TCO",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0070"
+      ],
+      "useful_result": "$5.121 per gallon captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0058",
+      "exact_query": "PSE residential schedule 7 electricity rate January 2026",
+      "purpose": "Home charging baseline",
+      "vehicle_or_topic": "TCO",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0072"
+      ],
+      "useful_result": "$0.141598/kWh first-block incremental energy charge captured.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0059",
+      "exact_query": "Washington RTA motor vehicle excise tax rate depreciation schedule",
+      "purpose": "Registration modeling",
+      "vehicle_or_topic": "TCO",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0071"
+      ],
+      "useful_result": "1.1% rate framework reviewed; exact-address applicability remains unresolved.",
+      "no_result_or_ambiguity_note": null
+    },
+    {
+      "query_id": "QRY-0060",
+      "exact_query": "site:*.honda.com OR authorized Honda dealer direct listing 2024 Honda Pilot Elite AWD VIN price mileage",
+      "purpose": "Replace a dealer inventory-results URL with an exact direct price-evidence URL during final QA.",
+      "vehicle_or_topic": "2024 Honda Pilot Elite AWD used price evidence",
+      "date": "2026-08-24",
+      "sources_reviewed": [
+        "SRC-0059"
+      ],
+      "useful_result": "Direct CPO listing found with exact VIN, stock number, mileage and listed vehicle price.",
+      "no_result_or_ambiguity_note": "Dealer fees are separate from the listed vehicle price and remain outside the official vehicle-price score."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "market": "US",
+  "model_years": [2022, 2023, 2024, 2025],
+  "condition": ["used"],
+  "candidate_target": 25,
+  "deep_research_target": 6,
+  "finalist_target": 3,
+  "ownership_years": 10,
+  "annual_mileage": 8000,
+  "research_rules": {
+    "require_source_for_factual_claims": true,
+    "prefer_primary_sources": true,
+    "include_owner_experiences": true,
+    "include_professional_reviews": true,
+    "include_safety_data": true,
+    "include_recall_data": true,
+    "include_total_cost_of_ownership": true,
+    "record_conflicting_evidence": true,
+    "record_confidence": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "observations": [
+    {
+      "observation_id": "OBS-0001",
+      "type": "project_input",
+      "topic": "annual_miles",
+      "value": 8000,
+      "unit": "miles/year",
+      "source": "user_input_payload",
+      "date": "2026-08-24"
+    },
+    {
+      "observation_id": "OBS-0002",
+      "type": "project_input",
+      "topic": "city_share",
+      "value": 0.7,
+      "unit": "fraction",
+      "source": "user_input_payload",
+      "date": "2026-08-24"
+    },
+    {
+      "observation_id": "OBS-0003",
+      "type": "project_input",
+      "topic": "highway_share",
+      "value": 0.3,
+      "unit": "fraction",
+      "source": "user_input_payload",
+      "date": "2026-08-24"
+    },
+    {
+      "observation_id": "OBS-0004",
+      "type": "project_input",
+      "topic": "ev_home_share",
+      "value": 0.9,
+      "unit": "fraction",
+      "source": "user_input_payload",
+      "date": "2026-08-24"
+    },
+    {
+      "observation_id": "OBS-0005",
+      "type": "project_input",
+      "topic": "ev_public_share",
+      "value": 0.1,
+      "unit": "fraction",
+      "source": "user_input_payload",
+      "date": "2026-08-24"
+    },
+    {
+      "observation_id": "OBS-0006",
+      "type": "physical_validation_placeholder",
+      "topic": "test_drive_and_fit",
+      "value": null,
+      "unit": null,
+      "source": "pending_client_observation",
+      "date": null
+    }
+  ]
+}
